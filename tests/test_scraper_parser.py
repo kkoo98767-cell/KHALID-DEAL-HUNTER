@@ -73,6 +73,18 @@ class ProductParserTests(unittest.TestCase):
         self.assertEqual(len(items), 1)
         self.assertEqual(items[0]["price"], 1299.0)
 
+    def test_embedded_product_with_display_price_and_product_page_url(self):
+        html = """
+        <script type="application/json">
+        {"products":[
+          {"productTitle":"USB-C Dock","displayPrice":{"value":"319.00"},
+           "productPageUrl":"/en-sa/dock-1"}
+        ]}
+        </script>
+        """
+        items = parse_jsonld_products(html, "https://shop.example/search", "Jarir")
+        self.assertTrue(any(x["title"] == "USB-C Dock" and x["price"] == 319.0 for x in items))
+
     def test_meta_product_fallback(self):
         html = """
         <html><head>
