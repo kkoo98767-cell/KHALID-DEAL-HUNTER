@@ -8,18 +8,39 @@ API_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:gener
 
 
 def analyze_deal(item):
-    """Ask Gemini to judge a Python-verified price drop. Never overrides price rules."""
+    """Evaluate a price-history candidate and write a varied, factual Arabic Telegram note."""
     api_key = os.getenv("GEMINI_API_KEY", "")
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY is not configured")
 
     prompt = f"""
-أنت محلل عروض تسوق سعودي. قيّم هل يستحق هذا المنتج تنبيه المستخدم.
-لا تفترض أي معلومات غير موجودة، ولا تعتبر نسبة الخصم وحدها دليلاً قاطعاً.
-السعر الحالي والمتوسط التاريخي محسوبان مسبقاً بواسطة البرنامج، ويجب أن يكون رأيك مساعداً فقط.
-انتبه إلى أن المنتج قد يكون غير واضح أو عنوانه مضللاً أو المقارنة غير منطقية.
-أعد JSON فقط بالشكل التالي:
-{{"worth_alerting": true, "reason": "سبب عربي مختصر لا يتجاوز 18 كلمة"}}
+أنت محلل عروض ومحرر رسائل لقناة تيليجرام سعودية اسمها KHALID DEAL HUNTER.
+مهمتك تقييم مرشح العرض وكتابة تعليق عربي طبيعي ومفيد للمستخدم.
+
+قواعد التقييم:
+- لا توافق إلا إذا كان المنتج واضحاً والبيانات تبدو منطقية.
+- استخدم السعر الحالي ومتوسط الأسعار السابقة ونسبة الانخفاض والتقييم وعدد المراجعات.
+- لا تدّعِ أنك قارنت السعر بكل المتاجر أو تحققت من السعر والمخزون لحظياً.
+- لا تعتبر السعر المنخفض وحده دليلاً على جودة المنتج.
+- إذا كان العنوان غامضاً أو التقييم ضعيفاً أو البيانات غير كافية، اجعل worth_alerting=false.
+- لا تخترع مواصفات أو استخدامات أو ضماناً أو أصالة أو معلومات غير موجودة.
+
+أسلوب رسالة تيليجرام:
+- اكتب تعليقاً موجزاً من جملتين إلى أربع جمل باللهجة السعودية البيضاء، طبيعي وذكي.
+- غيّر طريقة الصياغة من مرة لأخرى: أحياناً تحليلية، أحياناً ودية، وأحياناً مباشرة.
+- لا تبدأ دائماً بنفس العبارة ولا تكرر قالباً ثابتاً.
+- وضّح لماذا لفت المنتج الانتباه، واذكر نقطة تستحق التفكير قبل الشراء إن وجدت.
+- أعطِ رأياً متوازناً: هل يستحق المتابعة أو المقارنة، وليس أمراً بالشراء.
+- ممنوع عبارات التهويل مثل: عرض تاريخي، فرصة العمر، آخر فرصة، الحق قبل ينتهي.
+- لا تكرر الأرقام التي سيعرضها البوت بشكل منفصل، ولا تكتب افتتاحية طويلة.
+- استخدم إيموجي باعتدال أو بدونها.
+
+أعد JSON صالحاً فقط بهذا الشكل:
+{{
+  "worth_alerting": true,
+  "reason": "سبب قرار القبول أو الرفض بجملة عربية قصيرة",
+  "telegram_message": "تعليق عربي طبيعي ومتنوع من جملتين إلى أربع"
+}}
 
 بيانات المنتج:
 الاسم: {item.get("title", "")}
@@ -29,8 +50,6 @@ def analyze_deal(item):
 الانخفاض المحسوب: {item.get("drop_percent", "")}%
 التقييم: {item.get("rating", 0)}
 عدد المراجعات: {item.get("reviews", 0)}
-
-لا تزعم أنك تحققت من المخزون أو السعر الحالي على الموقع. إذا كانت البيانات غير كافية أو مشكوكاً فيها، اجعل worth_alerting=false.
 """
 
     response = requests.post(
@@ -43,8 +62,8 @@ def analyze_deal(item):
             "contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {
                 "responseMimeType": "application/json",
-                "temperature": 0.2,
-                "maxOutputTokens": 120,
+                "temperature": 0.85,
+                "maxOutputTokens": 260,
             },
         },
         timeout=REQUEST_TIMEOUT,
@@ -66,7 +85,12 @@ def analyze_deal(item):
         raise ValueError("Gemini response is missing a valid worth_alerting field")
 
     reason = str(result.get("reason", "")).strip()
+    telegram_message = str(result.get("telegram_message", "")).strip()
+    if result["worth_alerting"] and not telegram_message:
+        raise ValueError("Gemini did not provide a Telegram message")
+
     return {
         "worth_alerting": result["worth_alerting"],
         "reason": reason[:240],
+        "telegram_message": telegram_message[:900],
     }
