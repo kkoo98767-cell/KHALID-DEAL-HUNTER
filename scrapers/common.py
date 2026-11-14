@@ -15,10 +15,11 @@ HEADERS = {
 
 PRICE_KEYS = (
     "price", "salePrice", "finalPrice", "offerPrice", "currentPrice",
-    "lowPrice", "sellingPrice", "formattedPrice",
+    "lowPrice", "sellingPrice", "formattedPrice", "sale_price", "final_price",
+    "current_price", "price_value",
 )
-TITLE_KEYS = ("name", "title", "productName", "displayName")
-URL_KEYS = ("url", "productUrl", "canonicalUrl", "link")
+TITLE_KEYS = ("name", "title", "productName", "displayName", "product_name", "product_title", "display_name")
+URL_KEYS = ("url", "productUrl", "canonicalUrl", "link", "product_url", "canonical_url", "productLink", "product_link", "pdpUrl")
 CARD_SELECTORS = {
     "Amazon.sa": [
         'div[data-component-type="s-search-result"]',
@@ -30,10 +31,12 @@ CARD_SELECTORS = {
     ],
     "Extra": [
         ".product-item", ".product-tile", '[data-product-id]',
-        '[class*="productCard"]',
+        '[class*="productCard"]', '[class*="product-card"]',
+        '[data-testid*="product"]',
     ],
     "Jarir": [
         ".product-item", ".product-item-info", '[data-product-id]',
+        '[class*="product-card"]', '[data-testid*="product"]',
     ],
 }
 REVIEW_SELECTORS = [
@@ -67,7 +70,8 @@ def _walk_json(obj):
             yield from _walk_json(value)
     elif isinstance(obj, dict):
         typ = obj.get("@type", "")
-        if typ == "Product" or (isinstance(typ, list) and "Product" in typ):
+        types = typ if isinstance(typ, list) else [typ]
+        if any(str(value).rstrip("/").split("/")[-1].lower() == "product" for value in types):
             yield obj
         for value in obj.values():
             if isinstance(value, (dict, list)):
