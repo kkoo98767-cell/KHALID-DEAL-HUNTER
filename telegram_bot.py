@@ -34,6 +34,7 @@ def send_deal(item):
         f"💰 السعر الحالي: {item['price']:.2f} ريال\n"
         f"📊 متوسط الأسعار السابقة: {item['baseline']:.2f} ريال\n"
         f"📉 الانخفاض المسجل: {item['drop_percent']}%\n"
+        f"🤖 تقييم Gemini: {item.get('ai_reason', 'اجتاز تقييم الذكاء الاصطناعي')}\n"
         f"⭐ التقييم: {item.get('rating', 0)}\n"
         f"📝 عدد المراجعات: {item.get('reviews', 0)}\n\n"
         f"🔗 رابط المنتج:\n{item['url']}\n\n"
