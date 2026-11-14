@@ -1,8 +1,9 @@
-
 import sqlite3
 from pathlib import Path
 from statistics import median
+
 from config import DB_PATH, MIN_HISTORY_POINTS, MIN_DROP_PERCENT
+
 
 def connect():
     Path(DB_PATH).parent.mkdir(parents=True, exist_ok=True)
@@ -25,8 +26,16 @@ def connect():
             checked_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
         )
     """)
+    db.execute("""
+        CREATE TABLE IF NOT EXISTS sent_alerts (
+            product_key TEXT PRIMARY KEY,
+            last_price REAL NOT NULL,
+            sent_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
     db.commit()
     return db
+
 
 def save_and_evaluate(item):
     db = connect()
@@ -56,7 +65,6 @@ def save_and_evaluate(item):
     db.commit()
     db.close()
 
-    # Avoid calling a first-seen product a genuine discount.
     if len(previous) < MIN_HISTORY_POINTS:
         return None
 
@@ -70,3 +78,31 @@ def save_and_evaluate(item):
         item["drop_percent"] = round(drop)
         return item
     return None
+
+
+def was_recently_alerted(item, cooldown_hours=72):
+    """Prevent repeated alerts for the same product within 72 hours."""
+    key = item["url"].split("?")[0].rstrip("/")
+    db = connect()
+    row = db.execute(
+        "SELECT 1 FROM sent_alerts WHERE product_key=? "
+        "AND sent_at >= datetime('now', ?)",
+        (key, f"-{int(cooldown_hours)} hours")
+    ).fetchone()
+    db.close()
+    return row is not None
+
+
+def record_alert(item):
+    """Record only after Telegram confirms the message was accepted."""
+    key = item["url"].split("?")[0].rstrip("/")
+    db = connect()
+    db.execute(
+        "INSERT INTO sent_alerts(product_key,last_price,sent_at) "
+        "VALUES(?,?,CURRENT_TIMESTAMP) "
+        "ON CONFLICT(product_key) DO UPDATE SET "
+        "last_price=excluded.last_price, sent_at=CURRENT_TIMESTAMP",
+        (key, item["price"])
+    )
+    db.commit()
+    db.close()
