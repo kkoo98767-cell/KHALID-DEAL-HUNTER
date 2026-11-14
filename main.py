@@ -9,18 +9,54 @@ from database import save_and_evaluate, connect
 from ai_analyzer import analyze_deal
 from telegram_bot import send_deal
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; KhalidDealHunter/1.0; +https://github.com/)"
-}
+REQUEST_HEADERS = [
+    {
+        "User-Agent": (
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+        ),
+        "Accept-Language": "ar-SA,ar;q=0.9,en-US;q=0.8,en;q=0.7",
+    },
+    {
+        "User-Agent": (
+            "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36"
+        ),
+        "Accept-Language": "ar-SA,ar;q=0.9,en;q=0.8",
+    },
+]
 
 
 def fetch_store(store, query):
     url = STORES[store].format(query=quote_plus(query))
-    response = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
-    response.raise_for_status()
-    return parse_jsonld_products(
-        response.text, response.url, store, limit=MAX_PRODUCTS_PER_SEARCH
-    )
+    last_error = None
+
+    # Try a desktop browser request first, then a mobile browser request
+    # if the first response is blocked or contains no parsable products.
+    for attempt, headers in enumerate(REQUEST_HEADERS, start=1):
+        try:
+            response = requests.get(
+                url,
+                headers=headers,
+                timeout=REQUEST_TIMEOUT,
+                allow_redirects=True,
+            )
+            response.raise_for_status()
+            items = parse_jsonld_products(
+                response.text, response.url, store, limit=MAX_PRODUCTS_PER_SEARCH
+            )
+            if items:
+                print(f"{store}: extracted products using request profile {attempt}")
+                return items
+            print(f"{store}: no products parsed with request profile {attempt}")
+        except Exception as exc:
+            last_error = exc
+            print(f"{store}: request profile {attempt} failed: {type(exc).__name__}: {exc}")
+
+    if last_error:
+        raise last_error
+    return []
+
 
 
 def main():
