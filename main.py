@@ -119,11 +119,12 @@ def main():
                 if not ai_result["worth_alerting"]:
                     ai_skips += 1
                     print(
-                        f"Gemini rejected candidate: "
+                        f"{ai_result.get('provider', 'AI')} rejected candidate: "
                         f"{ai_result.get('reason', 'No reason')}"
                     )
                     continue
 
+                deal["ai_provider"] = ai_result.get("provider", "AI")
                 deal["ai_reason"] = ai_result.get("reason", "")
                 deal["ai_message"] = ai_result.get("telegram_message", "")
                 send_deal(deal)
