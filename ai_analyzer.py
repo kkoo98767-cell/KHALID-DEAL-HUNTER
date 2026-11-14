@@ -126,6 +126,7 @@ def _analyze_with_groq(prompt, api_key):
                 {"role": "user", "content": prompt},
             ],
             "response_format": {"type": "json_object"},
+            "reasoning_effort": "low",
             "max_completion_tokens": 500,
         },
         timeout=REQUEST_TIMEOUT,
