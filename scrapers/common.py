@@ -8,10 +8,12 @@ from bs4 import BeautifulSoup
 PRICE_KEYS = (
     "price", "salePrice", "finalPrice", "offerPrice", "currentPrice",
     "lowPrice", "sellingPrice", "formattedPrice", "sale_price", "final_price",
-    "current_price", "price_value", "amount", "value",
+    "current_price", "price_value", "amount", "value", "specialPrice",
+    "special_price", "discountPrice", "discount_price", "priceValue",
+    "displayPrice", "display_price", "minPrice", "min_price",
 )
-TITLE_KEYS = ("name", "title", "productName", "displayName", "product_name", "product_title", "display_name")
-URL_KEYS = ("url", "productUrl", "canonicalUrl", "link", "product_url", "canonical_url", "productLink", "product_link", "pdpUrl", "slug")
+TITLE_KEYS = ("name", "title", "productName", "displayName", "product_name", "product_title", "display_name", "productTitle", "itemName", "item_name")
+URL_KEYS = ("url", "productUrl", "canonicalUrl", "link", "product_url", "canonical_url", "productLink", "product_link", "pdpUrl", "productPageUrl", "product_page_url", "pdp_url", "href")
 CARD_SELECTORS = {
     "Amazon.sa": [
         'div[data-component-type="s-search-result"]', 'div[data-asin][data-index]',
@@ -46,7 +48,7 @@ def _number(value):
     if isinstance(value, (int, float)):
         return float(value)
     if isinstance(value, dict):
-        for key in ("value", "amount", "price", "currentPrice", "salePrice"):
+        for key in ("value", "amount", "price", "currentPrice", "salePrice", "sellingPrice", "finalPrice", "formattedValue"):
             if key in value:
                 parsed = _number(value[key])
                 if parsed is not None:
@@ -187,6 +189,7 @@ def _text_price(card):
     selectors = [
         '[data-price-amount]', '[data-price]', '[itemprop="price"]',
         '[data-qa*="price"]', '[data-testid*="price"]',
+        '[class*="price"]', '[class*="Price"]', '[id*="price"]',
         '.a-price:not(.a-text-price) .a-offscreen',
         '[class*="selling-price"]', '[class*="sale-price"]',
         '[class*="final-price"]', '[class*="current-price"]',
@@ -212,6 +215,8 @@ def _text_price(card):
         if price and 0.5 <= price <= 2_000_000:
             return price
     text = card.get_text(" ", strip=True)
+    digit_map = str.maketrans("٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹", "01234567890123456789")
+    text = text.translate(digit_map).replace("٬", ",").replace("٫", ".")
     patterns = [
         r"(?:SAR|ر\.?س\.?|ر.س|﷼)\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)",
         r"([0-9][0-9,]*(?:\.[0-9]{1,2})?)\s*(?:SAR|ر\.?س\.?|﷼)",
@@ -301,7 +306,8 @@ def _products_from_product_links(soup, base_url, store, limit):
     """Fallback for storefronts whose cards have no stable CSS class."""
     found, seen = [], set()
     selectors = ('a[href*="/dp/"]', 'a[href*="/p/"]', 'a[href*="/product/"]',
-                 'a[href*="/products/"]', 'a[href*=".html"]')
+                 'a[href*="/products/"]', 'a[href*=".html"]',
+                 'a[href*="/catalog/"]', 'a[href*="/item/"]')
     anchors = []
     for selector in selectors:
         try:
