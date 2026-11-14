@@ -301,11 +301,12 @@ def parse_jsonld_products(html, base_url, store, limit=20):
 
 
 def _extract_purchase_text(text):
+    amount = r"[\d,.]+\s*[KkMm]?"
     patterns = [
-        r"([\d,]+\+?\s*(?:bought|purchased)\s+(?:in the past month|last month|this month))",
-        r"((?:bought|purchased)\s+by\s+[\d,]+\+?\s+(?:customers|people))",
-        r"(اشتراه\s+[\d,]+\+?\s+(?:شخص|عميل|مستخدم)\s*(?:خلال الشهر الماضي)?)",
-        r"([\d,]+\+?\s*(?:عملية شراء|مشتري)\s*(?:خلال الشهر الماضي)?)",
+        rf"({amount}\+?\s*(?:bought|purchased)\s+(?:in the past month|last month|this month))",
+        rf"((?:bought|purchased)\s+by\s+{amount}\+?\s+(?:customers|people))",
+        rf"(اشتراه\s+{amount}\+?\s+(?:شخص|عميل|مستخدم)\s*(?:خلال الشهر الماضي)?)",
+        rf"({amount}\+?\s*(?:عملية شراء|مشتري)\s*(?:خلال الشهر الماضي)?)",
     ]
     for pattern in patterns:
         match = re.search(pattern, text, flags=re.I)
@@ -344,6 +345,23 @@ def enrich_product_details(item, timeout=12):
                 item["rating"] = rating
             if not item.get("reviews") and reviews:
                 item["reviews"] = reviews
+
+    # Fallback to visible microdata/meta fields when JSON-LD is absent.
+    if not item.get("rating"):
+        rating_node = soup.select_one('[itemprop="ratingValue"], [data-hook="rating-out-of-text"]')
+        if rating_node:
+            item["rating"] = _number(
+                rating_node.get("content") or rating_node.get_text(" ", strip=True)
+            ) or 0
+    if not item.get("reviews"):
+        count_node = soup.select_one(
+            '[itemprop="reviewCount"], [itemprop="ratingCount"], '
+            '[data-hook="total-review-count"]'
+        )
+        if count_node:
+            item["reviews"] = int(_number(
+                count_node.get("content") or count_node.get_text(" ", strip=True)
+            ) or 0)
 
     # Read only short, visibly rendered review excerpts; do not send full review pages.
     snippets = []
