@@ -63,6 +63,7 @@ def main():
                     continue
 
                 deal["ai_reason"] = ai_result.get("reason", "")
+                deal["ai_message"] = ai_result.get("telegram_message", "")
                 send_deal(deal)
                 alerts += 1
 
