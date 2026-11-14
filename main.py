@@ -249,6 +249,13 @@ def main():
         print(f"Telegram archive summary failed: {type(exc).__name__}: {exc}")
         telegram_errors += 1
 
+    # A green workflow with zero extracted products is not a healthy scan.
+    if total == 0:
+        raise RuntimeError(
+            "No products were extracted from any store. "
+            "Check store access, anti-bot pages, and scraper selectors."
+        )
+
 
 if __name__ == "__main__":
     main()
