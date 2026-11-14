@@ -140,6 +140,35 @@ def _analyze_with_groq(prompt, api_key):
     return _validate_result(answer, "Groq")
 
 
+def test_ai_provider(provider):
+    """Call exactly one selected AI provider with a tiny test prompt; never fallback."""
+    selected = (provider or "").strip().lower()
+    if selected not in {"gemini", "groq"}:
+        raise ValueError("Choose either 'gemini' or 'groq' for an AI connection test.")
+
+    if selected == "gemini":
+        api_key = os.getenv("GEMINI_API_KEY", "")
+        model = GEMINI_MODEL
+        analyze = _analyze_with_gemini
+        display_name = "Gemini"
+    else:
+        api_key = os.getenv("GROQ_API_KEY", "")
+        model = GROQ_MODEL
+        analyze = _analyze_with_groq
+        display_name = "Groq"
+
+    if not api_key:
+        raise RuntimeError(f"{display_name} API key is not configured in GitHub Secrets.")
+
+    prompt = (
+        "هذا اختبار اتصال فقط. أعد JSON صالحاً فقط بهذه الحقول: "
+        '{"worth_alerting": false, "reason": "تم استلام الاختبار والرد بنجاح", "telegram_message": ""}. '
+        "لا تضف أي نص خارج JSON."
+    )
+    result = analyze(prompt, api_key)
+    return {"provider": display_name, "model": model, "reason": result.get("reason", "رد النموذج بنجاح")}
+
+
 def analyze_deal(item):
     """Try Gemini first, then Groq, without restarting the store scan."""
     prompt = _build_prompt(item)
