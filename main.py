@@ -57,6 +57,7 @@ def _looks_like_challenge(html):
 def fetch_store(store, query):
     urls = _search_url_variants(store, query)
     last_error = None
+    valid_response_seen = False
     request_timeout = min(REQUEST_TIMEOUT, 18)
 
     with requests.Session() as session:
@@ -74,6 +75,7 @@ def fetch_store(store, query):
                                 response=response,
                             )
                         response.raise_for_status()
+                        valid_response_seen = True
                         last_error = None
                         html = response.text or ""
                         if not html:
@@ -108,7 +110,7 @@ def fetch_store(store, query):
                         )
                         if attempt == 1:
                             time.sleep(1.5)
-    if last_error:
+    if last_error and not valid_response_seen:
         raise last_error
     return []
 
