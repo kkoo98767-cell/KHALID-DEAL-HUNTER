@@ -232,7 +232,7 @@ def _products_from_cards(soup, base_url, store, limit):
     found, seen = [], set()
     selectors = CARD_SELECTORS.get(store, []) + [
         '[data-product-id]', '[data-product-sku]', '[itemtype*="Product"]',
-        'li[class*="product"]', 'div[class*="product"]',
+        'li[class*="product"]',
     ]
     for selector in selectors:
         try:
