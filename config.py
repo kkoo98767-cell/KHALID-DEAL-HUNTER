@@ -3,6 +3,7 @@ import os
 
 TG_TOKEN = os.getenv("TG_TOKEN", "")
 TG_CHAT = os.getenv("TG_CHAT", "")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 DB_PATH = "data/deals.db"
 
 # Run on one store per workflow execution; rotate randomly.
