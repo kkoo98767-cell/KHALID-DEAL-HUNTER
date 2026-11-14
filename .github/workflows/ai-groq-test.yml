@@ -17,7 +17,10 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests beautifulsoup4
+
+      - name: Check Python syntax
+        run: python -m compileall -q .
 
       - name: Test Groq fallback
         env:
