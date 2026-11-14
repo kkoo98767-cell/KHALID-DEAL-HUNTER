@@ -1,5 +1,6 @@
 import json
 import os
+import time
 import requests
 
 from config import GEMINI_MODEL, REQUEST_TIMEOUT
@@ -7,6 +8,9 @@ from config import GEMINI_MODEL, REQUEST_TIMEOUT
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
+GEMINI_REQUEST_TIMEOUT = 60
+AI_TEST_MAX_ATTEMPTS = 3
+AI_TEST_RETRY_DELAY = 3
 
 
 def _build_prompt(item):
@@ -94,7 +98,7 @@ def _analyze_with_gemini(prompt, api_key):
                 "maxOutputTokens": 300,
             },
         },
-        timeout=REQUEST_TIMEOUT,
+        timeout=GEMINI_REQUEST_TIMEOUT,
     )
     response.raise_for_status()
     payload = response.json()
@@ -165,8 +169,26 @@ def test_ai_provider(provider):
         '{"worth_alerting": false, "reason": "تم استلام الاختبار والرد بنجاح", "telegram_message": ""}. '
         "لا تضف أي نص خارج JSON."
     )
-    result = analyze(prompt, api_key)
-    return {"provider": display_name, "model": model, "reason": result.get("reason", "رد النموذج بنجاح")}
+    # A slow response should not immediately mark a healthy provider as unavailable.
+    # Retry timeouts only; authentication, quota, and malformed-response errors
+    # should fail immediately and remain visible in the test result.
+    for attempt in range(1, AI_TEST_MAX_ATTEMPTS + 1):
+        try:
+            result = analyze(prompt, api_key)
+            return {
+                "provider": display_name,
+                "model": model,
+                "reason": result.get("reason", "رد النموذج بنجاح"),
+                "attempts": attempt,
+            }
+        except requests.exceptions.Timeout:
+            if attempt >= AI_TEST_MAX_ATTEMPTS:
+                raise
+            print(
+                f"{display_name} timed out on attempt {attempt}/"
+                f"{AI_TEST_MAX_ATTEMPTS}; retrying in {AI_TEST_RETRY_DELAY}s..."
+            )
+            time.sleep(AI_TEST_RETRY_DELAY)
 
 
 def analyze_deal(item):
