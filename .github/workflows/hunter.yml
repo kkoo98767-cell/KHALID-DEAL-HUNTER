@@ -1,6 +1,11 @@
 name: KHALID DEAL HUNTER
 
 on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "data/deals.db"
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
