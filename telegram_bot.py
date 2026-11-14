@@ -30,7 +30,7 @@ def _send_text(message, timeout=20):
     return result
 
 
-def send_startup_status(run_number=None, run_id=None):
+def send_startup_status(run_number=None, run_id=None, mode="hunt"):
     """Send a clear heartbeat as soon as the main workflow starts."""
     details = []
     if run_number:
@@ -38,12 +38,40 @@ def send_startup_status(run_number=None, run_id=None):
     if run_id:
         details.append(f"معرّف التشغيل: {run_id}")
     suffix = "\n" + "\n".join(details) if details else ""
-    message = (
-        "🟢 KHALID DEAL HUNTER بدأ التشغيل بنجاح.\n"
-        "تم الاتصال بتيليجرام، والبوت الآن يفحص المتاجر ويبحث عن المنتجات والعروض.\n"
-        "هذه رسالة تأكيد تشغيل وليست تنبيهاً عن عرض."
-        + suffix
-    )
+
+    if mode == "ai_test":
+        message = (
+            "🧪 بدأ اختبار اتصال الذكاء الاصطناعي في KHALID DEAL HUNTER.\n"
+            "سيتم اختبار المزوّد الذي اخترته فقط، دون فحص المتاجر أو تعديل سجل الأسعار."
+            + suffix
+        )
+    else:
+        message = (
+            "🟢 KHALID DEAL HUNTER بدأ التشغيل بنجاح.\n"
+            "تم الاتصال بتيليجرام، والبوت الآن يفحص المتاجر ويبحث عن المنتجات والعروض.\n"
+            "هذه رسالة تأكيد تشغيل وليست تنبيهاً عن عرض."
+            + suffix
+        )
+    return _send_text(message)
+
+
+def send_ai_test_status(provider, success, detail="", run_number=None):
+    """Report the result of a manually requested provider test to Telegram."""
+    run_text = f"\nرقم التشغيل: #{run_number}" if run_number else ""
+    if success:
+        message = (
+            f"🟢 اختبار {provider} ناجح.\n"
+            "تم الاتصال بالمزوّد واستلام رد فعلي من النموذج بنجاح.\n"
+            f"التفاصيل: {detail or 'النموذج رد بنجاح.'}"
+            f"{run_text}"
+        )
+    else:
+        message = (
+            f"🔴 اختبار {provider} فشل.\n"
+            "لم نتمكن من إكمال الاتصال واستلام رد صالح من النموذج.\n"
+            f"السبب: {detail or 'راجع سجل التشغيل في GitHub Actions.'}"
+            f"{run_text}"
+        )
     return _send_text(message)
 
 
