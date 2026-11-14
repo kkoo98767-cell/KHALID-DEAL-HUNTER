@@ -90,6 +90,7 @@ def main():
     random.shuffle(stores)
 
     total = alerts = failures = ai_skips = 0
+    price_candidates = cooldown_skips = telegram_errors = 0
     print(f"Starting scan across {len(stores)} stores")
 
     for store in stores:
@@ -106,7 +107,15 @@ def main():
                 if not deal:
                     continue
 
+                price_candidates += 1
+                print(
+                    f"PRICE CANDIDATE: {deal['title']} | "
+                    f"price={deal['price']} SAR | baseline={deal['baseline']} SAR | "
+                    f"drop={deal['drop_percent']}%"
+                )
+
                 if was_recently_alerted(deal):
+                    cooldown_skips += 1
                     print(f"Skipping repeat alert within cooldown: {deal['title']}")
                     continue
 
@@ -135,9 +144,20 @@ def main():
                 deal["ai_provider"] = ai_result.get("provider", "AI")
                 deal["ai_reason"] = ai_result.get("reason", "")
                 deal["ai_message"] = ai_result.get("telegram_message", "")
-                send_deal(deal)
+                try:
+                    send_deal(deal)
+                except Exception as exc:
+                    telegram_errors += 1
+                    print(
+                        f"TELEGRAM SEND FAILED for {deal['title']}: "
+                        f"{type(exc).__name__}: {exc}"
+                    )
+                    # Continue checking the remaining products in this store.
+                    continue
+
                 record_alert(deal)
                 alerts += 1
+                print(f"TELEGRAM ALERT SENT: {deal['title']}")
 
         except Exception as exc:
             failures += 1
@@ -145,7 +165,10 @@ def main():
 
     print(
         f"Finished. stores_checked={len(stores)}, products={total}, "
-        f"alerts={alerts}, ai_skips={ai_skips}, failures={failures}"
+        f"price_candidates={price_candidates}, cooldown_skips={cooldown_skips}, "
+        f"ai_skips={ai_skips}, telegram_errors={telegram_errors}, "
+        f"alerts={alerts}, failures={failures}, "
+        f"no_price_signal={max(0, total - price_candidates)}"
     )
 
 
