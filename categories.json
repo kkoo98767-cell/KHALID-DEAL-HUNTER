@@ -1,0 +1,33 @@
+{
+  "core_categories": [
+    "PC & gaming accessories",
+    "gaming and TV screens",
+    "phones and charging",
+    "car accessories",
+    "home appliances",
+    "men's clothing and shoes",
+    "men's fragrances",
+    "personal care"
+  ],
+  "discovery": "Random products from other categories",
+  "preference_profile": {
+    "priority_examples": [
+      "UGREEN",
+      "Baseus",
+      "100W USB-C",
+      "ANC headphones",
+      "2K 240Hz monitors"
+    ],
+    "fragrance_preferences": [
+      "fresh",
+      "citrus",
+      "aquatic",
+      "clean"
+    ],
+    "deprioritize_fragrance_notes": [
+      "spicy",
+      "oud",
+      "heavy tobacco"
+    ]
+  }
+}
