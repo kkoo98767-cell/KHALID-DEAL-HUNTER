@@ -6,7 +6,7 @@ TG_CHAT = os.getenv("TG_CHAT", "")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 DB_PATH = "data/deals.db"
 
-# Run on one store per workflow execution; rotate randomly.
+# All four stores are scanned on every workflow run; searches rotate in four-run blocks.
 STORES = {
     "Amazon.sa": "https://www.amazon.sa/s?k={query}",
     "Noon": "https://www.noon.com/saudi-en/search/?q={query}",
