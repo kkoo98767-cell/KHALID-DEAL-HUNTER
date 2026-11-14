@@ -67,3 +67,6 @@ def send_deal(item):
         timeout=20,
     )
     response.raise_for_status()
+    result = response.json()
+    if not result.get("ok"):
+        raise RuntimeError(f"Telegram rejected the message: {result}")
