@@ -1,5 +1,6 @@
 import random
 import requests
+
 from config import TG_TOKEN, TG_CHAT
 
 OPENINGS = [
@@ -11,11 +12,42 @@ OPENINGS = [
 ]
 
 
-def send_deal(item):
+def _send_text(message, timeout=20):
     if not TG_TOKEN or not TG_CHAT:
-        print("Telegram secrets are missing.")
-        return
+        raise RuntimeError("Telegram secrets are missing: TG_TOKEN or TG_CHAT.")
+    response = requests.post(
+        f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage",
+        data={"chat_id": TG_CHAT, "text": message, "disable_web_page_preview": False},
+        timeout=timeout,
+    )
+    response.raise_for_status()
+    try:
+        result = response.json()
+    except ValueError as exc:
+        raise RuntimeError("Telegram returned a non-JSON response.") from exc
+    if not result.get("ok"):
+        raise RuntimeError(f"Telegram rejected the message: {result.get('description', 'unknown error')}")
+    return result
 
+
+def send_startup_status(run_number=None, run_id=None):
+    """Send a clear heartbeat as soon as the main workflow starts."""
+    details = []
+    if run_number:
+        details.append(f"رقم التشغيل: #{run_number}")
+    if run_id:
+        details.append(f"معرّف التشغيل: {run_id}")
+    suffix = "\n" + "\n".join(details) if details else ""
+    message = (
+        "🟢 KHALID DEAL HUNTER بدأ التشغيل بنجاح.\n"
+        "تم الاتصال بتيليجرام، والبوت الآن يفحص المتاجر ويبحث عن المنتجات والعروض.\n"
+        "هذه رسالة تأكيد تشغيل وليست تنبيهاً عن عرض."
+        + suffix
+    )
+    return _send_text(message)
+
+
+def send_deal(item):
     opening = random.choice(OPENINGS)
     ai_message = item.get("ai_message", "").strip()
     if not ai_message:
@@ -30,18 +62,13 @@ def send_deal(item):
     purchase_text = item.get("purchase_count_text", "").strip()
     if purchase_text:
         optional_details.append(f"🛒 مؤشر الشراء الظاهر بالمتجر: {purchase_text}")
-
     snippets = item.get("review_snippets", []) or []
     if snippets:
         optional_details.append("💬 مقتطفات من آراء العملاء:")
-        for snippet in snippets[:3]:
-            optional_details.append(f"• {snippet[:350]}")
+        optional_details.extend(f"• {snippet[:300]}" for snippet in snippets[:3])
+    optional_section = "\n\n" + "\n".join(optional_details) if optional_details else ""
 
-    optional_section = ""
-    if optional_details:
-        optional_section = "\n\n" + "\n".join(optional_details)
-
-    text = (
+    message = (
         f"{opening}\n\n"
         f"🛍️ {item['title']}\n"
         f"🏬 المتجر: {item['store']}\n\n"
@@ -56,17 +83,4 @@ def send_deal(item):
         "تنبيه: المقارنة مبنية على سجل الأسعار الذي جمعه البوت، "
         "وليست ضماناً لاستمرار السعر أو توفر المنتج."
     )
-
-    response = requests.post(
-        f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage",
-        data={
-            "chat_id": TG_CHAT,
-            "text": text,
-            "disable_web_page_preview": False,
-        },
-        timeout=20,
-    )
-    response.raise_for_status()
-    result = response.json()
-    if not result.get("ok"):
-        raise RuntimeError(f"Telegram rejected the message: {result}")
+    return _send_text(message)
