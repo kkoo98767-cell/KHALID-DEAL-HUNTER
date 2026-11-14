@@ -7,9 +7,9 @@ from urllib.parse import quote_plus
 from config import STORES, REQUEST_TIMEOUT, MAX_PRODUCTS_PER_SEARCH
 from discovery import choose_search
 from scrapers.common import parse_jsonld_products, enrich_product_details
-from database import save_and_evaluate, connect, was_recently_alerted, record_alert
+from database import save_and_evaluate, connect, was_recently_alerted, record_alert, get_archive_stats
 from ai_analyzer import analyze_deal, test_ai_provider
-from telegram_bot import send_deal, send_startup_status, send_ai_test_status
+from telegram_bot import send_deal, send_startup_status, send_ai_test_status, send_scan_summary
 
 REQUEST_HEADERS = [
     {
@@ -159,6 +159,7 @@ def main():
     total = alerts = failures = ai_skips = 0
     price_candidates = cooldown_skips = telegram_errors = 0
     empty_stores = 0
+    newly_archived = 0
     print(f"Starting scan across {len(stores)} stores")
 
     for store in stores:
@@ -173,6 +174,8 @@ def main():
             for item in items:
                 total += 1
                 deal = save_and_evaluate(item)
+                if item.get("_is_new_product"):
+                    newly_archived += 1
                 if not deal:
                     continue
 
@@ -221,13 +224,30 @@ def main():
             failures += 1
             print(f"Store/search failed: {store} / {query}: {type(exc).__name__}: {exc}")
 
+    archive_stats = get_archive_stats()
     print(
         f"Finished. stores_checked={len(stores)}, products={total}, "
+        f"newly_archived={newly_archived}, archive_total={archive_stats['products']}, "
+        f"price_observations={archive_stats['price_observations']}, "
+        f"stores_with_products={archive_stats['stores_with_products']}, "
         f"empty_stores={empty_stores}, price_candidates={price_candidates}, "
         f"cooldown_skips={cooldown_skips}, ai_skips={ai_skips}, "
         f"telegram_errors={telegram_errors}, alerts={alerts}, failures={failures}, "
         f"no_price_signal={max(0, total - price_candidates)}"
     )
+    try:
+        send_scan_summary(
+            run_number=os.getenv("GITHUB_RUN_NUMBER"),
+            products_seen=total,
+            new_products=newly_archived,
+            failures=failures,
+            empty_stores=empty_stores,
+            archive_stats=archive_stats,
+        )
+        print("Telegram archive summary sent successfully.")
+    except Exception as exc:
+        print(f"Telegram archive summary failed: {type(exc).__name__}: {exc}")
+        telegram_errors += 1
 
 
 if __name__ == "__main__":
