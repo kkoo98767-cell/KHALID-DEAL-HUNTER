@@ -196,14 +196,36 @@ def _walk_dicts(obj):
 
 
 def _text_price(card):
-    for node in card.select(
-        '[data-price-amount], [itemprop="price"], .a-price .a-offscreen, '
-        '[class*="price"], [data-qa*="price"], [data-testid*="price"]'
-    ):
+    # Prefer explicit current-price attributes over generic price containers.
+    priority_selectors = [
+        '[data-price-amount]',
+        '[itemprop="price"]',
+        '[data-qa="price"]',
+        '[data-testid="price"]',
+        '.a-price:not(.a-text-price) .a-offscreen',
+    ]
+    for selector in priority_selectors:
+        node = card.select_one(selector)
+        if not node:
+            continue
         value = node.get("content") or node.get("data-price-amount") or node.get_text(" ", strip=True)
         price = _number(value)
         if price and price > 0:
             return price
+
+    # Generic store-specific price classes; skip old/struck-through prices.
+    for node in card.select('[class*="price"], [data-qa*="price"], [data-testid*="price"]'):
+        classes = " ".join(node.get("class", [])).lower()
+        if any(marker in classes for marker in ("old", "was", "strike", "original", "list-price")):
+            continue
+        if node.find(["del", "s", "strike"]):
+            continue
+        value = node.get("content") or node.get("data-price-amount") or node.get_text(" ", strip=True)
+        price = _number(value)
+        if price and price > 0:
+            return price
+
+    # Last fallback: only accept a number explicitly paired with a currency.
     text = card.get_text(" ", strip=True)
     matches = re.findall(
         r"(?:SAR|ر\.?س\.?|ر.س|﷼)\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)"
