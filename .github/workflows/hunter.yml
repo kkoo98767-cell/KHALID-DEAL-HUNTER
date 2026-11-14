@@ -15,7 +15,7 @@ concurrency:
 jobs:
   hunt:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - name: Checkout repository
@@ -29,7 +29,15 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Validate Python syntax
+        run: python -m compileall -q .
+
+      - name: Run scraper regression tests
+        run: python -m unittest discover -s tests -v
 
       - name: Run KHALID DEAL HUNTER
         env:
@@ -45,6 +53,6 @@ jobs:
         run: |
           git config user.name "KHALID DEAL HUNTER"
           git config user.email "actions@github.com"
-          git add -A
-          git diff --cached --quiet || git commit -m "Update deal hunter data"
+          git add data/deals.db
+          git diff --cached --quiet || git commit -m "Update deal hunter price history"
           git push
