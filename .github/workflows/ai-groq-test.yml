@@ -1,0 +1,48 @@
+name: Groq Fallback Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-groq:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Test Groq fallback
+        env:
+          GEMINI_API_KEY: ""
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          python - <<'PY'
+          from ai_analyzer import analyze_deal
+
+          sample_deal = {
+              "title": "اختبار اتصال - سماعة بلوتوث",
+              "store": "Test Store",
+              "price": 100,
+              "baseline": 200,
+              "drop_percent": 50,
+              "rating": 4.5,
+              "reviews": 120,
+              "purchase_count_text": None,
+              "review_snippets": []
+          }
+
+          result = analyze_deal(sample_deal)
+          assert result.get("provider") == "Groq", "Fallback did not use Groq"
+          assert isinstance(result.get("worth_alerting"), bool), "Invalid AI response"
+          print("SUCCESS: Groq API key works and Groq fallback returned valid JSON.")
+          print("Provider:", result["provider"])
+          print("Valid decision:", result["worth_alerting"])
+          PY
