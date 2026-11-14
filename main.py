@@ -89,7 +89,7 @@ def main():
     print(f"Starting scan across {len(stores)} stores")
 
     for store in stores:
-        _, query = choose_search()
+        _, query = choose_search(store)
         print(f"Searching {store}: {query}")
 
         try:
