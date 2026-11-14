@@ -61,6 +61,18 @@ class ProductParserTests(unittest.TestCase):
         items = parse_jsonld_products(html, "https://www.extra.com/search", "Extra")
         self.assertTrue(any(x["title"] == "Mechanical Keyboard" and x["price"] == 399.0 for x in items))
 
+
+    def test_arabic_indic_price(self):
+        html = """
+        <script type="application/ld+json">
+        {"@type":"Product","name":"Arabic Price Charger",
+         "url":"/arabic-charger","offers":{"price":"١٬٢٩٩٫٠٠"}}
+        </script>
+        """
+        items = parse_jsonld_products(html, "https://shop.example/search", "Noon")
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0]["price"], 1299.0)
+
     def test_meta_product_fallback(self):
         html = """
         <html><head>
