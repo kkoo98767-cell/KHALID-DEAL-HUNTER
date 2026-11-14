@@ -85,6 +85,16 @@ class ProductParserTests(unittest.TestCase):
         items = parse_jsonld_products(html, "https://shop.example/search", "Jarir")
         self.assertTrue(any(x["title"] == "USB-C Dock" and x["price"] == 319.0 for x in items))
 
+    def test_generic_tile_with_arabic_price(self):
+        html = """
+        <article class="product-tile">
+          <a href="/p/usb-hub"><span class="product-title">USB Hub 8-in-1</span></a>
+          <span class="sale-price">٢٤٩٫٩٠ ر.س</span>
+        </article>
+        """
+        items = parse_jsonld_products(html, "https://shop.example/search", "Extra")
+        self.assertTrue(any(x["title"] == "USB Hub 8-in-1" and x["price"] == 249.9 for x in items))
+
     def test_meta_product_fallback(self):
         html = """
         <html><head>
