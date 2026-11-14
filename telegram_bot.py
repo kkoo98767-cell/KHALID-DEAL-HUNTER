@@ -118,15 +118,15 @@ def send_scan_summary(run_number=None, products_seen=0, new_products=0,
                       failures=0, empty_stores=0, archive_stats=None):
     """Send an end-of-run archive report so a successful workflow cannot hide an empty scan."""
     stats = archive_stats or {}
-    run_text = f"\\nرقم التشغيل: #{run_number}" if run_number else ""
+    run_text = f"\nرقم التشغيل: #{run_number}" if run_number else ""
     message = (
-        "📊 تقرير أرشيف KHALID DEAL HUNTER\\n\\n"
-        f"🧾 منتجات تم فحصها في هذا التشغيل: {products_seen}\\n"
-        f"🆕 منتجات جديدة أضيفت للأرشيف: {new_products}\\n"
-        f"📚 إجمالي المنتجات المؤرشفة: {stats.get('products', 0)}\\n"
-        f"📈 إجمالي قراءات الأسعار: {stats.get('price_observations', 0)}\\n"
-        f"🏬 متاجر لها منتجات مؤرشفة: {stats.get('stores_with_products', 0)} من 4\\n"
-        f"⚠️ متاجر بلا نتائج: {empty_stores}\\n"
+        "📊 تقرير أرشيف KHALID DEAL HUNTER\n\n"
+        f"🧾 منتجات تم فحصها في هذا التشغيل: {products_seen}\n"
+        f"🆕 منتجات جديدة أضيفت للأرشيف: {new_products}\n"
+        f"📚 إجمالي المنتجات المؤرشفة: {stats.get('products', 0)}\n"
+        f"📈 إجمالي قراءات الأسعار: {stats.get('price_observations', 0)}\n"
+        f"🏬 متاجر لها منتجات مؤرشفة: {stats.get('stores_with_products', 0)} من 4\n"
+        f"⚠️ متاجر بلا نتائج: {empty_stores}\n"
         f"❌ متاجر/عمليات واجهت أخطاء: {failures}"
         f"{run_text}"
     )
