@@ -1,0 +1,37 @@
+name: KHALID DEAL HUNTER - Telegram Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  telegram-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Telegram test message
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: ${{ secrets.TG_CHAT }}
+        run: |
+          python - <<'PY'
+          import os
+          import requests
+
+          token = os.getenv("TG_TOKEN", "")
+          chat_id = os.getenv("TG_CHAT", "")
+          if not token or not chat_id:
+              raise SystemExit("Missing TG_TOKEN or TG_CHAT repository secret.")
+
+          response = requests.post(
+              f"https://api.telegram.org/bot{token}/sendMessage",
+              data={
+                  "chat_id": chat_id,
+                  "text": "✅ اختبار اتصال KHALID DEAL HUNTER\nتيليجرام يستقبل الرسائل بنجاح.",
+              },
+              timeout=20,
+          )
+          print(f"Telegram HTTP status: {response.status_code}")
+          payload = response.json()
+          if not response.ok or not payload.get("ok"):
+              raise SystemExit(f"Telegram API rejected the message: {payload.get('description', 'unknown error')}")
+          print("Telegram test message sent successfully.")
+          PY
