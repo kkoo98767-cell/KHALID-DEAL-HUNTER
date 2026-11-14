@@ -1,0 +1,47 @@
+name: AI CONNECTION TEST
+
+on:
+  workflow_dispatch:
+    inputs:
+      ai_provider:
+        description: "اختر مزود الذكاء الاصطناعي الذي تريد اختباره"
+        required: true
+        type: choice
+        options:
+          - gemini
+          - groq
+
+permissions:
+  contents: read
+
+jobs:
+  test-ai:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Validate Python syntax
+        run: python -m compileall -q .
+
+      - name: Test selected AI provider and report to Telegram
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: ${{ secrets.TG_CHAT }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          AI_PROVIDER_TEST: ${{ inputs.ai_provider }}
+          PYTHONUNBUFFERED: "1"
+        run: python ai_connection_test.py
