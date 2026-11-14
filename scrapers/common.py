@@ -52,7 +52,7 @@ def _number(value):
     if isinstance(value, (int, float)):
         return float(value)
     text = str(value).strip().replace(",", "").replace("٬", "")
-    match = re.search(r"(?<!\\d)(\\d+(?:\\.\\d{1,2})?)(?!\\d)", text)
+    match = re.search(r"(?<!\d)(\d+(?:\.\d{1,2})?)(?!\d)", text)
     if not match:
         return None
     try:
@@ -106,7 +106,7 @@ def _normalise_product(title, price, url, store, base_url, rating=0, reviews=0):
         return None
     return {
         "store": store,
-        "title": re.sub(r"\\s+", " ", str(title)).strip()[:300],
+        "title": re.sub(r"\s+", " ", str(title)).strip()[:300],
         "url": absolute_url,
         "price": round(float(price), 2),
         "rating": float(rating or 0),
@@ -206,8 +206,8 @@ def _text_price(card):
             return price
     text = card.get_text(" ", strip=True)
     matches = re.findall(
-        r"(?:SAR|ر\\.?س\\.?|ر.س|﷼)\\s*([0-9][0-9,]*(?:\\.[0-9]{1,2})?)"
-        r"|([0-9][0-9,]*(?:\\.[0-9]{1,2})?)\\s*(?:SAR|ر\\.?س\\.?|﷼)",
+        r"(?:SAR|ر\.?س\.?|ر.س|﷼)\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)"
+        r"|([0-9][0-9,]*(?:\.[0-9]{1,2})?)\s*(?:SAR|ر\.?س\.?|﷼)",
         text,
         flags=re.I,
     )
@@ -302,15 +302,15 @@ def parse_jsonld_products(html, base_url, store, limit=20):
 
 def _extract_purchase_text(text):
     patterns = [
-        r"([\\d,]+\\+?\\s*(?:bought|purchased)\\s+(?:in the past month|last month|this month))",
-        r"((?:bought|purchased)\\s+by\\s+[\\d,]+\\+?\\s+(?:customers|people))",
-        r"(اشتراه\\s+[\\d,]+\\+?\\s+(?:شخص|عميل|مستخدم)\\s*(?:خلال الشهر الماضي)?)",
-        r"([\\d,]+\\+?\\s*(?:عملية شراء|مشتري)\\s*(?:خلال الشهر الماضي)?)",
+        r"([\d,]+\+?\s*(?:bought|purchased)\s+(?:in the past month|last month|this month))",
+        r"((?:bought|purchased)\s+by\s+[\d,]+\+?\s+(?:customers|people))",
+        r"(اشتراه\s+[\d,]+\+?\s+(?:شخص|عميل|مستخدم)\s*(?:خلال الشهر الماضي)?)",
+        r"([\d,]+\+?\s*(?:عملية شراء|مشتري)\s*(?:خلال الشهر الماضي)?)",
     ]
     for pattern in patterns:
         match = re.search(pattern, text, flags=re.I)
         if match:
-            return re.sub(r"\\s+", " ", match.group(1)).strip()[:120]
+            return re.sub(r"\s+", " ", match.group(1)).strip()[:120]
     return ""
 
 
@@ -349,7 +349,7 @@ def enrich_product_details(item, timeout=12):
     snippets = []
     for selector in REVIEW_SELECTORS:
         for node in soup.select(selector):
-            value = re.sub(r"\\s+", " ", node.get_text(" ", strip=True))
+            value = re.sub(r"\s+", " ", node.get_text(" ", strip=True))
             if len(value) >= 25 and value not in snippets:
                 snippets.append(value[:350])
             if len(snippets) >= 3:
