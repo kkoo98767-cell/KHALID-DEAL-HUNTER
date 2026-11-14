@@ -1,3 +1,4 @@
+import os
 import random
 import time
 import requests
@@ -118,8 +119,8 @@ def fetch_store(store, query):
 def main():
     # Do not report a green/healthy start unless the Telegram heartbeat was accepted.
     send_startup_status(
-        run_number=__import__("os").getenv("GITHUB_RUN_NUMBER"),
-        run_id=__import__("os").getenv("GITHUB_RUN_ID"),
+        run_number=os.getenv("GITHUB_RUN_NUMBER"),
+        run_id=os.getenv("GITHUB_RUN_ID"),
     )
     print("Telegram startup heartbeat sent successfully.")
 
