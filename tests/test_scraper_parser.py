@@ -29,6 +29,18 @@ class ProductParserTests(unittest.TestCase):
         items = parse_jsonld_products(html, "https://www.noon.com/search", "Noon")
         self.assertTrue(any(x["title"] == "Wireless Mouse" and x["price"] == 79.9 for x in items))
 
+
+    def test_embedded_nested_price_object(self):
+        html = """
+        <script type="application/json">
+        {"products":[
+          {"name":"Smart Plug","price":{"value":"59.50","currency":"SAR"},"url":"/products/plug"}
+        ]}
+        </script>
+        """
+        items = parse_jsonld_products(html, "https://shop.example/search", "Extra")
+        self.assertTrue(any(x["title"] == "Smart Plug" and x["price"] == 59.5 for x in items))
+
     def test_amazon_html_card(self):
         html = """
         <div data-component-type="s-search-result" data-asin="B000000001" data-index="1">
