@@ -6,7 +6,7 @@ from urllib.parse import quote_plus
 from config import STORES, REQUEST_TIMEOUT, MAX_PRODUCTS_PER_SEARCH
 from discovery import choose_search
 from scrapers.common import parse_jsonld_products, enrich_product_details
-from database import save_and_evaluate, connect
+from database import save_and_evaluate, connect, was_recently_alerted, record_alert
 from ai_analyzer import analyze_deal
 from telegram_bot import send_deal
 
@@ -102,6 +102,10 @@ def main():
                 if not deal:
                     continue
 
+                if was_recently_alerted(deal):
+                    print(f"Skipping repeat alert within cooldown: {deal['title']}")
+                    continue
+
                 # Optional product-page details; missing reviews/purchase signals
                 # never block an otherwise valid candidate.
                 deal = enrich_product_details(deal)
@@ -128,6 +132,7 @@ def main():
                 deal["ai_reason"] = ai_result.get("reason", "")
                 deal["ai_message"] = ai_result.get("telegram_message", "")
                 send_deal(deal)
+                record_alert(deal)
                 alerts += 1
 
         except Exception as exc:
