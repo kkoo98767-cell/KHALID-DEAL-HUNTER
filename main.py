@@ -4,7 +4,7 @@ from urllib.parse import quote_plus
 
 from config import STORES, REQUEST_TIMEOUT, MAX_PRODUCTS_PER_SEARCH
 from discovery import choose_search
-from scrapers.common import parse_jsonld_products
+from scrapers.common import parse_jsonld_products, enrich_product_details
 from database import save_and_evaluate, connect
 from ai_analyzer import analyze_deal
 from telegram_bot import send_deal
@@ -49,6 +49,10 @@ def main():
                 # the Python price-history rules (3 prior prices, 25% drop).
                 if not deal:
                     continue
+
+                # Optional product-page enrichment: review/rating/purchase details.
+                # Any block or layout change is non-fatal; the deal can still be evaluated.
+                deal = enrich_product_details(deal)
 
                 try:
                     ai_result = analyze_deal(deal)
