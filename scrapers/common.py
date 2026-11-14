@@ -252,6 +252,8 @@ def _products_from_cards(soup, base_url, store, limit):
         'div[class*="ProductCard"]', 'div[class*="product-tile"]',
         'div[class*="productTile"]', 'div[class*="ProductTile"]',
         'li[class*="item"]', 'article[class*="item"]',
+        'article[class*="tile"]', 'div[class*="tile"]',
+        'article[class*="Tile"]', 'div[class*="Tile"]',
     ]
     for selector in selectors:
         try:
