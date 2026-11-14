@@ -308,6 +308,11 @@ def _products_from_product_links(soup, base_url, store, limit):
             if parent.parent is None:
                 break
             parent = parent.parent
+            product_links = parent.select(
+                'a[href*="/p/"], a[href*="/dp/"], a[href*="/product/"], a[href*="/products/"]'
+            )
+            if len(product_links) > 4:
+                break
             price = _text_price(parent)
             if price:
                 rating, reviews = _rating_from_card(parent)
