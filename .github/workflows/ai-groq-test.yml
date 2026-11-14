@@ -22,6 +22,32 @@ jobs:
       - name: Check Python syntax
         run: python -m compileall -q .
 
+      - name: Test primary AI provider chain
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          python - <<'PY'
+          from ai_analyzer import analyze_deal
+
+          sample_deal = {
+              "title": "اختبار اتصال - سماعة بلوتوث",
+              "store": "Test Store",
+              "price": 100,
+              "baseline": 200,
+              "drop_percent": 50,
+              "rating": 4.5,
+              "reviews": 120,
+              "purchase_count_text": None,
+              "review_snippets": []
+          }
+
+          result = analyze_deal(sample_deal)
+          assert result.get("provider") in ("Gemini", "Groq")
+          print("SUCCESS: Provider chain returned a valid result.")
+          print("Provider selected:", result["provider"])
+          PY
+
       - name: Test Groq fallback
         env:
           GEMINI_API_KEY: ""
