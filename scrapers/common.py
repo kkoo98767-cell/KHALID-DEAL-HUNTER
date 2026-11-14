@@ -52,7 +52,10 @@ def _number(value):
                 if parsed is not None:
                     return parsed
         return None
-    text = str(value).strip().replace("٬", "").replace("٫", ".")
+    text = str(value).strip()
+    # Normalise Arabic-Indic and Persian digits and separators.
+    digit_map = str.maketrans("٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹", "01234567890123456789")
+    text = text.translate(digit_map).replace("٬", ",").replace("٫", ".")
     text = re.sub(r"(?<=\d)[,](?=\d{3}(?:\D|$))", "", text)
     match = re.search(r"(?<!\d)(\d+(?:\.\d{1,2})?)(?!\d)", text)
     try:
