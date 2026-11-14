@@ -4,16 +4,6 @@ on:
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
-    inputs:
-      ai_provider:
-        description: "اختبار مزود الذكاء الاصطناعي (اتركه بدون اختبار للتشغيل الطبيعي)"
-        required: true
-        type: choice
-        default: "none"
-        options:
-          - "none"
-          - "gemini"
-          - "groq"
 
 permissions:
   contents: write
@@ -55,12 +45,11 @@ jobs:
           TG_CHAT: ${{ secrets.TG_CHAT }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          AI_PROVIDER_TEST: ${{ inputs.ai_provider || 'none' }}
           PYTHONUNBUFFERED: "1"
         run: python main.py
 
       - name: Save database changes
-        if: always() && inputs.ai_provider != 'gemini' && inputs.ai_provider != 'groq'
+        if: always()
         run: |
           git config user.name "KHALID DEAL HUNTER"
           git config user.email "actions@github.com"
