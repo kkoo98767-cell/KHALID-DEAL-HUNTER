@@ -45,6 +45,13 @@ def _number(value):
         return None
     if isinstance(value, (int, float)):
         return float(value)
+    if isinstance(value, dict):
+        for key in ("value", "amount", "price", "currentPrice", "salePrice"):
+            if key in value:
+                parsed = _number(value[key])
+                if parsed is not None:
+                    return parsed
+        return None
     text = str(value).strip().replace("٬", "").replace("٫", ".")
     text = re.sub(r"(?<=\d)[,](?=\d{3}(?:\D|$))", "", text)
     match = re.search(r"(?<!\d)(\d+(?:\.\d{1,2})?)(?!\d)", text)
