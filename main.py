@@ -8,8 +8,8 @@ from config import STORES, REQUEST_TIMEOUT, MAX_PRODUCTS_PER_SEARCH
 from discovery import choose_search
 from scrapers.common import parse_jsonld_products, enrich_product_details
 from database import save_and_evaluate, connect, was_recently_alerted, record_alert
-from ai_analyzer import analyze_deal
-from telegram_bot import send_deal, send_startup_status
+from ai_analyzer import analyze_deal, test_ai_provider
+from telegram_bot import send_deal, send_startup_status, send_ai_test_status
 
 REQUEST_HEADERS = [
     {
@@ -100,8 +100,6 @@ def fetch_store(store, query):
                         )
                         if items:
                             return items
-                        # A 200 response with no products may be a JS shell, changed layout,
-                        # or anti-bot page. Try another URL/profile rather than declaring success.
                         break
                     except Exception as exc:
                         last_error = exc
@@ -117,12 +115,40 @@ def fetch_store(store, query):
 
 
 def main():
-    # Do not report a green/healthy start unless the Telegram heartbeat was accepted.
+    provider_test = os.getenv("AI_PROVIDER_TEST", "none").strip().lower()
+    is_ai_test = provider_test in {"gemini", "groq"}
+
     send_startup_status(
         run_number=os.getenv("GITHUB_RUN_NUMBER"),
         run_id=os.getenv("GITHUB_RUN_ID"),
+        mode="ai_test" if is_ai_test else "hunt",
     )
     print("Telegram startup heartbeat sent successfully.")
+
+    if is_ai_test:
+        provider_name = "Gemini" if provider_test == "gemini" else "Groq"
+        try:
+            result = test_ai_provider(provider_test)
+            print(f"AI PROVIDER TEST PASSED: {result}")
+            send_ai_test_status(
+                result["provider"], True,
+                f"النموذج: {result['model']} — {result['reason']}",
+                os.getenv("GITHUB_RUN_NUMBER"),
+            )
+            print(f"Telegram AI test success message sent for {provider_name}.")
+            return
+        except Exception as exc:
+            error_detail = f"{type(exc).__name__}: {exc}"
+            print(f"AI PROVIDER TEST FAILED: {error_detail}")
+            try:
+                send_ai_test_status(
+                    provider_name, False, error_detail,
+                    os.getenv("GITHUB_RUN_NUMBER"),
+                )
+                print("Telegram AI test failure message sent.")
+            except Exception as telegram_exc:
+                print(f"Could not send AI test failure to Telegram: {type(telegram_exc).__name__}: {telegram_exc}")
+            raise
 
     db = connect()
     db.close()
