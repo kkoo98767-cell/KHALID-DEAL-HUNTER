@@ -50,13 +50,17 @@ def fetch_store(store, query):
                         f"Transient HTTP {response.status_code}", response=response
                     )
                 response.raise_for_status()
+                # Clear earlier transient errors once a valid HTTP response arrives.
+                last_error = None
 
                 items = parse_jsonld_products(
                     response.text, response.url, store, limit=MAX_PRODUCTS_PER_SEARCH
                 )
                 print(
                     f"{store}: HTTP {response.status_code}, "
-                    f"{len(response.content)} bytes, parsed {len(items)} products "
+                    f"{len(response.content)} bytes, "
+                    f"JSON-LD blocks={response.text.lower().count('application/ld+json')}, "
+                    f"parsed {len(items)} products "
                     f"(profile {profile_number}, attempt {attempt})"
                 )
                 if items:
