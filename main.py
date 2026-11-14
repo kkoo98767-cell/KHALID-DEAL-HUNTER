@@ -74,6 +74,7 @@ def fetch_store(store, query):
                                 response=response,
                             )
                         response.raise_for_status()
+                        last_error = None
                         html = response.text or ""
                         if not html:
                             print(f"{store}: empty response body (URL {url_index}, profile {profile_number})")
