@@ -26,6 +26,21 @@ def send_deal(item):
     rating_text = f"{rating:g}/5" if rating else "غير متوفر"
     reviews_text = f"{reviews:,}" if reviews else "غير متوفر"
 
+    optional_details = []
+    purchase_text = item.get("purchase_count_text", "").strip()
+    if purchase_text:
+        optional_details.append(f"🛒 مؤشر الشراء الظاهر بالمتجر: {purchase_text}")
+
+    snippets = item.get("review_snippets", []) or []
+    if snippets:
+        optional_details.append("💬 مقتطفات من آراء العملاء:")
+        for snippet in snippets[:3]:
+            optional_details.append(f"• {snippet[:350]}")
+
+    optional_section = ""
+    if optional_details:
+        optional_section = "\n\n" + "\n".join(optional_details)
+
     text = (
         f"{opening}\n\n"
         f"🛍️ {item['title']}\n"
@@ -34,7 +49,8 @@ def send_deal(item):
         f"📊 متوسط الأسعار السابقة: {item['baseline']:.2f} ريال\n"
         f"📉 الانخفاض عن المتوسط: {item['drop_percent']}%\n"
         f"⭐ تقييم المنتج: {rating_text}\n"
-        f"📝 عدد المراجعات: {reviews_text}\n\n"
+        f"📝 عدد المراجعات: {reviews_text}"
+        f"{optional_section}\n\n"
         f"🤖 رأي KHALID DEAL HUNTER:\n{ai_message}\n\n"
         f"🔗 رابط المنتج:\n{item['url']}\n\n"
         "تنبيه: المقارنة مبنية على سجل الأسعار الذي جمعه البوت، "
