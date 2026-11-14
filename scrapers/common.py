@@ -247,7 +247,11 @@ def _products_from_cards(soup, base_url, store, limit):
     found, seen = [], set()
     selectors = CARD_SELECTORS.get(store, []) + [
         '[data-product-id]', '[data-product-sku]', '[itemtype*="Product"]',
-        'li[class*="product"]',
+        'li[class*="product"]', 'article[class*="product"]',
+        'div[class*="product-card"]', 'div[class*="productCard"]',
+        'div[class*="ProductCard"]', 'div[class*="product-tile"]',
+        'div[class*="productTile"]', 'div[class*="ProductTile"]',
+        'li[class*="item"]', 'article[class*="item"]',
     ]
     for selector in selectors:
         try:
@@ -255,6 +259,9 @@ def _products_from_cards(soup, base_url, store, limit):
         except Exception:
             continue
         for card in cards:
+            # Skip page-level wrappers; they can contain unrelated prices and links.
+            if len(card.select("a[href]")) > 8 or len(card.get_text(" ", strip=True)) > 5000:
+                continue
             title_node = card.select_one(
                 '[itemprop="name"], h2 a, h3 a, [class*="title"] a, '
                 '[class*="name"] a, [data-qa*="title"], a[href]'
