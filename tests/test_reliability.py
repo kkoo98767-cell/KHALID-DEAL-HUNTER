@@ -151,6 +151,55 @@ class ReliabilityTests(unittest.TestCase):
         a=choose_search("Jarir")[1];b=choose_search("Jarir")[1]
         self.assertNotEqual(a,b)
 
+    def test_partial_scan_keeps_other_store_prices(self):
+        def fetch(store,query):
+            if store == "Noon":raise requests.Timeout()
+            return [dict(title="Valid Product",store=store,url="https://"+store.lower()+".example/p/one",price=100)]
+        fallback=dict(provider="Fallback",worth_alerting=True,reason="تعذر التحليل",telegram_message="التقييم غير متاح")
+        with patch.object(main,"fetch_store",side_effect=fetch),patch.object(main,"refresh_tracked",return_value=[]),patch.object(main,"analyze_deal",return_value=fallback),patch.object(main,"send_startup_status",side_effect=RuntimeError),patch.object(main,"send_scan_summary") as summary,patch("dashboard.export"),patch.object(main,"Path"):
+            with self.assertRaises(RuntimeError):main.main()
+            self.assertEqual(database.get_archive_stats()["products"],3)
+            self.assertEqual(summary.call_args.kwargs["products_seen"],3)
+            self.assertEqual(summary.call_args.kwargs["failures"],1)
+
+    def test_stale_history_is_not_verified(self):
+        stale=[(200,(datetime.now(timezone.utc)-timedelta(days=30+i)).strftime("%Y-%m-%d")) for i in range(10)]
+        self.assertEqual(database.historical_assessment(stale,100)["status"],"INSUFFICIENT_HISTORY")
+
+    def test_same_product_different_names_do_not_merge(self):
+        first=self.item();second=self.item();second["url"]="https://www.noon.com/saudi-en/test/N456/p/"
+        database.save_and_evaluate(first);database.save_and_evaluate(second)
+        self.assertEqual(database.get_archive_stats()["products"],2)
+
+    def test_missing_metadata_does_not_erase_brand(self):
+        item=self.item();item["brand"]="Example"
+        database.save_and_evaluate(item);database.save_and_evaluate(self.item())
+        db=database.connect();self.assertEqual(db.execute("SELECT brand FROM products").fetchone()[0],"Example");db.close()
+
+    def test_negative_and_infinite_numeric_parsing(self):
+        self.assertIsNone(_number("-10 SAR"));self.assertIsNone(_number(float("inf")))
+
+    def test_price_text_is_not_product_identity(self):
+        from scrapers.common import reliable_title
+        for title in ["SAR 99.99", "الشراء لمرة واحدة", "الخيارات: 3 مقاسات", "‏19.02 ريال ريال ‎ 19 . ‎ 02 ‏"]:
+            self.assertFalse(reliable_title(title))
+
+    def test_scan_id_prevents_duplicate_observation(self):
+        first=self.item();first["_scan_id"]="scan-one"
+        second=self.item(90);second["_scan_id"]="scan-one"
+        database.save_and_evaluate(first);database.save_and_evaluate(second)
+        self.assertFalse(second["_price_recorded"])
+        self.assertEqual(database.get_archive_stats()["price_observations"],1)
+        second["_scan_id"]="scan-two";database.save_and_evaluate(second)
+        self.assertEqual(database.get_archive_stats()["price_observations"],2)
+
+    def test_structured_metadata_is_preserved(self):
+        first=self.item();first["description"]="Source description";first["gtin"]="1234567890123"
+        database.save_and_evaluate(first);database.save_and_evaluate(self.item())
+        db=database.connect();metadata,gtin=db.execute("SELECT metadata,gtin FROM products").fetchone();db.close()
+        self.assertEqual(json.loads(metadata)["description"],"Source description")
+        self.assertEqual(gtin,"1234567890123")
+
     def test_timeout_bounded(self):
         with patch.object(requests.Session,"get",side_effect=requests.Timeout) as get,patch.object(main.time,"sleep"):
             with self.assertRaises(requests.Timeout):main.fetch_store("Noon","mouse")

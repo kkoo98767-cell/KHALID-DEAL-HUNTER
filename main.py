@@ -3,6 +3,7 @@ import random
 import time
 import requests
 import json
+import uuid
 from pathlib import Path
 from urllib.parse import quote_plus, urljoin, urlparse
 from bs4 import BeautifulSoup
@@ -173,6 +174,7 @@ def main():
     db = connect()
     db.close()
 
+    scan_id = os.getenv("GITHUB_RUN_ID") or uuid.uuid4().hex
     stores = list(STORES.keys())
     random.shuffle(stores)
 
@@ -201,6 +203,7 @@ def main():
             for item in items:
                 total += 1
                 try:
+                    item["_scan_id"] = scan_id
                     deal = save_and_evaluate(item)
                 except ValueError as exc:
                     print(f"Invalid product skipped: {exc}")

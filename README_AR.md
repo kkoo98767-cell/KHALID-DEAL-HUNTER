@@ -19,7 +19,7 @@ python api.py
 
 GitHub Secrets: `TG_TOKEN`, `TG_CHAT`, `GEMINI_API_KEY`, `GROQ_API_KEY`. المفاتيح غير متاحة للقراءة من Actions. لم تُضف خدمات مدفوعة؛ استخدام مفاتيح ذات خطة مدفوعة يخضع لحسابك لدى المزود.
 
-متغيرات البيئة: `DB_PATH` (افتراضياً data/deals.db)، `GEMINI_MODEL` (gemini-3.8-flash)، `GROQ_MODEL` (openai/gpt-oss-20b)، `MIN_DROP_PERCENT` (25)، `MIN_HISTORY_POINTS` (7 أيام رصد مستقلة)، `MIN_HISTORY_DAYS` (امتداد 7 أيام)، `MAX_AI_REQUESTS` (8 طلبات لكل تشغيل)، `NOTIFY_NEW_PRODUCTS` (false لتجنب إغراق القناة).
+متغيرات البيئة: `DB_PATH` (افتراضياً data/deals.db)، `GEMINI_MODEL` (gemini-3.5-flash-lite)، `GROQ_MODEL` (openai/gpt-oss-20b)، `MIN_DROP_PERCENT` (25)، `MIN_HISTORY_POINTS` (7 أيام رصد مستقلة)، `MIN_HISTORY_DAYS` (امتداد 7 أيام)، `MAX_AI_REQUESTS` (8 طلبات لكل تشغيل)، `NOTIFY_NEW_PRODUCTS` (false لتجنب إغراق القناة).
 
 ## التحقق التاريخي
 

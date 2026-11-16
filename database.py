@@ -4,6 +4,8 @@ from statistics import median
 from datetime import datetime, timezone
 import math
 import json
+import os
+import unicodedata
 from scrapers.common import canonical_url
 
 from config import DB_PATH, MIN_HISTORY_POINTS, MIN_DROP_PERCENT, MIN_HISTORY_DAYS
@@ -41,9 +43,16 @@ def connect():
     """)
     db.execute("CREATE INDEX IF NOT EXISTS idx_price_history_product_time ON price_history(product_key, id DESC)")
     columns = {r[1] for r in db.execute("PRAGMA table_info(products)")}
-    for name in ("product_id", "brand", "category", "currency", "evaluation"):
+    for name in ("product_id", "brand", "category", "currency", "evaluation", "gtin", "normalized_name", "metadata"):
         if name not in columns:
             db.execute(f"ALTER TABLE products ADD COLUMN {name} TEXT")
+    history_columns = {r[1] for r in db.execute("PRAGMA table_info(price_history)")}
+    if "scan_id" not in history_columns:
+        db.execute("ALTER TABLE price_history ADD COLUMN scan_id TEXT")
+    if "store_original_price" not in history_columns:
+        db.execute("ALTER TABLE price_history ADD COLUMN store_original_price REAL")
+    db.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_history_scan ON price_history(product_key,scan_id) WHERE scan_id IS NOT NULL")
+    db.execute("CREATE INDEX IF NOT EXISTS idx_product_gtin ON products(gtin)")
     db.execute("CREATE TABLE IF NOT EXISTS alert_history (id INTEGER PRIMARY KEY, product_key TEXT, price REAL, status TEXT, sent_at TEXT DEFAULT CURRENT_TIMESTAMP)")
     db.execute("CREATE INDEX IF NOT EXISTS idx_alert_history ON alert_history(product_key,id DESC)")
     db.execute("CREATE TABLE IF NOT EXISTS ai_cache (cache_key TEXT PRIMARY KEY, result TEXT NOT NULL, created_at TEXT DEFAULT CURRENT_TIMESTAMP)")
@@ -52,7 +61,8 @@ def connect():
     if db.execute("PRAGMA user_version").fetchone()[0] < 3:
         for key,url in db.execute("SELECT product_key,url FROM products").fetchall():
             db.execute("INSERT OR IGNORE INTO product_aliases VALUES(?,?)", (canonical_url(url),key))
-        db.execute("PRAGMA user_version=3")
+    if db.execute("PRAGMA user_version").fetchone()[0] < 4:
+        db.execute("PRAGMA user_version=4")
     db.commit()
     return db
 
@@ -117,11 +127,20 @@ def save_and_evaluate(item, minimum_sample_minutes=60):
     previous = [r[0] for r in observations]
 
     if should_record:
-        db.execute(
-            "INSERT INTO price_history(product_key,price) VALUES(?,?)",
-            (key, item["price"])
+        cursor = db.execute(
+            "INSERT OR IGNORE INTO price_history(product_key,price,scan_id,store_original_price) VALUES(?,?,?,?)",
+            (key, item["price"],item.get("_scan_id"),item.get("original_price"))
         )
-    for field in ("product_id", "brand", "category", "currency"):
+        should_record = cursor.rowcount > 0
+    item["normalized_name"] = " ".join(unicodedata.normalize("NFKC",item["title"]).casefold().split())
+    stored = db.execute("SELECT metadata FROM products WHERE product_key=?", (key,)).fetchone()
+    try:
+        metadata = json.loads(stored[0]) if stored and stored[0] else {}
+    except ValueError:
+        metadata = {}
+    metadata.update({k:item[k] for k in ("rating","reviews","description","specifications","data_sources") if item.get(k)})
+    item["metadata"] = json.dumps(metadata,ensure_ascii=False)
+    for field in ("product_id", "brand", "category", "currency", "gtin", "normalized_name", "metadata"):
         if item.get(field):
             db.execute(f"UPDATE products SET {field}=? WHERE product_key=?", (str(item[field]), key))
     db.execute("INSERT OR IGNORE INTO product_aliases VALUES(?,?)", (canonical_url(item["url"]),key))

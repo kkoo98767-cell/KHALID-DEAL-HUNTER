@@ -11,7 +11,7 @@ from config import GEMINI_MODEL, REQUEST_TIMEOUT
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
-GEMINI_REQUEST_TIMEOUT = 60
+GEMINI_REQUEST_TIMEOUT = int(os.getenv("AI_TIMEOUT", "20"))
 AI_TEST_MAX_ATTEMPTS = 3
 AI_TEST_RETRY_DELAY = 3
 _PROVIDER_COOLDOWN = {}
@@ -62,6 +62,11 @@ def _validate_result(raw, provider):
     return {
         "worth_alerting": result["worth_alerting"],
         "reason": reason[:240],
+        "assessment": {
+            "overall": telegram_message[:900],
+            "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+            "recommendation": reason[:240],
+        },
         "telegram_message": telegram_message[:900],
         "provider": provider,
     }

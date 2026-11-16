@@ -3,7 +3,7 @@ import os
 
 TG_TOKEN = os.getenv("TG_TOKEN", "")
 TG_CHAT = os.getenv("TG_CHAT", "")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
 DB_PATH = os.getenv("DB_PATH", "data/deals.db")
 
 # All four stores are scanned on every workflow run; searches rotate in four-run blocks.

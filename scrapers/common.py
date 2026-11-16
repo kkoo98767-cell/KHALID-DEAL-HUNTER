@@ -199,6 +199,11 @@ def _products_from_json(soup, base_url, store, limit):
                         val = val.get("name")
                     if isinstance(val, (str,int)):
                         item[field] = str(val)
+                if isinstance(obj.get("description"),str):
+                    item["description"] = obj["description"][:2000]
+                specs = obj.get("additionalProperty")
+                if isinstance(specs,list):
+                    item["specifications"] = [{"name":str(v.get("name",""))[:100],"value":str(v.get("value",""))[:200]} for v in specs[:20] if isinstance(v,dict)]
                 original = _number(obj.get("oldPrice") or obj.get("originalPrice") or obj.get("listPrice"))
                 if original and original > item["price"]:
                     item["original_price"] = original
