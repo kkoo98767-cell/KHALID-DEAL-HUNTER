@@ -208,6 +208,13 @@ class ReliabilityTests(unittest.TestCase):
         self.assertEqual(item["status"],"POTENTIAL_DEAL")
         self.assertIsNone(item["baseline"])
 
+    def test_many_links_to_same_product_are_one_identity(self):
+        links=''.join('<a href="/dp/B000000001?ref='+str(i)+'">Details</a>' for i in range(12))
+        html='<div data-component-type="s-search-result"><a href="/dp/B000000001"><h2>Wireless Headphones</h2></a>'+links+'<span class="a-price"><span class="a-offscreen">SAR 100</span></span></div>'
+        items=parse_jsonld_products(html,"https://www.amazon.sa/s","Amazon.sa")
+        self.assertEqual(len(items),1)
+        self.assertEqual(items[0]["title"],"Wireless Headphones")
+
     def test_timeout_bounded(self):
         with patch.object(requests.Session,"get",side_effect=requests.Timeout) as get,patch.object(main.time,"sleep"):
             with self.assertRaises(requests.Timeout):main.fetch_store("Noon","mouse")

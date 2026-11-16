@@ -279,7 +279,8 @@ def _products_from_cards(soup, base_url, store, limit):
             continue
         for card in cards:
             # Skip page-level wrappers; they can contain unrelated prices and links.
-            if len(card.select("a[href]")) > 8 or len(card.get_text(" ", strip=True)) > 5000:
+            identities = {canonical_url(urljoin(base_url,a["href"])) for a in card.select("a[href]") if re.search(r"/dp/|/p/|/product/",a["href"])}
+            if len(identities) > 1 or len(card.get_text(" ", strip=True)) > 5000:
                 continue
             title_node = card.select_one(
                 '[itemprop="name"], h2 a, a h2, h2, h3 a, [class*="title"] a, '
@@ -359,7 +360,7 @@ def _products_from_product_links(soup, base_url, store, limit):
             product_links = parent.select(
                 'a[href*="/p/"], a[href*="/dp/"], a[href*="/product/"], a[href*="/products/"]'
             )
-            if len(product_links) > 4:
+            if len({canonical_url(urljoin(base_url,a["href"])) for a in product_links}) > 1:
                 break
             price = _text_price(parent)
             if price and len({canonical_url(urljoin(base_url,a.get("href"))) for a in product_links}) <= 1:
