@@ -200,6 +200,14 @@ class ReliabilityTests(unittest.TestCase):
         self.assertEqual(json.loads(metadata)["description"],"Source description")
         self.assertEqual(gtin,"1234567890123")
 
+    def test_advertised_price_is_only_potential_signal(self):
+        html='<div data-component-type="s-search-result"><h2><a href="/dp/B000000001">Wireless Mouse</a></h2><span class="a-price"><span class="a-offscreen">SAR 100</span></span><span class="a-text-price"><span class="a-offscreen">SAR 200</span></span></div>'
+        item=parse_jsonld_products(html,"https://www.amazon.sa/s","Amazon.sa")[0]
+        self.assertEqual(item["original_price"],200)
+        database.save_and_evaluate(item)
+        self.assertEqual(item["status"],"POTENTIAL_DEAL")
+        self.assertIsNone(item["baseline"])
+
     def test_timeout_bounded(self):
         with patch.object(requests.Session,"get",side_effect=requests.Timeout) as get,patch.object(main.time,"sleep"):
             with self.assertRaises(requests.Timeout):main.fetch_store("Noon","mouse")

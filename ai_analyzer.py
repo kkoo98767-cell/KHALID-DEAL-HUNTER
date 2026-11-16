@@ -220,4 +220,6 @@ def analyze_deal(item):
             detail = str(exc) if isinstance(exc, ValueError) else (f"HTTP {exc.response.status_code}" if isinstance(exc, requests.HTTPError) and exc.response is not None else type(exc).__name__)
             print(f"{provider} failed; trying next provider: {detail}")
 
+    if item.get("status") == "SCAN_SUMMARY":
+        return {"provider":"Fallback", "worth_alerting":False, "reason":"تعذر التعليق الآلي", "telegram_message":"الملخص يعرض النتائج المسجلة فعلياً؛ تعذر إنشاء تعليق آلي لهذا الفحص."}
     return {"provider": "Fallback", "worth_alerting": True, "reason": "تعذر التحليل الآلي", "telegram_message": "التقييم الآلي غير متاح حالياً. معلومات الجودة والمواصفات غير كافية للتوصية بالشراء؛ راجع تفاصيل المتجر."}

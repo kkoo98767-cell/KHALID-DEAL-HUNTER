@@ -302,6 +302,12 @@ def _products_from_cards(soup, base_url, store, limit):
             rating, reviews = _rating_from_card(card)
             item = _normalise_product(title, price, href, store, base_url, rating, reviews, "html_card")
             if item:
+                original = _original_price(card)
+                if original and original > item["price"]:
+                    item["original_price"] = original
+                identifier = card.get("data-asin") or card.get("data-product-id") or card.get("data-product-sku")
+                if identifier:
+                    item["product_id"] = identifier
                 found.append(item)
                 if len(found) >= limit:
                     return found
@@ -363,6 +369,9 @@ def _products_from_product_links(soup, base_url, store, limit):
                     title = heading.get_text(" ",strip=True)
                 item = _normalise_product(title, price, href, store, base_url, rating, reviews, "product_link_ancestor")
                 if item:
+                    original = _original_price(parent)
+                    if original and original > item["price"]:
+                        item["original_price"] = original
                     key = item["url"].split("?")[0].rstrip("/")
                     if key not in seen:
                         seen.add(key)
@@ -509,3 +518,8 @@ def reliable_title(title):
         return False
     stripped = re.sub(r"[\d\W_]+|ريال|SAR|List|Price|Was|سعر|القائمه", "", str(title),flags=re.I)
     return len(stripped) >= 3
+
+
+def _original_price(card):
+    node = card.select_one('.a-text-price .a-offscreen, del, s, [class*="old-price"], [class*="original-price"], [class*="was-price"]')
+    return _number(node.get("content") or node.get_text(" ",strip=True)) if node else None
