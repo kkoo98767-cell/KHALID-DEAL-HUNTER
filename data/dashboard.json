@@ -1,49 +1,606 @@
 {
-  "generated_at": "2026-11-16T05:25:35.437460+00:00",
+  "generated_at": "2026-11-16T06:21:33.252222+00:00",
   "stats": {
-    "products": 100,
-    "observations": 101,
+    "products": 120,
+    "observations": 121,
     "verified": 0,
     "sufficient": 0
   },
   "scan": {
-    "scan_number": "25",
+    "scan_number": "26",
     "stores": {
       "Amazon.sa": {
-        "products": 0,
-        "error": "HTTPError"
-      },
-      "Extra": {
-        "products": 0,
+        "products": 20,
         "error": null
       },
       "Noon": {
         "products": 0,
         "error": "ReadTimeout"
       },
+      "Extra": {
+        "products": 0,
+        "error": null
+      },
       "Jarir": {
         "products": 0,
         "error": null
       }
     },
-    "products": 0,
-    "new_products": 0,
-    "potential_deals": 0,
+    "products": 20,
+    "new_products": 20,
+    "potential_deals": 2,
     "verified_deals": 0,
     "sufficient_history": 0,
-    "store_errors": 2,
+    "store_errors": 1,
     "empty_stores": 2,
     "telegram_errors": 0,
     "ai_providers": [
-      "Groq"
+      "Fallback",
+      "Gemini"
     ],
     "archive": {
-      "products": 100,
-      "price_observations": 101,
+      "products": 120,
+      "price_observations": 121,
       "stores_with_products": 1
     }
   },
   "products": [
+    {
+      "id": "https://www.amazon.sa/dp/B0H41YGNK8?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "LG 65QNED80B6 65 inch 4K mini LED Dynamic QNED Color Pro Motion Booster up to 120hz α7 Processor 4K Gen9 4K Super Upscaling Gaming Mode Magic Remote webOS26 [2026]",
+      "url": "https://www.amazon.sa/dp/B0H41YGNK8?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 2099.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:51",
+      "history": [
+        {
+          "price": 2099.0,
+          "date": "2026-11-16 06:20:51"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0FT34RW3M?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "هايسينس تلفزيون ذكي 55 بوصة 4K UHD 55E6Q، دولبي فيجن، محسن الذكاء الاصطناعي، حركة ام اي ام سي سلسة، وضع اللعب، تحكم صوتي، يوتيوب، نتفليكس، شاهد، تحديثات 8 سنوات لنظام التشغيل فيدا",
+      "url": "https://www.amazon.sa/dp/B0FT34RW3M?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 1399.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:51",
+      "history": [
+        {
+          "price": 1399.0,
+          "date": "2026-11-16 06:20:51"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0F1W5MSBZ?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "هايسينس تلفزيون ذكي 65 بوصة 4K 144Hz QLED 65E8Q، لون كوانتوم دوت، صورة ذكاء اصطناعي، دولبي فيجن، دولبي اتموس، مشاركة التلفاز، التحكم الصوتي، وضع صانع الافلام، يوتيوب، نتفليكس، تحديثات نظام تشغيل فيدا",
+      "url": "https://www.amazon.sa/dp/B0F1W5MSBZ?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 1799.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:50",
+      "history": [
+        {
+          "price": 1799.0,
+          "date": "2026-11-16 06:20:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0H6ZXV476?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "شاشة تلفزيون جوجل ذكية 4K QLED 65 بوصة للألعاب بتحديث 120Hz وتقنية دولبي وMEMC/VRR/ALLM وRAM سعة 2GB وذاكرة ROM سعة 32GB وكروم كاست وHDMI 2.1 بتصميم أنيق بدون حواف موديل 65H5GUX من هاير، أسود",
+      "url": "https://www.amazon.sa/dp/B0H6ZXV476?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 1699.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:50",
+      "history": [
+        {
+          "price": 1699.0,
+          "date": "2026-11-16 06:20:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0GX6JQN6W?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "تلفزيون 65T61D ذكي موديل 2026 مقاس 65 بوصة بدقة 4K QLED وكريستال كوانتوم ملون HDR 10+ لتلفزيون جوجل للألعاب ودولبي فيجن اتموس ودي تي اس فيرتشوال:اكس وام اي ام سي وجيم ماستر بتصميم رفيع من تي سي ال",
+      "url": "https://www.amazon.sa/dp/B0GX6JQN6W?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 2199.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:50",
+      "history": [
+        {
+          "price": 2199.0,
+          "date": "2026-11-16 06:20:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0GGR5SYQC?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "تلفزيون QLED مقاس 65 بوصة ودقة 4K من سلسلة QEF1 ومعالج ذكاء صناعي Q4 ولون 100% مع كوانتوم دوت بحماية نوكس ومحتوى مجاني، تلفزيون ذكي من سامسونج (نسخة المملكة العربية السعودية - 2025)، QA65QEF1AUXSA",
+      "url": "https://www.amazon.sa/dp/B0GGR5SYQC?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 2216.08,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:50",
+      "history": [
+        {
+          "price": 2216.08,
+          "date": "2026-11-16 06:20:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0GS29FHVB?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "تلفزيون كريستال UHD مقاس 55 بوصة، U8000H، دقة 4K ومعالج كريستال، حزمة صوت ديناميكية، محتوى مجاني لا نهاية له، مؤمن بواسطة نوكس، تلفزيون ذكي، UA55U8000HUXSA (2026 - نسخة المملكة العربية السعودية) من",
+      "url": "https://www.amazon.sa/dp/B0GS29FHVB?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 1399.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:50",
+      "history": [
+        {
+          "price": 1399.0,
+          "date": "2026-11-16 06:20:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0GVFKLW83?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "تلفزيون LED ذكي مقاس 50 بوصة بدقة UHD 4K من اوسكار، يعمل بنظام تشغيل ال جي ويب او اس، تصميم بدون إطار مع دعم HDR10 وواي فاي وبلوتوث والتحكم الصوتي - OS50PW4KM",
+      "url": "https://www.amazon.sa/dp/B0GVFKLW83?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 958.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:50",
+      "history": [
+        {
+          "price": 958.0,
+          "date": "2026-11-16 06:20:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0GLQLXKNW?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "XIAOMI TV S Mini LED 55\" 2026, QLED Mini LED 4K UHD, Smart TV with Google TV, HDR10+, Triple Tuner, DVB T2, 60Hz with 120Hz Game Boost Mode, MEMC, Dolby Audio, Airplay 2",
+      "url": "https://www.amazon.sa/dp/B0GLQLXKNW?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 1699.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:50",
+      "history": [
+        {
+          "price": 1699.0,
+          "date": "2026-11-16 06:20:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0H1M7JS8L?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "تلفزيون تي سي إل 55 بوصة ذكي 4K، إضاءة ميني إل إي دي مع كيو دي ألوان كريستال إتش دي آر 10 بلس، ألعاب جوجل و144 هرتز، تقنية دولبي فيجن ودولبي أتموس ودي تي إس فيرتشوال إكس من تي سي ال، جيم ماستر 2026",
+      "url": "https://www.amazon.sa/dp/B0H1M7JS8L?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 2599.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:50",
+      "history": [
+        {
+          "price": 2599.0,
+          "date": "2026-11-16 06:20:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0FLCXHPQF?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "تلفزيون سوني برافيا 2 II 43 بوصة 4K UHD HDR LED 60 هرتز، تلفزيون جوجل الذكي (موديل 2025) مع دولبي اتموس، تحكم صوتي وتشغيل بلاي ستيشن عن بعد - K43S20M2",
+      "url": "https://www.amazon.sa/dp/B0FLCXHPQF?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 1692.36,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:50",
+      "history": [
+        {
+          "price": 1692.36,
+          "date": "2026-11-16 06:20:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0GQDXNH3L?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "هايسينس -تلفزيون ذكي صغير LED 4K 55 بوصة، 55E8S، تحديث نظام تشغيل 8 سنوات، محرك ذكاء اصطناعي عالي الرؤية، 144 هرتز، HSR 240Hz، مضخم صوت مدمج، دولبي فيجن IQ، حركة سلسة بالذكاء الاصطناعي، وضع صانع",
+      "url": "https://www.amazon.sa/dp/B0GQDXNH3L?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 1899.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:50",
+      "history": [
+        {
+          "price": 1899.0,
+          "date": "2026-11-16 06:20:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0GX6TB7GC?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "تلفزيون ذكي 55P61L نحيف 55 بوصة 2026 بدقة 4K وتقنية HDR 10+ للألعاب بنظام جوجل TV، مع ميزة تحسن الألوان وتقنية دولبي فيجن اتموس وDTS فيرتوال X ورقاقة ام اي ام سي لسلاسة الحركة وجيم ماستر من تي سي ال",
+      "url": "https://www.amazon.sa/dp/B0GX6TB7GC?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 1599.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:49",
+      "history": [
+        {
+          "price": 1599.0,
+          "date": "2026-11-16 06:20:49"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "غياب المواصفات التفصيلية ووجود تقييمات قليلة جدا لا يدعم التوصية بالشراء",
+        "assessment": {
+          "category": "شاشات وتلفزيونات",
+          "normalized_name": "تلفزيون ذكي",
+          "overall": "هذا المنتج يقدم شاشة ذكية بحجم كبير وتقنيات عرض حديثة للصورة والصوت ونظام تشغيل متطور إضافة إلى مزايا مخصصة للألعاب لكن البيانات المتوفرة غير كافية والمواصفات التفصيلية غائبة كما أن عدد التقييمات قليل ولا توجد معلومات كافية عن جودة الأداء الفعلي",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "غياب المواصفات التفصيلية ووجود تقييمات قليلة جدا لا يدعم التوصية بالشراء"
+        },
+        "telegram_message": "هذا المنتج يقدم شاشة ذكية بحجم كبير وتقنيات عرض حديثة للصورة والصوت ونظام تشغيل متطور إضافة إلى مزايا مخصصة للألعاب لكن البيانات المتوفرة غير كافية والمواصفات التفصيلية غائبة كما أن عدد التقييمات قليل ولا توجد معلومات كافية عن جودة الأداء الفعلي",
+        "provider": "Gemini"
+      },
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0GWJ4K1HR?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "سامسونج تلفزيون كريستال UHD مقاس 50 بوصة، U8000H، معالج كريستال، حزمة صوت ديناميكية، محتوى مجاني لا نهاية له، مؤمن بواسطة نوكس، تلفزيون ذكي، UA50U8000HUXSA (2026 - نسخة المملكة العربية السعودية)",
+      "url": "https://www.amazon.sa/dp/B0GWJ4K1HR?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 1199.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:48",
+      "history": [
+        {
+          "price": 1199.0,
+          "date": "2026-11-16 06:20:48"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "غياب المواصفات التفصيلية للمنتج وعدم توفر معلومات كافية عن الأداء الفعلي يمنع التوصية بالشراء رغم وجود تقييم إجمالي.",
+        "assessment": {
+          "category": "تلفزيونات",
+          "normalized_name": "تلفزيون سامسونج ذكي",
+          "overall": "هذا المنتج يحمل تقييماً جيداً من عدد محدود من المراجعين، ويتميز بكونه إصداراً حديثاً مع نظام حماية، لكنه يعاني من غياب المواصفات التقنية التفصيلية ومعلومات الأداء الدقيقة وعدم توفر تفاصيل كافية حول جودة الصورة أو الصوت.",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "غياب المواصفات التفصيلية للمنتج وعدم توفر معلومات كافية عن الأداء الفعلي يمنع التوصية بالشراء رغم وجود تقييم إجمالي."
+        },
+        "telegram_message": "هذا المنتج يحمل تقييماً جيداً من عدد محدود من المراجعين، ويتميز بكونه إصداراً حديثاً مع نظام حماية، لكنه يعاني من غياب المواصفات التقنية التفصيلية ومعلومات الأداء الدقيقة وعدم توفر تفاصيل كافية حول جودة الصورة أو الصوت.",
+        "provider": "Gemini"
+      },
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0GZL49LZT?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "تلفزيون ليد صغير، M1EH، 4K، HDR 75 بوصة +، موشن اكسسيليراتور، صوت ديناميكي، لون نقي، معالج ليد صغير 4K، تلفزيون ذكي من سامسونج، UA75M1EHAUXSA (10 - نسخة المملكة العربية السعودية)",
+      "url": "https://www.amazon.sa/dp/B0GZL49LZT?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 2599.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:47",
+      "history": [
+        {
+          "price": 2599.0,
+          "date": "2026-11-16 06:20:47"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "غياب المواصفات التفصيلية للمنتج ووجود تقييم منخفض مع عدد قليل جداً من المراجعات",
+        "assessment": {
+          "category": "تلفزيونات",
+          "normalized_name": "تلفزيون ذكي",
+          "overall": "هذا المنتج يأتي بتقييم منخفض وعدد محدود للغاية من المراجعات إلى جانب غياب المواصفات التقنية التفصيلية ووصف المنتج لا توجد معلومات كافية لدعم قرار الشراء أو تأكيد الأداء يفضل الانتظار حتى توفر تفاصيل أعم ومراجعات أكثر",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "غياب المواصفات التفصيلية للمنتج ووجود تقييم منخفض مع عدد قليل جداً من المراجعات"
+        },
+        "telegram_message": "هذا المنتج يأتي بتقييم منخفض وعدد محدود للغاية من المراجعات إلى جانب غياب المواصفات التقنية التفصيلية ووصف المنتج لا توجد معلومات كافية لدعم قرار الشراء أو تأكيد الأداء يفضل الانتظار حتى توفر تفاصيل أعم ومراجعات أكثر",
+        "provider": "Gemini"
+      },
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0HNLT32BQ?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "تلفزيون ذكي بتقنية كيو إل إي دي، مقاس 50 بوصة، بدقة 4K فائقة الوضوح، يعمل بنظام تايزن، يدعم الصوت المحيطي دولبي أتموس وإضاءة خلفية ليد مباشرة، بمعدل تحديث 60 هرتز، مع واي فاي وبلوتوث من نيكاي",
+      "url": "https://www.amazon.sa/dp/B0HNLT32BQ?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 976.27,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:46",
+      "history": [
+        {
+          "price": 976.27,
+          "date": "2026-11-16 06:20:46"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "غياب المواصفات التفصيلية وتقييمات المستخدمين يمنع التوصية بالشراء",
+        "assessment": {
+          "category": "تلفزيونات",
+          "normalized_name": "تلفزيون ذكي",
+          "overall": "يفتقر هذا المنتج إلى تقييمات المستخدمين والمواصفات المدعومة بالبيانات الكافية، كما أن المعلومات المتاحة ناقصة تماماً",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "غياب المواصفات التفصيلية وتقييمات المستخدمين يمنع التوصية بالشراء"
+        },
+        "telegram_message": "يفتقر هذا المنتج إلى تقييمات المستخدمين والمواصفات المدعومة بالبيانات الكافية، كما أن المعلومات المتاحة ناقصة تماماً",
+        "provider": "Gemini"
+      },
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0C6KFF73Q?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "تلفزيون LED ذكي الترا اتش دي 50 بوصة من نيكاي UHD | 4K-3840X2160 | واي فاي | اندرويد 9.0 | HDMI | USB | موالف تلفزيون انالوج مدمج | UHD50SLED-FL، أخضر",
+      "url": "https://www.amazon.sa/dp/B0C6KFF73Q?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 874.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:45",
+      "history": [
+        {
+          "price": 874.0,
+          "date": "2026-11-16 06:20:45"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "غالبية المواصفات الفنية غير متوفرة والتقييمات منخفضة للغاية وقليلة جدا",
+        "assessment": {
+          "category": "تلفزيونات",
+          "normalized_name": "تلفزيون ذكي",
+          "overall": "هذا المنتج يفتقر إلى تفاصيل المواصفات الأساسية والبيانات الداعمة بالإضافة إلى تدني التقييمات وقكلتها وعدم توفر معلومات كافية للحكم على الجودة أو الأداء",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "غالبية المواصفات الفنية غير متوفرة والتقييمات منخفضة للغاية وقليلة جدا"
+        },
+        "telegram_message": "هذا المنتج يفتقر إلى تفاصيل المواصفات الأساسية والبيانات الداعمة بالإضافة إلى تدني التقييمات وقكلتها وعدم توفر معلومات كافية للحكم على الجودة أو الأداء",
+        "provider": "Gemini"
+      },
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0FK4TKL2W?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "امبيكس تلفزيون ذكي QLED مقاس 50 بوصة بنظام اندرويد ومعالج رباعي النواة وخاصية صب الشاشة وزاوية عرض 176 درجة ونقطة ساطعة ++، ومنفذين HDMI و2 USB وRJ45 وموفر للطاقة وضمان لمدة عامين - جلوريا 50Q",
+      "url": "https://www.amazon.sa/dp/B0FK4TKL2W?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 1099.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:44",
+      "history": [
+        {
+          "price": 1099.0,
+          "date": "2026-11-16 06:20:44"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "تقييم المستخدمين منخفض وعدد المراجعات قليل للغاية مع غياب تفاصيل المواصفات الكاملة",
+        "assessment": {
+          "category": "تلفزيونات",
+          "normalized_name": "تلفزيون ذكي",
+          "overall": "هذا المنتج يحمل تقييماً منخفضاً من قبل عدد محدود من المستخدمين مما يثير الشكوك حول جودته الفعلية وتجربته، كما أن غياب تفاصيل المواصفات الدقيقة يجعل من الصعب الحكم على كفاءته، إضافة إلى قلة المعلومات المتاحة التي تدعم قرار الشراء، ومع ذلك توجد ميزات أساسية تظهر في البيانات مثل دعم النظام الذكي وتعدد المنافذ، لكن تظل المعلومات الناقصة وانخفاض التقييم وعدم توفر مراجعات كافية عوامل تجعل التوصية بالشراء غير مناسبة في الوقت الحالي",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "تقييم المستخدمين منخفض وعدد المراجعات قليل للغاية مع غياب تفاصيل المواصفات الكاملة"
+        },
+        "telegram_message": "هذا المنتج يحمل تقييماً منخفضاً من قبل عدد محدود من المستخدمين مما يثير الشكوك حول جودته الفعلية وتجربته، كما أن غياب تفاصيل المواصفات الدقيقة يجعل من الصعب الحكم على كفاءته، إضافة إلى قلة المعلومات المتاحة التي تدعم قرار الشراء، ومع ذلك توجد ميزات أساسية تظهر في البيانات مثل دعم النظام الذكي وتعدد المنافذ، لكن تظل المعلومات الناقصة وانخفاض التقييم وعدم توفر مراجعات كافية عوامل تجعل التوصية بالشراء غير مناسبة في الوقت الحالي",
+        "provider": "Gemini"
+      },
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0GWRC36TX?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "تلفزيون اندرويد ذكي بدقة 4K فائقة الوضوح مقاس 50 بوصة موديل DTD5021BU من دانسات، أسود، مع حامل يثبت على الحائط",
+      "url": "https://www.amazon.sa/dp/B0GWRC36TX?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 912.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:43",
+      "history": [
+        {
+          "price": 912.0,
+          "date": "2026-11-16 06:20:43"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "غیاب المواصفات التفصيلية للمنتج وقلة عدد التقييمات لا يدعمان اتخاذ قرار شراء موثوق.",
+        "assessment": {
+          "category": "تلفزيون",
+          "normalized_name": "تلفزيون ذكي",
+          "overall": "هذا المنتج يحمل تقييماً منخفضاً نسبياً مع عدد محدود جداً من المراجعات وغياب تام للمواصفات الفنية المدعومة بالبيانات مما يجعل تقييم الجودة متعذراً ويصعب التوصية بالشراء حالياً",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "غیاب المواصفات التفصيلية للمنتج وقلة عدد التقييمات لا يدعمان اتخاذ قرار شراء موثوق."
+        },
+        "telegram_message": "هذا المنتج يحمل تقييماً منخفضاً نسبياً مع عدد محدود جداً من المراجعات وغياب تام للمواصفات الفنية المدعومة بالبيانات مما يجعل تقييم الجودة متعذراً ويصعب التوصية بالشراء حالياً",
+        "provider": "Gemini"
+      },
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0FWKHZTC5?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "store": "Amazon.sa",
+      "title": "هايسينس تلفزيون ذكي 58 بوصة 4K UHD 58E6Q، دولبي فيجن، محسن الذكاء الاصطناعي 4K، العاب في دولبي، حركة سلسة مع ام ام اي سي، وضع رياضي ذكاء اصطناعي، مشاركة الى التلفزيون، يوتيوب، نتفليكس، ديزني+، شاهد",
+      "url": "https://www.amazon.sa/dp/B0FWKHZTC5?dib=eyJ2IjoiMSJ9.20uYfbuNOTyueTyBdPqjLog4NCcvfy93_DY9icD-E_OvRhYyRS5Xybp54QpAIfJbjV4QxzPJhz-He1s26rZpjxgAWlpRDqNrgrPovCh37rfEAcJZz65V9293hZaPb51t4spx-C8WLkTPViC9ldVhx_iaqjIY4KUDDwjbLVfPvC3D2kQsE0Dk3lk9KSFpdUsEg6-Ou_IoeQbbTL-veeJMVOIGbfGER3y6BkG9tJGfzEa1Zx0szH1SqCqcfVmdt0e_6tmMH7uXpOx-yCLwox52L4jbQ8KYjIbQgRaYysbXg-U.Tr3ew3imIJ0LOg3BWvp8zjfnla4UrLm7JpMFWqPlTN8&dib_tag=se&keywords=4K+television",
+      "brand": null,
+      "category": null,
+      "price": 1499.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 06:20:42",
+      "history": [
+        {
+          "price": 1499.0,
+          "date": "2026-11-16 06:20:42"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "غياب البيانات التقنية التفصيلية والمقارنة السعرية يمنع التوصية",
+        "assessment": {
+          "category": "تلفزيونات",
+          "normalized_name": "تلفزيون ذكي",
+          "overall": "هذا المنتج يقدم شاشة ذكية بدقة عالية مع تقنيات عرض متقدمة ودعم لبرامج البث وميزات الألعاب وتحسين الصورة بالذكاء الاصطناعي ومعالجة الحركة ورغم وجود تقييمات إيجابية محدودة إلا أن غياب المواصفات التقنية التفصيلية وتاريخ السعر يترك معلومات ناقصة تجعل الحكم على القيمة الحقيقية متعذرا ونوصي بالتحقق المستقل من المراجعات والمواصفات الكاملة قبل اتخاذ أي قرار",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "غياب البيانات التقنية التفصيلية والمقارنة السعرية يمنع التوصية"
+        },
+        "telegram_message": "هذا المنتج يقدم شاشة ذكية بدقة عالية مع تقنيات عرض متقدمة ودعم لبرامج البث وميزات الألعاب وتحسين الصورة بالذكاء الاصطناعي ومعالجة الحركة ورغم وجود تقييمات إيجابية محدودة إلا أن غياب المواصفات التقنية التفصيلية وتاريخ السعر يترك معلومات ناقصة تجعل الحكم على القيمة الحقيقية متعذرا ونوصي بالتحقق المستقل من المراجعات والمواصفات الكاملة قبل اتخاذ أي قرار",
+        "provider": "Gemini"
+      },
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
     {
       "id": "https://www.amazon.sa/dp/B0D3D5SSY8?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
       "store": "Amazon.sa",
