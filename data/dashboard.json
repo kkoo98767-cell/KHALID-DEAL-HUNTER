@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T05:24:01.105328+00:00",
+  "generated_at": "2026-11-16T05:25:35.437460+00:00",
   "stats": {
     "products": 100,
     "observations": 101,
@@ -7,8 +7,12 @@
     "sufficient": 0
   },
   "scan": {
-    "scan_number": "24",
+    "scan_number": "25",
     "stores": {
+      "Amazon.sa": {
+        "products": 0,
+        "error": "HTTPError"
+      },
       "Extra": {
         "products": 0,
         "error": null
@@ -16,10 +20,6 @@
       "Noon": {
         "products": 0,
         "error": "ReadTimeout"
-      },
-      "Amazon.sa": {
-        "products": 0,
-        "error": null
       },
       "Jarir": {
         "products": 0,
@@ -31,10 +31,12 @@
     "potential_deals": 0,
     "verified_deals": 0,
     "sufficient_history": 0,
-    "store_errors": 1,
-    "empty_stores": 3,
+    "store_errors": 2,
+    "empty_stores": 2,
     "telegram_errors": 0,
-    "ai_providers": [],
+    "ai_providers": [
+      "Groq"
+    ],
     "archive": {
       "products": 100,
       "price_observations": 101,
@@ -58,7 +60,19 @@
           "date": "2026-11-16 05:09:03"
         }
       ],
-      "analysis": null,
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "البيانات غير كافية لتقييم موثوقية المنتج وتحديد المزايا والعيوب.",
+        "assessment": {
+          "category": "غير متاح",
+          "normalized_name": "ماوس ألعاب X11",
+          "overall": "المنتج غير متوفر بالمعلومات الكافية: لا توجد مواصفات، تقييمات أو مراجعات، ولا تاريخ سابق لشراء. لا يُنصح بالشراء في هذه المرحلة.",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "البيانات غير كافية لتقييم موثوقية المنتج وتحديد المزايا والعيوب."
+        },
+        "telegram_message": "المنتج غير متوفر بالمعلومات الكافية: لا توجد مواصفات، تقييمات أو مراجعات، ولا تاريخ سابق لشراء. لا يُنصح بالشراء في هذه المرحلة.",
+        "provider": "Groq"
+      },
       "status": "INSUFFICIENT_HISTORY",
       "baseline": null,
       "drop_percent": null,
@@ -81,7 +95,19 @@
           "date": "2026-11-16 05:09:03"
         }
       ],
-      "analysis": null,
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "لا توجد بيانات كافية لتقييم موثوقية",
+        "assessment": {
+          "category": "غير متاح",
+          "normalized_name": "هذا المنتج",
+          "overall": "ومع ذلك، فالمعلومات التقنية محدودة ولا توجد مواصفات مفصلة أو تقييمات للمستخدم، ما يجعل اتخاذ قرار الشراء غير مستند إلى دليل قوي",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "لا توجد بيانات كافية لتقييم موثوقية"
+        },
+        "telegram_message": "ومع ذلك، فالمعلومات التقنية محدودة ولا توجد مواصفات مفصلة أو تقييمات للمستخدم، ما يجعل اتخاذ قرار الشراء غير مستند إلى دليل قوي",
+        "provider": "Groq"
+      },
       "status": "INSUFFICIENT_HISTORY",
       "baseline": null,
       "drop_percent": null,
