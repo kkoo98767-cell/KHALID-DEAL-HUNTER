@@ -254,6 +254,8 @@ def main():
             store_results[store] = {"products": 0, "error": type(exc).__name__}
             print(f"Store/search failed: {store} / {query}: {type(exc).__name__}: {exc}")
 
+    from ai_analyzer import evaluate_archive_backlog
+    providers.update(evaluate_archive_backlog())
     archive_stats = get_archive_stats()
     from dashboard import snapshot
     sufficient = snapshot()["stats"]["sufficient"]

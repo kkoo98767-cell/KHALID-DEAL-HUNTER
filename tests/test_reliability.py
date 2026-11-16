@@ -156,7 +156,7 @@ class ReliabilityTests(unittest.TestCase):
             if store == "Noon":raise requests.Timeout()
             return [dict(title="Valid Product",store=store,url="https://"+store.lower()+".example/p/one",price=100)]
         fallback=dict(provider="Fallback",worth_alerting=True,reason="تعذر التحليل",telegram_message="التقييم غير متاح")
-        with patch.object(main,"fetch_store",side_effect=fetch),patch.object(main,"refresh_tracked",return_value=[]),patch.object(main,"analyze_deal",return_value=fallback),patch.object(main,"send_startup_status",side_effect=RuntimeError),patch.object(main,"send_scan_summary") as summary,patch("dashboard.export"),patch.object(main,"Path"):
+        with patch.object(main,"fetch_store",side_effect=fetch),patch.object(main,"refresh_tracked",return_value=[]),patch.object(main,"analyze_deal",return_value=fallback),patch.object(main,"send_startup_status",side_effect=RuntimeError),patch.object(main,"send_scan_summary") as summary,patch("dashboard.export"),patch.object(main,"Path"),patch("ai_analyzer.evaluate_archive_backlog",return_value=set()):
             with self.assertRaises(RuntimeError):main.main()
             self.assertEqual(database.get_archive_stats()["products"],3)
             self.assertEqual(summary.call_args.kwargs["products_seen"],3)
