@@ -1,7 +1,7 @@
 import random
 import requests
 
-from config import TG_TOKEN, TG_CHAT
+from config import TG_TOKEN, TG_CHAT, STORES
 
 OPENINGS = [
     "👀 لفت انتباهي هذا المنتج",
@@ -103,10 +103,10 @@ def send_scan_summary(run_number=None, products_seen=0, new_products=0,
         f"🆕 منتجات جديدة أضيفت للأرشيف: {new_products}\n"
         f"📚 إجمالي المنتجات المؤرشفة: {stats.get('products', 0)}\n"
         f"📈 إجمالي قراءات الأسعار: {stats.get('price_observations', 0)}\n"
-        f"🏬 متاجر لها منتجات مؤرشفة: {stats.get('stores_with_products', 0)} من 4\n"
+        f"🏬 المتاجر النشطة في المراقبة: {len(STORES)}\n"
         f"⚠️ متاجر بلا نتائج: {empty_stores}\n"
         f"❌ متاجر/عمليات واجهت أخطاء: {failures}\n"
-        f"متاجر تم فحصها: {metrics.get('stores_checked', 4)}\n"
+        f"متاجر تم فحصها: {metrics.get('stores_checked', len(STORES))}\n"
         f"متاجر نجح استخراجها: {metrics.get('successful_stores', 0)}\n"
         f"منتجات لها تاريخ كافٍ: {metrics.get('sufficient_history', 0)}\n"
         f"عروض محتملة: {metrics.get('potential_deals', 0)}\n"

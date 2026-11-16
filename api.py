@@ -4,22 +4,25 @@ import json
 import os
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from urllib.parse import urlsplit
 from dashboard import snapshot
 
 
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        if self.path == "/" or self.path == "/index.html":
-            body = Path(__file__).with_name("website").joinpath("index.html").read_bytes()
-            content_type = "text/html; charset=utf-8"
-        elif self.path == "/api/dashboard":
+        route=urlsplit(self.path).path
+        assets={"/":"index.html","/index.html":"index.html","/style.css":"style.css","/app.js":"app.js"}
+        if route in assets:
+            body=Path(__file__).with_name("website").joinpath(assets[route]).read_bytes()
+            content_type={"index.html":"text/html; charset=utf-8","style.css":"text/css; charset=utf-8","app.js":"application/javascript; charset=utf-8"}[assets[route]]
+        elif route == "/api/dashboard":
             token = os.getenv("API_TOKEN", "")
             if token and not hmac.compare_digest(self.headers.get("Authorization", ""), "Bearer " + token):
                 self.send_error(401)
                 return
             body = json.dumps(snapshot(),ensure_ascii=False).encode()
             content_type = "application/json; charset=utf-8"
-        elif self.path == "/health":
+        elif route == "/health":
             body = b'{"status":"ok"}'
             content_type = "application/json"
         else:

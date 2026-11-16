@@ -8,11 +8,12 @@ from pathlib import Path
 from urllib.parse import quote_plus, urljoin, urlparse
 from bs4 import BeautifulSoup
 
-from config import STORES, REQUEST_TIMEOUT, MAX_PRODUCTS_PER_SEARCH
-from discovery import choose_search
-from scrapers.common import parse_jsonld_products, enrich_product_details
+from config import (STORES, MAX_PRODUCTS_PER_SEARCH, MAX_SEARCH_PAGES, MAX_PRODUCTS_PER_STORE,
+                    QUERIES_PER_STORE, TRACKED_PRODUCTS_PER_STORE, REQUEST_GAP_SECONDS, MIN_DROP_PERCENT)
+from discovery import choose_search, choose_queries
+from scrapers.common import parse_jsonld_products, canonical_url, product_identifier, reliable_title
 from database import save_and_evaluate, connect, was_recently_alerted, record_alert, get_archive_stats, checkpoint
-from ai_analyzer import analyze_deal, test_ai_provider
+from ai_analyzer import analyze_deal, fallback_result
 from telegram_bot import send_deal, send_startup_status, send_ai_test_status, send_scan_summary
 
 REQUEST_HEADERS = [
@@ -38,13 +39,7 @@ def _search_url_variants(store, query):
     encoded = quote_plus(query)
     primary = STORES[store].format(query=encoded)
     variants = [primary]
-    if store == "Noon":
-        variants.append(f"https://www.noon.com/saudi-en/search?q={encoded}")
-    elif store == "Extra":
-        variants.append(f"https://www.extra.com/en-sa/search?text={encoded}")
-    elif store == "Jarir":
-        variants.append(f"https://www.jarir.com/sa-en/search/?q={encoded}")
-    elif store == "Amazon.sa":
+    if store == "Amazon.sa":
         variants.append(f"https://www.amazon.sa/s?k={encoded}&language=en_AE")
     return list(dict.fromkeys(variants))
 
@@ -55,256 +50,288 @@ def _looks_like_challenge(html):
         "captcha", "verify you are human", "robot check",
         "access denied", "unusual traffic", "challenge-platform", "down for maintenance",
         "cf-chl-", "px-captcha", "enable javascript and cookies",
+        "to discuss automated access to amazon data", "api-services-support@amazon.com",
+        "click the button below to continue shopping",
     )
     return any(marker in sample for marker in markers)
 
 
+class StoreReadError(RuntimeError):
+    """Carries already validated products when a later page fails."""
+    def __init__(self,message,products=None,blocked=False):
+        super().__init__(message)
+        self.products=products or []
+        self.blocked=blocked
+
+
+class EmptyStoreResults(StoreReadError):
+    """HTTP success did not yield a usable, validated price observation."""
+
+
+def _blocked_exception(exc):
+    if getattr(exc,"blocked",False):
+        return True
+    response=getattr(exc,"response",None)
+    return response is not None and response.status_code in {401,403,429}
+
+
 def fetch_store(store, query):
-    items, seen = [], set()
-    # Stop on access denial/challenges. Never rotate fingerprints to evade them.
+    if store not in STORES:
+        raise ValueError("Store is not enabled for monitoring")
+    items,seen=[],set()
+    variants=_search_url_variants(store,query)
+    pending=[variants.pop(0)]
+    visited=set()
     with requests.Session() as session:
-        urls = _search_url_variants(store, query)
-        pages = 0
-        for url in urls:
-            pages += 1
-            if pages > 3:
-                break
-            for attempt in range(2):
-                try:
-                    response = session.get(url, headers=REQUEST_HEADERS[0], timeout=(5,18))
-                except (requests.Timeout, requests.ConnectionError):
-                    if attempt == 1:
-                        raise
-                    time.sleep(1)
+        try:
+            while pending and len(visited)<MAX_SEARCH_PAGES and len(items)<MAX_PRODUCTS_PER_SEARCH:
+                url=pending.pop(0)
+                if url in visited:
                     continue
-                if response.status_code in {401,403}:
-                    raise RuntimeError(f"Store access denied: HTTP {response.status_code}")
-                if response.status_code in TRANSIENT_STATUS and attempt == 0:
-                    time.sleep(min(5, max(1, int(response.headers.get("Retry-After", "1")) if response.headers.get("Retry-After", "1").isdigit() else 1)))
-                    continue
-                if response.status_code == 404:
+                visited.add(url)
+                response=None
+                for attempt in range(2):
+                    try:
+                        response=session.get(url,headers=REQUEST_HEADERS[0],timeout=(5,18))
+                    except (requests.Timeout,requests.ConnectionError):
+                        if attempt:
+                            raise
+                        time.sleep(1)
+                        continue
+                    if response.status_code in {401,403}:
+                        raise StoreReadError(f"Store access denied: HTTP {response.status_code}",blocked=True)
+                    if response.status_code in TRANSIENT_STATUS and attempt==0:
+                        delay=response.headers.get("Retry-After","1")
+                        time.sleep(min(5,max(1,int(delay) if delay.isdigit() else 1)))
+                        continue
                     break
+                if response.status_code==404:
+                    if not items and variants:
+                        pending.append(variants.pop(0))
+                    continue
+                if response.status_code==429:
+                    raise StoreReadError("Store rate limited: HTTP 429",blocked=True)
                 response.raise_for_status()
                 if _looks_like_challenge(response.text):
-                    raise RuntimeError("Store challenge page; access protection respected")
-                parsed = parse_jsonld_products(response.text, response.url, store, limit=MAX_PRODUCTS_PER_SEARCH)
-                if not parsed and store == "Jarir":
+                    raise StoreReadError("Store challenge page; access protection respected",blocked=True)
+                remaining=MAX_PRODUCTS_PER_SEARCH-len(items)
+                parsed=parse_jsonld_products(response.text,response.url,store,limit=remaining)
+                if not parsed and store=="Jarir":
                     from scrapers.jarir import discover
-                    parsed = discover(session,response.text,query,REQUEST_HEADERS[0],MAX_PRODUCTS_PER_SEARCH)
+                    parsed=discover(session,response.text,query,REQUEST_HEADERS[0],remaining)
                 print(f"{store}: HTTP {response.status_code}, bytes={len(response.content)}, validated_products={len(parsed)}")
                 for item in parsed:
-                    if item["url"] not in seen:
-                        seen.add(item["url"])
-                        items.append(item)
-                if len(items) >= MAX_PRODUCTS_PER_SEARCH:
-                    return items[:MAX_PRODUCTS_PER_SEARCH]
-                next_link = BeautifulSoup(response.text, "html.parser").select_one('a[rel="next"], a.s-pagination-next[href]')
+                    key=canonical_url(item["url"])
+                    if key not in seen:
+                        seen.add(key);items.append(item)
+                next_link=BeautifulSoup(response.text,"html.parser").select_one('a[rel="next"], a.s-pagination-next[href]')
                 if next_link and next_link.get("href"):
-                    next_url = urljoin(response.url, next_link["href"])
-                    if urlparse(next_url).hostname == urlparse(response.url).hostname and next_url not in urls:
-                        urls.append(next_url)
-                if parsed:
-                    # Drop alternate search routes after a successful native page.
-                    urls[:] = [url] + [u for u in urls if u == locals().get("next_url")]
+                    next_url=urljoin(response.url,next_link["href"])
+                    if urlparse(next_url).hostname==urlparse(STORES[store]).hostname and next_url not in visited:
+                        pending.append(next_url)
+                if not items and not pending and variants:
+                    pending.append(variants.pop(0))
+                if pending:
+                    time.sleep(REQUEST_GAP_SECONDS)
+        except Exception as exc:
+            partial=items+getattr(exc,"products",[])
+            if partial or isinstance(exc,StoreReadError):
+                unique={canonical_url(p["url"]):p for p in partial}
+                raise StoreReadError(str(exc) if isinstance(exc,StoreReadError) else f"{store} source failed: {type(exc).__name__}",list(unique.values()),_blocked_exception(exc)) from None
+            raise
+    if not items:
+        raise EmptyStoreResults("Public search yielded no validated products; results may be empty or unreadable")
+    return items[:MAX_PRODUCTS_PER_SEARCH]
 
+
+def merge_products(items):
+    """Conflicting observations are held back instead of inflating deal counts."""
+    unique={};conflicts=set()
+    for item in items:
+        key=canonical_url(item["url"])
+        if key in unique:
+            previous=unique[key]
+            if abs(previous["price"]-item["price"])>max(.01,previous["price"]*.01):
+                conflicts.add(key)
+            for field in ("image_url","original_price","brand","category"):
+                if not previous.get(field) and item.get(field):
+                    previous[field]=item[field]
+            continue
+        unique[key]=item
+    return [p for k,p in unique.items() if k not in conflicts],len(conflicts)
+
+
+def advertised_drop(item):
+    from deal_evidence import savings
+    return savings(item.get("original_price"),item.get("price"))["percent"] or 0
+
+
+def collect_store(store,queries=None):
+    queries=queries or choose_queries(store)
+    items=[];errors=[];checked=0
+    for query in queries:
+        if len({canonical_url(p["url"]) for p in items})>=MAX_PRODUCTS_PER_STORE:
+            break
+        checked+=1
+        print(f"Searching {store}: {query}")
+        try:
+            batch=fetch_store(store,query)
+            if not batch:
+                raise EmptyStoreResults("Public search yielded no validated products")
+            items.extend(batch)
+        except Exception as exc:
+            items.extend(getattr(exc,"products",[]))
+            errors.append(type(exc).__name__)
+            print(f"Store/search failed: {store} / {query}: {type(exc).__name__}: {exc}")
+            if _blocked_exception(exc) or len(errors)>=2:
                 break
-    return items
+        if checked<len(queries):
+            time.sleep(REQUEST_GAP_SECONDS)
+    items,conflicts=merge_products(items)
+    items.sort(key=lambda p:advertised_drop(p),reverse=True)
+    return items[:MAX_PRODUCTS_PER_STORE],dict(products=min(len(items),MAX_PRODUCTS_PER_STORE),queries_checked=checked,queries_requested=len(queries),error=errors[0] if errors else None,query_errors=len(errors),conflicting_products=conflicts)
 
 
-def refresh_tracked(store, seen):
-    """Revisit oldest products so rotating discovery does not starve history."""
-    db = connect()
-    rows = db.execute("SELECT url FROM products WHERE store=? ORDER BY last_seen LIMIT 3", (store,)).fetchall()
+def refresh_tracked(store,seen):
+    """Revisit more prior deal candidates, using Jarir's public batch catalog."""
+    if not TRACKED_PRODUCTS_PER_STORE:
+        return []
+    db=connect()
+    rows=db.execute("SELECT p.url,p.product_id,p.title FROM products p JOIN price_history h ON h.id=(SELECT MAX(id) FROM price_history WHERE product_key=p.product_key) WHERE p.store=? ORDER BY CASE WHEN h.store_original_price>0 AND (h.store_original_price-h.price)/h.store_original_price*100>=? THEN 0 ELSE 1 END,p.last_seen LIMIT ?",(store,MIN_DROP_PERCENT,TRACKED_PRODUCTS_PER_STORE*3)).fetchall()
     db.close()
-    items = []
-    for (url,) in rows:
-        if url in seen or urlparse(url).hostname != urlparse(STORES[store]).hostname:
+    rows=[(url,pid or product_identifier(url)) for url,pid,title in rows if canonical_url(url) not in seen and reliable_title(title) and urlparse(url).hostname==urlparse(STORES[store]).hostname][:TRACKED_PRODUCTS_PER_STORE]
+    if store=="Jarir":
+        import re
+        from scrapers.jarir import fetch_catalog
+        skus=list(dict.fromkeys(pid for _,pid in rows if pid and re.fullmatch(r"[0-9]{3,12}",pid)))
+        if not skus:
+            return []
+        try:
+            with requests.Session() as session:
+                return fetch_catalog(session,skus,REQUEST_HEADERS[0])
+        except Exception as exc:
+            print(f"{store}: tracked refresh failed: {type(exc).__name__}")
+            return getattr(exc,"products",[])
+    items=[]
+    for url,pid in rows:
+        if not pid:
             continue
         try:
-            response = requests.get(url, headers=REQUEST_HEADERS[0], timeout=(5,12))
+            response=requests.get(url,headers=REQUEST_HEADERS[0],timeout=(5,12))
             if response.status_code in {401,403,429} or _looks_like_challenge(response.text):
                 print(f"{store}: tracked refresh blocked; stopped")
                 break
             response.raise_for_status()
             for item in parse_jsonld_products(response.text,response.url,store):
-                if item["url"] == url and item["url"] not in seen:
-                    seen.add(item["url"])
+                if canonical_url(item["url"])==canonical_url(url):
                     items.append(item)
         except requests.RequestException as exc:
             print(f"{store}: tracked refresh failed: {type(exc).__name__}")
-    return items
+        time.sleep(REQUEST_GAP_SECONDS)
+    return merge_products(items)[0]
 
 
 def main():
-    provider_test = os.getenv("AI_PROVIDER_TEST", "none").strip().lower()
-    is_ai_test = provider_test in {"gemini", "groq"}
-
-    startup_failed = False
+    if os.getenv("AI_PROVIDER_TEST","none").strip().lower() in {"gemini","groq"}:
+        from ai_connection_test import main as provider_check
+        return provider_check()
+    startup_failed=False
     try:
-        send_startup_status(
-        run_number=os.getenv("GITHUB_RUN_NUMBER"),
-        run_id=os.getenv("GITHUB_RUN_ID"),
-        mode="ai_test" if is_ai_test else "hunt",
-    )
+        send_startup_status(run_number=os.getenv("GITHUB_RUN_NUMBER"),run_id=os.getenv("GITHUB_RUN_ID"),mode="hunt")
     except Exception as exc:
-        startup_failed = True
+        startup_failed=True
         print(f"Telegram startup failed: {type(exc).__name__}")
-
-    if is_ai_test:
-        provider_name = "Gemini" if provider_test == "gemini" else "Groq"
-        try:
-            result = test_ai_provider(provider_test)
-            print(f"AI PROVIDER TEST PASSED: {result}")
-            send_ai_test_status(
-                result["provider"], True,
-                f"النموذج: {result['model']} — {result['reason']}",
-                os.getenv("GITHUB_RUN_NUMBER"),
-            )
-            print(f"Telegram AI test success message sent for {provider_name}.")
-            return
-        except Exception as exc:
-            error_detail = f"{type(exc).__name__}: {exc}"
-            print(f"AI PROVIDER TEST FAILED: {error_detail}")
-            try:
-                send_ai_test_status(
-                    provider_name, False, error_detail,
-                    os.getenv("GITHUB_RUN_NUMBER"),
-                )
-                print("Telegram AI test failure message sent.")
-            except Exception as telegram_exc:
-                print(f"Could not send AI test failure to Telegram: {type(telegram_exc).__name__}")
-            raise
-
-    db = connect()
-    db.close()
-
-    scan_id = os.getenv("GITHUB_RUN_ID") or uuid.uuid4().hex
-    stores = list(STORES.keys())
-    random.shuffle(stores)
-
-    total = alerts = failures = ai_skips = 0
-    price_candidates = cooldown_skips = 0
-    telegram_errors = int(startup_failed)
-    empty_stores = 0
-    newly_archived = 0
-    potential = verified = sufficient = 0
-    providers = set()
-    store_results = {}
-    print(f"Starting scan across {len(stores)} stores")
-
+    db=connect();db.close()
+    scan_id=os.getenv("GITHUB_RUN_ID") or uuid.uuid4().hex
+    stores=list(STORES);random.shuffle(stores)
+    total=alerts=failures=empty_stores=newly_archived=potential=verified=processing_errors=0
+    telegram_errors=int(startup_failed)
+    providers=set();store_results={};archived=[];scan_seen=set()
     for store in stores:
-        _, query = choose_search(store)
-        print(f"Searching {store}: {query}")
         try:
-            items = fetch_store(store, query)
-            print(f"{store}: parsed {len(items)} products")
-            store_results[store] = {"products": len(items), "error": None}
-            if not items:
-                empty_stores += 1
-            else:
-                items.extend(refresh_tracked(store, {i["url"] for i in items}))
-
+            items,report=collect_store(store)
+            if items and report["error"] is None:
+                items.extend(refresh_tracked(store,{canonical_url(p["url"]) for p in items}))
+            items,conflicts=merge_products(items)
+            report["conflicting_products"]+=conflicts
+            report["observed_products"]=len(items)
+            store_results[store]=report
+            failures+=bool(report["error"])
+            empty_stores+=not items and not report["error"]
+            # Archive the entire validated batch before any AI or Telegram work.
             for item in items:
-                total += 1
+                key=(store,canonical_url(item["url"]))
+                if key in scan_seen:
+                    continue
+                scan_seen.add(key)
                 try:
-                    item["_scan_id"] = scan_id
-                    deal = save_and_evaluate(item)
-                except ValueError as exc:
-                    print(f"Invalid product skipped: {exc}")
-                    continue
-                ai_result = analyze_deal(item)
-                providers.add(ai_result.get("provider", "Fallback"))
-                if item.get("_is_new_product"):
-                    newly_archived += 1
-                potential += item.get("status") == "POTENTIAL_DEAL"
-                verified += item.get("status") == "VERIFIED_DEAL"
-                sufficient += item.get("baseline") is not None
-                db = connect()
-                prior = db.execute("SELECT status FROM alert_history WHERE product_key=? ORDER BY id DESC LIMIT 1", (item["_product_key"],)).fetchone()
-                db.close()
-                notify_new = os.getenv("NOTIFY_NEW_PRODUCTS", "false").lower() == "true"
-                if not deal and not (prior and (prior[0] == "VERIFIED_DEAL" or item.get("status") != prior[0])) and not (notify_new and item.get("_is_new_product")):
-                    continue
-                deal = item
-
-                price_candidates += 1
-                print(
-                    f"PRICE CANDIDATE: {deal['title']} | "
-                    f"price={deal['price']} SAR | baseline={deal.get('baseline')} SAR | "
-                    f"drop={deal.get('drop_percent')}%"
-                )
-                if was_recently_alerted(deal):
-                    cooldown_skips += 1
-                    print(f"Skipping repeat alert within cooldown: {deal['title']}")
-                    continue
-
-                deal["ai_provider"] = ai_result.get("provider", "AI")
-                deal["ai_reason"] = ai_result.get("reason", "")
-                deal["ai_message"] = ai_result.get("telegram_message", "")
-                try:
-                    send_deal(deal)
+                    item["_scan_id"]=scan_id
+                    save_and_evaluate(item)
                 except Exception as exc:
-                    telegram_errors += 1
-                    print(f"TELEGRAM SEND FAILED: {type(exc).__name__}")
+                    processing_errors+=1
+                    print(f"Product archive failed: {store}: {type(exc).__name__}")
                     continue
-
-                record_alert(deal)
-                alerts += 1
-                print(f"TELEGRAM ALERT SENT: {deal['title']}")
-
+                total+=1;newly_archived+=bool(item.get("_is_new_product"))
+                potential+=item.get("status")=="POTENTIAL_DEAL"
+                verified+=item.get("status")=="VERIFIED_DEAL"
+                archived.append(item)
         except Exception as exc:
-            failures += 1
-            store_results[store] = {"products": 0, "error": type(exc).__name__}
-            print(f"Store/search failed: {store} / {query}: {type(exc).__name__}: {exc}")
-
+            failures+=1
+            store_results[store]=dict(products=0,error=type(exc).__name__)
+            print(f"Store failed: {store}: {type(exc).__name__}: {exc}")
+    archived.sort(key=lambda p:(p.get("status")=="VERIFIED_DEAL",p.get("status")=="POTENTIAL_DEAL",advertised_drop(p)),reverse=True)
+    unverified_alerts=0
+    alert_limit=max(0,int(os.getenv("MAX_UNVERIFIED_ALERTS","12")))
+    for item in archived:
+        try:
+            ai_result=analyze_deal(item)
+        except Exception as exc:
+            print(f"AI unavailable: {type(exc).__name__}")
+            ai_result=fallback_result()
+        providers.add(ai_result.get("provider","Fallback"))
+        db=connect();prior=db.execute("SELECT status FROM alert_history WHERE product_key=? ORDER BY id DESC LIMIT 1",(item["_product_key"],)).fetchone();db.close()
+        notify_new=os.getenv("NOTIFY_NEW_PRODUCTS","false").lower()=="true"
+        should_notify=item.get("status") in {"POTENTIAL_DEAL","VERIFIED_DEAL"} or (prior and item.get("status")!=prior[0]) or (notify_new and item.get("_is_new_product"))
+        if not should_notify or was_recently_alerted(item):
+            continue
+        if item.get("status")=="POTENTIAL_DEAL" and unverified_alerts>=alert_limit:
+            continue
+        item.update(ai_provider=ai_result.get("provider","Fallback"),ai_reason=ai_result.get("reason",""),ai_message=ai_result.get("telegram_message",""))
+        try:
+            send_deal(item);record_alert(item)
+            alerts+=1
+            unverified_alerts+=item.get("status")=="POTENTIAL_DEAL"
+            print(f"TELEGRAM ALERT SENT: {item['title']}")
+        except Exception as exc:
+            telegram_errors+=1
+            print(f"TELEGRAM SEND FAILED: {type(exc).__name__}")
     from ai_analyzer import evaluate_archive_backlog
-    providers.update(evaluate_archive_backlog())
-    archive_stats = get_archive_stats()
-    from dashboard import snapshot
-    sufficient = snapshot()["stats"]["sufficient"]
-    scan_result = dict(scan_number=os.getenv("GITHUB_RUN_NUMBER"),stores=store_results,products=total,new_products=newly_archived,potential_deals=potential,verified_deals=verified,sufficient_history=sufficient,store_errors=failures,empty_stores=empty_stores,telegram_errors=telegram_errors,ai_providers=sorted(providers),archive=archive_stats)
-    Path("scan-results.json").write_text(json.dumps(scan_result,ensure_ascii=False,indent=2),encoding="utf-8")
-    summary_ai = analyze_deal({"title":"ملخص نشاط مراقبة الأسعار", "status":"SCAN_SUMMARY", "description": json.dumps(scan_result,ensure_ascii=False)})
-    print(
-        f"Finished. stores_checked={len(stores)}, products={total}, "
-        f"newly_archived={newly_archived}, archive_total={archive_stats['products']}, "
-        f"price_observations={archive_stats['price_observations']}, "
-        f"stores_with_products={archive_stats['stores_with_products']}, "
-        f"empty_stores={empty_stores}, price_candidates={price_candidates}, "
-        f"cooldown_skips={cooldown_skips}, ai_skips={ai_skips}, "
-        f"telegram_errors={telegram_errors}, alerts={alerts}, failures={failures}, "
-        f"no_price_signal={max(0, total - price_candidates)}"
-    )
     try:
-        send_scan_summary(
-            run_number=os.getenv("GITHUB_RUN_NUMBER"),
-            products_seen=total,
-            new_products=newly_archived,
-            failures=failures,
-            empty_stores=empty_stores,
-            archive_stats=archive_stats,
-            stores_checked=len(stores), successful_stores=len(stores)-failures-empty_stores,
-            potential_deals=potential, verified_deals=verified, sufficient_history=sufficient,
-            providers=", ".join(sorted(providers)) or "غير مستخدم",
-            comment=summary_ai.get("telegram_message", ""),
-        )
+        providers.update(evaluate_archive_backlog())
+    except Exception as exc:
+        print(f"Archive AI backlog failed: {type(exc).__name__}")
+    archive_stats=get_archive_stats()
+    from dashboard import snapshot,export
+    sufficient=snapshot()["stats"]["sufficient"]
+    scan_result=dict(scan_number=os.getenv("GITHUB_RUN_NUMBER"),stores=store_results,products=total,new_products=newly_archived,potential_deals=potential,verified_deals=verified,sufficient_history=sufficient,store_errors=failures,empty_stores=empty_stores,telegram_errors=telegram_errors,processing_errors=processing_errors,alerts_sent=alerts,ai_providers=sorted(providers),archive=archive_stats)
+    Path("scan-results.json").write_text(json.dumps(scan_result,ensure_ascii=False,indent=2),encoding="utf-8")
+    try:
+        summary_ai=analyze_deal(dict(title="ملخص نشاط مراقبة الأسعار",status="SCAN_SUMMARY",description=json.dumps(scan_result,ensure_ascii=False)))
+    except Exception:
+        summary_ai=dict(telegram_message="تم حفظ نتائج الفحص الفعلية؛ التعليق الآلي غير متاح حالياً.")
+    try:
+        send_scan_summary(run_number=os.getenv("GITHUB_RUN_NUMBER"),products_seen=total,new_products=newly_archived,failures=failures,empty_stores=empty_stores,archive_stats=archive_stats,stores_checked=len(stores),successful_stores=sum(bool(s.get("observed_products")) for s in store_results.values()),potential_deals=potential,verified_deals=verified,sufficient_history=sufficient,providers=", ".join(sorted(providers)) or "غير مستخدم",comment=summary_ai.get("telegram_message",""))
         print("Telegram archive summary sent successfully.")
     except Exception as exc:
+        telegram_errors+=1
         print(f"Telegram archive summary failed: {type(exc).__name__}")
-        telegram_errors += 1
-
-    from dashboard import export
-    export()
-    checkpoint()
-    # A green workflow with zero extracted products is not a healthy scan.
-    if failures or telegram_errors or empty_stores:
-        raise RuntimeError(f"Degraded scan: store_errors={failures}, empty_stores={empty_stores}, telegram_errors={telegram_errors}")
-    if total == 0:
-        raise RuntimeError(
-            "No products were extracted from any store. "
-            "Check store access, anti-bot pages, and scraper selectors."
-        )
+    scan_result["telegram_errors"]=telegram_errors
+    Path("scan-results.json").write_text(json.dumps(scan_result,ensure_ascii=False,indent=2),encoding="utf-8")
+    export();checkpoint()
+    print("Finished. "+json.dumps(scan_result,ensure_ascii=False))
+    if failures or telegram_errors or empty_stores or processing_errors or not total:
+        raise RuntimeError(f"Degraded scan: store_errors={failures},empty_stores={empty_stores},telegram_errors={telegram_errors},archive_errors={processing_errors}")
 
 
-if __name__ == "__main__":
+if __name__=="__main__":
     main()

@@ -140,7 +140,14 @@ def save_and_evaluate(item, minimum_sample_minutes=60):
         metadata = json.loads(stored[0]) if stored and stored[0] else {}
     except ValueError:
         metadata = {}
-    metadata.update({k:item[k] for k in ("rating","reviews","description","specifications","data_sources","model","condition","color","capacity","size") if item.get(k)})
+    metadata.update({k:item[k] for k in ("rating","reviews","description","specifications","data_sources","model","condition","color","capacity","size","image_url") if item.get(k)})
+    # Current offer evidence may change while the unchanged price is sampled hourly.
+    # Keep it separate from immutable historical observations and never replace the
+    # accepted price on a duplicate scan with a conflicting second reading.
+    if should_record or (latest and latest[2] and round(float(latest[0]),2)==round(float(item["price"]),2)):
+        original = item.get("original_price")
+        original = float(original) if isinstance(original,(int,float)) and not isinstance(original,bool) and math.isfinite(original) and original>item["price"] else None
+        metadata["current_offer"] = {"price":round(float(item["price"]),2),"original_price":original,"seen_at":datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S"),"validated":True,"data_sources":item.get("data_sources",[])}
     item["metadata"] = json.dumps(metadata,ensure_ascii=False)
     for field in ("product_id", "brand", "category", "currency", "gtin", "normalized_name", "metadata"):
         if item.get(field):
@@ -166,33 +173,48 @@ def save_and_evaluate(item, minimum_sample_minutes=60):
 
 
 def historical_assessment(observations, current):
-    # One daily median gives busy scan days no extra voting weight.
+    """Qualify positive historical savings independently of the advertised 25% signal."""
     days = {}
+    valid_observations = 0
+    today = datetime.now(timezone.utc).date()
     for price, stamp in observations:
-        if math.isfinite(price) and price > 0:
-            days.setdefault(stamp[:10], []).append(price)
-    daily = sorted((day, median(values)) for day, values in days.items())
-    result = {"status": "INSUFFICIENT_HISTORY", "baseline": None, "drop_percent": None,
-              "history_days": len(daily), "previous_min": min((v for _,v in daily), default=None)}
-    if len(daily) < MIN_HISTORY_POINTS:
+        try:
+            observed_day = datetime.fromisoformat(stamp.replace("Z","+00:00")).date()
+        except (ValueError,TypeError,AttributeError):
+            continue
+        if isinstance(price,(int,float)) and not isinstance(price,bool) and math.isfinite(price) and price>0 and observed_day<=today:
+            days.setdefault(observed_day.isoformat(),[]).append(price)
+            valid_observations += 1
+    daily = sorted((day,median(values)) for day,values in days.items())
+    coverage = (datetime.fromisoformat(daily[-1][0])-datetime.fromisoformat(daily[0][0])).days if daily else 0
+    result = {"status":"INSUFFICIENT_HISTORY","baseline":None,"drop_percent":None,
+              "history_days":len(daily),"history_observations":valid_observations,
+              "history_coverage_days":coverage,"history_required_days":MIN_HISTORY_POINTS,
+              "history_required_coverage_days":MIN_HISTORY_DAYS,
+              "previous_min":min((v for _,v in daily),default=None)}
+    if not isinstance(current,(int,float)) or isinstance(current,bool) or not math.isfinite(current) or current<=0:
+        result["status"]="DATA_ANOMALY"
         return result
-    coverage = (datetime.fromisoformat(daily[-1][0])-datetime.fromisoformat(daily[0][0])).days
-    stale = (datetime.now(timezone.utc).date()-datetime.fromisoformat(daily[-1][0]).date()).days > 7
-    if coverage < MIN_HISTORY_DAYS or stale:
+    if len(daily)<MIN_HISTORY_POINTS or coverage<MIN_HISTORY_DAYS:
         return result
-    values = [v for _, v in daily]
-    center = median(values)
-    mad = median(abs(v-center) for v in values)
-    clean = [v for v in values if abs(v-center) <= max(center*.2, 3*mad)]
-    if len(clean) < MIN_HISTORY_POINTS:
+    if (today-datetime.fromisoformat(daily[-1][0]).date()).days>7:
         return result
-    baseline = min(median(clean), median(values[-7:]))
-    drop = (baseline-current)/baseline*100
-    result.update(baseline=round(baseline,2), drop_percent=round(drop,2))
-    if current < baseline*.1 or current > baseline*5:
-        result["status"] = "DATA_ANOMALY"
+    values=[v for _,v in daily]
+    center=median(values)
+    mad=median(abs(v-center) for v in values)
+    clean=[(day,v) for day,v in daily if abs(v-center)<=max(center*.2,3*mad)]
+    clean_coverage=(datetime.fromisoformat(clean[-1][0])-datetime.fromisoformat(clean[0][0])).days if clean else 0
+    if len(clean)<MIN_HISTORY_POINTS or clean_coverage<MIN_HISTORY_DAYS:
+        return result
+    baseline=round(min(median(v for _,v in clean),median(values[-7:])),2)
+    drop=(baseline-round(current,2))/baseline*100
+    result.update(baseline=baseline,drop_percent=round(drop,2),history_qualified_days=len(clean))
+    if current<baseline*.1 or current>baseline*5:
+        result["status"]="DATA_ANOMALY"
+    elif round(current,2)<baseline:
+        result["status"]="VERIFIED_DEAL"
     else:
-        result["status"] = "VERIFIED_DEAL" if drop >= MIN_DROP_PERCENT else ("PRICE_INCREASED" if drop < -1 else "PRICE_NORMAL")
+        result["status"]="PRICE_INCREASED" if round(current,2)>baseline else "PRICE_NORMAL"
     return result
 
 

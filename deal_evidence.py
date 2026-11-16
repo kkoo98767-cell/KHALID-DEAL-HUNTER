@@ -2,6 +2,7 @@
 from decimal import Decimal, ROUND_HALF_UP, InvalidOperation
 from datetime import datetime, timezone
 import re
+from config import MIN_DROP_PERCENT
 
 
 def money(value):
@@ -59,7 +60,8 @@ def evaluate(product,offers):
     anomaly=product.get("status")=="DATA_ANOMALY"
     fresh=age<=24
     has_history=product.get("baseline") is not None
-    verified=has_history and fresh and not anomaly
+    latest_validated=product.get("latest_validated",True)
+    verified=has_history and fresh and not anomaly and latest_validated
     confirmed=[o for o in offers if o["condition_confirmed"]]
     components={"identity":10 if product.get("product_id") or valid_gtin(product.get("gtin")) else 3,
                 "freshness":20 if fresh else 10 if age<=72 else 0,
@@ -69,6 +71,7 @@ def evaluate(product,offers):
     if not verified:score=min(score,39)
     if anomaly:score=0
     warnings=[]
+    if not latest_validated:warnings.append("آخر قراءة غير مدققة ولا تصلح لإثبات خصم")
     if not has_history:warnings.append("التاريخ السعري غير كافٍ للتحقق من الخصم")
     if not fresh:warnings.append("السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه")
     if not offers:warnings.append("لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم")
@@ -79,8 +82,11 @@ def evaluate(product,offers):
         claim="OVERSTATED_VS_HISTORY" if advertised["percent"]-historical["percent"]>=10 else "CONSISTENT_WITH_HISTORY"
     if claim=="OVERSTATED_VS_HISTORY":warnings.append("الخصم المعلن أكبر من الانخفاض المدعوم بالسجل؛ هذا اختلاف مرجعي وليس إثباتاً للاحتيال")
     if anomaly:warnings.append("هوية المنتج أو بياناته تحتاج مراجعة")
-    return {"historical_savings":historical,"advertised_savings":advertised,"historical_evidence_valid":verified,
-            "verified_deal":verified and product.get("status")=="VERIFIED_DEAL",
+    positive_savings=historical["amount_sar"] is not None and historical["amount_sar"]>0
+    verified_deal=verified and positive_savings and product.get("status")=="VERIFIED_DEAL"
+    featured=fresh and latest_validated and not anomaly and ((advertised["percent"] is not None and advertised["percent"]>=MIN_DROP_PERCENT) or (verified and historical["percent"] is not None and historical["percent"]>=MIN_DROP_PERCENT))
+    return {"featured":featured,"discovery_threshold_percent":MIN_DROP_PERCENT,"historical_savings":historical,"advertised_savings":advertised,"historical_evidence_valid":verified,
+            "verified_deal":verified_deal,
             "claim_assessment":claim,"trust_score":score,"trust_components":components,"warnings":warnings,
             "cross_store_offers":offers,"lowest_matched_price":min((o["price"] for o in offers),default=None),
             "value_assessment":"لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"}

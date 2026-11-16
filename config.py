@@ -6,11 +6,9 @@ TG_CHAT = os.getenv("TG_CHAT", "")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
 DB_PATH = os.getenv("DB_PATH", "data/deals.db")
 
-# All four stores are scanned on every workflow run; searches rotate in four-run blocks.
+# Active stores only. Historical records for retired stores remain in SQLite.
 STORES = {
     "Amazon.sa": "https://www.amazon.sa/s?k={query}",
-    "Noon": "https://www.noon.com/saudi-en/search/?q={query}",
-    "Extra": "https://www.extra.com/en-sa/search/?text={query}",
     "Jarir": "https://www.jarir.com/sa-en/catalogsearch/result/?q={query}",
 }
 
@@ -48,5 +46,11 @@ LOW_PRIORITY_TERMS = ["spicy", "oud", "heavy tobacco", "cinnamon", "oriental spi
 MIN_DROP_PERCENT = float(os.getenv("MIN_DROP_PERCENT", "25"))
 MIN_HISTORY_POINTS = int(os.getenv("MIN_HISTORY_POINTS", "7"))
 MIN_HISTORY_DAYS = int(os.getenv("MIN_HISTORY_DAYS", "7"))
-MAX_PRODUCTS_PER_SEARCH = 20
+# Per-store sequential limits keep discovery broad without flooding public sources.
+QUERIES_PER_STORE = max(1, min(8, int(os.getenv("QUERIES_PER_STORE", "4"))))
+MAX_PRODUCTS_PER_SEARCH = max(1, min(100, int(os.getenv("MAX_PRODUCTS_PER_SEARCH", "40"))))
+MAX_PRODUCTS_PER_STORE = max(1, min(400, int(os.getenv("MAX_PRODUCTS_PER_STORE", "160"))))
+MAX_SEARCH_PAGES = max(1, min(5, int(os.getenv("MAX_SEARCH_PAGES", "3"))))
+TRACKED_PRODUCTS_PER_STORE = max(0, min(30, int(os.getenv("TRACKED_PRODUCTS_PER_STORE", "12"))))
+REQUEST_GAP_SECONDS = max(0.0, min(5.0, float(os.getenv("REQUEST_GAP_SECONDS", "0.75"))))
 REQUEST_TIMEOUT = 25

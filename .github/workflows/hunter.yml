@@ -49,6 +49,11 @@ jobs:
       - name: Run scraper regression tests
         run: python -m unittest discover -s tests -v
 
+      - name: Validate website labels and JavaScript
+        run: |
+          node --check website/app.js
+          node --test tests/test_frontend.cjs
+
       - name: Run KHALID DEAL HUNTER
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}

@@ -195,6 +195,9 @@ def _products_from_json(soup, base_url, store, limit):
                 reviews = int(_number(obj.get("reviewCount") or obj.get("ratingsCount") or obj.get("reviewsCount")) or 0)
             item = _normalise_product(title, price, url, store, base_url, rating, reviews, "embedded_json")
             if item:
+                picture=image_url(obj.get("image") or obj.get("image_url") or obj.get("imageUrl"),base_url)
+                if picture:
+                    item["image_url"]=picture
                 for field, keys in {"brand": ("brand",), "category": ("category",), "product_id": ("sku", "productId", "product_id"), "gtin": ("gtin13", "gtin", "gtin14")}.items():
                     val = next((obj.get(k) for k in keys if obj.get(k)), None)
                     if isinstance(val, dict):
@@ -306,6 +309,9 @@ def _products_from_cards(soup, base_url, store, limit):
             rating, reviews = _rating_from_card(card)
             item = _normalise_product(title, price, href, store, base_url, rating, reviews, "html_card")
             if item:
+                picture=_card_image(card,base_url)
+                if picture:
+                    item["image_url"]=picture
                 original = _original_price(card)
                 if original and original > item["price"]:
                     item["original_price"] = original
@@ -373,6 +379,9 @@ def _products_from_product_links(soup, base_url, store, limit):
                     title = heading.get_text(" ",strip=True)
                 item = _normalise_product(title, price, href, store, base_url, rating, reviews, "product_link_ancestor")
                 if item:
+                    picture=_card_image(parent,base_url)
+                    if picture:
+                        item["image_url"]=picture
                     original = _original_price(parent)
                     if original and original > item["price"]:
                         item["original_price"] = original
@@ -387,21 +396,28 @@ def _products_from_product_links(soup, base_url, store, limit):
 
 
 def _merge_products(groups, limit):
-    merged, by_url = [], {}
+    merged,by_url=[],{}
     for group in groups:
         for item in group:
-            key = item["url"].split("?")[0].rstrip("/")
+            key=canonical_url(item["url"])
             if key in by_url:
-                existing = by_url[key]
-                for field in ("rating", "reviews"):
-                    if not existing.get(field) and item.get(field):
-                        existing[field] = item[field]
-                existing["data_sources"] = list(dict.fromkeys(existing["data_sources"] + item["data_sources"]))
+                existing=by_url[key]
+                agrees=abs(existing["price"]-item["price"])<=.01
+                if agrees:
+                    for field in ("rating","reviews","image_url","brand","category","product_id","gtin"):
+                        if not existing.get(field) and item.get(field):
+                            existing[field]=item[field]
+                    if existing.get("original_price") and item.get("original_price") and abs(existing["original_price"]-item["original_price"])>.01:
+                        existing["original_price"]=None
+                        existing["original_price_conflict"]=True
+                    elif not existing.get("original_price") and not existing.get("original_price_conflict") and item.get("original_price"):
+                        existing["original_price"]=item["original_price"]
+                existing["data_sources"]=list(dict.fromkeys(existing["data_sources"]+item["data_sources"]))
                 continue
-            by_url[key] = item
+            if len(merged)>=limit:
+                continue
+            by_url[key]=item
             merged.append(item)
-            if len(merged) >= limit:
-                return merged
     return merged
 
 
@@ -527,3 +543,23 @@ def reliable_title(title):
 def _original_price(card):
     node = card.select_one('.a-text-price .a-offscreen, del, s, [class*="old-price"], [class*="original-price"], [class*="was-price"]')
     return _number(node.get("content") or node.get_text(" ",strip=True)) if node else None
+
+
+def image_url(value,base_url):
+    """Return a supplied real HTTPS image URL; never synthesize CDN paths."""
+    if isinstance(value,list):
+        value=next((v for v in value if v),None)
+    if isinstance(value,dict):
+        value=value.get("url") or value.get("contentUrl")
+    if not isinstance(value,str) or not value.strip():
+        return None
+    absolute=urljoin(base_url,value.strip())
+    parsed=urlparse(absolute)
+    return absolute if parsed.scheme=="https" and parsed.netloc and not parsed.username and not parsed.password else None
+
+
+def _card_image(card,base_url):
+    node=card.select_one('img.s-image, img[itemprop="image"], img[data-src], img[src]')
+    if node:
+        return image_url(node.get("data-src") or node.get("src"),base_url)
+    return None

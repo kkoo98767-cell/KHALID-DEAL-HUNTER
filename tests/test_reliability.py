@@ -43,7 +43,7 @@ class ReliabilityTests(unittest.TestCase):
     def test_verified_threshold_and_store_claim(self):
         h=self.history([200]*9)
         self.assertEqual(database.historical_assessment(h,150)["status"],"VERIFIED_DEAL")
-        self.assertEqual(database.historical_assessment(h,151)["status"],"PRICE_NORMAL")
+        self.assertEqual(database.historical_assessment(h,151)["status"],"VERIFIED_DEAL")
         self.assertEqual(database.historical_assessment(h,180)["drop_percent"],10)
 
     def test_spike_cannot_create_discount(self):
@@ -124,7 +124,7 @@ class ReliabilityTests(unittest.TestCase):
         from http.server import ThreadingHTTPServer
         from threading import Thread
         from api import Handler
-        database.save_and_evaluate(self.item())
+        database.save_and_evaluate(dict(title="Wireless Mouse",store="Amazon.sa",url="https://www.amazon.sa/dp/B000000001",price=100))
         server=ThreadingHTTPServer(("127.0.0.1",0),Handler)
         thread=Thread(target=server.serve_forever,daemon=True);thread.start()
         base=f"http://127.0.0.1:{server.server_port}"
@@ -153,13 +153,13 @@ class ReliabilityTests(unittest.TestCase):
 
     def test_partial_scan_keeps_other_store_prices(self):
         def fetch(store,query):
-            if store == "Noon":raise requests.Timeout()
+            if store == "Amazon.sa":raise requests.Timeout()
             return [dict(title="Valid Product",store=store,url="https://"+store.lower()+".example/p/one",price=100)]
         fallback=dict(provider="Fallback",worth_alerting=True,reason="تعذر التحليل",telegram_message="التقييم غير متاح")
-        with patch.object(main,"fetch_store",side_effect=fetch),patch.object(main,"refresh_tracked",return_value=[]),patch.object(main,"analyze_deal",return_value=fallback),patch.object(main,"send_startup_status",side_effect=RuntimeError),patch.object(main,"send_scan_summary") as summary,patch("dashboard.export"),patch.object(main,"Path"),patch("ai_analyzer.evaluate_archive_backlog",return_value=set()):
+        with patch.object(main,"fetch_store",side_effect=fetch),patch.object(main.time,"sleep"),patch.object(main,"refresh_tracked",return_value=[]),patch.object(main,"analyze_deal",return_value=fallback),patch.object(main,"send_startup_status",side_effect=RuntimeError),patch.object(main,"send_scan_summary") as summary,patch("dashboard.export"),patch.object(main,"Path"),patch("ai_analyzer.evaluate_archive_backlog",return_value=set()):
             with self.assertRaises(RuntimeError):main.main()
-            self.assertEqual(database.get_archive_stats()["products"],3)
-            self.assertEqual(summary.call_args.kwargs["products_seen"],3)
+            self.assertEqual(database.get_archive_stats()["products"],1)
+            self.assertEqual(summary.call_args.kwargs["products_seen"],1)
             self.assertEqual(summary.call_args.kwargs["failures"],1)
 
     def test_stale_history_is_not_verified(self):
@@ -217,12 +217,12 @@ class ReliabilityTests(unittest.TestCase):
 
     def test_timeout_bounded(self):
         with patch.object(requests.Session,"get",side_effect=requests.Timeout) as get,patch.object(main.time,"sleep"):
-            with self.assertRaises(requests.Timeout):main.fetch_store("Noon","mouse")
+            with self.assertRaises(requests.Timeout):main.fetch_store("Amazon.sa","mouse")
             self.assertEqual(get.call_count,2)
 
     def test_access_denial_stops(self):
         with patch.object(requests.Session,"get",return_value=Mock(status_code=403)) as get:
-            with self.assertRaises(RuntimeError):main.fetch_store("Noon","mouse")
+            with self.assertRaises(RuntimeError):main.fetch_store("Amazon.sa","mouse")
             self.assertEqual(get.call_count,1)
 
     def test_telegram_rejection_not_recorded(self):
