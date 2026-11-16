@@ -20,7 +20,8 @@ def _send_text(message, timeout=20):
         data={"chat_id": TG_CHAT, "text": message, "disable_web_page_preview": False},
         timeout=timeout,
     )
-    response.raise_for_status()
+    if not response.ok:
+        raise RuntimeError(f"Telegram HTTP {response.status_code}")
     try:
         result = response.json()
     except ValueError as exc:
@@ -69,53 +70,30 @@ def send_ai_test_status(provider, success, detail="", run_number=None):
         message = (
             f"🔴 اختبار {provider} فشل.\n"
             "لم نتمكن من إكمال الاتصال واستلام رد صالح من النموذج.\n"
-            f"السبب: {detail or 'راجع سجل التشغيل في GitHub Actions.'}"
+            f"السبب: {'راجع سجل التشغيل في GitHub Actions للتفاصيل الفنية.'}"
             f"{run_text}"
         )
     return _send_text(message)
 
 
+def format_deal(item):
+    labels = {"VERIFIED_DEAL": "✅ عرض موثوق — تم التحقق من قاعدة البيانات", "POTENTIAL_DEAL": "⚠️ انخفاض محتمل غير مؤكد؛ التاريخ غير كافٍ", "NEW_PRODUCT": "🆕 منتج جديد؛ بدأ تسجيل تاريخه السعري", "PRICE_INCREASED": "📈 ارتفع السعر ولم يعد يحقق شروط العرض", "PRICE_NORMAL": "📊 السعر ضمن النطاق المعتاد", "INSUFFICIENT_HISTORY": "⚠️ التاريخ السعري غير كافٍ", "DATA_ANOMALY": "⚠️ قراءة سعر غير اعتيادية تحتاج مراجعة"}
+    status = labels.get(item.get("status"), labels["INSUFFICIENT_HISTORY"])
+    store = {"Noon":"نون", "Extra":"إكسترا", "Jarir":"جرير"}.get(item["store"], item["store"])
+    message = f"{status}\n\n📦 المنتج: {item['title']}\n🏬 المتجر: {store}\n💰 السعر الحالي: {item['price']:.2f} ريال"
+    if item.get("baseline") is not None:
+        message += f"\n📊 خط الأساس التاريخي: {item['baseline']:.2f} ريال\n📉 الانخفاض الفعلي: {item['drop_percent']}٪"
+    comment = item.get("ai_message") or "التقييم الآلي غير متاح. معلومات الجودة والمواصفات غير كافية للتوصية بالشراء."
+    message += f"\n\n🤖 التقييم: {comment}\n\n🔗 رابط المنتج: {item['url']}"
+    return message
+
+
 def send_deal(item):
-    opening = random.choice(OPENINGS)
-    ai_message = item.get("ai_message", "").strip()
-    if not ai_message:
-        ai_message = "اجتاز المنتج التقييم، لكن ما توفر تعليق إضافي."
-
-    rating = item.get("rating", 0)
-    reviews = item.get("reviews", 0)
-    rating_text = f"{rating:g}/5" if rating else "غير متوفر"
-    reviews_text = f"{reviews:,}" if reviews else "غير متوفر"
-
-    optional_details = []
-    purchase_text = item.get("purchase_count_text", "").strip()
-    if purchase_text:
-        optional_details.append(f"🛒 مؤشر الشراء الظاهر بالمتجر: {purchase_text}")
-    snippets = item.get("review_snippets", []) or []
-    if snippets:
-        optional_details.append("💬 مقتطفات من آراء العملاء:")
-        optional_details.extend(f"• {snippet[:300]}" for snippet in snippets[:3])
-    optional_section = "\n\n" + "\n".join(optional_details) if optional_details else ""
-
-    message = (
-        f"{opening}\n\n"
-        f"🛍️ {item['title']}\n"
-        f"🏬 المتجر: {item['store']}\n\n"
-        f"💰 السعر الحالي: {item['price']:.2f} ريال\n"
-        f"📊 متوسط الأسعار السابقة: {item['baseline']:.2f} ريال\n"
-        f"📉 الانخفاض عن المتوسط: {item['drop_percent']}%\n"
-        f"⭐ تقييم المنتج: {rating_text}\n"
-        f"📝 عدد المراجعات: {reviews_text}"
-        f"{optional_section}\n\n"
-        f"🤖 رأي KHALID DEAL HUNTER:\n{ai_message}\n\n"
-        f"🔗 رابط المنتج:\n{item['url']}\n\n"
-        "تنبيه: المقارنة مبنية على سجل الأسعار الذي جمعه البوت، "
-        "وليست ضماناً لاستمرار السعر أو توفر المنتج."
-    )
-    return _send_text(message)
+    return _send_text(format_deal(item))
 
 
 def send_scan_summary(run_number=None, products_seen=0, new_products=0,
-                      failures=0, empty_stores=0, archive_stats=None):
+                      failures=0, empty_stores=0, archive_stats=None, **metrics):
     """Send an end-of-run archive report so a successful workflow cannot hide an empty scan."""
     stats = archive_stats or {}
     run_text = f"\nرقم التشغيل: #{run_number}" if run_number else ""
@@ -127,7 +105,16 @@ def send_scan_summary(run_number=None, products_seen=0, new_products=0,
         f"📈 إجمالي قراءات الأسعار: {stats.get('price_observations', 0)}\n"
         f"🏬 متاجر لها منتجات مؤرشفة: {stats.get('stores_with_products', 0)} من 4\n"
         f"⚠️ متاجر بلا نتائج: {empty_stores}\n"
-        f"❌ متاجر/عمليات واجهت أخطاء: {failures}"
+        f"❌ متاجر/عمليات واجهت أخطاء: {failures}\n"
+        f"متاجر تم فحصها: {metrics.get('stores_checked', 4)}\n"
+        f"متاجر نجح استخراجها: {metrics.get('successful_stores', 0)}\n"
+        f"منتجات لها تاريخ كافٍ: {metrics.get('sufficient_history', 0)}\n"
+        f"عروض محتملة: {metrics.get('potential_deals', 0)}\n"
+        f"عروض موثوقة: {metrics.get('verified_deals', 0)}\n"
+        f"عروض غير مؤكدة: {metrics.get('potential_deals', 0)}\n"
+        f"مزود التحليل: {metrics.get('providers', 'غير متاح')}"
         f"{run_text}"
     )
+    if metrics.get("comment"):
+        message += "\n\n" + metrics["comment"]
     return _send_text(message)

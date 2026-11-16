@@ -28,7 +28,7 @@ def main():
             result["provider"], True, detail, run_number
         )
     except Exception as exc:
-        detail = f"{type(exc).__name__}: {exc}"
+        detail = f"{type(exc).__name__}"
         print(f"AI PROVIDER TEST FAILED: {detail}")
         try:
             send_ai_test_status(
@@ -37,7 +37,7 @@ def main():
         except Exception as telegram_exc:
             print(
                 "Could not send failure result to Telegram: "
-                f"{type(telegram_exc).__name__}: {telegram_exc}"
+                f"{type(telegram_exc).__name__}"
             )
         raise
 

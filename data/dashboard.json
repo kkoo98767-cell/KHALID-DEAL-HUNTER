@@ -1,0 +1,1856 @@
+{
+  "generated_at": "2026-11-16T05:07:44.578018+00:00",
+  "stats": {
+    "products": 80,
+    "observations": 81,
+    "verified": 0,
+    "sufficient": 0
+  },
+  "scan": null,
+  "products": [
+    {
+      "id": "https://aax-eu-zaz.amazon.sa/x/c/JPbcxpgz2_5u4IWUCQJk5b0AAAGh4a7vNwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAPQl6G/clv1c_ek-IBIfXIjbXTd2CJA6kSYg9o0MWfMJ90stE7BJZpIoRwyGC0Rsl8mvM3FJv0Gz3pWQ1Bi65jT132bfDJzGsG8tcr3o9ETOh61948TwdK8EqTWnLIqbucbgtMxx2u1Cx1xMas-uPGH2Gw5Nk_OSkXxNO9bBHJtXohwQwTDWY0ZdHEUu8HMezNir4wjYVgoNz-Kw7IMJZdQzy72b1m2zIYsP7nlmhJYXukS5ugGGnn_yiOr2lmIXgGxuwCKcgy3WyatwePkmpZ1Ab2jdemBZGDfrFK9sxhvaSyUE55WgNEkO9q7w6QFNeXswlLDKpHcA6arE-I98FkJ1asau7JyipglVL-tKkdlI3Wou6IfS-6LgA6XsCvjFp03Ahuw0CKYnNphyZbeFB4ZbYsVQHsDeigrhZeTzi4QRyW73dsig5Jclc1ToCE0I18b6ez09aVZQT_RvuGWXxslztq_SmVtUVkpdw9H9LV6jW1c7qVIpCI3AMC4pzPUtl-rFqL0Vp8vpfQnvCzATnAxqJGwj1Ca4EctjiCpi-eDGgMztf1WwUJawT2UijanLOKEYUclEwhnbiVmGQclSfhTx54UKe06rV4qab-pzFKS0LZIoAZbguQygSXqaHpZNAn-x6pEuaZi66UTxSebpDaAXaLkSLbdhKWJlf7eqWbrpYCHXZ6qc4xxZBu-_61tbqWRGeYA4XrkEOIiYH2A_lK43NeYAD11L-eDqSw34WSnnfryRK6ksbU8lQtxO0vfZzOxl4JvRbj9y7zhlbAOW7HQgie8PEekCvWpeg2Nu4CBQqLkOCYaXpzdTJGAzBMt1VunZh7ze16lUA0rnLvwrHfdLMTg5Uu9U3UAD-jcwMGMx0QHkugFNFvoh1bDYns7nVnZZoNv-jQDg7cfmOSrmLLvHWVD1vslkHUAiGdFJed8F5fWrkqaEzeXRe1J9xeo-YZNKGpBnIuTyexBY6Fd8ojaFl3MciaOw2iY5RK7vEpxeHJwt-1H2eyo0NUxjRUJxuv5RgYUY84bJUU6wQBzk3Kh0fBn5wUcAic4zatdmbm1Ov2zv5jWd95MbGvTFq1cL9nPukcVjiFMh3-L9_5IzHxDEZ34fYZ4zRxEELu1wIVOv2ZLAOtB8KCq7a7o_Rpz5hHi6W8goNcPDZhb9-N5gKsQ8_zi-rqDkISlNYEzb6j_ZOrmVaZ4KpUgVhGQVpXSMUzf1UFL3txipaQNjAJ0dW1HKTo5lXz6sjtGjXgGGsT6QTR5l1MfTfBs4rE_9Hx0BOm1_hAyADzWEeihxTToD5cG0T7vq1Z5X5lBe9a6k0EH2U2-_Dys1Jr2jh3XAtK8qKaJR3KguK_rTg1wjOrKt85LcRXmn4ldYGlt7gC8ZMY-Az5xI81HdXXjSrpzOx0xODZDOq9OCM2D0cpAZjTVJ4t0sgLQ7CAHekQYjF4dyAmhNNYC89H5tHEPPXjJIcBHt8iGI_eaqqjvrwzdWi-18qOAL2EpbwEmemxmvZMFe4Lc_DxlLrFpNcGDAfR8Zh2OvG6YTqQM79WXWND3TWQZINSJ-Vg9O_jqdx8IGMHkMOdxx2OI_G-DeeMkTLglhqFtiqXiqkw75vcCq0-QNDmGkXgZ1pKNJgbLCWpY69LtgHRLLawIBR5vMxMteLU1em2WlVCXFrrQz45jCCsTiU1KdwgQ8hJNSa8zLNwYis61UcoZswKvyrgHryVD7Vj6A9r00RDwj-FlUjv8C7MGL7ZajFsUvdp1kuV5YFYyRe-R2Lw7Di/https://www.amazon.sa/dp/B0HBWB7Z9D",
+      "store": "Amazon.sa",
+      "title": "This advertisement showcases a DIY craft project for creating decorative fabric bow hair clips. The product demonstrates how to transform colorful patterned fabric scraps into charming hair accessories using simple folding and fastening techniques. Perfect for creative crafters, children's activitie",
+      "url": "https://aax-eu-zaz.amazon.sa/x/c/JPbcxpgz2_5u4IWUCQJk5b0AAAGh4a7vNwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAPQl6G/clv1c_ek-IBIfXIjbXTd2CJA6kSYg9o0MWfMJ90stE7BJZpIoRwyGC0Rsl8mvM3FJv0Gz3pWQ1Bi65jT132bfDJzGsG8tcr3o9ETOh61948TwdK8EqTWnLIqbucbgtMxx2u1Cx1xMas-uPGH2Gw5Nk_OSkXxNO9bBHJtXohwQwTDWY0ZdHEUu8HMezNir4wjYVgoNz-Kw7IMJZdQzy72b1m2zIYsP7nlmhJYXukS5ugGGnn_yiOr2lmIXgGxuwCKcgy3WyatwePkmpZ1Ab2jdemBZGDfrFK9sxhvaSyUE55WgNEkO9q7w6QFNeXswlLDKpHcA6arE-I98FkJ1asau7JyipglVL-tKkdlI3Wou6IfS-6LgA6XsCvjFp03Ahuw0CKYnNphyZbeFB4ZbYsVQHsDeigrhZeTzi4QRyW73dsig5Jclc1ToCE0I18b6ez09aVZQT_RvuGWXxslztq_SmVtUVkpdw9H9LV6jW1c7qVIpCI3AMC4pzPUtl-rFqL0Vp8vpfQnvCzATnAxqJGwj1Ca4EctjiCpi-eDGgMztf1WwUJawT2UijanLOKEYUclEwhnbiVmGQclSfhTx54UKe06rV4qab-pzFKS0LZIoAZbguQygSXqaHpZNAn-x6pEuaZi66UTxSebpDaAXaLkSLbdhKWJlf7eqWbrpYCHXZ6qc4xxZBu-_61tbqWRGeYA4XrkEOIiYH2A_lK43NeYAD11L-eDqSw34WSnnfryRK6ksbU8lQtxO0vfZzOxl4JvRbj9y7zhlbAOW7HQgie8PEekCvWpeg2Nu4CBQqLkOCYaXpzdTJGAzBMt1VunZh7ze16lUA0rnLvwrHfdLMTg5Uu9U3UAD-jcwMGMx0QHkugFNFvoh1bDYns7nVnZZoNv-jQDg7cfmOSrmLLvHWVD1vslkHUAiGdFJed8F5fWrkqaEzeXRe1J9xeo-YZNKGpBnIuTyexBY6Fd8ojaFl3MciaOw2iY5RK7vEpxeHJwt-1H2eyo0NUxjRUJxuv5RgYUY84bJUU6wQBzk3Kh0fBn5wUcAic4zatdmbm1Ov2zv5jWd95MbGvTFq1cL9nPukcVjiFMh3-L9_5IzHxDEZ34fYZ4zRxEELu1wIVOv2ZLAOtB8KCq7a7o_Rpz5hHi6W8goNcPDZhb9-N5gKsQ8_zi-rqDkISlNYEzb6j_ZOrmVaZ4KpUgVhGQVpXSMUzf1UFL3txipaQNjAJ0dW1HKTo5lXz6sjtGjXgGGsT6QTR5l1MfTfBs4rE_9Hx0BOm1_hAyADzWEeihxTToD5cG0T7vq1Z5X5lBe9a6k0EH2U2-_Dys1Jr2jh3XAtK8qKaJR3KguK_rTg1wjOrKt85LcRXmn4ldYGlt7gC8ZMY-Az5xI81HdXXjSrpzOx0xODZDOq9OCM2D0cpAZjTVJ4t0sgLQ7CAHekQYjF4dyAmhNNYC89H5tHEPPXjJIcBHt8iGI_eaqqjvrwzdWi-18qOAL2EpbwEmemxmvZMFe4Lc_DxlLrFpNcGDAfR8Zh2OvG6YTqQM79WXWND3TWQZINSJ-Vg9O_jqdx8IGMHkMOdxx2OI_G-DeeMkTLglhqFtiqXiqkw75vcCq0-QNDmGkXgZ1pKNJgbLCWpY69LtgHRLLawIBR5vMxMteLU1em2WlVCXFrrQz45jCCsTiU1KdwgQ8hJNSa8zLNwYis61UcoZswKvyrgHryVD7Vj6A9r00RDwj-FlUjv8C7MGL7ZajFsUvdp1kuV5YFYyRe-R2Lw7Di/https://www.amazon.sa/dp/B0HBWB7Z9D?aref=zf0P8zp8VE&pd_rd_i=B0HBWB7Z9D&pf_rd_p=c5531ce7-805f-4189-9405-51bac4f14705&pd_rd_wg=IFZtg&pf_rd_r=6B79933T3E36R6XZ3TWW&pd_rd_w=PiCZK&pd_rd_r=7a935c29-a86c-43db-ac18-18eae3d7d3aa",
+      "brand": null,
+      "category": null,
+      "price": 54.91,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 54.91,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Jones-Jjebradley-Sweat-Sweatshirt-Black/dp/B0C7HDJM3H/ref=mp_s_a_1_1",
+      "store": "Amazon.sa",
+      "title": "SAR 80.41 SAR 80 . 41 List: SAR 148.00 List: SAR 148.00 SAR148.00",
+      "url": "https://www.amazon.sa/-/en/Jones-Jjebradley-Sweat-Sweatshirt-Black/dp/B0C7HDJM3H/ref=mp_s_a_1_1?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-1",
+      "brand": null,
+      "category": null,
+      "price": 80.41,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 80.41,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Jones-Jjebradley-Sweat-Sweatshirt-Moonbeam/dp/B0C7HDKQF5/ref=mp_s_a_1_2",
+      "store": "Amazon.sa",
+      "title": "Limited time deal SAR 75.31 SAR 75 . 31 Was: SAR 100.12 Was: SAR 100.12 SAR100.12",
+      "url": "https://www.amazon.sa/-/en/Jones-Jjebradley-Sweat-Sweatshirt-Moonbeam/dp/B0C7HDKQF5/ref=mp_s_a_1_2?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-2",
+      "brand": null,
+      "category": null,
+      "price": 75.31,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 75.31,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Champion-Powerblend-Fleece-Hoodie-Black-407d55/dp/B01HIUTJCO/ref=mp_s_a_1_3",
+      "store": "Amazon.sa",
+      "title": "Limited time deal SAR 166.00 SAR 166 . 00",
+      "url": "https://www.amazon.sa/-/en/Champion-Powerblend-Fleece-Hoodie-Black-407d55/dp/B01HIUTJCO/ref=mp_s_a_1_3?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-3",
+      "brand": null,
+      "category": null,
+      "price": 166.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 166.0,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://aax-eu-zaz.amazon.sa/x/c/JPbcxpgz2_5u4IWUCQJk5b0AAAGh4a7vNwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAPQl6G/clv1c_ek-IBIfXIjbXTd2CJA6kSYg9o0MWfMJ90stE7BJZpIoRwyGC0Rsl8mvM3FJv0Gz3pWQ1Bi65jT132bfDJzGsG8tcr3o9ETOh61948TwdK8EqTWnLIqbucbgtMxx2u1Cx1xMas-uPGH2Gw5Nk_OSkXxNO9bBHJtXohwQwTDWY0ZdHEUu8HMezNir4wjYVgoNz-Kw7IMJZdQzy72b1m2zIYsP7nlmhJYXukS5ugGGnn_yiOr2lmIXgGxuwCKcgy3WyatwePkmpZ1Ab2jdemBZGDfrFK9sxhvaSyUE55WgNEkO9q7w6QFNeXswlLDKpHcA6arE-I98FkJ1asau7JyipglVL-tKkdlI3Wou6IfS-6LgA6XsCvjFp03Ahuw0CKYnNphyZbeFB4ZbYsVQHsDeigrhZeTzi4QRyW73dsig5Jclc1ToCE0I18b6ez09aVZQT_RvuGWXxslztq_SmVtUVkpdw9H9LV6jW1c7qVIpCI3AMC4pzPUtl-rFqL0Vp8vpfQnvCzATnAxqJGwj1Ca4EctjiCpi-eDGgMztf1WwUJawT2UijanLOKEYUclEwhnbiVmGQclSfhTx54UKe06rV4qab-pzFKS0LZIoAZbguQygSXqaHpZNAn-x6pEuaZi66UTxSebpDaAXaLkSLbdhKWJlf7eqWbrpYCHXZ6qc4xxZBu-_61tbqWRGeYA4XrkEOIiYH2A_lK43NeYAD11L-eDqSw34WSnnfryRK6ksbU8lQtxO0vfZzOxl4JvRbj9y7zhlbAOW7HQgie8PEekCvWpeg2Nu4CBQqLkOCYaXpzdTJGAzBMt1VunZh7ze16lUA0rnLvwrHfdLMTg5Uu9U3UAD-jcwMGMx0QHkugFNFvoh1bDYns7nVnZZoNv-jQDg7cfmOSrmLLvHWVD1vslkHUAiGdFJed8F5fWrkqaEzeXRe1J9xeo-YZNKGpBnIuTyexBY6Fd8ojaFl3MciaOw2iY5RK7vEpxeHJwt-1H2eyo0NUxjRUJxuv5RgYUY84bJUU6wQBzk3Kh0fBn5wUcAic4zatdmbm1Ov2zv5jWd95MbGvTFq1cL9nPukcVjiFMh3-L9_5IzHxDEZ34fYZ4zRxEELu1wIVOv2ZLAOtB8KCq7a7o_Rpz5hHi6W8goNcPDZhb9-N5gKsQ8_zi-rqDkISlNYEzb6j_ZOrmVaZ4KpUgVhGQVpXSMUzf1UFL3txipaQNjAJ0dW1HKTo5lXz6sjtGjXgGGsT6QTR5l1MfTfBs4rE_9Hx0BOm1_hAyADzWEeihxTToD5cG0T7vq1Z5X5lBe9a6k0EH2U2-_Dys1Jr2jh3XAtK8qKaJR3KguK_rTg1wjOrKt85LcRXmn4ldYGlt7gC8ZMY-Az5xI81HdXXjSrpzOx0xODZDOq9OCM2D0cpAZjTVJ4t0sgLQ7CAHekQYjF4dyAmhNNYC89H5tHEPPXjJIcBHt8iGI_eaqqjvrwzdWi-18qOAL2EpbwEmemxmvZMFe4Lc_DxlLrFpNcGDAfR8Zh2OvG6YTqQM79WXWND3TWQZINSJ-Vg9O_jqdx8IGMHkMOdxx2OI_G-DeeMkTLglhqFtiqXiqkw75vcCq0-QNDmGkXgZ1pKNJgbLCWpY69LtgHRLLawIBR5vMxMteLU1em2WlVCXFrrQz45jCCsTiU1KdwgQ8hJNSa8zLNwYis61UcoZswKvyrgHryVD7Vj6A9r00RDwj-FlUjv8C7MGL7ZajFsUvdp1kuV5YFYyRe-R2Lw7Di/https://www.amazon.sa/Quilting-Patchwork-Quarters-Breathable-Resistant/dp/B0HBWB7Z9D/ref=sxin_21_sbv_search_btf",
+      "store": "Amazon.sa",
+      "title": "SAR 54.91 SAR 54 . 91",
+      "url": "https://aax-eu-zaz.amazon.sa/x/c/JPbcxpgz2_5u4IWUCQJk5b0AAAGh4a7vNwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAPQl6G/clv1c_ek-IBIfXIjbXTd2CJA6kSYg9o0MWfMJ90stE7BJZpIoRwyGC0Rsl8mvM3FJv0Gz3pWQ1Bi65jT132bfDJzGsG8tcr3o9ETOh61948TwdK8EqTWnLIqbucbgtMxx2u1Cx1xMas-uPGH2Gw5Nk_OSkXxNO9bBHJtXohwQwTDWY0ZdHEUu8HMezNir4wjYVgoNz-Kw7IMJZdQzy72b1m2zIYsP7nlmhJYXukS5ugGGnn_yiOr2lmIXgGxuwCKcgy3WyatwePkmpZ1Ab2jdemBZGDfrFK9sxhvaSyUE55WgNEkO9q7w6QFNeXswlLDKpHcA6arE-I98FkJ1asau7JyipglVL-tKkdlI3Wou6IfS-6LgA6XsCvjFp03Ahuw0CKYnNphyZbeFB4ZbYsVQHsDeigrhZeTzi4QRyW73dsig5Jclc1ToCE0I18b6ez09aVZQT_RvuGWXxslztq_SmVtUVkpdw9H9LV6jW1c7qVIpCI3AMC4pzPUtl-rFqL0Vp8vpfQnvCzATnAxqJGwj1Ca4EctjiCpi-eDGgMztf1WwUJawT2UijanLOKEYUclEwhnbiVmGQclSfhTx54UKe06rV4qab-pzFKS0LZIoAZbguQygSXqaHpZNAn-x6pEuaZi66UTxSebpDaAXaLkSLbdhKWJlf7eqWbrpYCHXZ6qc4xxZBu-_61tbqWRGeYA4XrkEOIiYH2A_lK43NeYAD11L-eDqSw34WSnnfryRK6ksbU8lQtxO0vfZzOxl4JvRbj9y7zhlbAOW7HQgie8PEekCvWpeg2Nu4CBQqLkOCYaXpzdTJGAzBMt1VunZh7ze16lUA0rnLvwrHfdLMTg5Uu9U3UAD-jcwMGMx0QHkugFNFvoh1bDYns7nVnZZoNv-jQDg7cfmOSrmLLvHWVD1vslkHUAiGdFJed8F5fWrkqaEzeXRe1J9xeo-YZNKGpBnIuTyexBY6Fd8ojaFl3MciaOw2iY5RK7vEpxeHJwt-1H2eyo0NUxjRUJxuv5RgYUY84bJUU6wQBzk3Kh0fBn5wUcAic4zatdmbm1Ov2zv5jWd95MbGvTFq1cL9nPukcVjiFMh3-L9_5IzHxDEZ34fYZ4zRxEELu1wIVOv2ZLAOtB8KCq7a7o_Rpz5hHi6W8goNcPDZhb9-N5gKsQ8_zi-rqDkISlNYEzb6j_ZOrmVaZ4KpUgVhGQVpXSMUzf1UFL3txipaQNjAJ0dW1HKTo5lXz6sjtGjXgGGsT6QTR5l1MfTfBs4rE_9Hx0BOm1_hAyADzWEeihxTToD5cG0T7vq1Z5X5lBe9a6k0EH2U2-_Dys1Jr2jh3XAtK8qKaJR3KguK_rTg1wjOrKt85LcRXmn4ldYGlt7gC8ZMY-Az5xI81HdXXjSrpzOx0xODZDOq9OCM2D0cpAZjTVJ4t0sgLQ7CAHekQYjF4dyAmhNNYC89H5tHEPPXjJIcBHt8iGI_eaqqjvrwzdWi-18qOAL2EpbwEmemxmvZMFe4Lc_DxlLrFpNcGDAfR8Zh2OvG6YTqQM79WXWND3TWQZINSJ-Vg9O_jqdx8IGMHkMOdxx2OI_G-DeeMkTLglhqFtiqXiqkw75vcCq0-QNDmGkXgZ1pKNJgbLCWpY69LtgHRLLawIBR5vMxMteLU1em2WlVCXFrrQz45jCCsTiU1KdwgQ8hJNSa8zLNwYis61UcoZswKvyrgHryVD7Vj6A9r00RDwj-FlUjv8C7MGL7ZajFsUvdp1kuV5YFYyRe-R2Lw7Di/https://www.amazon.sa/Quilting-Patchwork-Quarters-Breathable-Resistant/dp/B0HBWB7Z9D/ref=sxin_21_sbv_search_btf?aref=zf0P8zp8VE&content-id=amzn1.sym.c5531ce7-805f-4189-9405-51bac4f14705%3Aamzn1.sym.c5531ce7-805f-4189-9405-51bac4f14705&cv_ct_cx=men+hoodie&keywords=men+hoodie&pd_rd_i=B0HBWB7Z9D&pd_rd_r=7a935c29-a86c-43db-ac18-18eae3d7d3aa&pd_rd_w=PiCZK&pd_rd_wg=IFZtg&pf_rd_p=c5531ce7-805f-4189-9405-51bac4f14705&pf_rd_r=6B79933T3E36R6XZ3TWW&qid=1794787700&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-1c478570-4379-4ea8-a792-2a17f33dfdd3",
+      "brand": null,
+      "category": null,
+      "price": 54.91,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 54.91,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Jones-Hoodie-Sweatshirt-Color-Black/dp/B07L6TPRVP/ref=mp_s_a_1_4",
+      "store": "Amazon.sa",
+      "title": "Limited time deal SAR 69.02 SAR 69 . 02",
+      "url": "https://www.amazon.sa/-/en/Jones-Hoodie-Sweatshirt-Color-Black/dp/B07L6TPRVP/ref=mp_s_a_1_4?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-4",
+      "brand": null,
+      "category": null,
+      "price": 69.02,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 69.02,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Lymio-Polyester-Hooded-Neck-Sweatshirt-H-46-Brown-M/dp/B0DBDP7RMN/ref=mp_s_a_1_5",
+      "store": "Amazon.sa",
+      "title": "Limited time deal SAR 37.00 SAR 37 . 00",
+      "url": "https://www.amazon.sa/-/en/Lymio-Polyester-Hooded-Neck-Sweatshirt-H-46-Brown-M/dp/B0DBDP7RMN/ref=mp_s_a_1_5?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-5",
+      "brand": null,
+      "category": null,
+      "price": 37.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 37.0,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Jones-Jjebradley-Sweat-Sweatshirt-Blazer/dp/B0C7HB2M8H/ref=mp_s_a_1_6",
+      "store": "Amazon.sa",
+      "title": "SAR 125.65 SAR 125 . 65 List Price: SAR 148.00 List Price: SAR 148.00 SAR148.00",
+      "url": "https://www.amazon.sa/-/en/Jones-Jjebradley-Sweat-Sweatshirt-Blazer/dp/B0C7HB2M8H/ref=mp_s_a_1_6?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-6",
+      "brand": null,
+      "category": null,
+      "price": 125.65,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 125.65,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Champion-Graphic-Powerblend-Fleece-Hoodie/dp/B078GLNW6P/ref=mp_s_a_1_7",
+      "store": "Amazon.sa",
+      "title": "Limited time deal SAR 126.00 SAR 126 . 00",
+      "url": "https://www.amazon.sa/-/en/Champion-Graphic-Powerblend-Fleece-Hoodie/dp/B078GLNW6P/ref=mp_s_a_1_7?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-7",
+      "brand": null,
+      "category": null,
+      "price": 126.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 126.0,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Jones-Jjestar-Sweat-Sweatshirt-Moonbeam/dp/B0C36S4S2F/ref=mp_s_a_1_8",
+      "store": "Amazon.sa",
+      "title": "No featured offers available SAR 118.76 (3 new offers)",
+      "url": "https://www.amazon.sa/-/en/Jones-Jjestar-Sweat-Sweatshirt-Moonbeam/dp/B0C36S4S2F/ref=mp_s_a_1_8?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-8",
+      "brand": null,
+      "category": null,
+      "price": 118.76,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 118.76,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Gildan-Sweatshirt-G18500-Multipack-X-Large/dp/B00SV758DI/ref=mp_s_a_1_9",
+      "store": "Amazon.sa",
+      "title": "Limited time deal SAR 66.31 SAR 66 . 31",
+      "url": "https://www.amazon.sa/-/en/Gildan-Sweatshirt-G18500-Multipack-X-Large/dp/B00SV758DI/ref=mp_s_a_1_9?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-9",
+      "brand": null,
+      "category": null,
+      "price": 66.31,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 66.31,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Jones-Jjecorp-Sweat-Sweatshirt-White/dp/B08H4BNGQ2/ref=mp_s_a_1_10",
+      "store": "Amazon.sa",
+      "title": "SAR 72.25 SAR 72 . 25 List: SAR 148.00 List: SAR 148.00 SAR148.00",
+      "url": "https://www.amazon.sa/-/en/Jones-Jjecorp-Sweat-Sweatshirt-White/dp/B08H4BNGQ2/ref=mp_s_a_1_10?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-10",
+      "brand": null,
+      "category": null,
+      "price": 72.25,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 72.25,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Jones-Hoodie-Sweatshirt-Color-Print/dp/B08NGGTMHZ/ref=mp_s_a_1_11",
+      "store": "Amazon.sa",
+      "title": "Limited time deal SAR 104.00 SAR 104 . 00 List: SAR 148.00 List: SAR 148.00 SAR148.00",
+      "url": "https://www.amazon.sa/-/en/Jones-Hoodie-Sweatshirt-Color-Print/dp/B08NGGTMHZ/ref=mp_s_a_1_11?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-11",
+      "brand": null,
+      "category": null,
+      "price": 104.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 104.0,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Lymio-Polyester-Hooded-Neck-Sweatshirt-H-47-Black-XL/dp/B0DBDQBW7T/ref=mp_s_a_1_12",
+      "store": "Amazon.sa",
+      "title": "No featured offers available SAR 86.74 (1 new offer)",
+      "url": "https://www.amazon.sa/-/en/Lymio-Polyester-Hooded-Neck-Sweatshirt-H-47-Black-XL/dp/B0DBDQBW7T/ref=mp_s_a_1_12?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-12",
+      "brand": null,
+      "category": null,
+      "price": 86.74,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 86.74,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/GAP-Fleece-Hoodie-Sweatshirt-Tapestry/dp/B09R2LBXVH/ref=mp_s_a_1_13_mod_primary_new",
+      "store": "Amazon.sa",
+      "title": "SAR 245.00 SAR 245 . 00",
+      "url": "https://www.amazon.sa/-/en/GAP-Fleece-Hoodie-Sweatshirt-Tapestry/dp/B09R2LBXVH/ref=mp_s_a_1_13_mod_primary_new?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=8-13",
+      "brand": null,
+      "category": null,
+      "price": 245.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 245.0,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Champion-Graphic-Powerblend-Fleece-X-Large/dp/B078HHDSD6/ref=mp_s_a_1_14",
+      "store": "Amazon.sa",
+      "title": "Limited time deal SAR 126.00 SAR 126 . 00",
+      "url": "https://www.amazon.sa/-/en/Champion-Graphic-Powerblend-Fleece-X-Large/dp/B078HHDSD6/ref=mp_s_a_1_14?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-14",
+      "brand": null,
+      "category": null,
+      "price": 126.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 126.0,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Fruit-Loom-Eversoft-Sweatshirts-Sweatshirt-Grey/dp/B08YGXS9PZ/ref=mp_s_a_1_15",
+      "store": "Amazon.sa",
+      "title": "Limited time deal SAR 48.00 SAR 48 . 00",
+      "url": "https://www.amazon.sa/-/en/Fruit-Loom-Eversoft-Sweatshirts-Sweatshirt-Grey/dp/B08YGXS9PZ/ref=mp_s_a_1_15?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-15",
+      "brand": null,
+      "category": null,
+      "price": 48.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 48.0,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Hanes-Pullover-Ecosmart-Sweatshirt-XX-Large/dp/B00JUM31F0/ref=mp_s_a_1_16",
+      "store": "Amazon.sa",
+      "title": "Limited time deal SAR 63.00 SAR 63 . 00 Was: SAR 81.62 Was: SAR 81.62 SAR81.62",
+      "url": "https://www.amazon.sa/-/en/Hanes-Pullover-Ecosmart-Sweatshirt-XX-Large/dp/B00JUM31F0/ref=mp_s_a_1_16?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-16",
+      "brand": null,
+      "category": null,
+      "price": 63.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 63.0,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/Champion-Graphic-Powerblend-Fleece-Hoodie/dp/B078GL8MD6/ref=mp_s_a_1_17",
+      "store": "Amazon.sa",
+      "title": "Limited time deal SAR 147.00 SAR 147 . 00",
+      "url": "https://www.amazon.sa/-/en/Champion-Graphic-Powerblend-Fleece-Hoodie/dp/B078GL8MD6/ref=mp_s_a_1_17?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sr=8-17",
+      "brand": null,
+      "category": null,
+      "price": 147.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 147.0,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/-/en/BOSS-Jacket-Stretch-Cotton-Hoodie/dp/B0C3MZ1NS4/ref=mp_s_a_1_18_mod_primary_new",
+      "store": "Amazon.sa",
+      "title": "SAR 258.83 SAR 258 . 83",
+      "url": "https://www.amazon.sa/-/en/BOSS-Jacket-Stretch-Cotton-Hoodie/dp/B0C3MZ1NS4/ref=mp_s_a_1_18_mod_primary_new?dib=eyJ2IjoiMSJ9.uN2whi7gi7QNFSSJf4fgzSWa2tw8Bwu4GGoed6L_8ONMg6T5t8vF6JaA8fv2o5jVrnfJLqwu7HhGOp3P4pwsk2f0xpKdBmp737D56j5UW4v43D56gyr4gKvEk0EqDQRcopIYukjBvOtOcgFDU4PmZV3LBb8WyigMgirvPHZNECMMw9K7lwabyhHrCg7kBDPVZyYmV1gRSCXOQzMfpMz0S0cUpwm8RE_bOkG85HBosRmndqG3iXT9MeRq_eWGgyDIlF9LavYxuEuYCrB_bn4uoQGQDVt5SPhkb5wuE3pCM4k.2Y207t_QLCQJAFVez-BVHNnzTXZTQqriApziqueRJIM&dib_tag=se&keywords=men+hoodie&qid=1794787700&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=8-18",
+      "brand": null,
+      "category": null,
+      "price": 258.83,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 00:08:22",
+      "history": [
+        {
+          "price": 258.83,
+          "date": "2026-11-16 00:08:22"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://sponsored-ads.amazon.sa/clk",
+      "store": "Amazon.sa",
+      "title": "تم نسخ معلومات معالجة الأخطاء.",
+      "url": "https://sponsored-ads.amazon.sa/clk?p=eAHj8uG4svLFdTYhPkdDc1dzS2czFwuXcL8AJUZDK7H8YPcCXws_H0ODIP_8EpdUZ8eCIl_HIG4jEzM9EzM9cyM9gyimYKckDkfXEA_XIM9gIXEu9pTU4uyS_AIhnlC_IFdnf3c_zyhXFylnLmWoRHxxamJRckZ8QWpRcn5OYklqfGZeTmZeanxSSZoQZ2JuYlV-nl5xohRXcVKZLkStEmtiUbyjq5IZF6OBwJ7F8080bHOR4oOapwvRrsRvZGBgYGpqaWRkZGpgYGJoxBzsGGTF7BzgrOUvZO3i5Ohc4Oapa-5Y51QIAemOdU6BJRV-Tp6OqKDOKR2MHCEMKQHndNcK94CycDdnF4OSDBNbozCukIySkoJiK3398vJyPbij9VMK9J0M3HzC_EJ8zYLtE4tS02xNjYwM_fM9yvLc1ApS4otS4jNtEUqgQgU5GSlFtiUAfgB7YA&v=c1&r=https://www.amazon.sa/dp/B0FLVNTM6S?aref=5221OoHvnF&pd_rd_i=B0FLVNTM6S&pf_rd_p=ff44a4e4-e96e-4ad4-8a65-3f21ce13b878&pd_rd_wg=YZAne&pf_rd_r=ZK8RYAMM7FCEHDS4YJR9&pd_rd_w=37Kqf&pd_rd_r=952f59d8-941b-4210-b425-343bff08dbcb",
+      "brand": null,
+      "category": null,
+      "price": 39.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 159.99,
+          "date": "2026-11-14 22:32:59"
+        },
+        {
+          "price": 39.99,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 1,
+      "previous_min": 159.99
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%87%D8%A7%D8%B1%D8%AF%D9%8A%D9%84/dp/B0G32NMLQH/ref=sr_1_1",
+      "store": "Amazon.sa",
+      "title": "HARDELL 3.7V Rotary Tool Kit, 5-Speed Mini Cordless with 69 Accessories",
+      "url": "https://www.amazon.sa/%D9%87%D8%A7%D8%B1%D8%AF%D9%8A%D9%84/dp/B0G32NMLQH/ref=sr_1_1?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&sr=8-1",
+      "brand": null,
+      "category": null,
+      "price": 95.98,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 95.98,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9-%D9%88%D9%88%D8%B1%D9%83%D8%A8%D8%B1%D9%88-%D9%84%D8%A7%D8%B3%D9%84%D9%83%D9%8A-%D9%88%D8%B5%D9%86%D8%AF%D9%88%D9%82-%D9%88%D8%A7%D9%84%D8%AA%D8%AE%D8%B2%D9%8A%D9%86/dp/B0GX84BBXJ/ref=sr_1_2",
+      "store": "Amazon.sa",
+      "title": "مجموعة أدوات ووركبرو 148 قطعة مع مفك براغي لاسلكي 3.6 فولت وصندوق أدوات",
+      "url": "https://www.amazon.sa/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9-%D9%88%D9%88%D8%B1%D9%83%D8%A8%D8%B1%D9%88-%D9%84%D8%A7%D8%B3%D9%84%D9%83%D9%8A-%D9%88%D8%B5%D9%86%D8%AF%D9%88%D9%82-%D9%88%D8%A7%D9%84%D8%AA%D8%AE%D8%B2%D9%8A%D9%86/dp/B0GX84BBXJ/ref=sr_1_2?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&sr=8-2",
+      "brand": null,
+      "category": null,
+      "price": 169.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 169.99,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9-%D8%A7%D8%AF%D9%88%D8%A7%D8%AA-%D8%B4%D8%AF%D9%8A%D8%AF%D8%A9-%D8%A7%D9%84%D8%AA%D8%AD%D9%85%D9%84-%D9%8A%D9%88%D9%86%D9%88%D9%81%D9%88/dp/B09MD1F2Z2/ref=sr_1_3",
+      "store": "Amazon.sa",
+      "title": "مجموعة ادوات شديدة التحمل مكونة من 100 قطعة مع شنطة ادوات من يونوفو - صندوق ادوات كامل للاصلاحات المنزلية والمشاريع التي تصنعها بنفسك | مجموعة ادوات ميكانيكية، مجموعة ادوات يدوية، كراج، المنزل، اصنعها",
+      "url": "https://www.amazon.sa/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9-%D8%A7%D8%AF%D9%88%D8%A7%D8%AA-%D8%B4%D8%AF%D9%8A%D8%AF%D8%A9-%D8%A7%D9%84%D8%AA%D8%AD%D9%85%D9%84-%D9%8A%D9%88%D9%86%D9%88%D9%81%D9%88/dp/B09MD1F2Z2/ref=sr_1_3?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&sr=8-3",
+      "brand": null,
+      "category": null,
+      "price": 129.9,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 129.9,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%84%D9%84%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84%D8%8C-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%D8%8C-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9%D8%8C-%D8%A7%D9%84%D9%86%D8%B8%D8%A7%D8%B1%D8%A7%D8%AA%D8%8C-%D8%A7%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7%D8%AA/dp/B0F2TJ7ZNM/ref=sr_1_4_hul_core",
+      "store": "Amazon.sa",
+      "title": "‏19.02 ريال ريال ‎ 19 . ‎ 02 ‏",
+      "url": "https://www.amazon.sa/%D9%84%D9%84%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84%D8%8C-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%D8%8C-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9%D8%8C-%D8%A7%D9%84%D9%86%D8%B8%D8%A7%D8%B1%D8%A7%D8%AA%D8%8C-%D8%A7%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7%D8%AA/dp/B0F2TJ7ZNM/ref=sr_1_4_hul_core?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&s=bazaar&sr=8-4",
+      "brand": null,
+      "category": null,
+      "price": 19.02,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 19.02,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D9%81%D8%AC%D9%88%D8%A7%D8%AA-%D9%84%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%A8%D8%AE-%D9%88%D8%A7%D9%84%D8%AD%D9%85%D8%A7%D9%85%D8%A7%D8%AA/dp/B0FW57V6M4/ref=sr_1_5",
+      "store": "Amazon.sa",
+      "title": "عدة أدوات تشطيب ملء الفجوات من جود تول، مجموعة مكونة من 15 قطعة، لمشاريع تحسين المنزل بنفسك، تشمل النوافذ والبلاط والمطابخ والحمامات",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D9%81%D8%AC%D9%88%D8%A7%D8%AA-%D9%84%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9-%D8%A7%D9%84%D9%86%D9%88%D8%A7%D9%81%D8%B0-%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%A8%D8%AE-%D9%88%D8%A7%D9%84%D8%AD%D9%85%D8%A7%D9%85%D8%A7%D8%AA/dp/B0FW57V6M4/ref=sr_1_5?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&sr=8-5",
+      "brand": null,
+      "category": null,
+      "price": 32.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 32.0,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%A3%D8%B3%D9%84%D8%A7%D9%83-%D8%A7%D9%84%D9%88%D8%B8%D8%A7%D8%A6%D9%81-%D9%84%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A%D9%8A%D9%86%D8%8C-%D9%84%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84-%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A%D8%A9/dp/B0DSW1GD7B/ref=sr_1_6_hul_core",
+      "store": "Amazon.sa",
+      "title": "‏6.79 ريال ريال ‎ 6 . ‎ 79 ‏",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D8%A3%D8%B3%D9%84%D8%A7%D9%83-%D8%A7%D9%84%D9%88%D8%B8%D8%A7%D8%A6%D9%81-%D9%84%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A%D9%8A%D9%86%D8%8C-%D9%84%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84-%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A%D8%A9/dp/B0DSW1GD7B/ref=sr_1_6_hul_core?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&s=bazaar&sr=8-6",
+      "brand": null,
+      "category": null,
+      "price": 6.79,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 6.79,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%84%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D9%88%D8%A7%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84-%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D9%86%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9-%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%D8%8C/dp/B0DKD39YWW/ref=sr_1_7",
+      "store": "Amazon.sa",
+      "title": "مسدس برشام يدوي شديد التحمل مع قبضة مريحة وتثبيت دقيق من لوازم، للسيارات والأعمال المعدنية والمشاريع التي تصنعها بنفسك وتجميع الأثاث وتحسين المنزل، 25 سم، برتقالي",
+      "url": "https://www.amazon.sa/%D9%84%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D9%88%D8%A7%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84-%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D9%86%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9-%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%D8%8C/dp/B0DKD39YWW/ref=sr_1_7?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&sr=8-7",
+      "brand": null,
+      "category": null,
+      "price": 30.61,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 30.61,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%B5%D8%BA%D9%8A%D8%B1%D8%A9%D8%8C-%D8%A7%D9%84%D9%8A%D8%AF%D9%88%D9%8A%D8%A9-%D8%A8%D9%82%D8%A7%D8%B9%D8%AF%D8%A9-%D8%AF%D9%88%D8%A7%D8%B1%D8%A9%D8%8C-%D9%84%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%84/dp/B0F5QFKD7J/ref=sr_1_8_hul_core",
+      "store": "Amazon.sa",
+      "title": "‏8.41 ريال ريال ‎ 8 . ‎ 41 ‏",
+      "url": "https://www.amazon.sa/%D8%B5%D8%BA%D9%8A%D8%B1%D8%A9%D8%8C-%D8%A7%D9%84%D9%8A%D8%AF%D9%88%D9%8A%D8%A9-%D8%A8%D9%82%D8%A7%D8%B9%D8%AF%D8%A9-%D8%AF%D9%88%D8%A7%D8%B1%D8%A9%D8%8C-%D9%84%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%84/dp/B0F5QFKD7J/ref=sr_1_8_hul_core?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&s=bazaar&sr=8-8",
+      "brand": null,
+      "category": null,
+      "price": 8.41,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 8.41,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A%D8%A9-%D8%A7%D8%AD%D8%AA%D8%B1%D8%A7%D9%81%D9%8A%D8%A9-%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85%D9%87%D8%A7-%D9%88%D8%A7%D9%84%D8%AD%D8%AF%D8%A7%D8%A6%D9%82-%D9%88%D9%8A%D9%85%D8%A7%D8%B1%D8%AA/dp/B0BLY13L8F/ref=sr_1_9",
+      "store": "Amazon.sa",
+      "title": "مجموعة ادوات كهربائية 128 قطعة مع مثقاب كهربائي لاسلكي 28 فولت، مجموعة ادوات منزلية احترافية مع اطقم ادوات يدوية يمكنك استخدامها بنفسك لاصلاح وصيانة المنزل والحدائق والمكاتب (احدث اصدار)، من ويمارت",
+      "url": "https://www.amazon.sa/%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A%D8%A9-%D8%A7%D8%AD%D8%AA%D8%B1%D8%A7%D9%81%D9%8A%D8%A9-%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85%D9%87%D8%A7-%D9%88%D8%A7%D9%84%D8%AD%D8%AF%D8%A7%D8%A6%D9%82-%D9%88%D9%8A%D9%85%D8%A7%D8%B1%D8%AA/dp/B0BLY13L8F/ref=sr_1_9?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&sr=8-9",
+      "brand": null,
+      "category": null,
+      "price": 219.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 219.99,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D8%AF%D8%A7%D8%A9-%D8%AA%D8%B9%D8%B1%D9%8A%D8%A9-%D8%A7%D8%B3%D9%84%D8%A7%D9%83-%D9%82%D8%A7%D8%A8%D9%84%D8%A9-%D9%84%D9%84%D8%B7%D9%8A/dp/B0F7RG63Z2/ref=sr_1_10_hul_core",
+      "store": "Amazon.sa",
+      "title": "‏11.77 ريال ريال ‎ 11 . ‎ 77 ‏",
+      "url": "https://www.amazon.sa/%D8%A7%D8%AF%D8%A7%D8%A9-%D8%AA%D8%B9%D8%B1%D9%8A%D8%A9-%D8%A7%D8%B3%D9%84%D8%A7%D9%83-%D9%82%D8%A7%D8%A8%D9%84%D8%A9-%D9%84%D9%84%D8%B7%D9%8A/dp/B0F7RG63Z2/ref=sr_1_10_hul_core?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&s=bazaar&sr=8-10",
+      "brand": null,
+      "category": null,
+      "price": 11.77,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 11.77,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D9%85%D9%8A%D9%83%D8%A7%D9%83%D9%88%D8%B2%D8%8C-%D8%A7%D9%84%D9%88%D8%B5%D9%84%D8%A7%D8%AA-%D9%84%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%84-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A7%D8%AA%D8%8C-%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D9%86%D9%8A%D8%A9/dp/B0HFV68JL5/ref=sr_1_11",
+      "store": "Amazon.sa",
+      "title": "مجموعة ادوات اصلاح سوار الساعة 11 قطعة من الميكاكوز، مجموعة ازالة الوصلات",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D9%85%D9%8A%D9%83%D8%A7%D9%83%D9%88%D8%B2%D8%8C-%D8%A7%D9%84%D9%88%D8%B5%D9%84%D8%A7%D8%AA-%D9%84%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%84-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A7%D8%AA%D8%8C-%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D9%86%D9%8A%D8%A9/dp/B0HFV68JL5/ref=sr_1_11?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&sr=8-11",
+      "brand": null,
+      "category": null,
+      "price": 29.76,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 29.76,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA%D8%8C-%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9-%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9-%D9%88%D8%A7%D9%84%D8%AA%D8%A7%D8%A8%D9%84%D9%88%D9%87-%D8%A7%D9%84%D8%B5%D9%88%D8%AA%D9%8A%D8%8C/dp/B0GC3H6BL8/ref=sr_1_12_hul_core",
+      "store": "Amazon.sa",
+      "title": "‏4.68 ريال ريال ‎ 4 . ‎ 68 ‏",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA%D8%8C-%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9-%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9-%D9%88%D8%A7%D9%84%D8%AA%D8%A7%D8%A8%D9%84%D9%88%D9%87-%D8%A7%D9%84%D8%B5%D9%88%D8%AA%D9%8A%D8%8C/dp/B0GC3H6BL8/ref=sr_1_12_hul_core?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&s=bazaar&sr=8-12",
+      "brand": null,
+      "category": null,
+      "price": 4.68,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 4.68,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D8%AF%D9%88%D8%A7%D8%AA-%D8%B3%D8%AF-%D8%B3%D9%8A%D9%84%D9%8A%D9%83%D9%88%D9%86-%D9%81%D9%8A-%D9%84%D9%84%D8%A7%D8%B3%D8%AA%D8%A8%D8%AF%D8%A7%D9%84%D8%8C/dp/B0GYRDRBKV/ref=sr_1_13_hul_core",
+      "store": "Amazon.sa",
+      "title": "‏6.49 ريال ريال ‎ 6 . ‎ 49 ‏",
+      "url": "https://www.amazon.sa/%D8%A7%D8%AF%D9%88%D8%A7%D8%AA-%D8%B3%D8%AF-%D8%B3%D9%8A%D9%84%D9%8A%D9%83%D9%88%D9%86-%D9%81%D9%8A-%D9%84%D9%84%D8%A7%D8%B3%D8%AA%D8%A8%D8%AF%D8%A7%D9%84%D8%8C/dp/B0GYRDRBKV/ref=sr_1_13_hul_core?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&s=bazaar&sr=8-13",
+      "brand": null,
+      "category": null,
+      "price": 6.49,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 6.49,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%85%D8%BA%D9%86%D8%A7%D8%B7%D9%8A%D8%B3%D9%8A%D8%A9-%D9%84%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7%D8%AA-%D9%88%D8%A7%D9%84%D9%84%D8%A7%D8%A8%D8%AA%D9%88%D8%A8-%D9%88%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%8A%D8%B1%D8%A7%D8%AA-%D9%88%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%84%D8%A7%D8%AA/dp/B0FRSJ6962/ref=sr_1_14_hul_core",
+      "store": "Amazon.sa",
+      "title": "‏20.19 ريال ريال ‎ 20 . ‎ 19 ‏",
+      "url": "https://www.amazon.sa/%D9%85%D8%BA%D9%86%D8%A7%D8%B7%D9%8A%D8%B3%D9%8A%D8%A9-%D9%84%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7%D8%AA-%D9%88%D8%A7%D9%84%D9%84%D8%A7%D8%A8%D8%AA%D9%88%D8%A8-%D9%88%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%8A%D8%B1%D8%A7%D8%AA-%D9%88%D8%A7%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%84%D8%A7%D8%AA/dp/B0FRSJ6962/ref=sr_1_14_hul_core?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&s=bazaar&sr=8-14",
+      "brand": null,
+      "category": null,
+      "price": 20.19,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 20.19,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9-%D9%85%D8%B9%D8%AF%D9%86%D9%8A%D8%A9-%D8%B5%D8%BA%D9%8A%D8%B1%D8%A9-%D9%84%D8%A7%D8%B9%D9%85%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%AC%D8%A7%D8%B1%D8%A9/dp/B0GS9J54H7/ref=sr_1_15_hul_core",
+      "store": "Amazon.sa",
+      "title": "‏5.79 ريال ريال ‎ 5 . ‎ 79 ‏",
+      "url": "https://www.amazon.sa/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9-%D9%85%D8%B9%D8%AF%D9%86%D9%8A%D8%A9-%D8%B5%D8%BA%D9%8A%D8%B1%D8%A9-%D9%84%D8%A7%D8%B9%D9%85%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%AC%D8%A7%D8%B1%D8%A9/dp/B0GS9J54H7/ref=sr_1_15_hul_core?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&s=bazaar&sr=8-15",
+      "brand": null,
+      "category": null,
+      "price": 5.79,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 5.79,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A7%D8%AA-%D9%8A%D9%84%D8%A7-%D9%84%D9%84%D8%A8%D8%B7%D8%A7%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A7%D8%AA%D8%8C-%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D8%B1%D8%A7%D9%81%D9%8A%D8%A9/dp/B0HFLGJ74J/ref=sr_1_16",
+      "store": "Amazon.sa",
+      "title": "مجموعة اصلاح الساعات 6 قطع من يلا جوي، اداة فتح علبة صفراء للبطارية",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A7%D8%AA-%D9%8A%D9%84%D8%A7-%D9%84%D9%84%D8%A8%D8%B7%D8%A7%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A7%D8%AA%D8%8C-%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D8%B1%D8%A7%D9%81%D9%8A%D8%A9/dp/B0HFLGJ74J/ref=sr_1_16?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&sr=8-16",
+      "brand": null,
+      "category": null,
+      "price": 25.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 25.99,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%B5%D9%86%D8%A8%D9%88%D8%B1-%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D9%86%D9%8A%D8%A9-%D8%A7%D9%84%D8%A7%D9%86%D8%A7%D8%A8%D9%8A%D8%A8-%D8%A7%D8%B3%D8%AA%D8%AE%D8%B1%D8%A7%D8%AC-%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D8%BA%D9%8A/dp/B0HBQPHK8Q/ref=sr_1_17_hul_core",
+      "store": "Amazon.sa",
+      "title": "‏7.91 ريال ريال ‎ 7 . ‎ 91 ‏",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D8%B5%D9%86%D8%A8%D9%88%D8%B1-%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D9%86%D9%8A%D8%A9-%D8%A7%D9%84%D8%A7%D9%86%D8%A7%D8%A8%D9%8A%D8%A8-%D8%A7%D8%B3%D8%AA%D8%AE%D8%B1%D8%A7%D8%AC-%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D8%BA%D9%8A/dp/B0HBQPHK8Q/ref=sr_1_17_hul_core?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&s=bazaar&sr=8-17",
+      "brand": null,
+      "category": null,
+      "price": 7.91,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 7.91,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D9%85%D8%AA%D9%85%D9%8A%D8%B2%D8%A9%D8%8C-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85-%D9%88%D8%A7%D9%84%D8%B5%D9%88%D8%A7%D9%85%D9%8A%D9%84-%D9%88%D8%A7%D9%84%D8%A3%D9%86%D8%A7%D8%A8%D9%8A%D8%A8-%D9%88%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA/dp/B0FF2D45LQ/ref=sr_1_18_hul_core",
+      "store": "Amazon.sa",
+      "title": "‏10.38 ريال ريال ‎ 10 . ‎ 38 ‏",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D9%85%D8%AA%D9%85%D9%8A%D8%B2%D8%A9%D8%8C-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85-%D9%88%D8%A7%D9%84%D8%B5%D9%88%D8%A7%D9%85%D9%8A%D9%84-%D9%88%D8%A7%D9%84%D8%A3%D9%86%D8%A7%D8%A8%D9%8A%D8%A8-%D9%88%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA/dp/B0FF2D45LQ/ref=sr_1_18_hul_core?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&s=bazaar&sr=8-18",
+      "brand": null,
+      "category": null,
+      "price": 10.38,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 10.38,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%A7%D8%AF%D9%88%D8%A7%D8%AA-%D9%85%D8%B3%D8%AA%D9%88%D9%8A%D8%8C-%D9%85%D8%B3%D8%B7%D8%B1%D8%A9%D8%8C-%D9%84%D9%84%D8%A7%D8%B5%D9%84%D8%A7%D8%AD%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D9%86%D9%82%D9%84%D8%8C/dp/B0GCMGTTTP/ref=sr_1_19_hul_core",
+      "store": "Amazon.sa",
+      "title": "‏8.79 ريال ريال ‎ 8 . ‎ 79 ‏",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D8%A7%D8%AF%D9%88%D8%A7%D8%AA-%D9%85%D8%B3%D8%AA%D9%88%D9%8A%D8%8C-%D9%85%D8%B3%D8%B7%D8%B1%D8%A9%D8%8C-%D9%84%D9%84%D8%A7%D8%B5%D9%84%D8%A7%D8%AD%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D9%86%D9%82%D9%84%D8%8C/dp/B0GCMGTTTP/ref=sr_1_19_hul_core?dib=eyJ2IjoiMSJ9.-53II5OAXNr6h5AOFJ1v2dcv7Zy1HYKMTkMd9UwZuU92PBskFJnw0RdhRmPnSBmR2pz9mF2w_5sPf0FeumJEld8zO4X5Ph05h1FznuZlxi_YPNYZObejByr58OilfgwL5l2PFROyT_D7gYt-cJpAHb0_rA_YXrbPbd2YyXdJLnbViXMaunY90UiciXoopnvuCgteH2RWo0nSNfbmncARVjHtPN-nUPW3Zl4SPRXSQbHwtM4WvrhNV83Urn5S_PxNDVlOUgnbcxwd2XGgjn6Gv0F20wnBzrkAHxQHW4-R3j0.dSz_XJdMM9GGBhWmOicIx1I0NmFHG-HtbHQH5nHlFaM&dib_tag=se&keywords=DIY+tools&qid=1794774228&s=bazaar&sr=8-19",
+      "brand": null,
+      "category": null,
+      "price": 8.79,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 20:23:50",
+      "history": [
+        {
+          "price": 8.79,
+          "date": "2026-11-15 20:23:50"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%8A%D9%88%D8%AC%D8%B1%D9%8A%D9%86-Type-C-%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%8C-%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D8%A7%D9%8A%D8%A8%D8%A7%D8%AF%D8%8C/dp/B09X1H88VP/ref=sr_1_1",
+      "store": "Amazon.sa",
+      "title": "يوجرين شاحن سفر عالمي 65W Type-C مع قابس US/UK/EU 3 منافذ GaN سريع",
+      "url": "https://www.amazon.sa/%D9%8A%D9%88%D8%AC%D8%B1%D9%8A%D9%86-Type-C-%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%8C-%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D8%A7%D9%8A%D8%A8%D8%A7%D8%AF%D8%8C/dp/B09X1H88VP/ref=sr_1_1?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-1",
+      "brand": null,
+      "category": null,
+      "price": 159.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 159.0,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%AA%D9%8A%D8%B3%D8%A7%D9%86-%D8%A7%D8%AA%D8%AC%D8%A7%D9%87%D9%8A%D9%86-%D9%84%D9%84%D9%85%D9%83%D8%AA%D8%A8%D8%8C-%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D8%A9/dp/B08THGKJSH/ref=sr_1_2",
+      "store": "Amazon.sa",
+      "title": "تيسان محول قابس مع 3 منافذ USB، وصلة تمديد متعددة في اتجاهين",
+      "url": "https://www.amazon.sa/%D8%AA%D9%8A%D8%B3%D8%A7%D9%86-%D8%A7%D8%AA%D8%AC%D8%A7%D9%87%D9%8A%D9%86-%D9%84%D9%84%D9%85%D9%83%D8%AA%D8%A8%D8%8C-%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D8%A9/dp/B08THGKJSH/ref=sr_1_2?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-2",
+      "brand": null,
+      "category": null,
+      "price": 69.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 69.99,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A8%D8%B1%D9%8A%D8%B7%D8%A7%D9%86%D9%8A-%D9%84%D8%A3%D8%AC%D9%87%D8%B2%D8%A9-%D8%AF%D8%A8%D8%A7%D8%A8%D9%8A%D8%B3-%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9/dp/B0FKBD89MQ/ref=sr_1_3",
+      "store": "Amazon.sa",
+      "title": "قابس بريطاني قياسي لمحول طاقة تيار متردد لأجهزة ماك بـ 3 دبابيس من ازوني، قابس محول رأس شاحن للسفر في المملكة المتحدة من النوع جي متوافق مع أجهزة ماك بوك اير / ماك اي بوك / آيفون / ايبود، لون أبيض",
+      "url": "https://www.amazon.sa/%D8%A8%D8%B1%D9%8A%D8%B7%D8%A7%D9%86%D9%8A-%D9%84%D8%A3%D8%AC%D9%87%D8%B2%D8%A9-%D8%AF%D8%A8%D8%A7%D8%A8%D9%8A%D8%B3-%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9/dp/B0FKBD89MQ/ref=sr_1_3?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-3",
+      "brand": null,
+      "category": null,
+      "price": 32.96,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 32.96,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/TriPlug-65PD%D8%8C-%D8%A8%D8%B1%D9%8A%D8%B7%D8%A7%D9%86%D9%8A%D8%A9-%D8%A3%D8%B3%D8%AA%D8%B1%D8%A7%D9%84%D9%8A%D8%A9%D8%8C-%D9%88%D8%A7%D9%84%D9%87%D9%88%D8%A7%D8%AA%D9%81-%D8%A8%D8%B1%D9%88%D9%85%D9%8A%D8%AA/dp/B0G1YVYWP1/ref=sr_1_4",
+      "store": "Amazon.sa",
+      "title": "شاحن سفر جان فاست 65 واط مزدوج USB-C PD مع PPS طراز TriPlug-65PD، محول صغير متعدد المنافذ مع شحن منفصل 45 + 20 واط، مقابس أمريكية/بريطانية/أوروبية/أسترالية، شحن عالمي للابتوب والهواتف الذكية من بروميت",
+      "url": "https://www.amazon.sa/TriPlug-65PD%D8%8C-%D8%A8%D8%B1%D9%8A%D8%B7%D8%A7%D9%86%D9%8A%D8%A9-%D8%A3%D8%B3%D8%AA%D8%B1%D8%A7%D9%84%D9%8A%D8%A9%D8%8C-%D9%88%D8%A7%D9%84%D9%87%D9%88%D8%A7%D8%AA%D9%81-%D8%A8%D8%B1%D9%88%D9%85%D9%8A%D8%AA/dp/B0G1YVYWP1/ref=sr_1_4?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-4",
+      "brand": null,
+      "category": null,
+      "price": 124.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 124.0,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A8%D9%8A%D9%86%D8%B1%D9%8A%D9%83-%D8%AA%D8%A7%D9%8A%D8%A8-C-%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%88%D8%AC%D8%A7%D9%84%D8%A7%D9%83%D8%B3%D9%8A-%D8%A8%D9%85%D9%86%D9%81%D8%B0%D9%8A%D9%86/dp/B0DXL36GX9/ref=sr_1_5",
+      "store": "Amazon.sa",
+      "title": "شاحن من بينريك بمنفذ USB و USB تايب-C متوافق مع آيفون وجالاكسي بمنفذين 65 واط مع شحن سريع وحماية متعددة",
+      "url": "https://www.amazon.sa/%D8%A8%D9%8A%D9%86%D8%B1%D9%8A%D9%83-%D8%AA%D8%A7%D9%8A%D8%A8-C-%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%88%D8%AC%D8%A7%D9%84%D8%A7%D9%83%D8%B3%D9%8A-%D8%A8%D9%85%D9%86%D9%81%D8%B0%D9%8A%D9%86/dp/B0DXL36GX9/ref=sr_1_5?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-5",
+      "brand": null,
+      "category": null,
+      "price": 89.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 89.99,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9-%D8%AF%D8%A8%D8%A7%D8%A8%D9%8A%D8%B3-%D9%88%D8%A7%D9%8A%D8%A8%D9%88%D8%AF-%D9%88%D8%A7%D9%8A%D8%A8%D8%A7%D8%AF/dp/B08M9PRRC6/ref=sr_1_6",
+      "store": "Amazon.sa",
+      "title": "محول طاقة تيار متردد بديل لشاحن المملكة المتحدة قابس محول قابس 3 دبابيس راس قياسي لشاحن ايفون 14 وماك بوك برو اير وماك واي بوك وايبود وايباد وغيرها (عبوة واحدة)",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9-%D8%AF%D8%A8%D8%A7%D8%A8%D9%8A%D8%B3-%D9%88%D8%A7%D9%8A%D8%A8%D9%88%D8%AF-%D9%88%D8%A7%D9%8A%D8%A8%D8%A7%D8%AF/dp/B08M9PRRC6/ref=sr_1_6?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-6",
+      "brand": null,
+      "category": null,
+      "price": 39.6,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 39.6,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%84%D9%8A%D9%86%D8%B3%D9%86%D8%AA-%D8%A8%D9%85%D9%86%D8%A7%D9%81%D8%B0-%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%8A%D9%81-%D8%A7%D9%84%D8%AA%D9%84%D9%82%D8%A7%D8%A6%D9%8A/dp/B08K3FHZSN/ref=sr_1_7",
+      "store": "Amazon.sa",
+      "title": "شاحن من لينسنت بمنافذ USB و USB-C متوافق مع آيفون بـ 4 منافذ 3250 واط مع شحن سريع وتقنية التعريف التلقائي وشحن أجهزة متعددة",
+      "url": "https://www.amazon.sa/%D9%84%D9%8A%D9%86%D8%B3%D9%86%D8%AA-%D8%A8%D9%85%D9%86%D8%A7%D9%81%D8%B0-%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D8%A7%D9%84%D8%AA%D8%B9%D8%B1%D9%8A%D9%81-%D8%A7%D9%84%D8%AA%D9%84%D9%82%D8%A7%D8%A6%D9%8A/dp/B08K3FHZSN/ref=sr_1_7?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-7",
+      "brand": null,
+      "category": null,
+      "price": 68.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 68.0,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%8A%D9%88%D8%AC%D8%B1%D9%8A%D9%86-%D8%A8%D8%AA%D9%82%D9%86%D9%8A%D8%A9-Type-C%D8%8C-%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%88Galaxy/dp/B0G5Z6GWN3/ref=sr_1_8",
+      "store": "Amazon.sa",
+      "title": "يوجرين محول شحن بقدرة 45W، شاحن سريع بتقنية GaN، مع كابل USB-C بقدرة 100W",
+      "url": "https://www.amazon.sa/%D9%8A%D9%88%D8%AC%D8%B1%D9%8A%D9%86-%D8%A8%D8%AA%D9%82%D9%86%D9%8A%D8%A9-Type-C%D8%8C-%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%88Galaxy/dp/B0G5Z6GWN3/ref=sr_1_8?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-8",
+      "brand": null,
+      "category": null,
+      "price": 69.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 69.0,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%86%D8%AA%D9%88%D8%A1%D8%A7%D8%AA-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85%D8%A7%D8%AA-%D9%84%D9%84%D9%87%D9%88%D8%A7%D8%AA%D9%81-%D9%88%D8%A7%D9%84%D9%84%D8%A7%D8%A8%D8%AA%D9%88%D8%A8-%D9%88%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF/dp/B0CLVTMQSG/ref=sr_1_9",
+      "store": "Amazon.sa",
+      "title": "شاحن سفر مدمج موحد، حل شامل صغير للشحن بثلاث نتوءات- يحول EU/JP/AU/UK/CN إلى US، شاحن حائط امن ومتعدد الاستخدامات للهواتف الذكية واللابتوب والمزيد - تصميم انيق باللون الابيض، (3/ العبوة) من انفينو",
+      "url": "https://www.amazon.sa/%D9%86%D8%AA%D9%88%D8%A1%D8%A7%D8%AA-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85%D8%A7%D8%AA-%D9%84%D9%84%D9%87%D9%88%D8%A7%D8%AA%D9%81-%D9%88%D8%A7%D9%84%D9%84%D8%A7%D8%A8%D8%AA%D9%88%D8%A8-%D9%88%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF/dp/B0CLVTMQSG/ref=sr_1_9?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-9",
+      "brand": null,
+      "category": null,
+      "price": 34.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 34.99,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A8%D8%B1%D9%8A%D8%B7%D8%A7%D9%86%D9%8A-%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%88%D8%A7%D9%8A%D9%81%D9%88%D9%86-%D9%88%D8%A7%D9%8A%D8%A8%D9%88%D8%AF-%D9%88%D8%A7%D9%84%D8%A3%D8%AC%D9%87%D8%B2%D8%A9/dp/B0DT47VL1Z/ref=sr_1_10",
+      "store": "Amazon.sa",
+      "title": "3 قطع قابس بريطاني لشاحن ماك بوك، رأس محول طاقة بديل على شكل رأس بطة",
+      "url": "https://www.amazon.sa/%D8%A8%D8%B1%D9%8A%D8%B7%D8%A7%D9%86%D9%8A-%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%88%D8%A7%D9%8A%D9%81%D9%88%D9%86-%D9%88%D8%A7%D9%8A%D8%A8%D9%88%D8%AF-%D9%88%D8%A7%D9%84%D8%A3%D8%AC%D9%87%D8%B2%D8%A9/dp/B0DT47VL1Z/ref=sr_1_10?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-10",
+      "brand": null,
+      "category": null,
+      "price": 39.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 39.99,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%88%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%D8%AC-%D8%A8%D9%85%D9%86%D9%81%D8%B0%D9%8A%D9%86-%D9%88%D8%AD%D9%85%D8%A7%D9%8A%D8%A9-%D9%85%D8%AA%D8%B9%D8%AF%D8%AF%D8%A9/dp/B0CFLSF7RQ/ref=sr_1_11",
+      "store": "Amazon.sa",
+      "title": "شاحن من أنكر بمنفذ USB و USB-C متوافق مع آيفون 15 و 14 و 13 وسامسونج بمنفذين بقوة 20 واط مع شحن سريع وحماية متعددة",
+      "url": "https://www.amazon.sa/%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%88%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%D8%AC-%D8%A8%D9%85%D9%86%D9%81%D8%B0%D9%8A%D9%86-%D9%88%D8%AD%D9%85%D8%A7%D9%8A%D8%A9-%D9%85%D8%AA%D8%B9%D8%AF%D8%AF%D8%A9/dp/B0CFLSF7RQ/ref=sr_1_11?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-11",
+      "brand": null,
+      "category": null,
+      "price": 69.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 69.0,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%B3%D9%88%D8%B3%D9%8A%D8%B1%D9%8A%D8%8C-%D8%A7%D9%84%D9%88%D9%84%D8%A7%D9%8A%D8%A7%D8%AA-%D9%88%D8%A7%D9%84%D8%A7%D8%AA%D8%AD%D8%A7%D8%AF-%D8%A7%D9%84%D8%A7%D9%81%D8%B1%D9%8A%D9%82%D9%8A-%D9%88%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9/dp/B0847PMNWT/ref=sr_1_12",
+      "store": "Amazon.sa",
+      "title": "محول شكل قابس سفر سلبي من سوسيري، الولايات المتحدة والاتحاد الافريقي والمملكة المتحدة نوع A/B/C/G/I الى EU نوع E/F، 250 فولت 16 امبير كحد اقصى، بدون تحويل الجهد، عبوة من 5 قطع",
+      "url": "https://www.amazon.sa/%D8%B3%D9%88%D8%B3%D9%8A%D8%B1%D9%8A%D8%8C-%D8%A7%D9%84%D9%88%D9%84%D8%A7%D9%8A%D8%A7%D8%AA-%D9%88%D8%A7%D9%84%D8%A7%D8%AA%D8%AD%D8%A7%D8%AF-%D8%A7%D9%84%D8%A7%D9%81%D8%B1%D9%8A%D9%82%D9%8A-%D9%88%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9/dp/B0847PMNWT/ref=sr_1_12?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-12",
+      "brand": null,
+      "category": null,
+      "price": 24.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 24.99,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%8A%D9%88%D8%AC%D8%B1%D9%8A%D9%86-%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%88%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%D8%AC-%D9%88%D9%87%D9%88%D8%A7%D9%88%D9%8A-%D9%88%D8%AD%D9%85%D8%A7%D9%8A%D8%A9/dp/B07WDKTCVG/ref=sr_1_13",
+      "store": "Amazon.sa",
+      "title": "شاحن من يوجرين بمنفذ USB-C متوافق مع آيفون 16 وسامسونج وهواوي بمنفذ واحد بقوة 20.0 واط مع شحن سريع وحماية متعددة ومحمول",
+      "url": "https://www.amazon.sa/%D9%8A%D9%88%D8%AC%D8%B1%D9%8A%D9%86-%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%88%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%D8%AC-%D9%88%D9%87%D9%88%D8%A7%D9%88%D9%8A-%D9%88%D8%AD%D9%85%D8%A7%D9%8A%D8%A9/dp/B07WDKTCVG/ref=sr_1_13?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-13",
+      "brand": null,
+      "category": null,
+      "price": 24.78,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 24.78,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D8%A8%D9%8A-%D9%84%D9%8A%D9%86%D9%83-%D8%A7%D9%84%D8%B2%D8%A7%D8%A6%D8%AF-%D8%A7%D9%84%D8%AF%D8%A7%D8%A6%D8%B1%D8%A9-%D8%A7%D9%84%D9%82%D8%B5%D9%8A%D8%B1%D8%A9/dp/B08F7X7KLR/ref=sr_1_14",
+      "store": "Amazon.sa",
+      "title": "شاحن من توم شاين متوافق مع جميع هواوي و تي بي-لينك رامات بقوة 24.0 واط مع حماية من الحمل الزائد و الجهد الزائد و الدائرة القصيرة",
+      "url": "https://www.amazon.sa/%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D8%A8%D9%8A-%D9%84%D9%8A%D9%86%D9%83-%D8%A7%D9%84%D8%B2%D8%A7%D8%A6%D8%AF-%D8%A7%D9%84%D8%AF%D8%A7%D8%A6%D8%B1%D8%A9-%D8%A7%D9%84%D9%82%D8%B5%D9%8A%D8%B1%D8%A9/dp/B08F7X7KLR/ref=sr_1_14?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-14",
+      "brand": null,
+      "category": null,
+      "price": 18.28,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 18.28,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%8A%D9%88%D8%AC%D8%B1%D9%8A%D9%86-%D9%84%D9%84%D8%A2%D9%8A%D9%81%D9%88%D9%86-%D9%88%D8%A7%D9%84%D8%AC%D8%A7%D9%84%D9%83%D8%B3%D9%8A-%D9%84%D9%84%D8%AD%D9%85%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D9%85%D9%86%D9%8A%D8%A9%D8%8C/dp/B0F48JZZG2/ref=sr_1_15",
+      "store": "Amazon.sa",
+      "title": "يوجرين شاحن 20W GaN منفذان Type-C جداري سريع أسود للآيفون والجالكسي",
+      "url": "https://www.amazon.sa/%D9%8A%D9%88%D8%AC%D8%B1%D9%8A%D9%86-%D9%84%D9%84%D8%A2%D9%8A%D9%81%D9%88%D9%86-%D9%88%D8%A7%D9%84%D8%AC%D8%A7%D9%84%D9%83%D8%B3%D9%8A-%D9%84%D9%84%D8%AD%D9%85%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D9%85%D9%86%D9%8A%D8%A9%D8%8C/dp/B0F48JZZG2/ref=sr_1_15?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-15",
+      "brand": null,
+      "category": null,
+      "price": 29.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 29.0,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A-%D8%A8%D9%82%D8%A7%D8%A8%D8%B3-%D8%A8%D8%B1%D9%8A%D8%B7%D8%A7%D9%86%D9%8A-%D8%B4%D8%A7%D9%86%D9%8A-%D8%AA%D9%8A%D9%83/dp/B01NCO8WNL/ref=sr_1_16",
+      "store": "Amazon.sa",
+      "title": "كيبل طاقة رئيسي بطول 2 متر بقابس بريطاني الى سي 5 كلوفر ليف من شاني تيك لمحول شاحن اللاب توب وما الى ذلك",
+      "url": "https://www.amazon.sa/%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A-%D8%A8%D9%82%D8%A7%D8%A8%D8%B3-%D8%A8%D8%B1%D9%8A%D8%B7%D8%A7%D9%86%D9%8A-%D8%B4%D8%A7%D9%86%D9%8A-%D8%AA%D9%8A%D9%83/dp/B01NCO8WNL/ref=sr_1_16?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-16",
+      "brand": null,
+      "category": null,
+      "price": 26.95,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 26.95,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%8A%D9%88%D8%AC%D8%B1%D9%8A%D9%86-%D9%84%D9%84%D8%A2%D9%8A%D9%81%D9%88%D9%86-%D9%88%D8%A7%D9%84%D8%AC%D8%A7%D9%84%D9%83%D8%B3%D9%8A-%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%8C-%D9%88%D8%AC%D8%A7%D9%84%D9%83%D8%B3%D9%8A/dp/B0DG8S5XRN/ref=sr_1_17",
+      "store": "Amazon.sa",
+      "title": "يوجرين شاحن Type-C 30W GaN 3 منافذ سريع آمن للآيفون والجالكسي",
+      "url": "https://www.amazon.sa/%D9%8A%D9%88%D8%AC%D8%B1%D9%8A%D9%86-%D9%84%D9%84%D8%A2%D9%8A%D9%81%D9%88%D9%86-%D9%88%D8%A7%D9%84%D8%AC%D8%A7%D9%84%D9%83%D8%B3%D9%8A-%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%8C-%D9%88%D8%AC%D8%A7%D9%84%D9%83%D8%B3%D9%8A/dp/B0DG8S5XRN/ref=sr_1_17?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-17",
+      "brand": null,
+      "category": null,
+      "price": 38.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 38.99,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%84%D8%A7%D9%86%D8%B3%D9%8A%D9%86%D8%AA-638DH/dp/B0C6PLNC6X/ref=sr_1_18",
+      "store": "Amazon.sa",
+      "title": "LENCENT Universal Travel Adapter, 100W GaN3 International Adaptor, Black",
+      "url": "https://www.amazon.sa/%D9%84%D8%A7%D9%86%D8%B3%D9%8A%D9%86%D8%AA-638DH/dp/B0C6PLNC6X/ref=sr_1_18?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-18",
+      "brand": null,
+      "category": null,
+      "price": 194.95,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 194.95,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A3%D9%8A%D9%88%D9%86%D9%8A%D9%88%D8%B3-%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%88%D8%A2%D9%8A%D8%A8%D8%A7%D8%AF-%D9%88%D8%AC%D8%A7%D9%84%D8%A7%D9%83%D8%B3%D9%8A%D8%8C-%D8%A8%D9%85%D9%86%D9%81%D8%B0%D9%8A%D9%86%D8%8C/dp/B0FPFBHWBK/ref=sr_1_19",
+      "store": "Amazon.sa",
+      "title": "شاحن من أيونيوس بمنفذ USB متوافق مع آيفون 17 و16 و15 و14 وآيباد وجالاكسي، بمنفذين، 40 واط، شحن سريع مع حماية وتصميم مدمج",
+      "url": "https://www.amazon.sa/%D8%A3%D9%8A%D9%88%D9%86%D9%8A%D9%88%D8%B3-%D9%85%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%88%D8%A2%D9%8A%D8%A8%D8%A7%D8%AF-%D9%88%D8%AC%D8%A7%D9%84%D8%A7%D9%83%D8%B3%D9%8A%D8%8C-%D8%A8%D9%85%D9%86%D9%81%D8%B0%D9%8A%D9%86%D8%8C/dp/B0FPFBHWBK/ref=sr_1_19?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-19",
+      "brand": null,
+      "category": null,
+      "price": 35.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 35.0,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%84%D8%A7%D9%86%D8%B3%D9%8A%D9%86%D8%AA-%D8%A7%D9%88%D8%B1%D9%88%D8%A8%D9%8A-%D8%A8%D8%B1%D9%8A%D8%B7%D8%A7%D9%86%D9%8A-%D9%88%D9%85%D9%86%D9%81%D8%B0%D9%8A%D9%86-%D8%A3%D8%B3%D8%AA%D8%B1%D8%A7%D9%84%D9%8A%D8%A7/dp/B09366756P/ref=sr_1_20",
+      "store": "Amazon.sa",
+      "title": "لانسينت محول قابس اوروبي/امريكي الى بريطاني مع منفذي USB-C ومنفذين USB، من",
+      "url": "https://www.amazon.sa/%D9%84%D8%A7%D9%86%D8%B3%D9%8A%D9%86%D8%AA-%D8%A7%D9%88%D8%B1%D9%88%D8%A8%D9%8A-%D8%A8%D8%B1%D9%8A%D8%B7%D8%A7%D9%86%D9%8A-%D9%88%D9%85%D9%86%D9%81%D8%B0%D9%8A%D9%86-%D8%A3%D8%B3%D8%AA%D8%B1%D8%A7%D9%84%D9%8A%D8%A7/dp/B09366756P/ref=sr_1_20?dib=eyJ2IjoiMSJ9.i_qrIiwtOiiyJE0iKLzFdZvvB9pr1JjQky1t0ZT5G_I3TFI5MwjVik-i_f3w7O9sNhTObdTTV2QGunrIg_QogyOh56hYvzttBx9uBH-iHQx4UYkiVzY6ngvL9vFc6TBPlqXg9_sclCICNsR1XqyhuY3jiEC8Yp0r0GARl7yjgZ9T5MgFmFJSWTOzRJk_aoFzgo1Ma9hmBfFRZuOmdt_ALhJxq4-4UykeN9N6gh6Zn_bJ39mCFaCZNtEiRHACm6eRDFLSmb5LxHbE7SToy7KS2A59J2R8JXIXUyt_O9lj_9s.8UMj4c9YNXiCwLsvcERlObeBUwlAARp_IEp_VooGuHU&dib_tag=se&keywords=UK+plug+charger&qid=1794704562&sr=8-20",
+      "brand": null,
+      "category": null,
+      "price": 69.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-15 01:02:44",
+      "history": [
+        {
+          "price": 69.0,
+          "date": "2026-11-15 01:02:44"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%AA%D9%84%D9%82%D8%A7%D8%A6%D9%8A-%D9%85%D8%B3%D8%AA%D9%88%D9%8A%D8%A7%D8%AA-%D9%88%D8%A3%D9%86%D8%AF%D8%B1%D9%88%D9%8A%D8%AF-%D9%88%D9%83%D9%84%D9%8A%D9%83%D8%B3-8-%D8%A8%D8%B1%D9%88%D9%85%D9%8A%D8%AA/dp/B07FF1PB8Q/ref=sr_1_1",
+      "store": "Amazon.sa",
+      "title": "ماوس لاسلكي 2.4G ضوئي محمول مع مستقبل نانو USB بمساحة عمل 10 م مع ميزة النوم التلقائي و3 مستويات DPI قابلة للتعديل لنظام Mac OS وويندوز وأندرويد وكليكس-8 من بروميت",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D8%AA%D9%84%D9%82%D8%A7%D8%A6%D9%8A-%D9%85%D8%B3%D8%AA%D9%88%D9%8A%D8%A7%D8%AA-%D9%88%D8%A3%D9%86%D8%AF%D8%B1%D9%88%D9%8A%D8%AF-%D9%88%D9%83%D9%84%D9%8A%D9%83%D8%B3-8-%D8%A8%D8%B1%D9%88%D9%85%D9%8A%D8%AA/dp/B07FF1PB8Q/ref=sr_1_1?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-1",
+      "brand": null,
+      "category": null,
+      "price": 13.26,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 13.26,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%BA%D9%84%D9%8A%D8%AA%D8%B1%D9%8A-%D8%A7%D9%84%D9%82%D9%85%D8%A7%D8%B4-%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D8%B4%D9%88%D8%B1%D8%AA%D9%83%D8%AA%D8%B3/dp/B0CNDF682X/ref=sr_1_2",
+      "store": "Amazon.sa",
+      "title": "مسند فأرة من غليتري غاردن مصنوع من القماش والمطاط بتصميم إكسل شورتكتس بمقاس 300ط × 800ع ملم",
+      "url": "https://www.amazon.sa/%D8%BA%D9%84%D9%8A%D8%AA%D8%B1%D9%8A-%D8%A7%D9%84%D9%82%D9%85%D8%A7%D8%B4-%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D8%B4%D9%88%D8%B1%D8%AA%D9%83%D8%AA%D8%B3/dp/B0CNDF682X/ref=sr_1_2?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-2",
+      "brand": null,
+      "category": null,
+      "price": 19.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 19.99,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%BA%D9%84%D9%8A%D8%AA%D8%B1%D9%8A-%D8%A7%D9%84%D9%82%D9%85%D8%A7%D8%B4-%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D8%B4%D9%88%D8%B1%D8%AA%D9%83%D8%AA%D8%B3/dp/B0CNDF682X/ref=vo_sr_l_dp",
+      "store": "Amazon.sa",
+      "title": "الخيارات: 3 مقاسات",
+      "url": "https://www.amazon.sa/%D8%BA%D9%84%D9%8A%D8%AA%D8%B1%D9%8A-%D8%A7%D9%84%D9%82%D9%85%D8%A7%D8%B4-%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D8%B4%D9%88%D8%B1%D8%AA%D9%83%D8%AA%D8%B3/dp/B0CNDF682X/ref=vo_sr_l_dp?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-2",
+      "brand": null,
+      "category": null,
+      "price": 19.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 19.99,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/UGREEN-4K30Hz%D8%8C-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D9%86%D8%A7%D9%81%D8%B0-%D9%88%D9%8A%D9%86%D8%AF%D9%88%D8%B2%D8%8C/dp/B0BR3M8XHK/ref=sr_1_3",
+      "store": "Amazon.sa",
+      "title": "UGREEN موزع USB-C 5 في 1، HDMI 4K@30Hz، PD 100W، 3 منافذ USB-A",
+      "url": "https://www.amazon.sa/UGREEN-4K30Hz%D8%8C-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D9%86%D8%A7%D9%81%D8%B0-%D9%88%D9%8A%D9%86%D8%AF%D9%88%D8%B2%D8%8C/dp/B0BR3M8XHK/ref=sr_1_3?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-3",
+      "brand": null,
+      "category": null,
+      "price": 66.98,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 66.98,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D9%88%D8%A7%D9%84%D9%84%D8%A7%D8%A8%D8%AA%D9%88%D8%A8-%D9%88%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%84-%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%AA%D9%83-%D9%88%D8%A3%D9%85%D8%A7%D9%86%D9%83%D8%8C/dp/B0B74MMTZP/ref=sr_1_4",
+      "store": "Amazon.sa",
+      "title": "غطاء كاميرا ويب رفيع للغاية لأجهزة الكمبيوتر واللابتوب وآبل ماك بوك وايباد والجوال وغير ذلك الكثير من سكاي تاتش، 6 قطع كتلة شبكية بسمك 5.5 ملم لحماية خصوصيتك وأمانك، لون أسود",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D9%88%D8%A7%D9%84%D9%84%D8%A7%D8%A8%D8%AA%D9%88%D8%A8-%D9%88%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%84-%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%AA%D9%83-%D9%88%D8%A3%D9%85%D8%A7%D9%86%D9%83%D8%8C/dp/B0B74MMTZP/ref=sr_1_4?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-4",
+      "brand": null,
+      "category": null,
+      "price": 9.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 9.0,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D9%81%D9%8A%D8%AF%D9%8A%D9%88%D8%8C-%D9%84%D9%84%D8%A7%D9%86%D8%B2%D9%84%D8%A7%D9%82-%D9%84%D9%84%D8%A7%D8%B9%D8%A8%D9%8A%D9%86-%D9%88%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8-%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%88%D8%AF%D9%8A%D9%88%D8%8C/dp/B098MJPQWR/ref=sr_1_5",
+      "store": "Amazon.sa",
+      "title": "قاعدة ماوس كبيرة ممتدة من سكاي تاتش لتشغيل العاب الفيديو، مقاس 35.4 × 15.7 × 0.12 انش، قاعدة مطاطية غير قابلة للانزلاق وحواف مخيطة للاعبين والمكتب والاستوديو، أسود، ممحاة",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D9%81%D9%8A%D8%AF%D9%8A%D9%88%D8%8C-%D9%84%D9%84%D8%A7%D9%86%D8%B2%D9%84%D8%A7%D9%82-%D9%84%D9%84%D8%A7%D8%B9%D8%A8%D9%8A%D9%86-%D9%88%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8-%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%88%D8%AF%D9%8A%D9%88%D8%8C/dp/B098MJPQWR/ref=sr_1_5?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-5",
+      "brand": null,
+      "category": null,
+      "price": 21.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 21.0,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%84%D9%88%D8%AC%D9%8A%D8%AA%D9%8A%D9%83-%D9%84%D8%A7%D8%B3%D9%84%D9%83%D9%8A-%D8%AC%D9%8A%D8%AC%D8%A7%D9%87%D8%B1%D8%AA%D8%B2-%D9%85%D8%B3%D8%AA%D9%82%D8%A8%D9%84-%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85%D9%87/dp/B01A9GXEOI/ref=sr_1_6",
+      "store": "Amazon.sa",
+      "title": "لوجيتيك ماوس لاسلكي M171 بتردد 2.4 جيجاهرتز مع مستقبل USB صغير، تتبع بصري",
+      "url": "https://www.amazon.sa/%D9%84%D9%88%D8%AC%D9%8A%D8%AA%D9%8A%D9%83-%D9%84%D8%A7%D8%B3%D9%84%D9%83%D9%8A-%D8%AC%D9%8A%D8%AC%D8%A7%D9%87%D8%B1%D8%AA%D8%B2-%D9%85%D8%B3%D8%AA%D9%82%D8%A8%D9%84-%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85%D9%87/dp/B01A9GXEOI/ref=sr_1_6?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-6",
+      "brand": null,
+      "category": null,
+      "price": 33.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 33.0,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/EooCoo-%D9%84%D9%84%D9%85%D8%B9%D8%B5%D9%85%D8%8C-%D9%85%D9%8A%D9%85%D9%88%D8%B1%D9%8A-%D9%88%D9%82%D8%A7%D8%B9%D8%AF%D8%A9-%D9%84%D9%84%D8%A7%D9%86%D8%B2%D9%84%D8%A7%D9%82/dp/B085XRMSTT/ref=sr_1_7",
+      "store": "Amazon.sa",
+      "title": "‏24.74 ريال ريال ‎ 24 . ‎ 74 ‏ سعر القائمه: ‏42.99 ريال سعر القائمه: ‏42.99 ريال ريال ‎42.99‎ ‏",
+      "url": "https://www.amazon.sa/EooCoo-%D9%84%D9%84%D9%85%D8%B9%D8%B5%D9%85%D8%8C-%D9%85%D9%8A%D9%85%D9%88%D8%B1%D9%8A-%D9%88%D9%82%D8%A7%D8%B9%D8%AF%D8%A9-%D9%84%D9%84%D8%A7%D9%86%D8%B2%D9%84%D8%A7%D9%82/dp/B085XRMSTT/ref=sr_1_7?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-7",
+      "brand": null,
+      "category": null,
+      "price": 24.74,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 24.74,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A8%D9%84%D9%88%D8%AA%D9%88%D8%AB-%D9%84%D8%A7%D8%B3%D9%84%D9%83%D9%8A-%D8%A7%D9%86%D9%8A%D9%88%D9%8A%D8%8C-%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1/dp/B0BKKSC6S4/ref=sr_1_8",
+      "store": "Amazon.sa",
+      "title": "ماوس بلوتوث لاسلكي من انيوي، بتصميم نحيف واضاءة LED ووضع مزدوج (بلوتوث 5.1 + USB) 2.4 GHz قابل لاعادة الشحن بلوتوث صامت، ماوس كمبيوتر مع مستقبل USB (اسود)",
+      "url": "https://www.amazon.sa/%D8%A8%D9%84%D9%88%D8%AA%D9%88%D8%AB-%D9%84%D8%A7%D8%B3%D9%84%D9%83%D9%8A-%D8%A7%D9%86%D9%8A%D9%88%D9%8A%D8%8C-%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1/dp/B0BKKSC6S4/ref=sr_1_8?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-8",
+      "brand": null,
+      "category": null,
+      "price": 22.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 22.99,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%A3%D9%84%D9%88%D9%85%D9%86%D9%8A%D9%88%D9%85%D8%8C-%D9%84%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%84-%D8%B3%D9%8A%D9%84%D9%8A%D9%83%D9%88%D9%86-%D9%84%D9%84%D8%A3%D9%86%D8%B2%D9%84%D8%A7%D9%82%D8%8C-%D9%88%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%D8%AC/dp/B091B4SWR7/ref=sr_1_9",
+      "store": "Amazon.sa",
+      "title": "حامل لابتوب عمودي من الألومنيوم، حامل مزدوج لسطح المكتب مع قاعدة قابلة للتعديل ومقابض سيليكون مضادة للأنزلاق، لجميع أجهزة التابلت / وأيباد / وماك بوك / وسيرفس / وسامسونج / واتش بي / وديل / وكروم بوك،",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D8%A3%D9%84%D9%88%D9%85%D9%86%D9%8A%D9%88%D9%85%D8%8C-%D9%84%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%84-%D8%B3%D9%8A%D9%84%D9%8A%D9%83%D9%88%D9%86-%D9%84%D9%84%D8%A3%D9%86%D8%B2%D9%84%D8%A7%D9%82%D8%8C-%D9%88%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%D8%AC/dp/B091B4SWR7/ref=sr_1_9?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-9",
+      "brand": null,
+      "category": null,
+      "price": 75.88,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 75.88,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%86%D9%83%D8%B1-%D9%85%D9%86%D8%A7%D9%81%D8%B0%D8%8C-%D8%A7%D9%84%D9%86%D8%AD%D8%A7%D9%81%D8%A9-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%D8%8C-%D8%A7%D9%84%D9%85%D8%AD%D9%85%D9%88%D9%84/dp/B07L32B9C2/ref=sr_1_10",
+      "store": "Amazon.sa",
+      "title": "انكر موزع USB 3.0 بـ4 منافذ، موزع بيانات فائق النحافة مع كيبل ممتد بطول 2",
+      "url": "https://www.amazon.sa/%D8%A7%D9%86%D9%83%D8%B1-%D9%85%D9%86%D8%A7%D9%81%D8%B0%D8%8C-%D8%A7%D9%84%D9%86%D8%AD%D8%A7%D9%81%D8%A9-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%D8%8C-%D8%A7%D9%84%D9%85%D8%AD%D9%85%D9%88%D9%84/dp/B07L32B9C2/ref=sr_1_10?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-10",
+      "brand": null,
+      "category": null,
+      "price": 39.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 39.0,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%83%D8%B3%D9%8A%D9%86/dp/B0CDWMVMFY/ref=sr_1_11",
+      "store": "Amazon.sa",
+      "title": "XICEN Monitor Stand Riser, Gaming Monitor Riser with RGB Light, Foldable Computer Monitor Stand, Desk Organizers and Accessories for Desktop, Printer (Black)",
+      "url": "https://www.amazon.sa/%D8%A7%D9%83%D8%B3%D9%8A%D9%86/dp/B0CDWMVMFY/ref=sr_1_11?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-11",
+      "brand": null,
+      "category": null,
+      "price": 129.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 129.0,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D9%84%D9%84%D8%A7%D8%A8%D8%AA%D9%88%D8%A8-%D9%88%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D9%88%D8%A7%D9%84%D9%83%D9%8A%D8%A8%D9%88%D8%B1%D8%AF-%D9%88%D8%A7%D9%84%D8%B7%D8%A7%D8%A8%D8%B9%D8%A9/dp/B0CD1BHXPZ/ref=sr_1_12",
+      "store": "Amazon.sa",
+      "title": "UGREEN موزع USB 3.0 بأربعة منافذ، تصميم نحيف لنقل البيانات",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D9%84%D9%84%D8%A7%D8%A8%D8%AA%D9%88%D8%A8-%D9%88%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D9%88%D8%A7%D9%84%D9%83%D9%8A%D8%A8%D9%88%D8%B1%D8%AF-%D9%88%D8%A7%D9%84%D8%B7%D8%A7%D8%A8%D8%B9%D8%A9/dp/B0CD1BHXPZ/ref=sr_1_12?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-12",
+      "brand": null,
+      "category": null,
+      "price": 35.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 35.0,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%81%D9%88%D8%B1%D8%B3%D9%83%D8%B3-%D9%85%D8%B5%D9%86%D9%88%D8%B9-%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%A7%D9%84%D9%84%D9%88%D9%86-%D8%A7%D9%84%D8%B1%D9%85%D8%A7%D8%AF%D9%8A/dp/B0FR9KDHC4/ref=sr_1_13",
+      "store": "Amazon.sa",
+      "title": "مسند فأرة من فورسكس مصنوع من المطاط باللون الرمادي بمقاس 900ط × 400ع ملم",
+      "url": "https://www.amazon.sa/%D9%81%D9%88%D8%B1%D8%B3%D9%83%D8%B3-%D9%85%D8%B5%D9%86%D9%88%D8%B9-%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%A7%D9%84%D9%84%D9%88%D9%86-%D8%A7%D9%84%D8%B1%D9%85%D8%A7%D8%AF%D9%8A/dp/B0FR9KDHC4/ref=sr_1_13?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-13",
+      "brand": null,
+      "category": null,
+      "price": 88.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 88.0,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%81%D9%88%D8%B1%D8%B3%D9%83%D8%B3-%D9%85%D8%B5%D9%86%D9%88%D8%B9-%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%A7%D9%84%D9%84%D9%88%D9%86-%D8%A7%D9%84%D8%B1%D9%85%D8%A7%D8%AF%D9%8A/dp/B0FR9KDHC4/ref=vo_sr_l_dp",
+      "store": "Amazon.sa",
+      "title": "الخيارات: 2 مقاسات",
+      "url": "https://www.amazon.sa/%D9%81%D9%88%D8%B1%D8%B3%D9%83%D8%B3-%D9%85%D8%B5%D9%86%D9%88%D8%B9-%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%A7%D9%84%D9%84%D9%88%D9%86-%D8%A7%D9%84%D8%B1%D9%85%D8%A7%D8%AF%D9%8A/dp/B0FR9KDHC4/ref=vo_sr_l_dp?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-13",
+      "brand": null,
+      "category": null,
+      "price": 88.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 88.0,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D9%83%D9%8A%D8%A8%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%D9%8A%D8%8C-%D8%A7%D9%84%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86%D8%8C-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%D8%8C/dp/B0BLTS461S/ref=sr_1_14",
+      "store": "Amazon.sa",
+      "title": "منظم لإدارة الكيبلات لتنظيم الكيبلات للمنزل والمكتب من انيوي، 273 قطعة. مفيد لسلك الطاقة، حزمة مشابك كيبلات جهاز الكمبيوتر المكتبي، كيبل USB، كيبل التلفزيون، الكمبيوتر، حامل سلك المكتب المنزلي للمكتب",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D9%83%D9%8A%D8%A8%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%D9%8A%D8%8C-%D8%A7%D9%84%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86%D8%8C-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%D8%8C/dp/B0BLTS461S/ref=sr_1_14?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-14",
+      "brand": null,
+      "category": null,
+      "price": 38.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 38.99,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%AF%D9%88%D9%86-%D9%84%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D8%A7%D9%84%D9%85%D9%81%D8%A7%D8%AA%D9%8A%D8%AD-%D9%88%D8%A7%D9%84%D9%85%D8%A7%D9%88%D8%B3-91-4%C3%9730-5/dp/B09MVT9Y98/ref=sr_1_15",
+      "store": "Amazon.sa",
+      "title": "قاعدة للمكتب من اللباد من دون تريز، بساط للكمبيوتر ولوحة المفاتيح والماوس مناسب للمكتب بحجم كبير، 91.4×30.5 سم، رمادي داكن",
+      "url": "https://www.amazon.sa/%D8%AF%D9%88%D9%86-%D9%84%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D8%A7%D9%84%D9%85%D9%81%D8%A7%D8%AA%D9%8A%D8%AD-%D9%88%D8%A7%D9%84%D9%85%D8%A7%D9%88%D8%B3-91-4%C3%9730-5/dp/B09MVT9Y98/ref=sr_1_15?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-15",
+      "brand": null,
+      "category": null,
+      "price": 38.49,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 38.49,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/EooCoo-%D9%84%D9%84%D9%85%D8%B9%D8%B5%D9%85%D8%8C-%D8%A8%D8%AE%D8%A7%D8%B5%D9%8A%D8%A9-%D8%A7%D9%84%D8%AA%D8%AF%D9%84%D9%8A%D9%83-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1/dp/B0D4M7TD4X/ref=sr_1_16",
+      "store": "Amazon.sa",
+      "title": "‏69.99 ريال ريال ‎ 69 . ‎ 99 ‏",
+      "url": "https://www.amazon.sa/EooCoo-%D9%84%D9%84%D9%85%D8%B9%D8%B5%D9%85%D8%8C-%D8%A8%D8%AE%D8%A7%D8%B5%D9%8A%D8%A9-%D8%A7%D9%84%D8%AA%D8%AF%D9%84%D9%8A%D9%83-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1/dp/B0D4M7TD4X/ref=sr_1_16?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-16",
+      "brand": null,
+      "category": null,
+      "price": 69.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 69.99,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%A7%D9%86%D8%AC%D9%84%D9%8A%D8%B2%D9%8A%D8%A9%D8%8C-%D8%A7%D9%84%D9%84%D8%B2%D9%88%D8%AC%D8%A9-%D9%88%D8%A7%D9%84%D8%AD%D8%A7%D8%B3%D9%88%D8%A8-OS-PC001-2/dp/B07NQKRTKP/ref=sr_1_17",
+      "store": "Amazon.sa",
+      "title": "ملصق لوحة مفاتيح باللغة العربية والانجليزية، مقاوم للغبار والماء وعالي اللزوجة لجهاز لاب توب والحاسوب المكتبي رقم الموديل OS-PC001-2",
+      "url": "https://www.amazon.sa/%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%A7%D9%86%D8%AC%D9%84%D9%8A%D8%B2%D9%8A%D8%A9%D8%8C-%D8%A7%D9%84%D9%84%D8%B2%D9%88%D8%AC%D8%A9-%D9%88%D8%A7%D9%84%D8%AD%D8%A7%D8%B3%D9%88%D8%A8-OS-PC001-2/dp/B07NQKRTKP/ref=sr_1_17?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-17",
+      "brand": null,
+      "category": null,
+      "price": 7.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 7.0,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%85%D8%B4%D8%A7%D8%A8%D9%83-%D8%AA%D9%86%D8%B8%D9%8A%D9%85-%D8%A7%D9%84%D9%83%D8%A7%D8%A8%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%8A%D8%A8%D9%84%D8%A7%D8%AA-7-5-3-1-1/dp/B07Y6HZFB3/ref=sr_1_18",
+      "store": "Amazon.sa",
+      "title": "مشابك تنظيم الكابلات - 5 عبوات ذاتية اللصق لتنظيم الكيبلات لكيبل USB / سلك الطاقة / الأسلاك والسيارة والمكتب والمنزل والمكتب (7-5-3-1-1 فتحات) حامل كيبل أسود",
+      "url": "https://www.amazon.sa/%D9%85%D8%B4%D8%A7%D8%A8%D9%83-%D8%AA%D9%86%D8%B8%D9%8A%D9%85-%D8%A7%D9%84%D9%83%D8%A7%D8%A8%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%8A%D8%A8%D9%84%D8%A7%D8%AA-7-5-3-1-1/dp/B07Y6HZFB3/ref=sr_1_18?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-18",
+      "brand": null,
+      "category": null,
+      "price": 17.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-14 23:20:57",
+      "history": [
+        {
+          "price": 17.99,
+          "date": "2026-11-14 23:20:57"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    }
+  ]
+}

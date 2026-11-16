@@ -1,12 +1,13 @@
 import json
 import re
-from urllib.parse import urljoin, urlparse
+import math
+from urllib.parse import urljoin, urlparse, urlunparse, parse_qsl, urlencode
 
 import requests
 from bs4 import BeautifulSoup
 
 PRICE_KEYS = (
-    "price", "salePrice", "finalPrice", "offerPrice", "currentPrice",
+    "salePrice", "finalPrice", "offerPrice", "currentPrice", "price",
     "lowPrice", "sellingPrice", "formattedPrice", "sale_price", "final_price",
     "current_price", "price_value", "amount", "value", "specialPrice",
     "special_price", "discountPrice", "discount_price", "priceValue",
@@ -46,7 +47,7 @@ def _number(value):
     if value is None or isinstance(value, bool):
         return None
     if isinstance(value, (int, float)):
-        return float(value)
+        return float(value) if math.isfinite(value) else None
     if isinstance(value, dict):
         for key in ("value", "amount", "price", "currentPrice", "salePrice", "sellingPrice", "finalPrice", "formattedValue"):
             if key in value:
@@ -55,6 +56,8 @@ def _number(value):
                     return parsed
         return None
     text = str(value).strip()
+    if re.search(r"-\s*[0-9٠-٩۰-۹]", text):
+        return None
     # Normalise Arabic-Indic and Persian digits and separators.
     digit_map = str.maketrans("٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹", "01234567890123456789")
     text = text.translate(digit_map).replace("٬", ",").replace("٫", ".")
@@ -114,14 +117,15 @@ def _normalise_product(title, price, url, store, base_url, rating=0, reviews=0, 
     title = re.sub(r"\s+", " ", str(title)).strip()
     if len(title) < 3 or title.lower() in {"home", "search", "products", "المنتجات"}:
         return None
-    absolute_url = urljoin(base_url, str(url).strip())
+    absolute_url = canonical_url(urljoin(base_url, str(url).strip()))
     parsed = urlparse(absolute_url)
-    if parsed.scheme not in ("http", "https") or not parsed.netloc:
+    if parsed.scheme not in ("http", "https") or not parsed.netloc or parsed.hostname != urlparse(base_url).hostname:
         return None
     if any(x in parsed.path.lower() for x in ("/search", "/customer/account", "/checkout")):
         return None
     return {
         "store": store, "title": title[:300], "url": absolute_url,
+        "product_id": product_identifier(absolute_url), "currency": "SAR",
         "price": round(float(price), 2), "rating": float(rating or 0),
         "reviews": int(reviews or 0), "purchase_count_text": "",
         "review_snippets": [], "data_sources": [source],
@@ -167,8 +171,18 @@ def _products_from_json(soup, base_url, store, limit):
             offer = _first_offer(obj) if is_product else {}
             price_value = (offer.get("price") or offer.get("lowPrice")
                            or next((obj.get(k) for k in PRICE_KEYS if obj.get(k) is not None), None))
+            if store == "Noon" and obj.get("url_key") and obj.get("sku") and re.fullmatch(r"[A-Za-z0-9_-]+", str(obj["sku"])):
+                obj = dict(obj, productUrl=f"/saudi-en/{str(obj['url_key']).strip('/')}/{obj['sku']}/p/")
             url = (obj.get("url") or offer.get("url")
                    or next((obj.get(k) for k in URL_KEYS if obj.get(k)), None))
+            currency = offer.get("priceCurrency") or obj.get("priceCurrency") or (price_value.get("currency") if isinstance(price_value, dict) else None)
+            if offer.get("highPrice") and _number(offer.get("highPrice")) != _number(offer.get("lowPrice")):
+                continue
+            if currency and currency != "SAR":
+                continue
+            if is_product and not url:
+                canonical = soup.select_one('link[rel="canonical"]')
+                url = canonical.get("href") if canonical else base_url
             if not title or price_value is None or not url:
                 continue
             price = _number(price_value)
@@ -179,6 +193,15 @@ def _products_from_json(soup, base_url, store, limit):
                 reviews = int(_number(obj.get("reviewCount") or obj.get("ratingsCount") or obj.get("reviewsCount")) or 0)
             item = _normalise_product(title, price, url, store, base_url, rating, reviews, "embedded_json")
             if item:
+                for field, keys in {"brand": ("brand",), "category": ("category",), "product_id": ("sku", "productId", "product_id"), "gtin": ("gtin13", "gtin", "gtin14")}.items():
+                    val = next((obj.get(k) for k in keys if obj.get(k)), None)
+                    if isinstance(val, dict):
+                        val = val.get("name")
+                    if isinstance(val, (str,int)):
+                        item[field] = str(val)
+                original = _number(obj.get("oldPrice") or obj.get("originalPrice") or obj.get("listPrice"))
+                if original and original > item["price"]:
+                    item["original_price"] = original
                 found.append(item)
                 if len(found) >= limit:
                     return found
@@ -187,7 +210,7 @@ def _products_from_json(soup, base_url, store, limit):
 
 def _text_price(card):
     selectors = [
-        '[data-price-amount]', '[data-price]', '[itemprop="price"]',
+        '.a-price:not(.a-text-price) .a-offscreen', '[data-price-amount]', '[data-price]', '[itemprop="price"]',
         '[data-qa*="price"]', '[data-testid*="price"]',
         '[class*="price"]', '[class*="Price"]', '[id*="price"]',
         '.a-price:not(.a-text-price) .a-offscreen',
@@ -201,6 +224,8 @@ def _text_price(card):
         classes = " ".join(node.get("class", [])).lower()
         if any(word in classes for word in ("old", "was", "strike", "original", "list-price", "crossed")):
             continue
+        if node.find(["del", "s", "strike"]) or node.find_parent(["del", "s", "strike"]):
+            continue
         value = node.get("content") or node.get("data-price-amount") or node.get("data-price") or node.get_text(" ", strip=True)
         price = _number(value)
         if price and 0.5 <= price <= 2_000_000:
@@ -209,24 +234,11 @@ def _text_price(card):
         classes = " ".join(node.get("class", [])).lower()
         if any(word in classes for word in ("old", "was", "strike", "original", "list-price", "crossed")):
             continue
-        if node.find(["del", "s", "strike"]):
+        if node.find(["del", "s", "strike"]) or node.find_parent(["del", "s", "strike"]):
             continue
         price = _number(node.get("content") or node.get_text(" ", strip=True))
         if price and 0.5 <= price <= 2_000_000:
             return price
-    text = card.get_text(" ", strip=True)
-    digit_map = str.maketrans("٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹", "01234567890123456789")
-    text = text.translate(digit_map).replace("٬", ",").replace("٫", ".")
-    patterns = [
-        r"(?:SAR|ر\.?س\.?|ر.س|﷼)\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)",
-        r"([0-9][0-9,]*(?:\.[0-9]{1,2})?)\s*(?:SAR|ر\.?س\.?|﷼)",
-    ]
-    for pattern in patterns:
-        match = re.search(pattern, text, flags=re.I)
-        if match:
-            price = _number(match.group(1))
-            if price and 0.5 <= price <= 2_000_000:
-                return price
     return None
 
 
@@ -339,7 +351,7 @@ def _products_from_product_links(soup, base_url, store, limit):
             if len(product_links) > 4:
                 break
             price = _text_price(parent)
-            if price:
+            if price and len({canonical_url(urljoin(base_url,a.get("href"))) for a in product_links}) <= 1:
                 rating, reviews = _rating_from_card(parent)
                 item = _normalise_product(title, price, href, store, base_url, rating, reviews, "product_link_ancestor")
                 if item:
@@ -382,7 +394,15 @@ def parse_jsonld_products(html, base_url, store, limit=20):
         _products_from_meta(soup, base_url, store),
     ]
     products = _merge_products(groups, limit)
-    return products
+    by_url = {}
+    conflicts = set()
+    for group in groups:
+        for item in group:
+            key = item["url"]
+            if key in by_url and abs(by_url[key]-item["price"]) > max(.01,by_url[key]*.01):
+                conflicts.add(key)
+            by_url[key] = item["price"]
+    return [item for item in products if item["url"] not in conflicts]
 
 
 def _extract_purchase_text(text):
@@ -454,3 +474,21 @@ def enrich_product_details(item, timeout=12):
     if item["purchase_count_text"]:
         item.setdefault("data_sources", []).append("visible_purchase_signal")
     return item
+
+
+def canonical_url(url):
+    parsed = urlparse(url)
+    path = parsed.path.rstrip("/")
+    asin = re.search(r"/(?:dp|gp/product)/([A-Z0-9]{10})(?:/|$)", path, re.I)
+    if parsed.hostname and parsed.hostname.endswith("amazon.sa") and asin:
+        path = "/dp/" + asin.group(1).upper()
+    query = [(k,v) for k,v in parse_qsl(parsed.query) if not (k.lower().startswith("utm_") or k.lower() in {"ref", "tag", "qid", "sr", "pf_rd_p", "pf_rd_r"})]
+    return urlunparse((parsed.scheme,parsed.netloc.lower(),path,"",urlencode(query),""))
+
+
+def product_identifier(url):
+    for pattern in (r"/dp/([A-Z0-9]{10})", r"/([A-Z0-9]+)/(?:p|P)$", r"/p/(\d+)", r"-(\d+)\.html$"):
+        match = re.search(pattern,url)
+        if match:
+            return match.group(1)
+    return None

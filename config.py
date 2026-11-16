@@ -3,8 +3,8 @@ import os
 
 TG_TOKEN = os.getenv("TG_TOKEN", "")
 TG_CHAT = os.getenv("TG_CHAT", "")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
-DB_PATH = "data/deals.db"
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+DB_PATH = os.getenv("DB_PATH", "data/deals.db")
 
 # All four stores are scanned on every workflow run; searches rotate in four-run blocks.
 STORES = {
@@ -45,7 +45,8 @@ PREFERRED_TERMS = [
 # Deprioritize these scent profiles in perfume-related results.
 LOW_PRIORITY_TERMS = ["spicy", "oud", "heavy tobacco", "cinnamon", "oriental spicy"]
 
-MIN_DROP_PERCENT = 25
-MIN_HISTORY_POINTS = 3
+MIN_DROP_PERCENT = float(os.getenv("MIN_DROP_PERCENT", "25"))
+MIN_HISTORY_POINTS = int(os.getenv("MIN_HISTORY_POINTS", "7"))
+MIN_HISTORY_DAYS = int(os.getenv("MIN_HISTORY_DAYS", "7"))
 MAX_PRODUCTS_PER_SEARCH = 20
 REQUEST_TIMEOUT = 25

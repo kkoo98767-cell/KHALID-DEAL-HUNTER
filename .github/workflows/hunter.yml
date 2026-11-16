@@ -6,6 +6,7 @@ on:
       - main
     paths-ignore:
       - "data/deals.db"
+      - "data/dashboard.json"
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
@@ -27,6 +28,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: true
+          fetch-depth: 0
+
+      - name: Refresh main before scanning
+        run: git pull --ff-only origin main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -53,11 +58,30 @@ jobs:
           PYTHONUNBUFFERED: "1"
         run: python main.py
 
+      - name: Checkpoint database
+        if: always()
+        run: python -c "from database import checkpoint; checkpoint()"
+
+      - name: Export dashboard snapshot
+        if: always()
+        run: python dashboard.py
+
+      - name: Preserve recovery copy and scan evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: price-archive-${{ github.run_id }}
+          path: |
+            data/deals.db
+            scan-results.json
+            data/dashboard.json
+          retention-days: 30
+
       - name: Save database changes
         if: always()
         run: |
           git config user.name "KHALID DEAL HUNTER"
           git config user.email "actions@github.com"
-          git add data/deals.db
+          git add data/deals.db data/dashboard.json
           git diff --cached --quiet || git commit -m "Update deal hunter price history"
           git push

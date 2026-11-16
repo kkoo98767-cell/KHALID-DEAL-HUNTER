@@ -1,6 +1,8 @@
 import os
 import random
 
+from database import connect
+
 from config import CORE_QUERIES, DISCOVERY_QUERIES, STORES
 
 
@@ -13,18 +15,11 @@ def choose_search(store=None):
     if store not in STORES:
         store = random.choice(stores)
 
-    run_number = max(1, int(os.getenv("GITHUB_RUN_NUMBER", "1")))
-    store_index = stores.index(store)
-    sequence = (run_number - 1) * len(stores) + store_index
-
-    # Preserve an approximate 70/30 split, but rotate on every scan.
-    slot = sequence % 10
-    batch = sequence // 10
-    if slot < 7:
-        index = (batch * 7 + slot) % len(CORE_QUERIES)
-        query = CORE_QUERIES[index]
-    else:
-        index = (batch * 3 + slot - 7) % len(DISCOVERY_QUERIES)
-        query = DISCOVERY_QUERIES[index]
-
+    db = connect()
+    queries = (CORE_QUERIES[:18] + ["laptop", "printer", "tablet", "هاتف ذكي", "شاشة ألعاب"]) if store in {"Extra", "Jarir"} else CORE_QUERIES + DISCOVERY_QUERIES
+    counts = dict(db.execute("SELECT query,COUNT(*) FROM discovery_history WHERE store=? GROUP BY query", (store,)).fetchall())
+    query = min(queries, key=lambda q: counts.get(q, 0))
+    with db:
+        db.execute("INSERT INTO discovery_history(store,query) VALUES(?,?)", (store,query))
+    db.close()
     return store, query

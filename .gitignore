@@ -1,2 +1,7 @@
 __pycache__/
 *.py[cod]
+
+*.db-wal
+*.db-shm
+scan-results.json
+integration-results.json
