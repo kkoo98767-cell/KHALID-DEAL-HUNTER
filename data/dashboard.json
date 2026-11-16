@@ -1,13 +1,509 @@
 {
-  "generated_at": "2026-11-16T05:07:44.578018+00:00",
+  "generated_at": "2026-11-16T05:09:44.060072+00:00",
   "stats": {
-    "products": 80,
-    "observations": 81,
+    "products": 100,
+    "observations": 101,
     "verified": 0,
     "sufficient": 0
   },
-  "scan": null,
+  "scan": {
+    "scan_number": "20",
+    "stores": {
+      "Extra": {
+        "products": 0,
+        "error": null
+      },
+      "Amazon.sa": {
+        "products": 20,
+        "error": null
+      },
+      "Noon": {
+        "products": 0,
+        "error": "ReadTimeout"
+      },
+      "Jarir": {
+        "products": 0,
+        "error": null
+      }
+    },
+    "products": 20,
+    "new_products": 20,
+    "potential_deals": 0,
+    "verified_deals": 0,
+    "sufficient_history": 0,
+    "store_errors": 1,
+    "empty_stores": 2,
+    "telegram_errors": 0,
+    "ai_providers": [
+      "Fallback"
+    ],
+    "archive": {
+      "products": 100,
+      "price_observations": 101,
+      "stores_with_products": 1
+    }
+  },
   "products": [
+    {
+      "id": "https://www.amazon.sa/dp/B0D3D5SSY8?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "ماوس ألعاب X11 مع قاعدة شحن مغناطيس ومستشعر ألعاب بيكسارت PAW3311، بلوتوث 2.4 جيجا ولاسلكي وسلكي، بدقة 22000 نقطة لكل بوصة، للمكتب والألعاب من اتاك شارك، أبيض",
+      "url": "https://www.amazon.sa/dp/B0D3D5SSY8?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 115.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 115.0,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B07W5JKFQC?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "ماوس الألعاب لوجيتك جي 203 الجيل الثاني مع سلك، 8000 DPI، تأثير ضوء قوس قزح لايت سينك RGB، 6 أزرار قابلة للبرمجة، ذاكرة مدمجة، تخطيط الشاشة، متوافق مع أجهزة الكمبيوتر وأجهزة الماك واللابتوبات - أسود",
+      "url": "https://www.amazon.sa/dp/B07W5JKFQC?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 62.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 62.0,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B092R5MCB3?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "ماوس الالعاب ديث ادر اسينشال من رايزر RZ01-02540100-R3M1، USB",
+      "url": "https://www.amazon.sa/dp/B092R5MCB3?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 79.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 79.0,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B07CGNP3RH?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "ماوس لاسلكية للالعاب G305 بتقنية لايت سبيد، مستشعر هيرو، 12,000 نقطة لكل انش، خفيفة الوزن، 6 ازرار قابلة للبرمجة، عمر بطارية 250 ساعة، ذاكرة مدمجة، متوافقة مع الكمبيوتر الشخصي/ ماك - لون ابيض",
+      "url": "https://www.amazon.sa/dp/B07CGNP3RH?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 128.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 128.0,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B07W5JKP66?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "لوجيتك جي ماوس العاب لاسلكي برو اكس سوبرلايت 2 لايت سبيد خفيف الوزن بمفاتيح لايت فورس هايبرد ومستشعر هيرو 2 بدقة 44000 نقطة لكل بوصة و5 ازرار قابلة للبرمجة وشحن USB نوع سي للكمبيوتر وماك - اسود",
+      "url": "https://www.amazon.sa/dp/B07W5JKP66?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 444.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 444.0,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0HPL6QYVN?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "فيليبس ماوس العاب سلكي SPK9304B/55 مع اضاءة امبيجلو RGB ومستشعر بصري عالي الدقة من مومنتوم - اسود",
+      "url": "https://www.amazon.sa/dp/B0HPL6QYVN?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 40.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 40.0,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0DCVCQKWN?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "Azonee Wireless Mouse Wireless Gaming Mouse, Rechargeable Pc Mouse with RGB Backlight 6 Buttons Adjustable Lightweight Honeycomb Shell for Laptops, PC, Computers, Etc (White)",
+      "url": "https://www.amazon.sa/dp/B0DCVCQKWN?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 38.69,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 38.69,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B07GS6ZB7T?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "ماوس الألعاب السلكي جي G502 هيرو لايت سينك عالي الأداء، 25,600 نقطة لكل بوصة من لوجيتك، لون أسود",
+      "url": "https://www.amazon.sa/dp/B07GS6ZB7T?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 139.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 139.0,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0D3D5XXW1?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D",
+      "store": "Amazon.sa",
+      "title": "الشراء لمرة واحدة",
+      "url": "https://www.amazon.sa/dp/B0D3D5XXW1?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D",
+      "brand": null,
+      "category": null,
+      "price": 139.96,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 139.96,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B097F8H1MC?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "ريزر ماوس العاب مريح قابل للتخصيص V3 من باسيليسك: اسرع مفتاح ماوس للالعاب، اضاءة كروما RGB ومستشعر بصري 26K DPI - اسود كلاسيكي",
+      "url": "https://www.amazon.sa/dp/B097F8H1MC?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 157.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 157.0,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B07W6JN8N7?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "لوجيتك جي ماوس العاب لايت سينك 203، 8000 نقطة لكل بوصة، ازرار قابلة للتعديل",
+      "url": "https://www.amazon.sa/dp/B07W6JN8N7?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 62.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 62.0,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B092R71V77?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "ماوس ديث ادر ايسينشال من رايزر-جهاز استشعار بصري ترو 6400 DPI - شكل مريح، متانة عالية، 5 ازرار استجابة سريعة، 10 ملايين نقرة - باللون الابيض، USB",
+      "url": "https://www.amazon.sa/dp/B092R71V77?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 79.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 79.0,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B09ZY348SY?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "ريدراجون ماوس العاب لاسلكي M810 برو، ماوس العاب سلكي/لاسلكي 10000 نقطة لكل بوصة مع مفتاح اطلاق سريع، 8 ازرار ماكرو، سعة طاقة موثوقة 45 ساعة واضاءة خلفية RGB للكمبيوتر وماك واللابتوب",
+      "url": "https://www.amazon.sa/dp/B09ZY348SY?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 99.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 99.0,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B07W6JNFYQ?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "ماوس الالعاب السلكية لوغيتك G502 اكس - مفاتيح اساسية ميكانيكية ضوئية هجينة لايت فورس، مستشعر العاب هيرو 25 كيه، متوافق مع الكمبيوتر الشخصي - macOS / ويندوز- ابيض، USB",
+      "url": "https://www.amazon.sa/dp/B07W6JNFYQ?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 179.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 179.0,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0FBFN3G3V?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "ماوس العاب لاسلكي شارك X11SE من اتاك، ضوء فائق 63 غرام مع مستشعر بيكسارت PAW3311، 22000 نقطة لكل بوصة، بلوتوث ثلاثي الاوضاع/2.4Ghz/سلكي، معدل تصويب 1000Hz، بطارية 300mAh، محرك مزدوج، للكمبيوتر واكس بوكس وماك (اسود)",
+      "url": "https://www.amazon.sa/dp/B0FBFN3G3V?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 89.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 89.99,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0CBCPB2T1?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "ريزر ماوس العاب لاسلكي V3 هايبر سبيد من فايبر: تصميم خفيف الوزن 82 غرام، مستشعر بصري 30 الف نقطة لكل بوصة، عمر بطارية يصل الى 280 ساعة، مفاتيح ميكانيكية الجيل الثاني - اسود كلاسيكي",
+      "url": "https://www.amazon.sa/dp/B0CBCPB2T1?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 259.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 259.0,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B07W4DGPGF?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "ماوس ألعاب لاسلكي برو اكس سوبرلايت 2 لايت سبيد من لوجيتك جي، خفيف الوزن، مفاتيح لايت فورس هايبرد، مستشعر هيرو 2، 32000 نقطة لكل بوصة، 5 أزرار قابلة للبرمجة، شحن USB نوع سي، للكمبيوتر وماك - أبيض",
+      "url": "https://www.amazon.sa/dp/B07W4DGPGF?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 445.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 445.0,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0BT4VRZGV?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "ريزر ماوس العاب لاسلكي قابل للتخصيص V3 X هايبر سبيد من باسيليسك: مفاتيح ميكانيكية الجيل الثاني، مستشعر بصري متطور 18 كيه 5G، كروما RGB، 9 ازرار قابلة للبرمجة، بطارية 535 ساعة، اسود كلاسيكي",
+      "url": "https://www.amazon.sa/dp/B0BT4VRZGV?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 217.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 217.0,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0FN7K443F?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "ماوس العاب لاسلكي VXE دراجون فلاي R1 SE+ من ايه تي كيه - ابيض",
+      "url": "https://www.amazon.sa/dp/B0FN7K443F?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 128.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:03",
+      "history": [
+        {
+          "price": 128.99,
+          "date": "2026-11-16 05:09:03"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B07CGPZ3ZQ?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "store": "Amazon.sa",
+      "title": "لوجيتك جي ماوس العاب لاسلكي لايت سبيد 305، مستشعر هيرو 12000 نقطة لكل بوصة، خفيف الوزن، 6 ازرار قابلة للبرمجة، عمر بطارية 250 ساعة، ذاكرة داخلية، متوافق مع الكمبيوتر / ماك - اسود",
+      "url": "https://www.amazon.sa/dp/B07CGPZ3ZQ?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
+      "brand": null,
+      "category": null,
+      "price": 119.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 05:09:02",
+      "history": [
+        {
+          "price": 119.0,
+          "date": "2026-11-16 05:09:02"
+        }
+      ],
+      "analysis": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null
+    },
     {
       "id": "https://aax-eu-zaz.amazon.sa/x/c/JPbcxpgz2_5u4IWUCQJk5b0AAAGh4a7vNwoAAAH2AQBvbm9fdHhuX2JpZDMgICBvbm9fdHhuX2ltcDEgICAPQl6G/clv1c_ek-IBIfXIjbXTd2CJA6kSYg9o0MWfMJ90stE7BJZpIoRwyGC0Rsl8mvM3FJv0Gz3pWQ1Bi65jT132bfDJzGsG8tcr3o9ETOh61948TwdK8EqTWnLIqbucbgtMxx2u1Cx1xMas-uPGH2Gw5Nk_OSkXxNO9bBHJtXohwQwTDWY0ZdHEUu8HMezNir4wjYVgoNz-Kw7IMJZdQzy72b1m2zIYsP7nlmhJYXukS5ugGGnn_yiOr2lmIXgGxuwCKcgy3WyatwePkmpZ1Ab2jdemBZGDfrFK9sxhvaSyUE55WgNEkO9q7w6QFNeXswlLDKpHcA6arE-I98FkJ1asau7JyipglVL-tKkdlI3Wou6IfS-6LgA6XsCvjFp03Ahuw0CKYnNphyZbeFB4ZbYsVQHsDeigrhZeTzi4QRyW73dsig5Jclc1ToCE0I18b6ez09aVZQT_RvuGWXxslztq_SmVtUVkpdw9H9LV6jW1c7qVIpCI3AMC4pzPUtl-rFqL0Vp8vpfQnvCzATnAxqJGwj1Ca4EctjiCpi-eDGgMztf1WwUJawT2UijanLOKEYUclEwhnbiVmGQclSfhTx54UKe06rV4qab-pzFKS0LZIoAZbguQygSXqaHpZNAn-x6pEuaZi66UTxSebpDaAXaLkSLbdhKWJlf7eqWbrpYCHXZ6qc4xxZBu-_61tbqWRGeYA4XrkEOIiYH2A_lK43NeYAD11L-eDqSw34WSnnfryRK6ksbU8lQtxO0vfZzOxl4JvRbj9y7zhlbAOW7HQgie8PEekCvWpeg2Nu4CBQqLkOCYaXpzdTJGAzBMt1VunZh7ze16lUA0rnLvwrHfdLMTg5Uu9U3UAD-jcwMGMx0QHkugFNFvoh1bDYns7nVnZZoNv-jQDg7cfmOSrmLLvHWVD1vslkHUAiGdFJed8F5fWrkqaEzeXRe1J9xeo-YZNKGpBnIuTyexBY6Fd8ojaFl3MciaOw2iY5RK7vEpxeHJwt-1H2eyo0NUxjRUJxuv5RgYUY84bJUU6wQBzk3Kh0fBn5wUcAic4zatdmbm1Ov2zv5jWd95MbGvTFq1cL9nPukcVjiFMh3-L9_5IzHxDEZ34fYZ4zRxEELu1wIVOv2ZLAOtB8KCq7a7o_Rpz5hHi6W8goNcPDZhb9-N5gKsQ8_zi-rqDkISlNYEzb6j_ZOrmVaZ4KpUgVhGQVpXSMUzf1UFL3txipaQNjAJ0dW1HKTo5lXz6sjtGjXgGGsT6QTR5l1MfTfBs4rE_9Hx0BOm1_hAyADzWEeihxTToD5cG0T7vq1Z5X5lBe9a6k0EH2U2-_Dys1Jr2jh3XAtK8qKaJR3KguK_rTg1wjOrKt85LcRXmn4ldYGlt7gC8ZMY-Az5xI81HdXXjSrpzOx0xODZDOq9OCM2D0cpAZjTVJ4t0sgLQ7CAHekQYjF4dyAmhNNYC89H5tHEPPXjJIcBHt8iGI_eaqqjvrwzdWi-18qOAL2EpbwEmemxmvZMFe4Lc_DxlLrFpNcGDAfR8Zh2OvG6YTqQM79WXWND3TWQZINSJ-Vg9O_jqdx8IGMHkMOdxx2OI_G-DeeMkTLglhqFtiqXiqkw75vcCq0-QNDmGkXgZ1pKNJgbLCWpY69LtgHRLLawIBR5vMxMteLU1em2WlVCXFrrQz45jCCsTiU1KdwgQ8hJNSa8zLNwYis61UcoZswKvyrgHryVD7Vj6A9r00RDwj-FlUjv8C7MGL7ZajFsUvdp1kuV5YFYyRe-R2Lw7Di/https://www.amazon.sa/dp/B0HBWB7Z9D",
       "store": "Amazon.sa",
