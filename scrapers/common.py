@@ -288,10 +288,19 @@ def _products_from_cards(soup, base_url, store, limit):
             identities = {canonical_url(urljoin(base_url,a["href"])) for a in card.select("a[href]") if re.search(r"/dp/|/p/|/product/",a["href"])}
             if len(identities) > 1 or len(card.get_text(" ", strip=True)) > 5000:
                 continue
-            title_node = card.select_one(
-                '[itemprop="name"], h2 a, a h2, h2, h3 a, [class*="title"] a, '
-                '[class*="name"] a, [data-qa*="title"], a[href]'
-            )
+            # CSS selector lists follow document order, not selector priority.
+            # Amazon's empty image link precedes its heading; choosing that link
+            # first discards the full card and loses its matching product image.
+            title_node = None
+            for title_selector in (
+                '[itemprop="name"]', 'h2 a', 'a h2', 'h2', 'h3 a',
+                '[class*="title"] a', '[class*="name"] a',
+                '[data-qa*="title"]', 'a[href]',
+            ):
+                candidate=card.select_one(title_selector)
+                if candidate and (candidate.get("title") or candidate.get("aria-label") or candidate.get_text(" ",strip=True)):
+                    title_node=candidate
+                    break
             if not title_node:
                 continue
             title = title_node.get("title") or title_node.get("aria-label") or title_node.get_text(" ", strip=True)
@@ -559,7 +568,9 @@ def image_url(value,base_url):
 
 
 def _card_image(card,base_url):
-    node=card.select_one('img.s-image, img[itemprop="image"], img[data-src], img[src]')
-    if node:
-        return image_url(node.get("data-src") or node.get("src"),base_url)
+    for selector in ('img.s-image', 'img[itemprop="image"]', 'img[data-src]', 'img[src]'):
+        for node in card.select(selector):
+            picture=image_url(node.get("data-src"),base_url) or image_url(node.get("src"),base_url)
+            if picture:
+                return picture
     return None
