@@ -11,52 +11,2527 @@
     },
     "insufficient_or_stale_cap": 39
   },
-  "generated_at": "2026-11-16T10:16:49.465564+00:00",
+  "generated_at": "2026-11-16T10:19:03.215616+00:00",
   "stats": {
-    "products": 163,
-    "observations": 184,
+    "products": 186,
+    "observations": 224,
     "verified": 0,
     "sufficient": 0
   },
   "scan": {
-    "scan_number": "27",
+    "scan_number": "28",
     "stores": {
       "Extra": {
         "products": 0,
         "error": null
       },
-      "Jarir": {
-        "products": 3,
-        "error": null
-      },
       "Noon": {
         "products": 0,
-        "error": "RuntimeError"
+        "error": "ReadTimeout"
+      },
+      "Jarir": {
+        "products": 20,
+        "error": null
       },
       "Amazon.sa": {
-        "products": 0,
+        "products": 20,
         "error": null
       }
     },
-    "products": 6,
-    "new_products": 3,
-    "potential_deals": 0,
+    "products": 43,
+    "new_products": 23,
+    "potential_deals": 7,
     "verified_deals": 0,
     "sufficient_history": 0,
     "store_errors": 1,
-    "empty_stores": 2,
+    "empty_stores": 1,
     "telegram_errors": 0,
     "ai_providers": [
       "Fallback",
-      "Gemini"
+      "Groq"
     ],
     "archive": {
-      "products": 163,
-      "price_observations": 184,
+      "products": 186,
+      "price_observations": 224,
       "stores_with_products": 2
     }
   },
   "products": [
+    {
+      "id": "https://www.amazon.sa/dp/B0BHHTN5VF",
+      "store": "Amazon.sa",
+      "title": "قاعدة ماوس العاب كبيرة مع حواف مخيطة من اوفن بيرد، قاعدة ماوس كبيرة للمكتب بنمط خريطة طبوغرافية بتصميم بسيط مع قاعدة مضادة للانزلاق رائعة للكيبورد والماوس، 31.8×11.8 انش، ابيض، بوليستر مطاطي",
+      "url": "https://www.amazon.sa/dp/B0BHHTN5VF",
+      "brand": null,
+      "category": null,
+      "price": 18.8,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:19:02",
+      "history": [
+        {
+          "price": 18.8,
+          "date": "2026-11-16 10:19:02"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B0BHHTN5VF",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B0CBJLM51J",
+      "store": "Amazon.sa",
+      "title": "حامل أجهزة إلكترونية محمول من يو جرين متوافق مع آيباد و ماك بوك و لابتوب، قابل للتعديل و مانع للانزلاق، ألومنيوم و سيليكون، أسود",
+      "url": "https://www.amazon.sa/dp/B0CBJLM51J",
+      "brand": null,
+      "category": null,
+      "price": 99.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:19:02",
+      "history": [
+        {
+          "price": 99.0,
+          "date": "2026-11-16 10:19:02"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B0CBJLM51J",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%86%D9%83%D8%B1-%D9%85%D9%86%D8%A7%D9%81%D8%B0%D8%8C-%D8%A7%D9%84%D9%86%D8%AD%D8%A7%D9%81%D8%A9-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%D8%8C-%D8%A7%D9%84%D9%85%D8%AD%D9%85%D9%88%D9%84/dp/B07L32B9C2/ref=sr_1_10",
+      "store": "Amazon.sa",
+      "title": "انكر موزع USB 3.0 بـ4 منافذ، موزع بيانات فائق النحافة مع كيبل ممتد بطول 2",
+      "url": "https://www.amazon.sa/dp/B07L32B9C2",
+      "brand": null,
+      "category": null,
+      "price": 39.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:19:01",
+      "history": [
+        {
+          "price": 39.0,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 39.0,
+          "date": "2026-11-16 10:19:01"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B07L32B9C2",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%81%D9%88%D8%B1%D8%B3%D9%83%D8%B3-%D9%85%D8%B5%D9%86%D9%88%D8%B9-%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%A7%D9%84%D9%84%D9%88%D9%86-%D8%A7%D9%84%D8%B1%D9%85%D8%A7%D8%AF%D9%8A/dp/B0FR9KDHC4/ref=sr_1_13",
+      "store": "Amazon.sa",
+      "title": "مسند فأرة من فورسكس مصنوع من المطاط باللون الرمادي بمقاس 900ط × 400ع ملم",
+      "url": "https://www.amazon.sa/dp/B0FR9KDHC4",
+      "brand": null,
+      "category": null,
+      "price": 88.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:19:01",
+      "history": [
+        {
+          "price": 88.0,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 88.0,
+          "date": "2026-11-16 10:19:01"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B0FR9KDHC4",
+      "gtin": null,
+      "store_original_price": 99.0,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": 11.0,
+          "percent": 11.11
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "UNVERIFIED",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D9%83%D9%8A%D8%A8%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%D9%8A%D8%8C-%D8%A7%D9%84%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86%D8%8C-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%D8%8C/dp/B0BLTS461S/ref=sr_1_14",
+      "store": "Amazon.sa",
+      "title": "منظم لإدارة الكيبلات لتنظيم الكيبلات للمنزل والمكتب من انيوي، 273 قطعة. مفيد لسلك الطاقة، حزمة مشابك كيبلات جهاز الكمبيوتر المكتبي، كيبل USB، كيبل التلفزيون، الكمبيوتر، حامل سلك المكتب المنزلي للمكتب",
+      "url": "https://www.amazon.sa/dp/B0BLTS461S",
+      "brand": null,
+      "category": null,
+      "price": 38.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:19:01",
+      "history": [
+        {
+          "price": 38.99,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 38.99,
+          "date": "2026-11-16 10:19:01"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B0BLTS461S",
+      "gtin": null,
+      "store_original_price": 54.99,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": 16.0,
+          "percent": 29.1
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "UNVERIFIED",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%AF%D9%88%D9%86-%D9%84%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D8%A7%D9%84%D9%85%D9%81%D8%A7%D8%AA%D9%8A%D8%AD-%D9%88%D8%A7%D9%84%D9%85%D8%A7%D9%88%D8%B3-91-4%C3%9730-5/dp/B09MVT9Y98/ref=sr_1_15",
+      "store": "Amazon.sa",
+      "title": "قاعدة للمكتب من اللباد من دون تريز، بساط للكمبيوتر ولوحة المفاتيح والماوس مناسب للمكتب بحجم كبير، 91.4×30.5 سم، رمادي داكن",
+      "url": "https://www.amazon.sa/dp/B09MVT9Y98",
+      "brand": null,
+      "category": null,
+      "price": 38.49,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:19:01",
+      "history": [
+        {
+          "price": 38.49,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 38.49,
+          "date": "2026-11-16 10:19:01"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B09MVT9Y98",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%A7%D9%86%D8%AC%D9%84%D9%8A%D8%B2%D9%8A%D8%A9%D8%8C-%D8%A7%D9%84%D9%84%D8%B2%D9%88%D8%AC%D8%A9-%D9%88%D8%A7%D9%84%D8%AD%D8%A7%D8%B3%D9%88%D8%A8-OS-PC001-2/dp/B07NQKRTKP/ref=sr_1_17",
+      "store": "Amazon.sa",
+      "title": "ملصق لوحة مفاتيح باللغة العربية والانجليزية، مقاوم للغبار والماء وعالي اللزوجة لجهاز لاب توب والحاسوب المكتبي رقم الموديل OS-PC001-2",
+      "url": "https://www.amazon.sa/dp/B07NQKRTKP",
+      "brand": null,
+      "category": null,
+      "price": 6.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:19:01",
+      "history": [
+        {
+          "price": 7.0,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 6.99,
+          "date": "2026-11-16 10:19:01"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B07NQKRTKP",
+      "gtin": null,
+      "store_original_price": 9.0,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": 2.01,
+          "percent": 22.33
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "UNVERIFIED",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B07FDXMCLB?dib=eyJ2IjoiMSJ9.IzQGTwWvPM9fvus-V8Ukd2EM4ilf6KtVO6kxDrWfXfScgQZPfAK5bxshQgatxr9nT6203lgESpcS8NBUnhZMAk5LLpsl0ohcgXcsGRF4mbrnoTg1FSDYmgYk96cyFauyI20hGA_QNDzNXZL1wcaHh6TXTADlIRk4EI8hmZYwewPAbh3zYdxtIfaaTkyArwWUztmsl2lPb55nRxUPi6tsOsWOv_zSQFJ1EtHBrSSglL3k0fHdJeaTZVHEkIOYBAaGDddh2NkyDadnLPINUJDpvlJLQu9FStwklvJJxwKwuS8.W6hi1RBz4IbFEUf_Iqy3XdAbXvACL6aaQor5XvA8uDA&dib_tag=se&keywords=wireless+mouse",
+      "store": "Amazon.sa",
+      "title": "ماوس لاسلكي سامسونج كروم بوك برو ضوئي مريح بتردد 2.4 جيجاهرتز و3 مستويات DPI قابلة للتعديل مع 4 أزرار ووظيفة النوم التلقائي ونطاق عمل 10 أمتار Clix-8 من بروميت، أسود",
+      "url": "https://www.amazon.sa/dp/B07FDXMCLB",
+      "brand": null,
+      "category": null,
+      "price": 13.26,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:19:01",
+      "history": [
+        {
+          "price": 13.26,
+          "date": "2026-11-16 10:07:38"
+        },
+        {
+          "price": 13.26,
+          "date": "2026-11-16 10:19:01"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B07FDXMCLB",
+      "gtin": null,
+      "store_original_price": 29.0,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": 15.74,
+          "percent": 54.28
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "UNVERIFIED",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/dp/B098JLTX4W",
+      "store": "Amazon.sa",
+      "title": "كابل HDMI من سنيوكو بطول 3 متر متوافق مع آبل TV وPS5 وإكس بوكس Series X/S ونينتندو سويتش ولابتوب وسامسونج QLED TV وبروجيكتور",
+      "url": "https://www.amazon.sa/dp/B098JLTX4W",
+      "brand": null,
+      "category": null,
+      "price": 44.43,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:19:01",
+      "history": [
+        {
+          "price": 44.43,
+          "date": "2026-11-16 10:19:01"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B098JLTX4W",
+      "gtin": null,
+      "store_original_price": 56.95,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": 12.52,
+          "percent": 21.98
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "UNVERIFIED",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%83%D8%B3%D9%8A%D9%86/dp/B0CDWMVMFY/ref=sr_1_11",
+      "store": "Amazon.sa",
+      "title": "XICEN Monitor Stand Riser, Gaming Monitor Riser with RGB Light, Foldable Computer Monitor Stand, Desk Organizers and Accessories for Desktop, Printer (Black)",
+      "url": "https://www.amazon.sa/dp/B0CDWMVMFY",
+      "brand": null,
+      "category": null,
+      "price": 135.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:59",
+      "history": [
+        {
+          "price": 129.0,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 135.0,
+          "date": "2026-11-16 10:18:59"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B0CDWMVMFY",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D9%84%D9%84%D8%A7%D8%A8%D8%AA%D9%88%D8%A8-%D9%88%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D9%88%D8%A7%D9%84%D9%83%D9%8A%D8%A8%D9%88%D8%B1%D8%AF-%D9%88%D8%A7%D9%84%D8%B7%D8%A7%D8%A8%D8%B9%D8%A9/dp/B0CD1BHXPZ/ref=sr_1_12",
+      "store": "Amazon.sa",
+      "title": "UGREEN موزع USB 3.0 بأربعة منافذ، تصميم نحيف لنقل البيانات",
+      "url": "https://www.amazon.sa/dp/B0CD1BHXPZ",
+      "brand": null,
+      "category": null,
+      "price": 35.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:59",
+      "history": [
+        {
+          "price": 35.0,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 35.0,
+          "date": "2026-11-16 10:18:59"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B0CD1BHXPZ",
+      "gtin": null,
+      "store_original_price": 49.0,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": 14.0,
+          "percent": 28.57
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "UNVERIFIED",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%85%D8%B4%D8%A7%D8%A8%D9%83-%D8%AA%D9%86%D8%B8%D9%8A%D9%85-%D8%A7%D9%84%D9%83%D8%A7%D8%A8%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%8A%D8%A8%D9%84%D8%A7%D8%AA-7-5-3-1-1/dp/B07Y6HZFB3/ref=sr_1_18",
+      "store": "Amazon.sa",
+      "title": "مشابك تنظيم الكابلات - 5 عبوات ذاتية اللصق لتنظيم الكيبلات لكيبل USB / سلك الطاقة / الأسلاك والسيارة والمكتب والمنزل والمكتب (7-5-3-1-1 فتحات) حامل كيبل أسود",
+      "url": "https://www.amazon.sa/dp/B07Y6HZFB3",
+      "brand": null,
+      "category": null,
+      "price": 15.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:59",
+      "history": [
+        {
+          "price": 17.99,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 15.0,
+          "date": "2026-11-16 10:18:59"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B07Y6HZFB3",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D9%88%D8%A7%D9%84%D9%84%D8%A7%D8%A8%D8%AA%D9%88%D8%A8-%D9%88%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%84-%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%AA%D9%83-%D9%88%D8%A3%D9%85%D8%A7%D9%86%D9%83%D8%8C/dp/B0B74MMTZP/ref=sr_1_4",
+      "store": "Amazon.sa",
+      "title": "غطاء كاميرا ويب رفيع للغاية لأجهزة الكمبيوتر واللابتوب وآبل ماك بوك وايباد والجوال وغير ذلك الكثير من سكاي تاتش، 6 قطع كتلة شبكية بسمك 5.5 ملم لحماية خصوصيتك وأمانك، لون أسود",
+      "url": "https://www.amazon.sa/dp/B0B74MMTZP",
+      "brand": null,
+      "category": null,
+      "price": 9.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:58",
+      "history": [
+        {
+          "price": 9.0,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 9.0,
+          "date": "2026-11-16 10:18:58"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B0B74MMTZP",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D9%81%D9%8A%D8%AF%D9%8A%D9%88%D8%8C-%D9%84%D9%84%D8%A7%D9%86%D8%B2%D9%84%D8%A7%D9%82-%D9%84%D9%84%D8%A7%D8%B9%D8%A8%D9%8A%D9%86-%D9%88%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8-%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%88%D8%AF%D9%8A%D9%88%D8%8C/dp/B098MJPQWR/ref=sr_1_5",
+      "store": "Amazon.sa",
+      "title": "قاعدة ماوس كبيرة ممتدة من سكاي تاتش لتشغيل العاب الفيديو، مقاس 35.4 × 15.7 × 0.12 انش، قاعدة مطاطية غير قابلة للانزلاق وحواف مخيطة للاعبين والمكتب والاستوديو، أسود، ممحاة",
+      "url": "https://www.amazon.sa/dp/B098MJPQWR",
+      "brand": null,
+      "category": null,
+      "price": 21.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:58",
+      "history": [
+        {
+          "price": 21.0,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 21.0,
+          "date": "2026-11-16 10:18:58"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B098MJPQWR",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/%D9%84%D9%88%D8%AC%D9%8A%D8%AA%D9%8A%D9%83-%D9%84%D8%A7%D8%B3%D9%84%D9%83%D9%8A-%D8%AC%D9%8A%D8%AC%D8%A7%D9%87%D8%B1%D8%AA%D8%B2-%D9%85%D8%B3%D8%AA%D9%82%D8%A8%D9%84-%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85%D9%87/dp/B01A9GXEOI/ref=sr_1_6",
+      "store": "Amazon.sa",
+      "title": "لوجيتيك ماوس لاسلكي M171 بتردد 2.4 جيجاهرتز مع مستقبل USB صغير، تتبع بصري",
+      "url": "https://www.amazon.sa/dp/B01A9GXEOI",
+      "brand": null,
+      "category": null,
+      "price": 35.15,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:58",
+      "history": [
+        {
+          "price": 33.0,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 35.15,
+          "date": "2026-11-16 10:18:58"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B01A9GXEOI",
+      "gtin": null,
+      "store_original_price": 51.38,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": 16.23,
+          "percent": 31.59
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "UNVERIFIED",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A8%D9%84%D9%88%D8%AA%D9%88%D8%AB-%D9%84%D8%A7%D8%B3%D9%84%D9%83%D9%8A-%D8%A7%D9%86%D9%8A%D9%88%D9%8A%D8%8C-%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1/dp/B0BKKSC6S4/ref=sr_1_8",
+      "store": "Amazon.sa",
+      "title": "ماوس بلوتوث لاسلكي من انيوي، بتصميم نحيف واضاءة LED ووضع مزدوج (بلوتوث 5.1 + USB) 2.4 GHz قابل لاعادة الشحن بلوتوث صامت، ماوس كمبيوتر مع مستقبل USB (اسود)",
+      "url": "https://www.amazon.sa/dp/B0BKKSC6S4",
+      "brand": null,
+      "category": null,
+      "price": 22.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:58",
+      "history": [
+        {
+          "price": 22.99,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 22.99,
+          "date": "2026-11-16 10:18:58"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B0BKKSC6S4",
+      "gtin": null,
+      "store_original_price": 24.99,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": 2.0,
+          "percent": 8.0
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "UNVERIFIED",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%A3%D9%84%D9%88%D9%85%D9%86%D9%8A%D9%88%D9%85%D8%8C-%D9%84%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%84-%D8%B3%D9%8A%D9%84%D9%8A%D9%83%D9%88%D9%86-%D9%84%D9%84%D8%A3%D9%86%D8%B2%D9%84%D8%A7%D9%82%D8%8C-%D9%88%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%D8%AC/dp/B091B4SWR7/ref=sr_1_9",
+      "store": "Amazon.sa",
+      "title": "حامل لابتوب عمودي من الألومنيوم، حامل مزدوج لسطح المكتب مع قاعدة قابلة للتعديل ومقابض سيليكون مضادة للأنزلاق، لجميع أجهزة التابلت / وأيباد / وماك بوك / وسيرفس / وسامسونج / واتش بي / وديل / وكروم بوك،",
+      "url": "https://www.amazon.sa/dp/B091B4SWR7",
+      "brand": null,
+      "category": null,
+      "price": 75.88,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:58",
+      "history": [
+        {
+          "price": 75.88,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 75.88,
+          "date": "2026-11-16 10:18:58"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B091B4SWR7",
+      "gtin": null,
+      "store_original_price": 109.0,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": 33.12,
+          "percent": 30.39
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "UNVERIFIED",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%AA%D9%84%D9%82%D8%A7%D8%A6%D9%8A-%D9%85%D8%B3%D8%AA%D9%88%D9%8A%D8%A7%D8%AA-%D9%88%D8%A3%D9%86%D8%AF%D8%B1%D9%88%D9%8A%D8%AF-%D9%88%D9%83%D9%84%D9%8A%D9%83%D8%B3-8-%D8%A8%D8%B1%D9%88%D9%85%D9%8A%D8%AA/dp/B07FF1PB8Q/ref=sr_1_1",
+      "store": "Amazon.sa",
+      "title": "ماوس لاسلكي 2.4G ضوئي محمول مع مستقبل نانو USB بمساحة عمل 10 م مع ميزة النوم التلقائي و3 مستويات DPI قابلة للتعديل لنظام Mac OS وويندوز وأندرويد وكليكس-8 من بروميت",
+      "url": "https://www.amazon.sa/dp/B07FF1PB8Q",
+      "brand": null,
+      "category": null,
+      "price": 13.26,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:57",
+      "history": [
+        {
+          "price": 13.26,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 13.26,
+          "date": "2026-11-16 10:18:57"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B07FF1PB8Q",
+      "gtin": null,
+      "store_original_price": 29.0,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": 15.74,
+          "percent": 54.28
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "UNVERIFIED",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/%D8%BA%D9%84%D9%8A%D8%AA%D8%B1%D9%8A-%D8%A7%D9%84%D9%82%D9%85%D8%A7%D8%B4-%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D8%B4%D9%88%D8%B1%D8%AA%D9%83%D8%AA%D8%B3/dp/B0CNDF682X/ref=sr_1_2",
+      "store": "Amazon.sa",
+      "title": "مسند فأرة من غليتري غاردن مصنوع من القماش والمطاط بتصميم إكسل شورتكتس بمقاس 300ط × 800ع ملم",
+      "url": "https://www.amazon.sa/dp/B0CNDF682X",
+      "brand": null,
+      "category": null,
+      "price": 19.99,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:57",
+      "history": [
+        {
+          "price": 19.99,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 19.99,
+          "date": "2026-11-16 10:18:57"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B0CNDF682X",
+      "gtin": null,
+      "store_original_price": 21.0,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": 1.01,
+          "percent": 4.81
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "UNVERIFIED",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.amazon.sa/UGREEN-4K30Hz%D8%8C-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D9%86%D8%A7%D9%81%D8%B0-%D9%88%D9%8A%D9%86%D8%AF%D9%88%D8%B2%D8%8C/dp/B0BR3M8XHK/ref=sr_1_3",
+      "store": "Amazon.sa",
+      "title": "UGREEN موزع USB-C 5 في 1، HDMI 4K@30Hz، PD 100W، 3 منافذ USB-A",
+      "url": "https://www.amazon.sa/dp/B0BR3M8XHK",
+      "brand": null,
+      "category": null,
+      "price": 66.98,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:57",
+      "history": [
+        {
+          "price": 66.98,
+          "date": "2026-11-14 23:20:57"
+        },
+        {
+          "price": 66.98,
+          "date": "2026-11-16 10:18:57"
+        }
+      ],
+      "analysis": null,
+      "product_id": "B0BR3M8XHK",
+      "gtin": null,
+      "store_original_price": 89.0,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": 22.02,
+          "percent": 24.74
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "UNVERIFIED",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/hp-220-mouse-542986.html",
+      "store": "Jarir",
+      "title": "HP 220 Mouse Wireless - Jarir Bookstore KSA",
+      "url": "https://www.jarir.com/sa-en/hp-220-mouse-542986.html",
+      "brand": "HP",
+      "category": null,
+      "price": 65.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:14:25",
+      "history": [
+        {
+          "price": 65.0,
+          "date": "2026-11-16 10:08:14"
+        },
+        {
+          "price": 65.0,
+          "date": "2026-11-16 10:14:25"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "غياب المواصفات التفصيلية وتقييمات المستخدمين وسجل الأسعار",
+        "assessment": {
+          "category": "إلكترونيات",
+          "normalized_name": "ماوس لاسلكي",
+          "overall": "هذا المنتج يأتي من علامة تجارية معروفة لكنه يعاني من غياب المعلومات التقنية الشاملة وتقييمات الاستخدام الواقعية إضافة إلى عدم توفر تفاصيل كافية حول الأداء الفعلي والمواصفات الداعمة مما يجعل اتخاذ قرار الشراء مبكرا غير مبرر في ظل نقص البيانات المتاحة",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "غياب المواصفات التفصيلية وتقييمات المستخدمين وسجل الأسعار"
+        },
+        "telegram_message": "هذا المنتج يأتي من علامة تجارية معروفة لكنه يعاني من غياب المعلومات التقنية الشاملة وتقييمات الاستخدام الواقعية إضافة إلى عدم توفر تفاصيل كافية حول الأداء الفعلي والمواصفات الداعمة مما يجعل اتخاذ قرار الشراء مبكرا غير مبرر في ظل نقص البيانات المتاحة",
+        "provider": "Gemini"
+      },
+      "product_id": "542986",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "220",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/logitech-910-004909-mouse-518872.html",
+      "store": "Jarir",
+      "title": "Logitech M330 Silent Plus Mouse Wireless (2.4 GHz RF) - Jarir Bookstore KSA",
+      "url": "https://www.jarir.com/sa-en/logitech-910-004909-mouse-518872.html",
+      "brand": "Logitech",
+      "category": null,
+      "price": 99.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:14:25",
+      "history": [
+        {
+          "price": 99.0,
+          "date": "2026-11-16 10:08:14"
+        },
+        {
+          "price": 99.0,
+          "date": "2026-11-16 10:14:25"
+        }
+      ],
+      "analysis": null,
+      "product_id": "518872",
+      "gtin": "5099206066670",
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "M330 Silent Plus",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/lenovo-150-mouse-646693.html",
+      "store": "Jarir",
+      "title": "Lenovo 150 Mouse Wireless - Jarir Bookstore KSA",
+      "url": "https://www.jarir.com/sa-en/lenovo-150-mouse-646693.html",
+      "brand": "Lenovo",
+      "category": null,
+      "price": 39.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:14:25",
+      "history": [
+        {
+          "price": 39.0,
+          "date": "2026-11-16 10:08:14"
+        },
+        {
+          "price": 39.0,
+          "date": "2026-11-16 10:14:25"
+        }
+      ],
+      "analysis": null,
+      "product_id": "646693",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "150",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/microsoft-surface-other-computer-accessories-582905.html",
+      "store": "Jarir",
+      "title": "Microsoft Surface Tablet Stylus Accessory, for Surface Slim Pen 2",
+      "url": "https://www.jarir.com/sa-en/microsoft-surface-other-computer-accessories-582905.html",
+      "brand": "Microsoft",
+      "category": null,
+      "price": 79.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:53",
+      "history": [
+        {
+          "price": 79.0,
+          "date": "2026-11-16 10:18:53"
+        }
+      ],
+      "analysis": null,
+      "product_id": "582905",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "Surface",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/razer-other-gaming-accessories-577156.html",
+      "store": "Jarir",
+      "title": "Razer Ripsaw X USB Capture Card with Camera Connection, for Laptop/Gaming Laptop/Desktop Computer/CPU/Gaming CPU, Black",
+      "url": "https://www.jarir.com/sa-en/razer-other-gaming-accessories-577156.html",
+      "brand": "Razer",
+      "category": null,
+      "price": 469.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:53",
+      "history": [
+        {
+          "price": 469.0,
+          "date": "2026-11-16 10:18:53"
+        }
+      ],
+      "analysis": null,
+      "product_id": "577156",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "Ripsaw X",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/twisted-minds-other-computer-accessories-679559.html",
+      "store": "Jarir",
+      "title": "Twisted Minds Dual Monitor Holder for Screen Size 17\"-32\", Desktop Accessory, Universal, Black",
+      "url": "https://www.jarir.com/sa-en/twisted-minds-other-computer-accessories-679559.html",
+      "brand": "Twisted Minds",
+      "category": null,
+      "price": 219.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:52",
+      "history": [
+        {
+          "price": 219.0,
+          "date": "2026-11-16 10:18:52"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "يبدو أن المنتج لا يحتوي على مواصفات أو مراجعات أو تقييمات محددة، وبالتالي لا يوجد دليل كافٍ لتحديد جودته أو موثوقيته.",
+        "assessment": {
+          "category": "غير متاح",
+          "normalized_name": "Twisted Minds Dual Monitor Holder",
+          "overall": "هذا المنتج لا يشتمل على تفاصيل كافية حول مواصفاته أو تقييمات مستخدمين، لذا لا يُنصح بالشراء دون مزيد من المعلومات.",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "يبدو أن المنتج لا يحتوي على مواصفات أو مراجعات أو تقييمات محددة، وبالتالي لا يوجد دليل كافٍ لتحديد جودته أو موثوقيته."
+        },
+        "telegram_message": "هذا المنتج لا يشتمل على تفاصيل كافية حول مواصفاته أو تقييمات مستخدمين، لذا لا يُنصح بالشراء دون مزيد من المعلومات.",
+        "provider": "Groq"
+      },
+      "product_id": "679559",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/benq-bdl01-other-computer-accessories-682513.html",
+      "store": "Jarir",
+      "title": "BenQ BDL01 Dual Ergo Monitor Arm for Screen Size 17\"-35\", Weight Capacity 2KG-11KG, Desktop Accessory, Universal, Black",
+      "url": "https://www.jarir.com/sa-en/benq-bdl01-other-computer-accessories-682513.html",
+      "brand": "BenQ",
+      "category": null,
+      "price": 949.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:52",
+      "history": [
+        {
+          "price": 949.0,
+          "date": "2026-11-16 10:18:52"
+        }
+      ],
+      "analysis": null,
+      "product_id": "682513",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "BDL01",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/hama-other-computer-accessories-579522.html",
+      "store": "Jarir",
+      "title": "Hama Fullmotion Monitor Arm for 13\" - 35\", Desktop Accessory, Universal, Black",
+      "url": "https://www.jarir.com/sa-en/hama-other-computer-accessories-579522.html",
+      "brand": "Hama",
+      "category": null,
+      "price": 359.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:52",
+      "history": [
+        {
+          "price": 359.0,
+          "date": "2026-11-16 10:18:52"
+        }
+      ],
+      "analysis": null,
+      "product_id": "579522",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "Fullmotion",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/benq-bdh01-other-computer-accessories-682517.html",
+      "store": "Jarir",
+      "title": "BenQ BDH01 Dual Ergo Monitor Arm for Screen Size 17\"-35\" Weight Capacity 2KG-20KG, Desktop Accessory, Universal, Black",
+      "url": "https://www.jarir.com/sa-en/benq-bdh01-other-computer-accessories-682517.html",
+      "brand": "BenQ",
+      "category": null,
+      "price": 999.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:52",
+      "history": [
+        {
+          "price": 999.0,
+          "date": "2026-11-16 10:18:52"
+        }
+      ],
+      "analysis": null,
+      "product_id": "682517",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "BDH01",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/benq-screenbar-halo-2-other-computer-accessories-682524.html",
+      "store": "Jarir",
+      "title": "BenQ ScreenBar Halo 2 LED Monitor Light with Controller, Desktop Accessory, Universal, Dark Grey",
+      "url": "https://www.jarir.com/sa-en/benq-screenbar-halo-2-other-computer-accessories-682524.html",
+      "brand": "BenQ",
+      "category": null,
+      "price": 899.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:52",
+      "history": [
+        {
+          "price": 899.0,
+          "date": "2026-11-16 10:18:52"
+        }
+      ],
+      "analysis": null,
+      "product_id": "682524",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "ScreenBar Halo 2",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/apple-pencil-tips-other-tablet-accessories-648411.html",
+      "store": "Jarir",
+      "title": "Apple Pencil Tips Tablet Stylus Accessory, for Apple Pencil",
+      "url": "https://www.jarir.com/sa-en/apple-pencil-tips-other-tablet-accessories-648411.html",
+      "brand": "Apple",
+      "category": null,
+      "price": 93.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:52",
+      "history": [
+        {
+          "price": 93.0,
+          "date": "2026-11-16 10:18:52"
+        }
+      ],
+      "analysis": null,
+      "product_id": "648411",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "Pencil Tips",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/hama-other-computer-accessories-620715.html",
+      "store": "Jarir",
+      "title": "Hama Dual Monitor Holder for Screen Size 13\"-35\", Desktop Accessory, Universal, Black",
+      "url": "https://www.jarir.com/sa-en/hama-other-computer-accessories-620715.html",
+      "brand": "Hama",
+      "category": null,
+      "price": 399.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:52",
+      "history": [
+        {
+          "price": 399.0,
+          "date": "2026-11-16 10:18:52"
+        }
+      ],
+      "analysis": null,
+      "product_id": "620715",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/benq-bsl01-other-computer-accessories-682510.html",
+      "store": "Jarir",
+      "title": "BenQ BSL01 Single Ergo Monitor Arm Screen Size 17\"-40\", Weight Capacity 2KG-11KG, Desktop Accessory, Universal, Black",
+      "url": "https://www.jarir.com/sa-en/benq-bsl01-other-computer-accessories-682510.html",
+      "brand": "BenQ",
+      "category": null,
+      "price": 599.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:52",
+      "history": [
+        {
+          "price": 599.0,
+          "date": "2026-11-16 10:18:52"
+        }
+      ],
+      "analysis": null,
+      "product_id": "682510",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "BSL01",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/royal-falcon-ldt109-c024e-other-computer-accessories-679441.html",
+      "store": "Jarir",
+      "title": "Royal Falcon LDT109-C024E Counterbalance Mechanical Spring Dual Monitor Arm for 17\"-32\", VESA Plate, Desktop Accessory, Universal, White",
+      "url": "https://www.jarir.com/sa-en/royal-falcon-ldt109-c024e-other-computer-accessories-679441.html",
+      "brand": "Royal Falcon",
+      "category": null,
+      "price": 349.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:52",
+      "history": [
+        {
+          "price": 349.0,
+          "date": "2026-11-16 10:18:52"
+        }
+      ],
+      "analysis": null,
+      "product_id": "679441",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "LDT109-C024E",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/hama-other-computer-accessories-579515.html",
+      "store": "Jarir",
+      "title": "Hama Monitor Holder for Screen Size 13\"-32\", Desktop Accessory, Universal, Black",
+      "url": "https://www.jarir.com/sa-en/hama-other-computer-accessories-579515.html",
+      "brand": "Hama",
+      "category": null,
+      "price": 179.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:52",
+      "history": [
+        {
+          "price": 179.0,
+          "date": "2026-11-16 10:18:52"
+        }
+      ],
+      "analysis": null,
+      "product_id": "579515",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/benq-bsh01-other-computer-accessories-682497.html",
+      "store": "Jarir",
+      "title": "BenQ BSH01 Single Ergo Monitor Arm Screen Size 17\"-45\", Weight Capacity 2KG-20KG, Desktop Accessory, Universal, Black",
+      "url": "https://www.jarir.com/sa-en/benq-bsh01-other-computer-accessories-682497.html",
+      "brand": "BenQ",
+      "category": null,
+      "price": 749.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:52",
+      "history": [
+        {
+          "price": 749.0,
+          "date": "2026-11-16 10:18:52"
+        }
+      ],
+      "analysis": null,
+      "product_id": "682497",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "BSH01",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/thrustmaster-joystick-other-gaming-accessories-661300.html",
+      "store": "Jarir",
+      "title": "Thrustmaster HOTAS WARTHOG Joystick, for Gaming Laptop/Gaming Desktop Computer/Gaming CPU, Black",
+      "url": "https://www.jarir.com/sa-en/thrustmaster-joystick-other-gaming-accessories-661300.html",
+      "brand": "Thrustmaster",
+      "category": null,
+      "price": 1248.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:52",
+      "history": [
+        {
+          "price": 1248.0,
+          "date": "2026-11-16 10:18:52"
+        }
+      ],
+      "analysis": null,
+      "product_id": "661300",
+      "gtin": null,
+      "store_original_price": 2355.0,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "HOTAS WARTHOG",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": 1107.0,
+          "percent": 47.01
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "UNVERIFIED",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/tucano-desk-pad-other-computer-accessories-644650.html",
+      "store": "Jarir",
+      "title": "TUCANO DESK PAD Neoprene Desk Mat, Desktop Accessory, Light Blue",
+      "url": "https://www.jarir.com/sa-en/tucano-desk-pad-other-computer-accessories-644650.html",
+      "brand": "TUCANO",
+      "category": null,
+      "price": 99.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:51",
+      "history": [
+        {
+          "price": 99.0,
+          "date": "2026-11-16 10:18:51"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "لا توجد مواصفات محددة أو تقييمات من المستخدمين، وبالتالي لا يمكن التوصية بهذا المنتج بناءً على البيانات المتاحة.",
+        "assessment": {
+          "category": "مكتب",
+          "normalized_name": "TUCANO DESK PAD",
+          "overall": "هذا المنتج جديد، لكن لا توجد مواصفات مفصلة أو مراجعات لتقييم جودة أو كفاءة استخدامه. لا يمكن اتخاذ قرار الشراء دون مزيد من المعلومات. إذا رغبت في المزيد من التفاصيل، يرجى مراجعة المصدر أو الانتظار لظهور تقييمات المستخدمين.",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "لا توجد مواصفات محددة أو تقييمات من المستخدمين، وبالتالي لا يمكن التوصية بهذا المنتج بناءً على البيانات المتاحة."
+        },
+        "telegram_message": "هذا المنتج جديد، لكن لا توجد مواصفات مفصلة أو مراجعات لتقييم جودة أو كفاءة استخدامه. لا يمكن اتخاذ قرار الشراء دون مزيد من المعلومات. إذا رغبت في المزيد من التفاصيل، يرجى مراجعة المصدر أو الانتظار لظهور تقييمات المستخدمين.",
+        "provider": "Groq"
+      },
+      "product_id": "644650",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "DESK PAD",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/royal-falcon-ldt109-c012e-other-computer-accessories-679440.html",
+      "store": "Jarir",
+      "title": "Royal Falcon LDT109-C012E Counterbalance Mechanical Spring Single Monitor Arm for 17\"-32\", VESA Plate, Desktop Accessory, Universal, White",
+      "url": "https://www.jarir.com/sa-en/royal-falcon-ldt109-c012e-other-computer-accessories-679440.html",
+      "brand": "Royal Falcon",
+      "category": null,
+      "price": 179.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:51",
+      "history": [
+        {
+          "price": 179.0,
+          "date": "2026-11-16 10:18:51"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "المعلومات المتوفرة محدودة جداً، ولا توجد مواصفات أو تقييمات أو مراجعات تدعم اتخاذ قرار شراء.",
+        "assessment": {
+          "category": "غير متاح",
+          "normalized_name": "Royal Falcon LDT109-C012E",
+          "overall": "يُرجى مراجعة تفاصيل المنتج بتمعن قبل اتخاذ قرار الشراء، حيث لا تتوفر مواصفات أو آراء عملاء لتقييم جودة المنتج.",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "المعلومات المتوفرة محدودة جداً، ولا توجد مواصفات أو تقييمات أو مراجعات تدعم اتخاذ قرار شراء."
+        },
+        "telegram_message": "يُرجى مراجعة تفاصيل المنتج بتمعن قبل اتخاذ قرار الشراء، حيث لا تتوفر مواصفات أو آراء عملاء لتقييم جودة المنتج.",
+        "provider": "Groq"
+      },
+      "product_id": "679440",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "LDT109-C012E",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/benq-screenbar-pro-other-computer-accessories-682555.html",
+      "store": "Jarir",
+      "title": "BenQ ScreenBar Pro LED Monitor Light, Desktop Accessory, Universal, Black",
+      "url": "https://www.jarir.com/sa-en/benq-screenbar-pro-other-computer-accessories-682555.html",
+      "brand": "BenQ",
+      "category": null,
+      "price": 699.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:50",
+      "history": [
+        {
+          "price": 699.0,
+          "date": "2026-11-16 10:18:50"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "المعلومات المتوفرة محدودة ولا تشمل مواصفات المنتج أو مراجعات العملاء، ما يصعب تقييم جودته أو ملاءمته للاستخدام.",
+        "assessment": {
+          "category": "غير متاح",
+          "normalized_name": "BenQ ScreenBar Pro",
+          "overall": "المنتج من علامة BenQ، وهو مصباح شاشة يعمل بالـ LED موجه للمنصات المكتبية مع دعم شامل للأنظمة. لا توجد تفاصيل عن الفئة، الأداء أو جودة الإضاءة في البيانات المقدمة. بما أن المعلومات غير كافية لتحديد ما إذا كان يلبي احتياجات المستخدم، يُنصح بالبحث عن مزيد من التفاصيل أو مراجعات مستقلة قبل اتخاذ قرار الشراء. عدم وجود مواصفات أو تقييمات يعني عدم وجود ضمان كافي للثقة في هذا العرض.",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "المعلومات المتوفرة محدودة ولا تشمل مواصفات المنتج أو مراجعات العملاء، ما يصعب تقييم جودته أو ملاءمته للاستخدام."
+        },
+        "telegram_message": "المنتج من علامة BenQ، وهو مصباح شاشة يعمل بالـ LED موجه للمنصات المكتبية مع دعم شامل للأنظمة. لا توجد تفاصيل عن الفئة، الأداء أو جودة الإضاءة في البيانات المقدمة. بما أن المعلومات غير كافية لتحديد ما إذا كان يلبي احتياجات المستخدم، يُنصح بالبحث عن مزيد من التفاصيل أو مراجعات مستقلة قبل اتخاذ قرار الشراء. عدم وجود مواصفات أو تقييمات يعني عدم وجود ضمان كافي للثقة في هذا العرض.",
+        "provider": "Groq"
+      },
+      "product_id": "682555",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "ScreenBar Pro",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/apple-pencil-pro-stylus-635515.html",
+      "store": "Jarir",
+      "title": "Apple Pencil Pro iPad Stylus, for iPad Pro 11 M4 - 2024/iPad Pro 13 M4 - 2024/iPad Air 13 M2 - 2024, White",
+      "url": "https://www.jarir.com/sa-en/apple-pencil-pro-stylus-635515.html",
+      "brand": "Apple",
+      "category": null,
+      "price": 589.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:48",
+      "history": [
+        {
+          "price": 589.0,
+          "date": "2026-11-16 10:18:48"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "المعلومات المتوفرة عن هذا المنتج محدودة ولا توجد مواصفات أو تقييمات، ما يجعل اتخاذ قرار شراء غير مستنجد بالمعلومات الكافية.",
+        "assessment": {
+          "category": "غير متاح",
+          "normalized_name": "Apple Pencil Pro",
+          "overall": "هذا المنتج لا يملك مواصفات أو تقييمات كافية، ولا توجد بيانات موثقة تدعم قوته أو ضعفه. لذلك يُنصح بالانتظار حتى تتوفر معلومات إضافية قبل الشراء.",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "المعلومات المتوفرة عن هذا المنتج محدودة ولا توجد مواصفات أو تقييمات، ما يجعل اتخاذ قرار شراء غير مستنجد بالمعلومات الكافية."
+        },
+        "telegram_message": "هذا المنتج لا يملك مواصفات أو تقييمات كافية، ولا توجد بيانات موثقة تدعم قوته أو ضعفه. لذلك يُنصح بالانتظار حتى تتوفر معلومات إضافية قبل الشراء.",
+        "provider": "Groq"
+      },
+      "product_id": "635515",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "Pencil Pro",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/hercules-hercules-stream-control-other-gaming-accessories-629314.html",
+      "store": "Jarir",
+      "title": "Hercules Stream 100 Audio Controller, for Gaming Laptop/Gaming Desktop Computer/Gaming CPU, Black",
+      "url": "https://www.jarir.com/sa-en/hercules-hercules-stream-control-other-gaming-accessories-629314.html",
+      "brand": "Hercules",
+      "category": null,
+      "price": 619.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:48",
+      "history": [
+        {
+          "price": 619.0,
+          "date": "2026-11-16 10:18:48"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": true,
+        "reason": "المعلومات المتوفرة محدودة ولا توجد مواصفات أو تقييمات، لذلك لا يمكن اتخاذ قرار شراء مبني على أساس موثوق.",
+        "assessment": {
+          "category": "غير متاح",
+          "normalized_name": "Hercules Stream 100 Audio Controller",
+          "overall": "مع عدم وجود بيانات كافية، يُنصح بالتحقق من مزود آخر أو انتظار مراجعات أكثر قبل الشراء",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "المعلومات المتوفرة محدودة ولا توجد مواصفات أو تقييمات، لذلك لا يمكن اتخاذ قرار شراء مبني على أساس موثوق."
+        },
+        "telegram_message": "مع عدم وجود بيانات كافية، يُنصح بالتحقق من مزود آخر أو انتظار مراجعات أكثر قبل الشراء",
+        "provider": "Groq"
+      },
+      "product_id": "629314",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "Stream 100",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/apple-pencil-usb-c-stylus-625922.html",
+      "store": "Jarir",
+      "title": "Apple Pencil USB-C iPad Stylus, for iPad Pro 12.9 - 2021/iPad Pro 11 - 2021/iPad Air 10.9 5th Gen/iPad mini 6, White",
+      "url": "https://www.jarir.com/sa-en/apple-pencil-usb-c-stylus-625922.html",
+      "brand": "Apple",
+      "category": null,
+      "price": 349.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:18:39",
+      "history": [
+        {
+          "price": 349.0,
+          "date": "2026-11-16 10:18:39"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": true,
+        "reason": "المنتج جديد لكن لا توجد بيانات تقنية محدّدة أو مراجعات لتقييم أدائه.",
+        "assessment": {
+          "category": "غير متاح",
+          "normalized_name": "Apple Pencil USB-C",
+          "overall": "الـApple Pencil USB‑C مخصص لاستخدامه مع عدة طرازات iPad Pro وAir وMini، ما يُظهر توافقاً واسعاً. لا توجد مواصفات تفصيلية أو تقييمات مستخدمين في البيانات، ما يحد من قدرتنا على التأكد من جودة الأداء أو السعر. يُنصح بالانتظار حتى تتوفر معلومات فنية ومراجعات قبل اتخاذ قرار الشراء.",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "المنتج جديد لكن لا توجد بيانات تقنية محدّدة أو مراجعات لتقييم أدائه."
+        },
+        "telegram_message": "الـApple Pencil USB‑C مخصص لاستخدامه مع عدة طرازات iPad Pro وAir وMini، ما يُظهر توافقاً واسعاً. لا توجد مواصفات تفصيلية أو تقييمات مستخدمين في البيانات، ما يحد من قدرتنا على التأكد من جودة الأداء أو السعر. يُنصح بالانتظار حتى تتوفر معلومات فنية ومراجعات قبل اتخاذ قرار الشراء.",
+        "provider": "Groq"
+      },
+      "product_id": "625922",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "Pencil USB-C",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
     {
       "id": "https://www.jarir.com/sa-en/logitech-m185-mouse-388705.html",
       "store": "Jarir",
@@ -436,192 +2911,6 @@
       "history_days": 0,
       "previous_min": null,
       "model": "GeForce RTX 5070",
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 30,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 20,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.jarir.com/sa-en/hp-220-mouse-542986.html",
-      "store": "Jarir",
-      "title": "HP 220 Mouse, Optical 1000 dpi, Wireless, Black",
-      "url": "https://www.jarir.com/sa-en/hp-220-mouse-542986.html",
-      "brand": "HP",
-      "category": null,
-      "price": 65.0,
-      "currency": "SAR",
-      "last_seen": "2026-11-16 10:14:25",
-      "history": [
-        {
-          "price": 65.0,
-          "date": "2026-11-16 10:08:14"
-        },
-        {
-          "price": 65.0,
-          "date": "2026-11-16 10:14:25"
-        }
-      ],
-      "analysis": {
-        "worth_alerting": false,
-        "reason": "غياب المواصفات التفصيلية وتقييمات المستخدمين وسجل الأسعار",
-        "assessment": {
-          "category": "إلكترونيات",
-          "normalized_name": "ماوس لاسلكي",
-          "overall": "هذا المنتج يأتي من علامة تجارية معروفة لكنه يعاني من غياب المعلومات التقنية الشاملة وتقييمات الاستخدام الواقعية إضافة إلى عدم توفر تفاصيل كافية حول الأداء الفعلي والمواصفات الداعمة مما يجعل اتخاذ قرار الشراء مبكرا غير مبرر في ظل نقص البيانات المتاحة",
-          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
-          "recommendation": "غياب المواصفات التفصيلية وتقييمات المستخدمين وسجل الأسعار"
-        },
-        "telegram_message": "هذا المنتج يأتي من علامة تجارية معروفة لكنه يعاني من غياب المعلومات التقنية الشاملة وتقييمات الاستخدام الواقعية إضافة إلى عدم توفر تفاصيل كافية حول الأداء الفعلي والمواصفات الداعمة مما يجعل اتخاذ قرار الشراء مبكرا غير مبرر في ظل نقص البيانات المتاحة",
-        "provider": "Gemini"
-      },
-      "product_id": "542986",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "model": "220",
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 30,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 20,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.jarir.com/sa-en/logitech-910-004909-mouse-518872.html",
-      "store": "Jarir",
-      "title": "Logitech M330 Silent Plus Mouse, Wireless (2.4 GHz RF), Optical, 1000 dpi, Black",
-      "url": "https://www.jarir.com/sa-en/logitech-910-004909-mouse-518872.html",
-      "brand": "Logitech",
-      "category": null,
-      "price": 99.0,
-      "currency": "SAR",
-      "last_seen": "2026-11-16 10:14:25",
-      "history": [
-        {
-          "price": 99.0,
-          "date": "2026-11-16 10:08:14"
-        },
-        {
-          "price": 99.0,
-          "date": "2026-11-16 10:14:25"
-        }
-      ],
-      "analysis": null,
-      "product_id": "518872",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "model": "M330 Silent Plus",
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 30,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 20,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.jarir.com/sa-en/lenovo-150-mouse-646693.html",
-      "store": "Jarir",
-      "title": "Lenovo 150 Mouse, Wireless, Optical, 1000 dpi, Black",
-      "url": "https://www.jarir.com/sa-en/lenovo-150-mouse-646693.html",
-      "brand": "Lenovo",
-      "category": null,
-      "price": 39.0,
-      "currency": "SAR",
-      "last_seen": "2026-11-16 10:14:25",
-      "history": [
-        {
-          "price": 39.0,
-          "date": "2026-11-16 10:08:14"
-        },
-        {
-          "price": 39.0,
-          "date": "2026-11-16 10:14:25"
-        }
-      ],
-      "analysis": null,
-      "product_id": "646693",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "model": "150",
       "evidence": {
         "historical_savings": {
           "amount_sar": null,
@@ -1924,59 +4213,6 @@
         "historical_evidence_valid": false,
         "verified_deal": false,
         "claim_assessment": "NO_REFERENCE",
-        "trust_score": 30,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 20,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.amazon.sa/dp/B07FDXMCLB?dib=eyJ2IjoiMSJ9.IzQGTwWvPM9fvus-V8Ukd2EM4ilf6KtVO6kxDrWfXfScgQZPfAK5bxshQgatxr9nT6203lgESpcS8NBUnhZMAk5LLpsl0ohcgXcsGRF4mbrnoTg1FSDYmgYk96cyFauyI20hGA_QNDzNXZL1wcaHh6TXTADlIRk4EI8hmZYwewPAbh3zYdxtIfaaTkyArwWUztmsl2lPb55nRxUPi6tsOsWOv_zSQFJ1EtHBrSSglL3k0fHdJeaTZVHEkIOYBAaGDddh2NkyDadnLPINUJDpvlJLQu9FStwklvJJxwKwuS8.W6hi1RBz4IbFEUf_Iqy3XdAbXvACL6aaQor5XvA8uDA&dib_tag=se&keywords=wireless+mouse",
-      "store": "Amazon.sa",
-      "title": "ماوس لاسلكي سامسونج كروم بوك برو ضوئي مريح بتردد 2.4 جيجاهرتز و3 مستويات DPI قابلة للتعديل مع 4 أزرار ووظيفة النوم التلقائي ونطاق عمل 10 أمتار Clix-8 من بروميت، أسود",
-      "url": "https://www.amazon.sa/dp/B07FDXMCLB?dib=eyJ2IjoiMSJ9.IzQGTwWvPM9fvus-V8Ukd2EM4ilf6KtVO6kxDrWfXfScgQZPfAK5bxshQgatxr9nT6203lgESpcS8NBUnhZMAk5LLpsl0ohcgXcsGRF4mbrnoTg1FSDYmgYk96cyFauyI20hGA_QNDzNXZL1wcaHh6TXTADlIRk4EI8hmZYwewPAbh3zYdxtIfaaTkyArwWUztmsl2lPb55nRxUPi6tsOsWOv_zSQFJ1EtHBrSSglL3k0fHdJeaTZVHEkIOYBAaGDddh2NkyDadnLPINUJDpvlJLQu9FStwklvJJxwKwuS8.W6hi1RBz4IbFEUf_Iqy3XdAbXvACL6aaQor5XvA8uDA&dib_tag=se&keywords=wireless+mouse",
-      "brand": null,
-      "category": null,
-      "price": 13.26,
-      "currency": "SAR",
-      "last_seen": "2026-11-16 10:07:38",
-      "history": [
-        {
-          "price": 13.26,
-          "date": "2026-11-16 10:07:38"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B07FDXMCLB",
-      "gtin": null,
-      "store_original_price": 29.0,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": 15.74,
-          "percent": 54.28
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "UNVERIFIED",
         "trust_score": 30,
         "trust_components": {
           "identity": 10,
@@ -8001,114 +10237,6 @@
       }
     },
     {
-      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%AA%D9%84%D9%82%D8%A7%D8%A6%D9%8A-%D9%85%D8%B3%D8%AA%D9%88%D9%8A%D8%A7%D8%AA-%D9%88%D8%A3%D9%86%D8%AF%D8%B1%D9%88%D9%8A%D8%AF-%D9%88%D9%83%D9%84%D9%8A%D9%83%D8%B3-8-%D8%A8%D8%B1%D9%88%D9%85%D9%8A%D8%AA/dp/B07FF1PB8Q/ref=sr_1_1",
-      "store": "Amazon.sa",
-      "title": "ماوس لاسلكي 2.4G ضوئي محمول مع مستقبل نانو USB بمساحة عمل 10 م مع ميزة النوم التلقائي و3 مستويات DPI قابلة للتعديل لنظام Mac OS وويندوز وأندرويد وكليكس-8 من بروميت",
-      "url": "https://www.amazon.sa/%D8%A7%D9%84%D8%AA%D9%84%D9%82%D8%A7%D8%A6%D9%8A-%D9%85%D8%B3%D8%AA%D9%88%D9%8A%D8%A7%D8%AA-%D9%88%D8%A3%D9%86%D8%AF%D8%B1%D9%88%D9%8A%D8%AF-%D9%88%D9%83%D9%84%D9%8A%D9%83%D8%B3-8-%D8%A8%D8%B1%D9%88%D9%85%D9%8A%D8%AA/dp/B07FF1PB8Q/ref=sr_1_1?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-1",
-      "brand": null,
-      "category": null,
-      "price": 13.26,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 13.26,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B07FF1PB8Q",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.amazon.sa/%D8%BA%D9%84%D9%8A%D8%AA%D8%B1%D9%8A-%D8%A7%D9%84%D9%82%D9%85%D8%A7%D8%B4-%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D8%B4%D9%88%D8%B1%D8%AA%D9%83%D8%AA%D8%B3/dp/B0CNDF682X/ref=sr_1_2",
-      "store": "Amazon.sa",
-      "title": "مسند فأرة من غليتري غاردن مصنوع من القماش والمطاط بتصميم إكسل شورتكتس بمقاس 300ط × 800ع ملم",
-      "url": "https://www.amazon.sa/%D8%BA%D9%84%D9%8A%D8%AA%D8%B1%D9%8A-%D8%A7%D9%84%D9%82%D9%85%D8%A7%D8%B4-%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D8%B4%D9%88%D8%B1%D8%AA%D9%83%D8%AA%D8%B3/dp/B0CNDF682X/ref=sr_1_2?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-2",
-      "brand": null,
-      "category": null,
-      "price": 19.99,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 19.99,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B0CNDF682X",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
       "id": "https://www.amazon.sa/%D8%BA%D9%84%D9%8A%D8%AA%D8%B1%D9%8A-%D8%A7%D9%84%D9%82%D9%85%D8%A7%D8%B4-%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D8%B4%D9%88%D8%B1%D8%AA%D9%83%D8%AA%D8%B3/dp/B0CNDF682X/ref=vo_sr_l_dp",
       "store": "Amazon.sa",
       "title": "الخيارات: 3 مقاسات",
@@ -8157,222 +10285,6 @@
           "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
           "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم",
           "هوية المنتج أو بياناته تحتاج مراجعة"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.amazon.sa/UGREEN-4K30Hz%D8%8C-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D9%86%D8%A7%D9%81%D8%B0-%D9%88%D9%8A%D9%86%D8%AF%D9%88%D8%B2%D8%8C/dp/B0BR3M8XHK/ref=sr_1_3",
-      "store": "Amazon.sa",
-      "title": "UGREEN موزع USB-C 5 في 1، HDMI 4K@30Hz، PD 100W، 3 منافذ USB-A",
-      "url": "https://www.amazon.sa/UGREEN-4K30Hz%D8%8C-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D9%86%D8%A7%D9%81%D8%B0-%D9%88%D9%8A%D9%86%D8%AF%D9%88%D8%B2%D8%8C/dp/B0BR3M8XHK/ref=sr_1_3?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-3",
-      "brand": null,
-      "category": null,
-      "price": 66.98,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 66.98,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B0BR3M8XHK",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.amazon.sa/%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D9%88%D8%A7%D9%84%D9%84%D8%A7%D8%A8%D8%AA%D9%88%D8%A8-%D9%88%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%84-%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%AA%D9%83-%D9%88%D8%A3%D9%85%D8%A7%D9%86%D9%83%D8%8C/dp/B0B74MMTZP/ref=sr_1_4",
-      "store": "Amazon.sa",
-      "title": "غطاء كاميرا ويب رفيع للغاية لأجهزة الكمبيوتر واللابتوب وآبل ماك بوك وايباد والجوال وغير ذلك الكثير من سكاي تاتش، 6 قطع كتلة شبكية بسمك 5.5 ملم لحماية خصوصيتك وأمانك، لون أسود",
-      "url": "https://www.amazon.sa/%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D9%88%D8%A7%D9%84%D9%84%D8%A7%D8%A8%D8%AA%D9%88%D8%A8-%D9%88%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%84-%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%AA%D9%83-%D9%88%D8%A3%D9%85%D8%A7%D9%86%D9%83%D8%8C/dp/B0B74MMTZP/ref=sr_1_4?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-4",
-      "brand": null,
-      "category": null,
-      "price": 9.0,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 9.0,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B0B74MMTZP",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.amazon.sa/%D8%A7%D9%84%D9%81%D9%8A%D8%AF%D9%8A%D9%88%D8%8C-%D9%84%D9%84%D8%A7%D9%86%D8%B2%D9%84%D8%A7%D9%82-%D9%84%D9%84%D8%A7%D8%B9%D8%A8%D9%8A%D9%86-%D9%88%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8-%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%88%D8%AF%D9%8A%D9%88%D8%8C/dp/B098MJPQWR/ref=sr_1_5",
-      "store": "Amazon.sa",
-      "title": "قاعدة ماوس كبيرة ممتدة من سكاي تاتش لتشغيل العاب الفيديو، مقاس 35.4 × 15.7 × 0.12 انش، قاعدة مطاطية غير قابلة للانزلاق وحواف مخيطة للاعبين والمكتب والاستوديو، أسود، ممحاة",
-      "url": "https://www.amazon.sa/%D8%A7%D9%84%D9%81%D9%8A%D8%AF%D9%8A%D9%88%D8%8C-%D9%84%D9%84%D8%A7%D9%86%D8%B2%D9%84%D8%A7%D9%82-%D9%84%D9%84%D8%A7%D8%B9%D8%A8%D9%8A%D9%86-%D9%88%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8-%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%88%D8%AF%D9%8A%D9%88%D8%8C/dp/B098MJPQWR/ref=sr_1_5?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-5",
-      "brand": null,
-      "category": null,
-      "price": 21.0,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 21.0,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B098MJPQWR",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.amazon.sa/%D9%84%D9%88%D8%AC%D9%8A%D8%AA%D9%8A%D9%83-%D9%84%D8%A7%D8%B3%D9%84%D9%83%D9%8A-%D8%AC%D9%8A%D8%AC%D8%A7%D9%87%D8%B1%D8%AA%D8%B2-%D9%85%D8%B3%D8%AA%D9%82%D8%A8%D9%84-%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85%D9%87/dp/B01A9GXEOI/ref=sr_1_6",
-      "store": "Amazon.sa",
-      "title": "لوجيتيك ماوس لاسلكي M171 بتردد 2.4 جيجاهرتز مع مستقبل USB صغير، تتبع بصري",
-      "url": "https://www.amazon.sa/%D9%84%D9%88%D8%AC%D9%8A%D8%AA%D9%8A%D9%83-%D9%84%D8%A7%D8%B3%D9%84%D9%83%D9%8A-%D8%AC%D9%8A%D8%AC%D8%A7%D9%87%D8%B1%D8%AA%D8%B2-%D9%85%D8%B3%D8%AA%D9%82%D8%A8%D9%84-%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85%D9%87/dp/B01A9GXEOI/ref=sr_1_6?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-6",
-      "brand": null,
-      "category": null,
-      "price": 33.0,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 33.0,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B01A9GXEOI",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
         ],
         "cross_store_offers": [],
         "lowest_matched_price": null,
@@ -8435,330 +10347,6 @@
       }
     },
     {
-      "id": "https://www.amazon.sa/%D8%A8%D9%84%D9%88%D8%AA%D9%88%D8%AB-%D9%84%D8%A7%D8%B3%D9%84%D9%83%D9%8A-%D8%A7%D9%86%D9%8A%D9%88%D9%8A%D8%8C-%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1/dp/B0BKKSC6S4/ref=sr_1_8",
-      "store": "Amazon.sa",
-      "title": "ماوس بلوتوث لاسلكي من انيوي، بتصميم نحيف واضاءة LED ووضع مزدوج (بلوتوث 5.1 + USB) 2.4 GHz قابل لاعادة الشحن بلوتوث صامت، ماوس كمبيوتر مع مستقبل USB (اسود)",
-      "url": "https://www.amazon.sa/%D8%A8%D9%84%D9%88%D8%AA%D9%88%D8%AB-%D9%84%D8%A7%D8%B3%D9%84%D9%83%D9%8A-%D8%A7%D9%86%D9%8A%D9%88%D9%8A%D8%8C-%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1/dp/B0BKKSC6S4/ref=sr_1_8?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-8",
-      "brand": null,
-      "category": null,
-      "price": 22.99,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 22.99,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B0BKKSC6S4",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%A3%D9%84%D9%88%D9%85%D9%86%D9%8A%D9%88%D9%85%D8%8C-%D9%84%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%84-%D8%B3%D9%8A%D9%84%D9%8A%D9%83%D9%88%D9%86-%D9%84%D9%84%D8%A3%D9%86%D8%B2%D9%84%D8%A7%D9%82%D8%8C-%D9%88%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%D8%AC/dp/B091B4SWR7/ref=sr_1_9",
-      "store": "Amazon.sa",
-      "title": "حامل لابتوب عمودي من الألومنيوم، حامل مزدوج لسطح المكتب مع قاعدة قابلة للتعديل ومقابض سيليكون مضادة للأنزلاق، لجميع أجهزة التابلت / وأيباد / وماك بوك / وسيرفس / وسامسونج / واتش بي / وديل / وكروم بوك،",
-      "url": "https://www.amazon.sa/%D8%A7%D9%84%D8%A3%D9%84%D9%88%D9%85%D9%86%D9%8A%D9%88%D9%85%D8%8C-%D9%84%D9%84%D8%AA%D8%B9%D8%AF%D9%8A%D9%84-%D8%B3%D9%8A%D9%84%D9%8A%D9%83%D9%88%D9%86-%D9%84%D9%84%D8%A3%D9%86%D8%B2%D9%84%D8%A7%D9%82%D8%8C-%D9%88%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%D8%AC/dp/B091B4SWR7/ref=sr_1_9?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-9",
-      "brand": null,
-      "category": null,
-      "price": 75.88,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 75.88,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B091B4SWR7",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.amazon.sa/%D8%A7%D9%86%D9%83%D8%B1-%D9%85%D9%86%D8%A7%D9%81%D8%B0%D8%8C-%D8%A7%D9%84%D9%86%D8%AD%D8%A7%D9%81%D8%A9-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%D8%8C-%D8%A7%D9%84%D9%85%D8%AD%D9%85%D9%88%D9%84/dp/B07L32B9C2/ref=sr_1_10",
-      "store": "Amazon.sa",
-      "title": "انكر موزع USB 3.0 بـ4 منافذ، موزع بيانات فائق النحافة مع كيبل ممتد بطول 2",
-      "url": "https://www.amazon.sa/%D8%A7%D9%86%D9%83%D8%B1-%D9%85%D9%86%D8%A7%D9%81%D8%B0%D8%8C-%D8%A7%D9%84%D9%86%D8%AD%D8%A7%D9%81%D8%A9-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%D8%8C-%D8%A7%D9%84%D9%85%D8%AD%D9%85%D9%88%D9%84/dp/B07L32B9C2/ref=sr_1_10?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-10",
-      "brand": null,
-      "category": null,
-      "price": 39.0,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 39.0,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B07L32B9C2",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.amazon.sa/%D8%A7%D9%83%D8%B3%D9%8A%D9%86/dp/B0CDWMVMFY/ref=sr_1_11",
-      "store": "Amazon.sa",
-      "title": "XICEN Monitor Stand Riser, Gaming Monitor Riser with RGB Light, Foldable Computer Monitor Stand, Desk Organizers and Accessories for Desktop, Printer (Black)",
-      "url": "https://www.amazon.sa/%D8%A7%D9%83%D8%B3%D9%8A%D9%86/dp/B0CDWMVMFY/ref=sr_1_11?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-11",
-      "brand": null,
-      "category": null,
-      "price": 129.0,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 129.0,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B0CDWMVMFY",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D9%84%D9%84%D8%A7%D8%A8%D8%AA%D9%88%D8%A8-%D9%88%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D9%88%D8%A7%D9%84%D9%83%D9%8A%D8%A8%D9%88%D8%B1%D8%AF-%D9%88%D8%A7%D9%84%D8%B7%D8%A7%D8%A8%D8%B9%D8%A9/dp/B0CD1BHXPZ/ref=sr_1_12",
-      "store": "Amazon.sa",
-      "title": "UGREEN موزع USB 3.0 بأربعة منافذ، تصميم نحيف لنقل البيانات",
-      "url": "https://www.amazon.sa/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D9%84%D9%84%D8%A7%D8%A8%D8%AA%D9%88%D8%A8-%D9%88%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D9%88%D8%A7%D9%84%D9%83%D9%8A%D8%A8%D9%88%D8%B1%D8%AF-%D9%88%D8%A7%D9%84%D8%B7%D8%A7%D8%A8%D8%B9%D8%A9/dp/B0CD1BHXPZ/ref=sr_1_12?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-12",
-      "brand": null,
-      "category": null,
-      "price": 35.0,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 35.0,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B0CD1BHXPZ",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.amazon.sa/%D9%81%D9%88%D8%B1%D8%B3%D9%83%D8%B3-%D9%85%D8%B5%D9%86%D9%88%D8%B9-%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%A7%D9%84%D9%84%D9%88%D9%86-%D8%A7%D9%84%D8%B1%D9%85%D8%A7%D8%AF%D9%8A/dp/B0FR9KDHC4/ref=sr_1_13",
-      "store": "Amazon.sa",
-      "title": "مسند فأرة من فورسكس مصنوع من المطاط باللون الرمادي بمقاس 900ط × 400ع ملم",
-      "url": "https://www.amazon.sa/%D9%81%D9%88%D8%B1%D8%B3%D9%83%D8%B3-%D9%85%D8%B5%D9%86%D9%88%D8%B9-%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%A7%D9%84%D9%84%D9%88%D9%86-%D8%A7%D9%84%D8%B1%D9%85%D8%A7%D8%AF%D9%8A/dp/B0FR9KDHC4/ref=sr_1_13?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-13",
-      "brand": null,
-      "category": null,
-      "price": 88.0,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 88.0,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B0FR9KDHC4",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
       "id": "https://www.amazon.sa/%D9%81%D9%88%D8%B1%D8%B3%D9%83%D8%B3-%D9%85%D8%B5%D9%86%D9%88%D8%B9-%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B7-%D8%A8%D8%A7%D9%84%D9%84%D9%88%D9%86-%D8%A7%D9%84%D8%B1%D9%85%D8%A7%D8%AF%D9%8A/dp/B0FR9KDHC4/ref=vo_sr_l_dp",
       "store": "Amazon.sa",
       "title": "الخيارات: 2 مقاسات",
@@ -8814,114 +10402,6 @@
       }
     },
     {
-      "id": "https://www.amazon.sa/%D8%A7%D9%84%D9%83%D9%8A%D8%A8%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%D9%8A%D8%8C-%D8%A7%D9%84%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86%D8%8C-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%D8%8C/dp/B0BLTS461S/ref=sr_1_14",
-      "store": "Amazon.sa",
-      "title": "منظم لإدارة الكيبلات لتنظيم الكيبلات للمنزل والمكتب من انيوي، 273 قطعة. مفيد لسلك الطاقة، حزمة مشابك كيبلات جهاز الكمبيوتر المكتبي، كيبل USB، كيبل التلفزيون، الكمبيوتر، حامل سلك المكتب المنزلي للمكتب",
-      "url": "https://www.amazon.sa/%D8%A7%D9%84%D9%83%D9%8A%D8%A8%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%D9%8A%D8%8C-%D8%A7%D9%84%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86%D8%8C-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%D8%8C/dp/B0BLTS461S/ref=sr_1_14?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-14",
-      "brand": null,
-      "category": null,
-      "price": 38.99,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 38.99,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B0BLTS461S",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.amazon.sa/%D8%AF%D9%88%D9%86-%D9%84%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D8%A7%D9%84%D9%85%D9%81%D8%A7%D8%AA%D9%8A%D8%AD-%D9%88%D8%A7%D9%84%D9%85%D8%A7%D9%88%D8%B3-91-4%C3%9730-5/dp/B09MVT9Y98/ref=sr_1_15",
-      "store": "Amazon.sa",
-      "title": "قاعدة للمكتب من اللباد من دون تريز، بساط للكمبيوتر ولوحة المفاتيح والماوس مناسب للمكتب بحجم كبير، 91.4×30.5 سم، رمادي داكن",
-      "url": "https://www.amazon.sa/%D8%AF%D9%88%D9%86-%D9%84%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D8%A7%D9%84%D9%85%D9%81%D8%A7%D8%AA%D9%8A%D8%AD-%D9%88%D8%A7%D9%84%D9%85%D8%A7%D9%88%D8%B3-91-4%C3%9730-5/dp/B09MVT9Y98/ref=sr_1_15?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-15",
-      "brand": null,
-      "category": null,
-      "price": 38.49,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 38.49,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B09MVT9Y98",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
       "id": "https://www.amazon.sa/EooCoo-%D9%84%D9%84%D9%85%D8%B9%D8%B5%D9%85%D8%8C-%D8%A8%D8%AE%D8%A7%D8%B5%D9%8A%D8%A9-%D8%A7%D9%84%D8%AA%D8%AF%D9%84%D9%8A%D9%83-%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1/dp/B0D4M7TD4X/ref=sr_1_16",
       "store": "Amazon.sa",
       "title": "‏69.99 ريال ريال ‎ 69 . ‎ 99 ‏",
@@ -8970,114 +10450,6 @@
           "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
           "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم",
           "هوية المنتج أو بياناته تحتاج مراجعة"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.amazon.sa/%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%A7%D9%86%D8%AC%D9%84%D9%8A%D8%B2%D9%8A%D8%A9%D8%8C-%D8%A7%D9%84%D9%84%D8%B2%D9%88%D8%AC%D8%A9-%D9%88%D8%A7%D9%84%D8%AD%D8%A7%D8%B3%D9%88%D8%A8-OS-PC001-2/dp/B07NQKRTKP/ref=sr_1_17",
-      "store": "Amazon.sa",
-      "title": "ملصق لوحة مفاتيح باللغة العربية والانجليزية، مقاوم للغبار والماء وعالي اللزوجة لجهاز لاب توب والحاسوب المكتبي رقم الموديل OS-PC001-2",
-      "url": "https://www.amazon.sa/%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%A7%D9%86%D8%AC%D9%84%D9%8A%D8%B2%D9%8A%D8%A9%D8%8C-%D8%A7%D9%84%D9%84%D8%B2%D9%88%D8%AC%D8%A9-%D9%88%D8%A7%D9%84%D8%AD%D8%A7%D8%B3%D9%88%D8%A8-OS-PC001-2/dp/B07NQKRTKP/ref=sr_1_17?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-17",
-      "brand": null,
-      "category": null,
-      "price": 7.0,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 7.0,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B07NQKRTKP",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
-        ],
-        "cross_store_offers": [],
-        "lowest_matched_price": null,
-        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
-      }
-    },
-    {
-      "id": "https://www.amazon.sa/%D9%85%D8%B4%D8%A7%D8%A8%D9%83-%D8%AA%D9%86%D8%B8%D9%8A%D9%85-%D8%A7%D9%84%D9%83%D8%A7%D8%A8%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%8A%D8%A8%D9%84%D8%A7%D8%AA-7-5-3-1-1/dp/B07Y6HZFB3/ref=sr_1_18",
-      "store": "Amazon.sa",
-      "title": "مشابك تنظيم الكابلات - 5 عبوات ذاتية اللصق لتنظيم الكيبلات لكيبل USB / سلك الطاقة / الأسلاك والسيارة والمكتب والمنزل والمكتب (7-5-3-1-1 فتحات) حامل كيبل أسود",
-      "url": "https://www.amazon.sa/%D9%85%D8%B4%D8%A7%D8%A8%D9%83-%D8%AA%D9%86%D8%B8%D9%8A%D9%85-%D8%A7%D9%84%D9%83%D8%A7%D8%A8%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%8A%D8%A8%D9%84%D8%A7%D8%AA-7-5-3-1-1/dp/B07Y6HZFB3/ref=sr_1_18?dib=eyJ2IjoiMSJ9.WN0fy8EZ9mumSCshtmt9KwbeWdVTxYIDHyQCysAtSbVnXIgNtvB9wA1-4KfQyGu0yh6mqmxz31vQhZIj0PkBmbVRY7iG5yXzgWNp9Utp2T5DU5HPNPCXej1-HMNAQsuFa8Q4e8wrHE5DLjlYnDlqP8_0X_P5n4yaZ4-CbvdY593tFElN19utQj9g_Ab8tde2fQq-Xqkww363FtGUiYp_xfC5SnsIEwb70LTP-50bhFfGyduoYb68q9bCEe1TeCYgyzUnNnE5oFskixoXtrlGwJTVmf9bxVkcJjdGCYp19yg.K2J5A7awprptxPpWEqKHFJxP3akmh2P5DnVtqJp9Rd8&dib_tag=se&keywords=computer+accessories&qid=1794698455&sr=8-18",
-      "brand": null,
-      "category": null,
-      "price": 17.99,
-      "currency": "SAR",
-      "last_seen": "2026-11-14 23:20:57",
-      "history": [
-        {
-          "price": 17.99,
-          "date": "2026-11-14 23:20:57"
-        }
-      ],
-      "analysis": null,
-      "product_id": "B07Y6HZFB3",
-      "gtin": null,
-      "store_original_price": null,
-      "status": "INSUFFICIENT_HISTORY",
-      "baseline": null,
-      "drop_percent": null,
-      "history_days": 0,
-      "previous_min": null,
-      "evidence": {
-        "historical_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "advertised_savings": {
-          "amount_sar": null,
-          "percent": null
-        },
-        "historical_evidence_valid": false,
-        "verified_deal": false,
-        "claim_assessment": "NO_REFERENCE",
-        "trust_score": 20,
-        "trust_components": {
-          "identity": 10,
-          "freshness": 10,
-          "history": 0,
-          "cross_store": 0
-        },
-        "warnings": [
-          "التاريخ السعري غير كافٍ للتحقق من الخصم",
-          "السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه",
-          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
         ],
         "cross_store_offers": [],
         "lowest_matched_price": null,
