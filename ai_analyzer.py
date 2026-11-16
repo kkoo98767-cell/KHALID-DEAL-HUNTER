@@ -243,7 +243,7 @@ def evaluate_archive_backlog(limit=2):
         if not reliable_title(title):
             continue
         db = connect()
-        history = db.execute("SELECT price,checked_at FROM price_history WHERE product_key=? ORDER BY checked_at,id",(key,)).fetchall()
+        history = db.execute("SELECT price,checked_at FROM price_history WHERE product_key=? AND validated=1 ORDER BY checked_at,id",(key,)).fetchall()
         db.close()
         if not history:
             continue

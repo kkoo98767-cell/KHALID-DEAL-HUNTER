@@ -47,6 +47,8 @@ def connect():
         if name not in columns:
             db.execute(f"ALTER TABLE products ADD COLUMN {name} TEXT")
     history_columns = {r[1] for r in db.execute("PRAGMA table_info(price_history)")}
+    if "validated" not in history_columns:
+        db.execute("ALTER TABLE price_history ADD COLUMN validated INTEGER NOT NULL DEFAULT 0")
     if "scan_id" not in history_columns:
         db.execute("ALTER TABLE price_history ADD COLUMN scan_id TEXT")
     if "store_original_price" not in history_columns:
@@ -58,11 +60,11 @@ def connect():
     db.execute("CREATE TABLE IF NOT EXISTS ai_cache (cache_key TEXT PRIMARY KEY, result TEXT NOT NULL, created_at TEXT DEFAULT CURRENT_TIMESTAMP)")
     db.execute("CREATE TABLE IF NOT EXISTS discovery_history (id INTEGER PRIMARY KEY, store TEXT, query TEXT, searched_at TEXT DEFAULT CURRENT_TIMESTAMP)")
     db.execute("CREATE TABLE IF NOT EXISTS product_aliases (canonical_url TEXT PRIMARY KEY, product_key TEXT NOT NULL)")
-    if db.execute("PRAGMA user_version").fetchone()[0] < 3:
+    if db.execute("PRAGMA user_version").fetchone()[0] < 5:
         for key,url in db.execute("SELECT product_key,url FROM products").fetchall():
             db.execute("INSERT OR IGNORE INTO product_aliases VALUES(?,?)", (canonical_url(url),key))
-    if db.execute("PRAGMA user_version").fetchone()[0] < 4:
-        db.execute("PRAGMA user_version=4")
+    if db.execute("PRAGMA user_version").fetchone()[0] < 5:
+        db.execute("PRAGMA user_version=5")
     db.commit()
     return db
 
@@ -107,12 +109,12 @@ def save_and_evaluate(item, minimum_sample_minutes=60):
         )
 
     latest = db.execute(
-        "SELECT price, checked_at FROM price_history WHERE product_key=? ORDER BY id DESC LIMIT 1",
+        "SELECT price, checked_at, validated FROM price_history WHERE product_key=? ORDER BY id DESC LIMIT 1",
         (key,)
     ).fetchone()
 
     should_record = True
-    if latest and round(float(latest[0]), 2) == round(float(item["price"]), 2):
+    if latest and latest[2] and round(float(latest[0]), 2) == round(float(item["price"]), 2):
         recent = db.execute(
             "SELECT 1 FROM price_history WHERE product_key=? "
             "AND checked_at >= datetime('now', ? ) LIMIT 1",
@@ -121,14 +123,14 @@ def save_and_evaluate(item, minimum_sample_minutes=60):
         should_record = recent is None
 
     observations = db.execute(
-        "SELECT price, checked_at FROM price_history WHERE product_key=? AND checked_at >= datetime('now', '-90 days') ORDER BY checked_at",
+        "SELECT price, checked_at FROM price_history WHERE product_key=? AND validated=1 AND checked_at >= datetime('now', '-90 days') ORDER BY checked_at",
         (key,)
     ).fetchall()
     previous = [r[0] for r in observations]
 
     if should_record:
         cursor = db.execute(
-            "INSERT OR IGNORE INTO price_history(product_key,price,scan_id,store_original_price) VALUES(?,?,?,?)",
+            "INSERT OR IGNORE INTO price_history(product_key,price,scan_id,store_original_price,validated) VALUES(?,?,?,?,1)",
             (key, item["price"],item.get("_scan_id"),item.get("original_price"))
         )
         should_record = cursor.rowcount > 0
@@ -138,7 +140,7 @@ def save_and_evaluate(item, minimum_sample_minutes=60):
         metadata = json.loads(stored[0]) if stored and stored[0] else {}
     except ValueError:
         metadata = {}
-    metadata.update({k:item[k] for k in ("rating","reviews","description","specifications","data_sources") if item.get(k)})
+    metadata.update({k:item[k] for k in ("rating","reviews","description","specifications","data_sources","model","condition","color","capacity","size") if item.get(k)})
     item["metadata"] = json.dumps(metadata,ensure_ascii=False)
     for field in ("product_id", "brand", "category", "currency", "gtin", "normalized_name", "metadata"):
         if item.get(field):

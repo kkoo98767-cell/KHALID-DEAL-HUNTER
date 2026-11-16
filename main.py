@@ -88,6 +88,9 @@ def fetch_store(store, query):
                 if _looks_like_challenge(response.text):
                     raise RuntimeError("Store challenge page; access protection respected")
                 parsed = parse_jsonld_products(response.text, response.url, store, limit=MAX_PRODUCTS_PER_SEARCH)
+                if not parsed and store == "Jarir":
+                    from scrapers.jarir import discover
+                    parsed = discover(session,response.text,query,REQUEST_HEADERS[0],MAX_PRODUCTS_PER_SEARCH)
                 print(f"{store}: HTTP {response.status_code}, bytes={len(response.content)}, validated_products={len(parsed)}")
                 for item in parsed:
                     if item["url"] not in seen:
@@ -105,7 +108,7 @@ def fetch_store(store, query):
                     urls[:] = [url] + [u for u in urls if u == locals().get("next_url")]
 
                 break
-    return []
+    return items
 
 
 def refresh_tracked(store, seen):

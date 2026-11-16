@@ -121,6 +121,8 @@ def _normalise_product(title, price, url, store, base_url, rating=0, reviews=0, 
     parsed = urlparse(absolute_url)
     if parsed.scheme not in ("http", "https") or not parsed.netloc or parsed.hostname != urlparse(base_url).hostname:
         return None
+    if parsed.hostname and parsed.hostname.endswith("amazon.sa") and not re.search(r"/dp/[A-Z0-9]{10}(?:/|$)",parsed.path,re.I):
+        return None
     if any(x in parsed.path.lower() for x in ("/search", "/customer/account", "/checkout")):
         return None
     return {
@@ -254,9 +256,10 @@ def _rating_from_card(card):
         rating = _number(node.get("aria-label") or node.get_text(" ", strip=True)) or 0
         if rating > 5:
             rating = 0
-    count = card.select_one('[class*="review"], [class*="ratingCount"], [aria-label*="ratings"]')
+    count = card.select_one('a[href*="customerReviews"], [itemprop="reviewCount"], [data-testid="review-count"], [class*="ratingCount"]')
     if count:
-        reviews = int(_number(count.get("aria-label") or count.get_text(" ", strip=True)) or 0)
+        value = _number(count.get("content") or count.get("aria-label") or count.get_text(" ",strip=True))
+        reviews = int(value) if value is not None and value.is_integer() else 0
     return rating, reviews
 
 
@@ -500,7 +503,7 @@ def canonical_url(url):
     asin = re.search(r"/(?:dp|gp/product)/([A-Z0-9]{10})(?:/|$)", path, re.I)
     if parsed.hostname and parsed.hostname.endswith("amazon.sa") and asin:
         path = "/dp/" + asin.group(1).upper()
-    query = [(k,v) for k,v in parse_qsl(parsed.query) if not (k.lower().startswith("utm_") or k.lower() in {"ref", "tag", "qid", "sr", "pf_rd_p", "pf_rd_r"})]
+    query = [] if asin and parsed.hostname and parsed.hostname.endswith("amazon.sa") else [(k,v) for k,v in parse_qsl(parsed.query) if not (k.lower().startswith("utm_") or k.lower() in {"ref", "tag", "qid", "sr", "pf_rd_p", "pf_rd_r"})]
     return urlunparse((parsed.scheme,parsed.netloc.lower(),path,"",urlencode(query),""))
 
 
