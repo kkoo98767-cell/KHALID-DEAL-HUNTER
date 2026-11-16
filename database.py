@@ -52,7 +52,7 @@ def connect():
     if db.execute("PRAGMA user_version").fetchone()[0] < 3:
         for key,url in db.execute("SELECT product_key,url FROM products").fetchall():
             db.execute("INSERT OR IGNORE INTO product_aliases VALUES(?,?)", (canonical_url(url),key))
-    db.execute("PRAGMA user_version=3")
+        db.execute("PRAGMA user_version=3")
     db.commit()
     return db
 

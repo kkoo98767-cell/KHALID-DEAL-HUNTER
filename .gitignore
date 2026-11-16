@@ -5,3 +5,4 @@ __pycache__/
 *.db-shm
 scan-results.json
 integration-results.json
+service-results.json

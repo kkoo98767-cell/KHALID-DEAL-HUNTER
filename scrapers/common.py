@@ -115,7 +115,7 @@ def _normalise_product(title, price, url, store, base_url, rating=0, reviews=0, 
     if not title or price is None or price <= 0 or not url:
         return None
     title = re.sub(r"\s+", " ", str(title)).strip()
-    if len(title) < 3 or title.lower() in {"home", "search", "products", "المنتجات"}:
+    if not reliable_title(title) or title.lower() in {"home", "search", "products", "المنتجات"}:
         return None
     absolute_url = canonical_url(urljoin(base_url, str(url).strip()))
     parsed = urlparse(absolute_url)
@@ -277,7 +277,7 @@ def _products_from_cards(soup, base_url, store, limit):
             if len(card.select("a[href]")) > 8 or len(card.get_text(" ", strip=True)) > 5000:
                 continue
             title_node = card.select_one(
-                '[itemprop="name"], h2 a, h3 a, [class*="title"] a, '
+                '[itemprop="name"], h2 a, a h2, h2, h3 a, [class*="title"] a, '
                 '[class*="name"] a, [data-qa*="title"], a[href]'
             )
             if not title_node:
@@ -353,6 +353,9 @@ def _products_from_product_links(soup, base_url, store, limit):
             price = _text_price(parent)
             if price and len({canonical_url(urljoin(base_url,a.get("href"))) for a in product_links}) <= 1:
                 rating, reviews = _rating_from_card(parent)
+                heading = parent.select_one('h2, h3, [itemprop="name"], [class*="product-title"]')
+                if heading:
+                    title = heading.get_text(" ",strip=True)
                 item = _normalise_product(title, price, href, store, base_url, rating, reviews, "product_link_ancestor")
                 if item:
                     key = item["url"].split("?")[0].rstrip("/")
@@ -492,3 +495,12 @@ def product_identifier(url):
         if match:
             return match.group(1)
     return None
+
+
+def reliable_title(title):
+    if len(str(title).strip()) < 3:
+        return False
+    if re.search(r"^(?:SAR|Limited time deal|No featured offers|الخيارات:|الشراء لمرة|تم نسخ معلومات|This advertisement)",str(title).strip(),re.I):
+        return False
+    stripped = re.sub(r"[\d\W_]+|ريال|SAR|List|Price|Was|سعر|القائمه", "", str(title),flags=re.I)
+    return len(stripped) >= 3

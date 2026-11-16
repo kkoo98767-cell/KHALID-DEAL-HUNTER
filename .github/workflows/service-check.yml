@@ -1,0 +1,33 @@
+name: Service integration verification
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ai_analyzer.py
+      - config.py
+      - service_check.py
+      - .github/workflows/service-check.yml
+permissions:
+  contents: read
+jobs:
+  services:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python service_check.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: ${{ secrets.TG_CHAT }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: service-verification-${{ github.run_id }}
+          path: service-results.json

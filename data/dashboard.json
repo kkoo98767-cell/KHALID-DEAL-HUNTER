@@ -1,48 +1,12 @@
 {
-  "generated_at": "2026-11-16T05:09:44.060072+00:00",
+  "generated_at": "2026-11-16T05:14:49.681487+00:00",
   "stats": {
     "products": 100,
     "observations": 101,
     "verified": 0,
     "sufficient": 0
   },
-  "scan": {
-    "scan_number": "20",
-    "stores": {
-      "Extra": {
-        "products": 0,
-        "error": null
-      },
-      "Amazon.sa": {
-        "products": 20,
-        "error": null
-      },
-      "Noon": {
-        "products": 0,
-        "error": "ReadTimeout"
-      },
-      "Jarir": {
-        "products": 0,
-        "error": null
-      }
-    },
-    "products": 20,
-    "new_products": 20,
-    "potential_deals": 0,
-    "verified_deals": 0,
-    "sufficient_history": 0,
-    "store_errors": 1,
-    "empty_stores": 2,
-    "telegram_errors": 0,
-    "ai_providers": [
-      "Fallback"
-    ],
-    "archive": {
-      "products": 100,
-      "price_observations": 101,
-      "stores_with_products": 1
-    }
-  },
+  "scan": null,
   "products": [
     {
       "id": "https://www.amazon.sa/dp/B0D3D5SSY8?dib=eyJ2IjoiMSJ9.e66FpP-fFW7rTaghPNigwQA70U_OFECs2LANexdLjfB0O0ZGksMmoG0EUgGHBX3maB2sezUUnUMXzF1tQ1hSRX8pI8lyi2ZbESNZCKuLhjdBTb9swOdYPHZle09HmT6W2-wjInazTfvNs4wdjrPacgYh-0ORwyRaOPhR69iuCdNqX2ge9JGGOE7YtyDajNTLBsy3QA8UXuz9ekwy7lhIJt4r4DnqfFeSdOAF3qg9nxuUPQhpgUUMf0lMSPIzu_8ejOmQQWSGgjcUch_sSN-JV1vDnvRfSuM4aYnSj2vwa2U.GfgEuwezHRIxLv7X0e4ofEXJknNp1exfdRkwLvFG7b4&dib_tag=se&keywords=gaming+mouse",
@@ -245,7 +209,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -521,7 +485,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -544,7 +508,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -567,7 +531,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -590,7 +554,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -613,7 +577,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -636,7 +600,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -659,7 +623,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -682,7 +646,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -705,7 +669,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -728,7 +692,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -751,7 +715,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -774,7 +738,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -797,7 +761,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -820,7 +784,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -843,7 +807,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -866,7 +830,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -889,7 +853,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -912,7 +876,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -935,7 +899,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -958,7 +922,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -985,7 +949,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 1,
@@ -1077,7 +1041,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -1123,7 +1087,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -1169,7 +1133,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -1215,7 +1179,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -1261,7 +1225,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -1284,7 +1248,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -1307,7 +1271,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -1330,7 +1294,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -1376,7 +1340,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -1399,7 +1363,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -1422,7 +1386,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -1951,7 +1915,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -2066,7 +2030,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -2227,7 +2191,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
@@ -2296,7 +2260,7 @@
         }
       ],
       "analysis": null,
-      "status": "INSUFFICIENT_HISTORY",
+      "status": "DATA_ANOMALY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,

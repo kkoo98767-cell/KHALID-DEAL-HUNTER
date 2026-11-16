@@ -3,6 +3,8 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 from database import connect, historical_assessment
+from scrapers.common import reliable_title
+from urllib.parse import urlparse
 
 
 def snapshot():
@@ -14,6 +16,8 @@ def snapshot():
             continue
         price = history[-1][0]
         assessment = historical_assessment(history[:-1],price)
+        if not reliable_title(title) or urlparse(url).hostname in {"sponsored-ads.amazon.sa", "aax-eu-zaz.amazon.sa"}:
+            assessment.update(status="DATA_ANOMALY",baseline=None,drop_percent=None)
         try:
             analysis = json.loads(evaluation) if evaluation else None
         except (ValueError,TypeError):
