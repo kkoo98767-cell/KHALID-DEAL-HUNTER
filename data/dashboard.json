@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T05:16:56.295776+00:00",
+  "generated_at": "2026-11-16T05:20:31.216129+00:00",
   "stats": {
     "products": 100,
     "observations": 101,
@@ -7,13 +7,13 @@
     "sufficient": 0
   },
   "scan": {
-    "scan_number": "21",
+    "scan_number": "22",
     "stores": {
       "Extra": {
         "products": 0,
         "error": null
       },
-      "Jarir": {
+      "Amazon.sa": {
         "products": 0,
         "error": null
       },
@@ -21,9 +21,9 @@
         "products": 0,
         "error": "ReadTimeout"
       },
-      "Amazon.sa": {
+      "Jarir": {
         "products": 0,
-        "error": "HTTPError"
+        "error": null
       }
     },
     "products": 0,
@@ -31,8 +31,8 @@
     "potential_deals": 0,
     "verified_deals": 0,
     "sufficient_history": 0,
-    "store_errors": 2,
-    "empty_stores": 2,
+    "store_errors": 1,
+    "empty_stores": 3,
     "telegram_errors": 0,
     "ai_providers": [],
     "archive": {
