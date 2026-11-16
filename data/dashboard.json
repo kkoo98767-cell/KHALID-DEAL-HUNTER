@@ -11,45 +11,94 @@
     },
     "insufficient_or_stale_cap": 39
   },
-  "generated_at": "2026-11-16T10:15:19.338746+00:00",
+  "generated_at": "2026-11-16T10:16:49.465564+00:00",
   "stats": {
-    "products": 160,
-    "observations": 181,
+    "products": 163,
+    "observations": 184,
     "verified": 0,
     "sufficient": 0
   },
-  "scan": null,
+  "scan": {
+    "scan_number": "27",
+    "stores": {
+      "Extra": {
+        "products": 0,
+        "error": null
+      },
+      "Jarir": {
+        "products": 3,
+        "error": null
+      },
+      "Noon": {
+        "products": 0,
+        "error": "RuntimeError"
+      },
+      "Amazon.sa": {
+        "products": 0,
+        "error": null
+      }
+    },
+    "products": 6,
+    "new_products": 3,
+    "potential_deals": 0,
+    "verified_deals": 0,
+    "sufficient_history": 0,
+    "store_errors": 1,
+    "empty_stores": 2,
+    "telegram_errors": 0,
+    "ai_providers": [
+      "Fallback",
+      "Gemini"
+    ],
+    "archive": {
+      "products": 163,
+      "price_observations": 184,
+      "stores_with_products": 2
+    }
+  },
   "products": [
     {
-      "id": "https://www.jarir.com/sa-en/logitech-m171-mouse-460350.html",
+      "id": "https://www.jarir.com/sa-en/logitech-m185-mouse-388705.html",
       "store": "Jarir",
-      "title": "Logitech M171 Mouse, Optical 1000 dpi, Wireless (2.4 GHz RF), Black",
-      "url": "https://www.jarir.com/sa-en/logitech-m171-mouse-460350.html",
+      "title": "Logitech M185 Mouse Wireless (2.4 GHz RF) - Jarir Bookstore KSA",
+      "url": "https://www.jarir.com/sa-en/logitech-m185-mouse-388705.html",
       "brand": "Logitech",
       "category": null,
-      "price": 45.0,
+      "price": 65.0,
       "currency": "SAR",
       "last_seen": "2026-11-16 10:14:25",
       "history": [
         {
-          "price": 45.0,
+          "price": 65.0,
           "date": "2026-11-16 10:08:14"
         },
         {
-          "price": 45.0,
+          "price": 65.0,
           "date": "2026-11-16 10:14:25"
         }
       ],
-      "analysis": null,
-      "product_id": "460350",
-      "gtin": null,
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "غاب السعر السابق ومستوى الخصم وغابت تفاصيل الأداء والموثوقية طويلة الأمد",
+        "assessment": {
+          "category": "فأرة حاسوب",
+          "normalized_name": "فأرة لاسلكية",
+          "overall": "هذا المنتج يوفر اتصال لاسلكي ونطاق دقة محدد لكن البيانات المتوفرة قليلة جدا وتاريخ الأسعار غير مكتمل وتقييمات المستخدمين محدودة للغاية مما يجعل تقييم القيمة الحقيقية متعذرا في الوقت الحالي",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "غاب السعر السابق ومستوى الخصم وغابت تفاصيل الأداء والموثوقية طويلة الأمد"
+        },
+        "telegram_message": "هذا المنتج يوفر اتصال لاسلكي ونطاق دقة محدد لكن البيانات المتوفرة قليلة جدا وتاريخ الأسعار غير مكتمل وتقييمات المستخدمين محدودة للغاية مما يجعل تقييم القيمة الحقيقية متعذرا في الوقت الحالي",
+        "provider": "Gemini"
+      },
+      "product_id": "388705",
+      "gtin": "5099206027275",
       "store_original_price": null,
       "status": "INSUFFICIENT_HISTORY",
       "baseline": null,
       "drop_percent": null,
       "history_days": 0,
       "previous_min": null,
-      "model": "M171",
+      "model": "M185",
       "evidence": {
         "historical_savings": {
           "amount_sar": null,
@@ -81,7 +130,7 @@
     {
       "id": "https://www.jarir.com/sa-en/hp-780m-mouse-677109.html",
       "store": "Jarir",
-      "title": "HP 780M Mouse, Bluetooth/Wireless, Optical, Up to 6000 dpi, Black",
+      "title": "HP 780M Mouse Bluetooth/Wireless - Jarir Bookstore KSA",
       "url": "https://www.jarir.com/sa-en/hp-780m-mouse-677109.html",
       "brand": "HP",
       "category": null,
@@ -98,7 +147,19 @@
           "date": "2026-11-16 10:14:25"
         }
       ],
-      "analysis": null,
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "غاب السعر السابق وغابت معلومات التقييم والمراجعات تماما",
+        "assessment": {
+          "category": "إلكترونيات",
+          "normalized_name": "فأرة لاسلكية",
+          "overall": "هذا المنتج يدعم الاتصال اللاسلكي والبلوتوث مع مدى حساسية مرتفع لكن البيانات الناقصة تشمل السعر السابق وتاريخ التخفيضات وغياب المراجعات والتقييمات بالكامل مما يجعل التقييم غير دقيق والمواصفات المتاحة محدودة ولا توجد معلومات كافية عن جودة التصنيع أو الأداء الفعلي",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "غاب السعر السابق وغابت معلومات التقييم والمراجعات تماما"
+        },
+        "telegram_message": "هذا المنتج يدعم الاتصال اللاسلكي والبلوتوث مع مدى حساسية مرتفع لكن البيانات الناقصة تشمل السعر السابق وتاريخ التخفيضات وغياب المراجعات والتقييمات بالكامل مما يجعل التقييم غير دقيق والمواصفات المتاحة محدودة ولا توجد معلومات كافية عن جودة التصنيع أو الأداء الفعلي",
+        "provider": "Gemini"
+      },
       "product_id": "677109",
       "gtin": null,
       "store_original_price": null,
@@ -137,27 +198,105 @@
       }
     },
     {
-      "id": "https://www.jarir.com/sa-en/logitech-m185-mouse-388705.html",
+      "id": "https://www.jarir.com/sa-en/logitech-m171-mouse-460350.html",
       "store": "Jarir",
-      "title": "Logitech M185 Mouse, Optical 1000 dpi, Wireless (2.4 GHz RF), Swift Grey",
-      "url": "https://www.jarir.com/sa-en/logitech-m185-mouse-388705.html",
+      "title": "Logitech M171 Mouse Wireless (2.4 GHz RF) - Jarir Bookstore KSA",
+      "url": "https://www.jarir.com/sa-en/logitech-m171-mouse-460350.html",
       "brand": "Logitech",
       "category": null,
-      "price": 65.0,
+      "price": 45.0,
       "currency": "SAR",
       "last_seen": "2026-11-16 10:14:25",
       "history": [
         {
-          "price": 65.0,
+          "price": 45.0,
           "date": "2026-11-16 10:08:14"
         },
         {
-          "price": 65.0,
+          "price": 45.0,
           "date": "2026-11-16 10:14:25"
         }
       ],
-      "analysis": null,
-      "product_id": "388705",
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "غاب السعر السابق ومستوى التخفيض وتقييمات المستخدمين الكافية للحكم على جودة هذا المنتج.",
+        "assessment": {
+          "category": "فأرة حاسوب",
+          "normalized_name": "هذا المنتج",
+          "overall": "هذا المنتج يتصل لاسلكيا بتردد راديو ويحتوي على دقة مستشعر محددة، لكن البيانات توضح غياب التخفيضات والسعر الأساسي لتقييم العرض، مع وجود تقييم واحد فقط مما يجعل المراجعات غير كافية، ونظرا لنقص المعلومات نوصي بعدم الشراء حتى توفر بيانات أدق.",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "غاب السعر السابق ومستوى التخفيض وتقييمات المستخدمين الكافية للحكم على جودة هذا المنتج."
+        },
+        "telegram_message": "هذا المنتج يتصل لاسلكيا بتردد راديو ويحتوي على دقة مستشعر محددة، لكن البيانات توضح غياب التخفيضات والسعر الأساسي لتقييم العرض، مع وجود تقييم واحد فقط مما يجعل المراجعات غير كافية، ونظرا لنقص المعلومات نوصي بعدم الشراء حتى توفر بيانات أدق.",
+        "provider": "Gemini"
+      },
+      "product_id": "460350",
+      "gtin": "5099206062856",
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "M171",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/harper-collins-english-books-501461.html",
+      "store": "Jarir",
+      "title": "Cards on The Table (Poirot)",
+      "url": "https://www.jarir.com/sa-en/harper-collins-english-books-501461.html",
+      "brand": "Harper Collins",
+      "category": null,
+      "price": 39.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:16:32",
+      "history": [
+        {
+          "price": 39.0,
+          "date": "2026-11-16 10:16:32"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "غياب المواصفات وتفاصيل المنتج وتقييمات المستخدمين يمنع التوصية بالشراء.",
+        "assessment": {
+          "category": "كتب",
+          "normalized_name": "رواية بولسية",
+          "overall": "هذا المنتج لا تتوفر عنه أي مواصفات أو وصف تفصيلي أو مراجعات سابقة للمستخدمين مما يجعل تقييمه متعذرا ويفتقر للبيانات الداعمة للمزايا أو العيوب",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "غياب المواصفات وتفاصيل المنتج وتقييمات المستخدمين يمنع التوصية بالشراء."
+        },
+        "telegram_message": "هذا المنتج لا تتوفر عنه أي مواصفات أو وصف تفصيلي أو مراجعات سابقة للمستخدمين مما يجعل تقييمه متعذرا ويفتقر للبيانات الداعمة للمزايا أو العيوب",
+        "provider": "Gemini"
+      },
+      "product_id": "501461",
       "gtin": null,
       "store_original_price": null,
       "status": "INSUFFICIENT_HISTORY",
@@ -165,7 +304,138 @@
       "drop_percent": null,
       "history_days": 0,
       "previous_min": null,
-      "model": "M185",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/pny-technologies-geforce-rtx-memory-upgrades-634142.html",
+      "store": "Jarir",
+      "title": "PNY TECHNOLOGIES GeForce RTX 3050 Verto Dual Fan Edition Graphics Card, 6 GB GDDR6",
+      "url": "https://www.jarir.com/sa-en/pny-technologies-geforce-rtx-memory-upgrades-634142.html",
+      "brand": "PNY TECHNOLOGIES",
+      "category": null,
+      "price": 799.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:16:30",
+      "history": [
+        {
+          "price": 799.0,
+          "date": "2026-11-16 10:16:30"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "غیاب المواصفات التفصيلية والتقييمات يجعل التوصية غير مناسبة",
+        "assessment": {
+          "category": "بطاقات الرسوميات",
+          "normalized_name": "بطاقة رسوميات",
+          "overall": "هذا المنتج ينتمي إلى فئة بطاقات الرسوميات ويحمل علامة بي إن واي تكنولوجيز. يتميز بكونه إصدارا بمروحيتين وسعة ذاكرة محددة. تشمل المزايا وجود وحدة معالجة رسومية معروفة وذاكرة كافية للأعمال الأساسية. تتضمن العيوب غياب المواصفات التقنية الدقيقة وتقييمات المستخدمين ومعلومات الأداء. توجد معلومات ناقصة تشمل تفاصيل المنافذ واستهلاك الطاقة والتبريد الفعلي. لا يمكن الجزم بكفاءة هذا الإصدار دون بيانات إضافية",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "غیاب المواصفات التفصيلية والتقييمات يجعل التوصية غير مناسبة"
+        },
+        "telegram_message": "هذا المنتج ينتمي إلى فئة بطاقات الرسوميات ويحمل علامة بي إن واي تكنولوجيز. يتميز بكونه إصدارا بمروحيتين وسعة ذاكرة محددة. تشمل المزايا وجود وحدة معالجة رسومية معروفة وذاكرة كافية للأعمال الأساسية. تتضمن العيوب غياب المواصفات التقنية الدقيقة وتقييمات المستخدمين ومعلومات الأداء. توجد معلومات ناقصة تشمل تفاصيل المنافذ واستهلاك الطاقة والتبريد الفعلي. لا يمكن الجزم بكفاءة هذا الإصدار دون بيانات إضافية",
+        "provider": "Gemini"
+      },
+      "product_id": "634142",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "GeForce RTX 3050 Verto",
+      "evidence": {
+        "historical_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "advertised_savings": {
+          "amount_sar": null,
+          "percent": null
+        },
+        "historical_evidence_valid": false,
+        "verified_deal": false,
+        "claim_assessment": "NO_REFERENCE",
+        "trust_score": 30,
+        "trust_components": {
+          "identity": 10,
+          "freshness": 20,
+          "history": 0,
+          "cross_store": 0
+        },
+        "warnings": [
+          "التاريخ السعري غير كافٍ للتحقق من الخصم",
+          "لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم"
+        ],
+        "cross_store_offers": [],
+        "lowest_matched_price": null,
+        "value_assessment": "لا يمثل تقييم الثقة درجة لجودة المنتج أو توصية بالشراء"
+      }
+    },
+    {
+      "id": "https://www.jarir.com/sa-en/pny-technologies-geforce-rtx-5070-argb-graphics-card-652116.html",
+      "store": "Jarir",
+      "title": "PNY TECHNOLOGIES GeForce RTX 5070 ARGB Overclocked Triple Fan, 12 GB GDDR7",
+      "url": "https://www.jarir.com/sa-en/pny-technologies-geforce-rtx-5070-argb-graphics-card-652116.html",
+      "brand": "PNY TECHNOLOGIES",
+      "category": null,
+      "price": 3749.0,
+      "currency": "SAR",
+      "last_seen": "2026-11-16 10:16:28",
+      "history": [
+        {
+          "price": 3749.0,
+          "date": "2026-11-16 10:16:28"
+        }
+      ],
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "غیاب المواصفات التفصيلية والتقييمات والمراجعات يجعل من الصعب التوصية بشراء هذا المنتج بناء على البيانات المتاحة",
+        "assessment": {
+          "category": "بطاقة رسومية",
+          "normalized_name": "بطاقة رسومية",
+          "overall": "هذا المنتج يأتي من علامة تجارية معروفة مع ذاكرة وسائط حديثة وتصميم تبريد بثلاثة مراوح ومعالج رسومي متطور لكن يفتقر إلى المراجعات وتغيب عنه المواصفات التفصيلية ولا توجد معلومات كافية حول الأداء الفعلي",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "غیاب المواصفات التفصيلية والتقييمات والمراجعات يجعل من الصعب التوصية بشراء هذا المنتج بناء على البيانات المتاحة"
+        },
+        "telegram_message": "هذا المنتج يأتي من علامة تجارية معروفة مع ذاكرة وسائط حديثة وتصميم تبريد بثلاثة مراوح ومعالج رسومي متطور لكن يفتقر إلى المراجعات وتغيب عنه المواصفات التفصيلية ولا توجد معلومات كافية حول الأداء الفعلي",
+        "provider": "Gemini"
+      },
+      "product_id": "652116",
+      "gtin": null,
+      "store_original_price": null,
+      "status": "INSUFFICIENT_HISTORY",
+      "baseline": null,
+      "drop_percent": null,
+      "history_days": 0,
+      "previous_min": null,
+      "model": "GeForce RTX 5070",
       "evidence": {
         "historical_savings": {
           "amount_sar": null,
@@ -214,7 +484,19 @@
           "date": "2026-11-16 10:14:25"
         }
       ],
-      "analysis": null,
+      "analysis": {
+        "worth_alerting": false,
+        "reason": "غياب المواصفات التفصيلية وتقييمات المستخدمين وسجل الأسعار",
+        "assessment": {
+          "category": "إلكترونيات",
+          "normalized_name": "ماوس لاسلكي",
+          "overall": "هذا المنتج يأتي من علامة تجارية معروفة لكنه يعاني من غياب المعلومات التقنية الشاملة وتقييمات الاستخدام الواقعية إضافة إلى عدم توفر تفاصيل كافية حول الأداء الفعلي والمواصفات الداعمة مما يجعل اتخاذ قرار الشراء مبكرا غير مبرر في ظل نقص البيانات المتاحة",
+          "information_reliability": "المعلومات المتاحة محدودة؛ لا تتوفر مواصفات أو مراجعات كافية إلا ما ورد صراحة في بيانات المنتج",
+          "recommendation": "غياب المواصفات التفصيلية وتقييمات المستخدمين وسجل الأسعار"
+        },
+        "telegram_message": "هذا المنتج يأتي من علامة تجارية معروفة لكنه يعاني من غياب المعلومات التقنية الشاملة وتقييمات الاستخدام الواقعية إضافة إلى عدم توفر تفاصيل كافية حول الأداء الفعلي والمواصفات الداعمة مما يجعل اتخاذ قرار الشراء مبكرا غير مبرر في ظل نقص البيانات المتاحة",
+        "provider": "Gemini"
+      },
       "product_id": "542986",
       "gtin": null,
       "store_original_price": null,
