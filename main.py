@@ -4,6 +4,8 @@ import time
 import requests
 import json
 import uuid
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import quote_plus, urljoin, urlparse
 from bs4 import BeautifulSoup
@@ -31,7 +33,8 @@ REQUEST_HEADERS = [
     },
 ]
 
-TRANSIENT_STATUS = {408, 425, 429, 500, 502, 503, 504}
+TRANSIENT_STATUS = {408, 425, 500, 502, 503, 504}
+MAX_RETRY_WAIT = 12
 
 
 def _search_url_variants(store, query):
@@ -75,6 +78,44 @@ def _blocked_exception(exc):
     return response is not None and response.status_code in {401,403,429}
 
 
+def _retry_wait(value):
+    if not value:
+        return 0
+    if value.isdigit():
+        return int(value)
+    try:
+        target = parsedate_to_datetime(value)
+        if target.tzinfo is None:
+            target = target.replace(tzinfo=timezone.utc)
+        return max(0, (target - datetime.now(timezone.utc)).total_seconds())
+    except (TypeError, ValueError, OverflowError):
+        return 0
+
+
+def _fetch_search_page(session, url):
+    for attempt in range(3):
+        try:
+            response = session.get(url, headers=REQUEST_HEADERS[0], timeout=(5, 18))
+        except (requests.Timeout, requests.ConnectionError):
+            if attempt == 2:
+                raise
+            time.sleep(2 ** attempt)
+            continue
+        status = response.status_code
+        if status in {401, 403, 429}:
+            raise StoreReadError(f"Store refused requests: HTTP {status}", blocked=True)
+        if (status == 200 or status in TRANSIENT_STATUS) and _looks_like_challenge(response.text):
+            raise StoreReadError("Store challenge page; access protection respected", blocked=True)
+        if status not in TRANSIENT_STATUS:
+            return response
+        wait = _retry_wait(response.headers.get("Retry-After"))
+        if wait > MAX_RETRY_WAIT or (wait and attempt == 2):
+            raise StoreReadError(f"Store returned HTTP {status} and requested a cooldown", blocked=True)
+        if attempt == 2:
+            return response
+        time.sleep(max(wait, 3 * (2 ** attempt) + random.uniform(0, 1)))
+
+
 def fetch_store(store, query):
     if store not in STORES:
         raise ValueError("Store is not enabled for monitoring")
@@ -89,31 +130,12 @@ def fetch_store(store, query):
                 if url in visited:
                     continue
                 visited.add(url)
-                response=None
-                for attempt in range(2):
-                    try:
-                        response=session.get(url,headers=REQUEST_HEADERS[0],timeout=(5,18))
-                    except (requests.Timeout,requests.ConnectionError):
-                        if attempt:
-                            raise
-                        time.sleep(1)
-                        continue
-                    if response.status_code in {401,403}:
-                        raise StoreReadError(f"Store access denied: HTTP {response.status_code}",blocked=True)
-                    if response.status_code in TRANSIENT_STATUS and attempt==0:
-                        delay=response.headers.get("Retry-After","1")
-                        time.sleep(min(5,max(1,int(delay) if delay.isdigit() else 1)))
-                        continue
-                    break
+                response=_fetch_search_page(session,url)
                 if response.status_code==404:
                     if not items and variants:
                         pending.append(variants.pop(0))
                     continue
-                if response.status_code==429:
-                    raise StoreReadError("Store rate limited: HTTP 429",blocked=True)
                 response.raise_for_status()
-                if _looks_like_challenge(response.text):
-                    raise StoreReadError("Store challenge page; access protection respected",blocked=True)
                 remaining=MAX_PRODUCTS_PER_SEARCH-len(items)
                 parsed=parse_jsonld_products(response.text,response.url,store,limit=remaining)
                 if not parsed and store=="Jarir":

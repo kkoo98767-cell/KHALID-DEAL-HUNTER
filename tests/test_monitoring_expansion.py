@@ -71,9 +71,30 @@ class ExpandedMonitoringTests(unittest.TestCase):
 
     def test_failed_later_html_page_preserves_validated_first_page(self):
         html='<div data-component-type="s-search-result"><h2><a href="/dp/B000000001">Mouse One</a></h2><span class="a-price"><span class="a-offscreen">SAR 100</span></span></div><a rel="next" href="/s?k=mouse&page=2">Next</a>'
-        with patch.object(main.requests.Session,"get",side_effect=[response(html),requests.Timeout(),requests.Timeout()]),patch.object(main.time,"sleep"):
+        with patch.object(main.requests.Session,"get",side_effect=[response(html),requests.Timeout(),requests.Timeout(),requests.Timeout()]),patch.object(main.time,"sleep"):
             with self.assertRaises(main.StoreReadError) as error:main.fetch_store("Amazon.sa","mouse")
         self.assertEqual(len(error.exception.products),1)
+
+    def test_search_recovers_from_two_transient_503_responses(self):
+        session = Mock()
+        unavailable = response("Service unavailable", status=503)
+        recovered = response("Recovered")
+        session.get.side_effect = [unavailable, unavailable, recovered]
+        with patch.object(main.time, "sleep") as sleep:
+            self.assertIs(main._fetch_search_page(session, recovered.url), recovered)
+        self.assertEqual(session.get.call_count, 3)
+        self.assertGreater(sleep.call_args_list[1].args[0], sleep.call_args_list[0].args[0])
+
+    def test_retry_after_beyond_scan_budget_stops_the_store(self):
+        session = Mock()
+        session.get.return_value = response("Service unavailable", status=503)
+        session.get.return_value.headers["Retry-After"] = "120"
+        with patch.object(main.time, "sleep") as sleep:
+            with self.assertRaises(main.StoreReadError) as error:
+                main._fetch_search_page(session, session.get.return_value.url)
+        self.assertTrue(error.exception.blocked)
+        self.assertEqual(session.get.call_count, 1)
+        sleep.assert_not_called()
 
     def test_http_200_empty_interstitial_is_not_a_successful_store_scan(self):
         with patch.object(main.requests.Session,"get",return_value=response('<html>Temporary page</html>')) as get,patch.object(main.time,"sleep"):

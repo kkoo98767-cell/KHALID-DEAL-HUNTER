@@ -218,7 +218,7 @@ class ReliabilityTests(unittest.TestCase):
     def test_timeout_bounded(self):
         with patch.object(requests.Session,"get",side_effect=requests.Timeout) as get,patch.object(main.time,"sleep"):
             with self.assertRaises(requests.Timeout):main.fetch_store("Amazon.sa","mouse")
-            self.assertEqual(get.call_count,2)
+            self.assertEqual(get.call_count,3)
 
     def test_access_denial_stops(self):
         with patch.object(requests.Session,"get",return_value=Mock(status_code=403)) as get:
