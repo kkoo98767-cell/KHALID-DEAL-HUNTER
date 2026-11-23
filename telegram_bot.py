@@ -97,8 +97,10 @@ def send_scan_summary(run_number=None, products_seen=0, new_products=0,
     """Send an end-of-run archive report so a successful workflow cannot hide an empty scan."""
     stats = archive_stats or {}
     run_text = f"\nرقم التشغيل: #{run_number}" if run_number else ""
+    coverage = {"COMPLETE": "مكتمل", "PARTIAL": "جزئي؛ تعذر إكمال بعض المتاجر", "UNAVAILABLE": "تعذر جمع أسعار جديدة"}.get(metrics.get("coverage_status"), "راجع تفاصيل المتاجر")
     message = (
         "📊 تقرير أرشيف KHALID DEAL HUNTER\n\n"
+        f"حالة الفحص: {coverage}\n"
         f"🧾 منتجات تم فحصها في هذا التشغيل: {products_seen}\n"
         f"🆕 منتجات جديدة أضيفت للأرشيف: {new_products}\n"
         f"📚 إجمالي المنتجات المؤرشفة: {stats.get('products', 0)}\n"

@@ -15,6 +15,8 @@ from config import (STORES, MAX_PRODUCTS_PER_SEARCH, MAX_SEARCH_PAGES, MAX_PRODU
 from discovery import choose_search, choose_queries
 from scrapers.common import parse_jsonld_products, canonical_url, product_identifier, reliable_title
 from database import save_and_evaluate, connect, was_recently_alerted, record_alert, get_archive_stats, checkpoint
+from database import store_cooldown, set_store_cooldown
+from config import TRACKED_JARIR_PRODUCTS
 from ai_analyzer import analyze_deal, fallback_result
 from telegram_bot import send_deal, send_startup_status, send_ai_test_status, send_scan_summary
 
@@ -189,8 +191,15 @@ def advertised_drop(item):
 
 
 def collect_store(store,queries=None):
+    if store not in STORES:
+        raise ValueError("Store is not enabled for monitoring")
+    cooldown = store_cooldown(store)
+    if cooldown and cooldown["retry_after"] > time.time():
+        return [], dict(products=0, queries_checked=0, queries_requested=0,
+                        error="StoreCooldown", query_errors=0, conflicting_products=0,
+                        retry_after=cooldown["retry_after"], reason=cooldown["reason"], blocked=True)
     queries=queries or choose_queries(store)
-    items=[];errors=[];checked=0
+    items=[];errors=[];checked=0;blocked=False
     for query in queries:
         if len({canonical_url(p["url"]) for p in items})>=MAX_PRODUCTS_PER_STORE:
             break
@@ -205,23 +214,27 @@ def collect_store(store,queries=None):
             items.extend(getattr(exc,"products",[]))
             errors.append(type(exc).__name__)
             print(f"Store/search failed: {store} / {query}: {type(exc).__name__}: {exc}")
-            if _blocked_exception(exc) or len(errors)>=2:
+            blocked = _blocked_exception(exc)
+            if blocked or len(errors)>=2:
                 break
         if checked<len(queries):
             time.sleep(REQUEST_GAP_SECONDS)
     items,conflicts=merge_products(items)
     items.sort(key=lambda p:advertised_drop(p),reverse=True)
-    return items[:MAX_PRODUCTS_PER_STORE],dict(products=min(len(items),MAX_PRODUCTS_PER_STORE),queries_checked=checked,queries_requested=len(queries),error=errors[0] if errors else None,query_errors=len(errors),conflicting_products=conflicts)
+    retry_after = time.time() + (21600 if blocked else 1800) if errors else 0
+    set_store_cooldown(store, retry_after, errors[0] if errors else "")
+    return items[:MAX_PRODUCTS_PER_STORE],dict(products=min(len(items),MAX_PRODUCTS_PER_STORE),queries_checked=checked,queries_requested=len(queries),error=errors[0] if errors else None,query_errors=len(errors),conflicting_products=conflicts,blocked=blocked,retry_after=retry_after)
 
 
 def refresh_tracked(store,seen):
     """Revisit more prior deal candidates, using Jarir's public batch catalog."""
     if not TRACKED_PRODUCTS_PER_STORE:
         return []
+    refresh_limit = TRACKED_JARIR_PRODUCTS if store == "Jarir" else TRACKED_PRODUCTS_PER_STORE
     db=connect()
-    rows=db.execute("SELECT p.url,p.product_id,p.title FROM products p JOIN price_history h ON h.id=(SELECT MAX(id) FROM price_history WHERE product_key=p.product_key) WHERE p.store=? ORDER BY CASE WHEN h.store_original_price>0 AND (h.store_original_price-h.price)/h.store_original_price*100>=? THEN 0 ELSE 1 END,p.last_seen LIMIT ?",(store,MIN_DROP_PERCENT,TRACKED_PRODUCTS_PER_STORE*3)).fetchall()
+    rows=db.execute("SELECT p.url,p.product_id,p.title FROM products p JOIN price_history h ON h.id=(SELECT MAX(id) FROM price_history WHERE product_key=p.product_key) WHERE p.store=? ORDER BY CASE WHEN h.store_original_price>0 AND (h.store_original_price-h.price)/h.store_original_price*100>=? THEN 0 ELSE 1 END,p.last_seen LIMIT ?",(store,MIN_DROP_PERCENT,refresh_limit*3)).fetchall()
     db.close()
-    rows=[(url,pid or product_identifier(url)) for url,pid,title in rows if canonical_url(url) not in seen and reliable_title(title) and urlparse(url).hostname==urlparse(STORES[store]).hostname][:TRACKED_PRODUCTS_PER_STORE]
+    rows=[(url,pid or product_identifier(url)) for url,pid,title in rows if canonical_url(url) not in seen and reliable_title(title) and urlparse(url).hostname==urlparse(STORES[store]).hostname][:refresh_limit]
     if store=="Jarir":
         import re
         from scrapers.jarir import fetch_catalog
@@ -336,22 +349,28 @@ def main():
     from dashboard import snapshot,export
     sufficient=snapshot()["stats"]["sufficient"]
     scan_result=dict(scan_number=os.getenv("GITHUB_RUN_NUMBER"),stores=store_results,products=total,new_products=newly_archived,potential_deals=potential,verified_deals=verified,sufficient_history=sufficient,store_errors=failures,empty_stores=empty_stores,telegram_errors=telegram_errors,processing_errors=processing_errors,alerts_sent=alerts,ai_providers=sorted(providers),archive=archive_stats)
+    scan_result["status"] = "UNAVAILABLE" if not total else "PARTIAL" if failures or empty_stores else "COMPLETE"
+    coverage_status = scan_result["status"]
     Path("scan-results.json").write_text(json.dumps(scan_result,ensure_ascii=False,indent=2),encoding="utf-8")
     try:
         summary_ai=analyze_deal(dict(title="ملخص نشاط مراقبة الأسعار",status="SCAN_SUMMARY",description=json.dumps(scan_result,ensure_ascii=False)))
     except Exception:
         summary_ai=dict(telegram_message="تم حفظ نتائج الفحص الفعلية؛ التعليق الآلي غير متاح حالياً.")
     try:
-        send_scan_summary(run_number=os.getenv("GITHUB_RUN_NUMBER"),products_seen=total,new_products=newly_archived,failures=failures,empty_stores=empty_stores,archive_stats=archive_stats,stores_checked=len(stores),successful_stores=sum(bool(s.get("observed_products")) for s in store_results.values()),potential_deals=potential,verified_deals=verified,sufficient_history=sufficient,providers=", ".join(sorted(providers)) or "غير مستخدم",comment=summary_ai.get("telegram_message",""))
+        send_scan_summary(run_number=os.getenv("GITHUB_RUN_NUMBER"),products_seen=total,new_products=newly_archived,failures=failures,empty_stores=empty_stores,archive_stats=archive_stats,coverage_status=coverage_status,stores_checked=len(stores),successful_stores=sum(bool(s.get("observed_products")) for s in store_results.values()),potential_deals=potential,verified_deals=verified,sufficient_history=sufficient,providers=", ".join(sorted(providers)) or "غير مستخدم",comment=summary_ai.get("telegram_message",""))
         print("Telegram archive summary sent successfully.")
     except Exception as exc:
         telegram_errors+=1
         print(f"Telegram archive summary failed: {type(exc).__name__}")
     scan_result["telegram_errors"]=telegram_errors
+    if telegram_errors or processing_errors:
+        scan_result["status"] = "FAILED"
     Path("scan-results.json").write_text(json.dumps(scan_result,ensure_ascii=False,indent=2),encoding="utf-8")
     export();checkpoint()
     print("Finished. "+json.dumps(scan_result,ensure_ascii=False))
-    if failures or telegram_errors or empty_stores or processing_errors or not total:
+    if failures or empty_stores:
+        print(f"::warning::Partial store coverage: store_errors={failures}, empty_stores={empty_stores}. See scan-results.json for source details.")
+    if telegram_errors or processing_errors or not total:
         raise RuntimeError(f"Degraded scan: store_errors={failures},empty_stores={empty_stores},telegram_errors={telegram_errors},archive_errors={processing_errors}")
 
 

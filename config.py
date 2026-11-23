@@ -52,5 +52,6 @@ MAX_PRODUCTS_PER_SEARCH = max(1, min(100, int(os.getenv("MAX_PRODUCTS_PER_SEARCH
 MAX_PRODUCTS_PER_STORE = max(1, min(400, int(os.getenv("MAX_PRODUCTS_PER_STORE", "160"))))
 MAX_SEARCH_PAGES = max(1, min(5, int(os.getenv("MAX_SEARCH_PAGES", "3"))))
 TRACKED_PRODUCTS_PER_STORE = max(0, min(30, int(os.getenv("TRACKED_PRODUCTS_PER_STORE", "12"))))
+TRACKED_JARIR_PRODUCTS = max(0, min(160, int(os.getenv("TRACKED_JARIR_PRODUCTS", "80"))))
 REQUEST_GAP_SECONDS = max(0.0, min(5.0, float(os.getenv("REQUEST_GAP_SECONDS", "0.75"))))
 REQUEST_TIMEOUT = 25

@@ -166,6 +166,20 @@ class ReliabilityTests(unittest.TestCase):
         stale=[(200,(datetime.now(timezone.utc)-timedelta(days=30+i)).strftime("%Y-%m-%d")) for i in range(10)]
         self.assertEqual(database.historical_assessment(stale,100)["status"],"INSUFFICIENT_HISTORY")
 
+    def test_partial_scan_publishes_explicit_warning_with_healthy_archive(self):
+        candidate = dict(title="Wireless Mouse", store="Jarir", url="https://www.jarir.com/sa-en/mouse-123456.html", price=100)
+        def collect(store):
+            report = dict(error="StoreCooldown" if store == "Amazon.sa" else None, conflicting_products=0, products=0 if store == "Amazon.sa" else 1)
+            return ([] if store == "Amazon.sa" else [candidate]), report
+        fallback = dict(provider="Fallback", telegram_message="التقييم غير متاح")
+        with patch.object(main, "collect_store", side_effect=collect), patch.object(main, "refresh_tracked", return_value=[]), patch.object(main, "analyze_deal", return_value=fallback), patch.object(main, "send_startup_status"), patch.object(main, "send_scan_summary"), patch("dashboard.export"), patch.object(main, "Path") as path, patch("ai_analyzer.evaluate_archive_backlog", return_value=set()):
+            main.main()
+        report = json.loads(path.return_value.write_text.call_args.args[0])
+        self.assertEqual(report["status"], "PARTIAL")
+        self.assertEqual(report["store_errors"], 1)
+        self.assertEqual(report["telegram_errors"], 0)
+        self.assertEqual(database.get_archive_stats()["products"], 1)
+
     def test_same_product_different_names_do_not_merge(self):
         first=self.item();second=self.item();second["url"]="https://www.noon.com/saudi-en/test/N456/p/"
         database.save_and_evaluate(first);database.save_and_evaluate(second)

@@ -21,10 +21,46 @@ def response(html,url="https://www.amazon.sa/s?k=mouse",status=200):
 
 
 class ExpandedMonitoringTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.db_patch = patch.object(database, "DB_PATH", str(Path(self.temp.name) / "db.sqlite"))
+        self.db_patch.start()
+        self.addCleanup(self.db_patch.stop)
+
+    def test_blocked_store_cooldown_survives_new_collection(self):
+        with patch.object(main, "fetch_store", side_effect=main.StoreReadError("challenge", blocked=True)), patch.object(main.time, "sleep"):
+            main.collect_store("Amazon.sa", ["mouse"])
+        with patch.object(main, "fetch_store") as fetch:
+            products, report = main.collect_store("Amazon.sa", ["keyboard"])
+        fetch.assert_not_called()
+        self.assertEqual(products, [])
+        self.assertEqual(report["error"], "StoreCooldown")
+        self.assertGreater(report["retry_after"], main.time.time())
+
+    def test_expired_cooldown_allows_successful_probe(self):
+        database.set_store_cooldown("Amazon.sa", main.time.time() - 1, "challenge")
+        with patch.object(main, "fetch_store", return_value=[item("B000000001")]):
+            products, report = main.collect_store("Amazon.sa", ["mouse"])
+        self.assertEqual(len(products), 1)
+        self.assertIsNone(report["error"])
+        self.assertEqual(database.store_cooldown("Amazon.sa")["retry_after"], 0)
+
     def test_only_amazon_and_jarir_are_active(self):
         self.assertEqual(set(STORES),{"Amazon.sa","Jarir"})
         with self.assertRaises(ValueError):main.fetch_store("Noon","mouse")
         with self.assertRaises(ValueError):discovery.choose_search("Extra")
+
+    def test_jarir_revisits_eighty_distinct_products_in_bounded_batch(self):
+        db = Mock()
+        db.execute.return_value.fetchall.return_value = [
+            (f"https://www.jarir.com/sa-en/mouse-{100000+i}.html", str(100000+i), "Wireless Mouse")
+            for i in range(100)
+        ]
+        with patch.object(main, "connect", return_value=db), patch("scrapers.jarir.fetch_catalog", return_value=[]) as fetch:
+            main.refresh_tracked("Jarir", set())
+        self.assertEqual(len(fetch.call_args.args[1]), 80)
+        self.assertEqual(len(set(fetch.call_args.args[1])), 80)
 
     def test_four_queries_collect_more_than_old_twenty_cap(self):
         batches=[[item(f"B{i*30+j:09d}") for j in range(30)] for i in range(4)]

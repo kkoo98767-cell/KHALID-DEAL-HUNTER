@@ -60,6 +60,7 @@ def connect():
     db.execute("CREATE TABLE IF NOT EXISTS ai_cache (cache_key TEXT PRIMARY KEY, result TEXT NOT NULL, created_at TEXT DEFAULT CURRENT_TIMESTAMP)")
     db.execute("CREATE TABLE IF NOT EXISTS discovery_history (id INTEGER PRIMARY KEY, store TEXT, query TEXT, searched_at TEXT DEFAULT CURRENT_TIMESTAMP)")
     db.execute("CREATE TABLE IF NOT EXISTS product_aliases (canonical_url TEXT PRIMARY KEY, product_key TEXT NOT NULL)")
+    db.execute("CREATE TABLE IF NOT EXISTS store_health (store TEXT PRIMARY KEY, retry_after REAL NOT NULL, reason TEXT NOT NULL)")
     if db.execute("PRAGMA user_version").fetchone()[0] < 5:
         for key,url in db.execute("SELECT product_key,url FROM products").fetchall():
             db.execute("INSERT OR IGNORE INTO product_aliases VALUES(?,?)", (canonical_url(url),key))
@@ -67,6 +68,24 @@ def connect():
         db.execute("PRAGMA user_version=5")
     db.commit()
     return db
+
+
+def store_cooldown(store):
+    db = connect()
+    try:
+        row = db.execute("SELECT retry_after,reason FROM store_health WHERE store=?", (store,)).fetchone()
+    finally:
+        db.close()
+    return dict(retry_after=row[0], reason=row[1]) if row else None
+
+
+def set_store_cooldown(store, retry_after, reason):
+    db = connect()
+    try:
+        with db:
+            db.execute("INSERT OR REPLACE INTO store_health VALUES(?,?,?)", (store, retry_after, reason))
+    finally:
+        db.close()
 
 
 def _product_key(item):
