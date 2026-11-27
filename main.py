@@ -14,11 +14,11 @@ from config import (STORES, MAX_PRODUCTS_PER_SEARCH, MAX_SEARCH_PAGES, MAX_PRODU
                     QUERIES_PER_STORE, TRACKED_PRODUCTS_PER_STORE, REQUEST_GAP_SECONDS, MIN_DROP_PERCENT)
 from discovery import choose_search, choose_queries
 from scrapers.common import parse_jsonld_products, canonical_url, product_identifier, reliable_title
-from database import save_and_evaluate, connect, was_recently_alerted, record_alert, get_archive_stats, checkpoint
+from database import save_and_evaluate, connect, was_recently_alerted, record_alerts, get_archive_stats, checkpoint
 from database import store_cooldown, set_store_cooldown
 from config import TRACKED_JARIR_PRODUCTS
 from ai_analyzer import analyze_deal, fallback_result
-from telegram_bot import send_deal, send_startup_status, send_ai_test_status, send_scan_summary
+from telegram_bot import send_deal_pair, send_startup_status, send_ai_test_status, send_scan_summary
 
 REQUEST_HEADERS = [
     {
@@ -268,6 +268,18 @@ def refresh_tracked(store,seen):
     return merge_products(items)[0]
 
 
+def balanced_pairs(candidates, unverified_limit):
+    def eligible(store):
+        potential_count = 0
+        for item in candidates[store]:
+            if item.get("status") == "POTENTIAL_DEAL":
+                if potential_count >= unverified_limit // 2:
+                    continue
+                potential_count += 1
+            yield item
+    return zip(eligible("Amazon.sa"), eligible("Jarir"))
+
+
 def main():
     if os.getenv("AI_PROVIDER_TEST","none").strip().lower() in {"gemini","groq"}:
         from ai_connection_test import main as provider_check
@@ -321,7 +333,7 @@ def main():
             store_results[store]=dict(products=0,error=type(exc).__name__)
             print(f"Store failed: {store}: {type(exc).__name__}: {exc}")
     archived.sort(key=lambda p:(p.get("status")=="VERIFIED_DEAL",p.get("status")=="POTENTIAL_DEAL",advertised_drop(p)),reverse=True)
-    unverified_alerts=0
+    candidates = {store: [] for store in STORES}
     alert_limit=max(0,int(os.getenv("MAX_UNVERIFIED_ALERTS","12")))
     for item in archived:
         try:
@@ -335,17 +347,18 @@ def main():
         should_notify=item.get("status") in {"POTENTIAL_DEAL","VERIFIED_DEAL"} or (prior and item.get("status")!=prior[0]) or (notify_new and item.get("_is_new_product"))
         if not should_notify or was_recently_alerted(item):
             continue
-        if item.get("status")=="POTENTIAL_DEAL" and unverified_alerts>=alert_limit:
-            continue
         item.update(ai_provider=ai_result.get("provider","Fallback"),ai_reason=ai_result.get("reason",""),ai_message=ai_result.get("telegram_message",""))
+        candidates[item["store"]].append(item)
+    pairs_sent = 0
+    for amazon, jarir in balanced_pairs(candidates, alert_limit):
         try:
-            send_deal(item);record_alert(item)
-            alerts+=1
-            unverified_alerts+=item.get("status")=="POTENTIAL_DEAL"
-            print(f"TELEGRAM ALERT SENT: {item['title']}")
+            send_deal_pair(amazon, jarir)
+            record_alerts((amazon, jarir))
+            alerts += 2
+            pairs_sent += 1
         except Exception as exc:
-            telegram_errors+=1
-            print(f"TELEGRAM SEND FAILED: {type(exc).__name__}")
+            telegram_errors += 1
+            print(f"Paired alert failed: {type(exc).__name__}")
     from ai_analyzer import evaluate_archive_backlog
     try:
         providers.update(evaluate_archive_backlog())
@@ -354,7 +367,7 @@ def main():
     archive_stats=get_archive_stats()
     from dashboard import snapshot,export
     sufficient=snapshot()["stats"]["sufficient"]
-    scan_result=dict(scan_number=os.getenv("GITHUB_RUN_NUMBER"),stores=store_results,products=total,new_products=newly_archived,potential_deals=potential,verified_deals=verified,sufficient_history=sufficient,store_errors=failures,empty_stores=empty_stores,telegram_errors=telegram_errors,processing_errors=processing_errors,alerts_sent=alerts,ai_providers=sorted(providers),archive=archive_stats)
+    scan_result=dict(scan_number=os.getenv("GITHUB_RUN_NUMBER"),stores=store_results,products=total,new_products=newly_archived,potential_deals=potential,verified_deals=verified,sufficient_history=sufficient,store_errors=failures,empty_stores=empty_stores,telegram_errors=telegram_errors,processing_errors=processing_errors,alerts_sent=alerts,pairs_sent=pairs_sent,eligible_by_store={k: len(v) for k,v in candidates.items()},ai_providers=sorted(providers),archive=archive_stats)
     scan_result["status"] = "UNAVAILABLE" if not total else "PARTIAL" if failures or empty_stores else "COMPLETE"
     coverage_status = scan_result["status"]
     Path("scan-results.json").write_text(json.dumps(scan_result,ensure_ascii=False,indent=2),encoding="utf-8")
@@ -363,7 +376,7 @@ def main():
     except Exception:
         summary_ai=dict(telegram_message="تم حفظ نتائج الفحص الفعلية؛ التعليق الآلي غير متاح حالياً.")
     try:
-        send_scan_summary(run_number=os.getenv("GITHUB_RUN_NUMBER"),products_seen=total,new_products=newly_archived,failures=failures,empty_stores=empty_stores,archive_stats=archive_stats,coverage_status=coverage_status,stores_checked=len(stores),successful_stores=sum(bool(s.get("observed_products")) for s in store_results.values()),potential_deals=potential,verified_deals=verified,sufficient_history=sufficient,providers=", ".join(sorted(providers)) or "غير مستخدم",comment=summary_ai.get("telegram_message",""))
+        send_scan_summary(run_number=os.getenv("GITHUB_RUN_NUMBER"),products_seen=total,pairs_sent=pairs_sent,eligible_by_store=scan_result["eligible_by_store"],new_products=newly_archived,failures=failures,empty_stores=empty_stores,archive_stats=archive_stats,coverage_status=coverage_status,stores_checked=len(stores),successful_stores=sum(bool(s.get("observed_products")) for s in store_results.values()),potential_deals=potential,verified_deals=verified,sufficient_history=sufficient,providers=", ".join(sorted(providers)) or "غير مستخدم",comment=summary_ai.get("telegram_message",""))
         print("Telegram archive summary sent successfully.")
     except Exception as exc:
         telegram_errors+=1

@@ -90,7 +90,7 @@ def send_ai_test_status(provider, success, detail="", run_number=None):
 def format_deal(item):
     labels = {"VERIFIED_DEAL": "✅ عرض موثوق — تم التحقق من قاعدة البيانات", "POTENTIAL_DEAL": "⚠️ انخفاض محتمل غير مؤكد؛ التاريخ غير كافٍ", "NEW_PRODUCT": "🆕 منتج جديد؛ بدأ تسجيل تاريخه السعري", "PRICE_INCREASED": "📈 ارتفع السعر ولم يعد يحقق شروط العرض", "PRICE_NORMAL": "📊 السعر ضمن النطاق المعتاد", "INSUFFICIENT_HISTORY": "⚠️ التاريخ السعري غير كافٍ", "DATA_ANOMALY": "⚠️ قراءة سعر غير اعتيادية تحتاج مراجعة"}
     status = labels.get(item.get("status"), labels["INSUFFICIENT_HISTORY"])
-    store = {"Noon":"نون", "Extra":"إكسترا", "Jarir":"جرير"}.get(item["store"], item["store"])
+    store = {"Amazon.sa":"أمازون السعودية", "Noon":"نون", "Extra":"إكسترا", "Jarir":"جرير"}.get(item["store"], item["store"])
     message = f"{status}\n\n📦 المنتج: {item['title']}\n🏬 المتجر: {store}\n💰 السعر الحالي: {item['price']:.2f} ريال"
     if item.get("baseline") is not None:
         message += f"\n📊 خط الأساس التاريخي: {item['baseline']:.2f} ريال\n📉 الانخفاض الفعلي: {item['drop_percent']}٪"
@@ -101,6 +101,10 @@ def format_deal(item):
 
 def send_deal(item):
     return _send_text(format_deal(item))
+
+
+def send_deal_pair(amazon, jarir):
+    return _send_text(format_deal(amazon) + "\n\n━━━━━━━━━━\n\n" + format_deal(jarir))
 
 
 def send_scan_summary(run_number=None, products_seen=0, new_products=0,
@@ -128,6 +132,10 @@ def send_scan_summary(run_number=None, products_seen=0, new_products=0,
         f"مزود التحليل: {metrics.get('providers', 'غير متاح')}"
         f"{run_text}"
     )
+    if "pairs_sent" in metrics:
+        message += f"\nرسائل العروض المشتركة: {metrics['pairs_sent']} (منتج من كل متجر في الرسالة)"
+        for store, count in metrics["eligible_by_store"].items():
+            message += f"\n{store}: {count} منتجات مؤهلة للتنبيه"
     if metrics.get("comment"):
         message += "\n\n" + metrics["comment"]
     return _send_text(message)

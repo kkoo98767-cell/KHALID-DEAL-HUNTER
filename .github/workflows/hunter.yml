@@ -4,11 +4,10 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - "data/deals.db"
-      - "data/dashboard.json"
+    paths:
+      - ".github/workflows/hunter.yml"
   schedule:
-    - cron: "7,22,37,52 * * * *"
+    - cron: "0 3,15 * * *"
   workflow_dispatch:
 
 permissions:

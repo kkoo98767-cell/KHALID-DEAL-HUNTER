@@ -35,3 +35,19 @@ class AmazonDeliveryTests(unittest.TestCase):
             self.assertTrue(_send_text("test")["ok"])
         sleep.assert_called_once_with(2)
         self.assertEqual(post.call_count, 2)
+
+    def test_balanced_alerts_require_both_stores(self):
+        from main import balanced_pairs
+        discounts = [{"status": "POTENTIAL_DEAL"}] * 10
+        self.assertEqual(list(balanced_pairs({"Amazon.sa": [], "Jarir": discounts}, 12)), [])
+        pairs = list(balanced_pairs({"Amazon.sa": discounts, "Jarir": discounts}, 12))
+        self.assertEqual(len(pairs), 6)
+
+    def test_pair_is_one_telegram_message_with_both_links(self):
+        from telegram_bot import send_deal_pair
+        amazon = dict(store="Amazon.sa", url=self.url, title="Gaming mouse", price=75)
+        jarir = dict(amazon, store="Jarir", url="https://www.jarir.com/mouse.html")
+        with patch("telegram_bot._send_text") as send:
+            send_deal_pair(amazon, jarir)
+        send.assert_called_once()
+        self.assertTrue(all(item["url"] in send.call_args.args[0] for item in (amazon, jarir)))

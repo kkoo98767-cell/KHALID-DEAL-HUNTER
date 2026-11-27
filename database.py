@@ -262,10 +262,15 @@ def was_recently_alerted(item, cooldown_hours=72):
 
 
 def record_alert(item):
+    record_alerts([item])
+
+
+def record_alerts(items):
     db = connect()
     with db:
-        db.execute("INSERT INTO alert_history(product_key,price,status) VALUES(?,?,?)", (_product_key(item),item["price"],item.get("status")))
-        db.execute("INSERT INTO sent_alerts(product_key,last_price,sent_at) VALUES(?,?,CURRENT_TIMESTAMP) ON CONFLICT(product_key) DO UPDATE SET last_price=excluded.last_price,sent_at=CURRENT_TIMESTAMP", (_product_key(item),item["price"]))
+        for item in items:
+            db.execute("INSERT INTO alert_history(product_key,price,status) VALUES(?,?,?)", (_product_key(item),item["price"],item.get("status")))
+            db.execute("INSERT INTO sent_alerts(product_key,last_price,sent_at) VALUES(?,?,CURRENT_TIMESTAMP) ON CONFLICT(product_key) DO UPDATE SET last_price=excluded.last_price,sent_at=CURRENT_TIMESTAMP", (_product_key(item),item["price"]))
     db.close()
 
 
