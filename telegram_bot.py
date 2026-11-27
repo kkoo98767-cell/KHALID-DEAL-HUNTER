@@ -1,4 +1,5 @@
 import random
+import time
 import requests
 
 from config import TG_TOKEN, TG_CHAT, STORES
@@ -15,11 +16,21 @@ OPENINGS = [
 def _send_text(message, timeout=20):
     if not TG_TOKEN or not TG_CHAT:
         raise RuntimeError("Telegram secrets are missing: TG_TOKEN or TG_CHAT.")
-    response = requests.post(
-        f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage",
-        data={"chat_id": TG_CHAT, "text": message, "disable_web_page_preview": False},
-        timeout=timeout,
-    )
+    for attempt in range(2):
+        response = requests.post(
+            f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage",
+            data={"chat_id": TG_CHAT, "text": message, "disable_web_page_preview": False},
+            timeout=timeout,
+        )
+        if response.status_code != 429 or attempt:
+            break
+        try:
+            delay = response.json()["parameters"]["retry_after"]
+        except (ValueError, KeyError, TypeError):
+            break
+        if type(delay) is not int or not 0 <= delay <= 60:
+            break
+        time.sleep(delay)
     if not response.ok:
         raise RuntimeError(f"Telegram HTTP {response.status_code}")
     try:

@@ -222,8 +222,9 @@ def collect_store(store,queries=None):
     items,conflicts=merge_products(items)
     items.sort(key=lambda p:advertised_drop(p),reverse=True)
     retry_after = time.time() + (21600 if blocked else 1800) if errors else 0
-    set_store_cooldown(store, retry_after, errors[0] if errors else "")
-    return items[:MAX_PRODUCTS_PER_STORE],dict(products=min(len(items),MAX_PRODUCTS_PER_STORE),queries_checked=checked,queries_requested=len(queries),error=errors[0] if errors else None,query_errors=len(errors),conflicting_products=conflicts,blocked=blocked,retry_after=retry_after)
+    reason = errors[-1] if blocked else next(iter(errors), None)
+    set_store_cooldown(store, retry_after, reason or "")
+    return items[:MAX_PRODUCTS_PER_STORE],dict(products=min(len(items),MAX_PRODUCTS_PER_STORE),queries_checked=checked,queries_requested=len(queries),error=reason,query_errors=len(errors),conflicting_products=conflicts,blocked=blocked,retry_after=retry_after)
 
 
 def refresh_tracked(store,seen):
@@ -254,6 +255,7 @@ def refresh_tracked(store,seen):
         try:
             response=requests.get(url,headers=REQUEST_HEADERS[0],timeout=(5,12))
             if response.status_code in {401,403,429} or _looks_like_challenge(response.text):
+                set_store_cooldown(store, time.time() + 21600, "TrackedAccessDenied")
                 print(f"{store}: tracked refresh blocked; stopped")
                 break
             response.raise_for_status()
@@ -285,7 +287,11 @@ def main():
     for store in stores:
         try:
             items,report=collect_store(store)
-            if items and report["error"] is None:
+            refresh_after_empty_search = (
+                store == "Amazon.sa" and report["error"] == "EmptyStoreResults"
+                and not report.get("blocked")
+            )
+            if (items and report["error"] is None) or refresh_after_empty_search:
                 items.extend(refresh_tracked(store,{canonical_url(p["url"]) for p in items}))
             items,conflicts=merge_products(items)
             report["conflicting_products"]+=conflicts
