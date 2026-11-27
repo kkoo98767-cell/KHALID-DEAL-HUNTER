@@ -198,12 +198,20 @@ def _products_from_json(soup, base_url, store, limit):
                 picture=image_url(obj.get("image") or obj.get("image_url") or obj.get("imageUrl"),base_url)
                 if picture:
                     item["image_url"]=picture
-                for field, keys in {"brand": ("brand",), "category": ("category",), "product_id": ("sku", "productId", "product_id"), "gtin": ("gtin13", "gtin", "gtin14")}.items():
+                for field, keys in {"brand": ("brand",), "category": ("category",), "product_id": ("sku", "productId", "product_id"), "model": ("mpn","model"), "capacity": ("capacity",), "color": ("color",), "size": ("size",), "gtin": ("gtin13", "gtin", "gtin14","gtin12","gtin8")}.items():
                     val = next((obj.get(k) for k in keys if obj.get(k)), None)
                     if isinstance(val, dict):
                         val = val.get("name")
                     if isinstance(val, (str,int)):
                         item[field] = str(val)
+                condition = str(offer.get("itemCondition", "")).split("/")[-1]
+                if condition in ("NewCondition", "UsedCondition", "RefurbishedCondition"):
+                    item["condition"] = condition.removesuffix("Condition").lower()
+                details = offer.get("shippingDetails")
+                if isinstance(details, dict) and not any(k in details for k in ("shippingDestination", "eligibleTransactionVolume", "doesNotShip")):
+                    rate = details.get("shippingRate")
+                    if isinstance(rate, dict) and rate.get("currency") == "SAR" and re.fullmatch(r"\d+(?:\.\d{1,2})?", str(rate.get("value"))):
+                        item["shipping_sar"] = float(rate["value"])
                 if isinstance(obj.get("description"),str):
                     item["description"] = obj["description"][:2000]
                 specs = obj.get("additionalProperty")
@@ -413,8 +421,8 @@ def _merge_products(groups, limit):
                 existing=by_url[key]
                 agrees=abs(existing["price"]-item["price"])<=.01
                 if agrees:
-                    for field in ("rating","reviews","image_url","brand","category","product_id","gtin"):
-                        if not existing.get(field) and item.get(field):
+                    for field in ("rating","reviews","image_url","brand","category","product_id","gtin","shipping_sar","model","capacity","size","color","condition"):
+                        if existing.get(field) is None and item.get(field) is not None:
                             existing[field]=item[field]
                     if existing.get("original_price") and item.get("original_price") and abs(existing["original_price"]-item["original_price"])>.01:
                         existing["original_price"]=None

@@ -87,13 +87,16 @@ def snapshot():
             original=offer.get("original_price")
             stamp=offer["seen_at"]
             validated=True
+        shipping = offer.get("shipping_sar") if isinstance(offer,dict) and offer.get("seen_at")==stamp and offer.get("price")==price else None
         previous=[(p,d) for p,d,_,valid,_ in history[:-1] if valid]
         assessment=historical_assessment(previous,price)
         if assessment["status"]=="INSUFFICIENT_HISTORY" and original and original>price and (original-price)/original*100>=MIN_DROP_PERCENT:
             assessment["status"]="POTENTIAL_DEAL"
         analysis=_metadata(evaluation) or None
-        product=dict(id=key,store=store,title=title,url=canonical_url(url),brand=brand,category=category,price=price,currency="SAR",last_seen=stamp,first_seen=min(row[-2] for row in members),history=[dict(price=p,date=d,validated=valid) for p,d,_,valid,_ in history[-90:]],analysis=analysis,product_id=pid or identity[1],gtin=gtin,store_original_price=original,latest_validated=validated,data_sources=meta.get("data_sources",[]),image_url=_image_url(meta.get("image_url")),**assessment)
+        product=dict(shipping_sar=shipping,id=key,store=store,title=title,url=canonical_url(url),brand=brand,category=category,price=price,currency="SAR",last_seen=stamp,first_seen=min(row[-2] for row in members),history=[dict(price=p,date=d,validated=valid) for p,d,_,valid,_ in history[-90:]],analysis=analysis,product_id=pid or identity[1],gtin=gtin,store_original_price=original,latest_validated=validated,data_sources=meta.get("data_sources",[]),image_url=_image_url(meta.get("image_url")),**assessment)
         product.update({k:meta[k] for k in ("model","color","capacity","condition","size") if meta.get(k)})
+        recent_prices = [p for p,d,_,valid,_ in history if valid and age_hours(d)<=24*30]
+        product["lowest_observed_30d"] = min(recent_prices) if recent_prices else None
         product["history_summary"]={"observations":len(history),"validated_observations":sum(v[3] for v in history),"observed_days":assessment["history_days"],"coverage_days":assessment["history_coverage_days"],"required_days":assessment["history_required_days"],"required_coverage_days":assessment["history_required_coverage_days"],"sufficient":assessment["baseline"] is not None,"latest_validated":validated,"first_observed":history[0][1],"last_observed":stamp}
         products.append(product)
     by_gtin=defaultdict(list)
@@ -126,7 +129,9 @@ def snapshot():
     except (ValueError,OSError):
         scan=None
     store_stats={store:{"products":sum(p["store"]==store for p in products),"featured_25":sum(p["store"]==store and p["featured"] for p in products),"verified":sum(p["store"]==store and p["evidence"]["verified_deal"] for p in products)} for store in STORES}
-    return dict(schema_version=3,active_stores=list(STORES),refresh_seconds=60,discovery_threshold_percent=MIN_DROP_PERCENT,score_methodology={"scale":"0–100: evidence strength, not purchase quality or probability","components":{"identity":10,"freshness":20,"history":50,"cross_store":20},"insufficient_or_stale_cap":39},generated_at=datetime.now(timezone.utc).isoformat(),stats=dict(products=len(products),observations=observations,active_observations=active_observations,verified=sum(p["evidence"]["verified_deal"] for p in products),potential=sum(p["deal_type"]=="POTENTIAL" for p in products),featured_25=sum(p["featured"] for p in products),sufficient=sum(p["baseline"] is not None for p in products),archive_products=archive_products,hidden_legacy_products=active_rows-len(products)),store_stats=store_stats,scan=scan,products=products)
+    from discovery import SEARCH_POOL
+    from config import PREFERRED_TERMS
+    return dict(interest_terms=SEARCH_POOL + PREFERRED_TERMS,schema_version=3,active_stores=list(STORES),refresh_seconds=60,discovery_threshold_percent=MIN_DROP_PERCENT,score_methodology={"scale":"0–100: evidence strength, not purchase quality or probability","components":{"identity":10,"freshness":20,"history":50,"cross_store":20},"insufficient_or_stale_cap":39},generated_at=datetime.now(timezone.utc).isoformat(),stats=dict(products=len(products),observations=observations,active_observations=active_observations,verified=sum(p["evidence"]["verified_deal"] for p in products),potential=sum(p["deal_type"]=="POTENTIAL" for p in products),featured_25=sum(p["featured"] for p in products),sufficient=sum(p["baseline"] is not None for p in products),archive_products=archive_products,hidden_legacy_products=active_rows-len(products)),store_stats=store_stats,scan=scan,products=products)
 
 
 def export(path="data/dashboard.json"):

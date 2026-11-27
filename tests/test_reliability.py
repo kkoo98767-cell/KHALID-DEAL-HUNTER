@@ -73,9 +73,9 @@ class ReliabilityTests(unittest.TestCase):
         database.record_alert(item)
         self.assertTrue(database.was_recently_alerted(item))
         item["status"]="VERIFIED_DEAL"
-        self.assertFalse(database.was_recently_alerted(item))
+        self.assertTrue(database.was_recently_alerted(item))
         database.record_alert(item)
-        item["price"]=90
+        item["price"]=item["price"]-0.01
         self.assertFalse(database.was_recently_alerted(item))
         db=database.connect();self.assertEqual(db.execute("SELECT COUNT(*) FROM alert_history").fetchone()[0],2);db.close()
 

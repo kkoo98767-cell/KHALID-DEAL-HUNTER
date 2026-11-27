@@ -40,16 +40,16 @@ def age_hours(stamp,now=None):
 
 
 def matching_offers(product,candidates):
-    if not valid_gtin(product.get("gtin")):
+    if not valid_gtin(product.get("gtin")) or age_hours(product.get("last_seen"))>24 or not product.get("latest_validated",True) or product.get("status")=="DATA_ANOMALY":
         return []
     matches=[]
     for other in candidates:
-        if other["store"]==product["store"] or other.get("gtin")!=product["gtin"] or age_hours(other.get("last_seen"))>24 or other.get("currency")!="SAR" or other.get("status")=="DATA_ANOMALY":
+        if not other.get("latest_validated",True) or other["store"]==product["store"] or other.get("gtin")!=product["gtin"] or age_hours(other.get("last_seen"))>24 or other.get("currency")!="SAR" or other.get("status")=="DATA_ANOMALY":
             continue
         mismatch=any(product.get(k) and other.get(k) and str(product[k]).casefold()!=str(other[k]).casefold() for k in ("brand","model","color","capacity","size","condition"))
         if mismatch:continue
         confirmed=str(product.get("condition", "")).casefold() in {"new","used","refurbished"} and str(product.get("condition", "")).casefold()==str(other.get("condition", "")).casefold()
-        matches.append({"store":other["store"],"price":other["price"],"url":other["url"],"last_seen":other["last_seen"],"match":"GTIN", "condition_confirmed":confirmed,"shipping_included":False})
+        matches.append({"store":other["store"],"price":other["price"],"url":other["url"],"last_seen":other["last_seen"],"match":"GTIN", "condition_confirmed":confirmed,"shipping_sar":other.get("shipping_sar"),"shipping_included":False})
     return sorted(matches,key=lambda o:o["price"])
 
 
@@ -76,7 +76,7 @@ def evaluate(product,offers):
     if not fresh:warnings.append("السعر أقدم من يوم؛ يجب تحديثه قبل الاعتماد عليه")
     if not offers:warnings.append("لا توجد مطابقة موثوقة حديثة عبر المتاجر؛ لا نقارن المنتجات بتشابه الاسم")
     elif not confirmed:warnings.append("مطابقة GTIN متاحة، لكن حالة السلعة غير مؤكدة؛ المقارنة أولية")
-    if offers:warnings.append("المقارنة لأسعار السلعة؛ الشحن والرسوم النهائية غير متاحة")
+    if offers:warnings.append("راجع تكاليف الشحن المتاحة وحالة السلعة قبل الشراء")
     claim="NO_REFERENCE" if advertised["percent"] is None else "UNVERIFIED"
     if advertised["percent"] is not None and verified:
         claim="OVERSTATED_VS_HISTORY" if advertised["percent"]-historical["percent"]>=10 else "CONSISTENT_WITH_HISTORY"

@@ -18,7 +18,7 @@ from database import save_and_evaluate, connect, was_recently_alerted, record_al
 from database import store_cooldown, set_store_cooldown
 from config import TRACKED_JARIR_PRODUCTS
 from ai_analyzer import analyze_deal, fallback_result
-from telegram_bot import send_deal_pair, send_startup_status, send_ai_test_status, send_scan_summary
+from telegram_bot import send_deal, send_deal_pair, send_startup_status, send_ai_test_status, send_scan_summary
 
 REQUEST_HEADERS = [
     {
@@ -269,15 +269,17 @@ def refresh_tracked(store,seen):
 
 
 def balanced_pairs(candidates, unverified_limit):
-    def eligible(store):
-        potential_count = 0
-        for item in candidates[store]:
-            if item.get("status") == "POTENTIAL_DEAL":
-                if potential_count >= unverified_limit // 2:
-                    continue
-                potential_count += 1
-            yield item
-    return zip(eligible("Amazon.sa"), eligible("Jarir"))
+    return zip(eligible_items(candidates["Amazon.sa"], unverified_limit), eligible_items(candidates["Jarir"], unverified_limit))
+
+
+def eligible_items(items, limit):
+    potential = 0
+    for item in items:
+        if item.get("status") == "POTENTIAL_DEAL":
+            if potential >= limit // 2:
+                continue
+            potential += 1
+        yield item
 
 
 def main():
@@ -342,9 +344,8 @@ def main():
             print(f"AI unavailable: {type(exc).__name__}")
             ai_result=fallback_result()
         providers.add(ai_result.get("provider","Fallback"))
-        db=connect();prior=db.execute("SELECT status FROM alert_history WHERE product_key=? ORDER BY id DESC LIMIT 1",(item["_product_key"],)).fetchone();db.close()
         notify_new=os.getenv("NOTIFY_NEW_PRODUCTS","false").lower()=="true"
-        should_notify=item.get("status") in {"POTENTIAL_DEAL","VERIFIED_DEAL"} or (prior and item.get("status")!=prior[0]) or (notify_new and item.get("_is_new_product"))
+        should_notify=item.get("status") in {"POTENTIAL_DEAL","VERIFIED_DEAL"} or (notify_new and item.get("_is_new_product"))
         if not should_notify or was_recently_alerted(item):
             continue
         item.update(ai_provider=ai_result.get("provider","Fallback"),ai_reason=ai_result.get("reason",""),ai_message=ai_result.get("telegram_message",""))
@@ -359,6 +360,16 @@ def main():
         except Exception as exc:
             telegram_errors += 1
             print(f"Paired alert failed: {type(exc).__name__}")
+    if not all(candidates.values()):
+        for items in candidates.values():
+            for item in eligible_items(items, alert_limit):
+                try:
+                    send_deal(item)
+                    record_alerts([item])
+                    alerts += 1
+                except Exception as exc:
+                    telegram_errors += 1
+                    print(f"Single alert failed: {type(exc).__name__}")
     from ai_analyzer import evaluate_archive_backlog
     try:
         providers.update(evaluate_archive_backlog())
@@ -376,7 +387,7 @@ def main():
     except Exception:
         summary_ai=dict(telegram_message="تم حفظ نتائج الفحص الفعلية؛ التعليق الآلي غير متاح حالياً.")
     try:
-        send_scan_summary(run_number=os.getenv("GITHUB_RUN_NUMBER"),products_seen=total,pairs_sent=pairs_sent,eligible_by_store=scan_result["eligible_by_store"],new_products=newly_archived,failures=failures,empty_stores=empty_stores,archive_stats=archive_stats,coverage_status=coverage_status,stores_checked=len(stores),successful_stores=sum(bool(s.get("observed_products")) for s in store_results.values()),potential_deals=potential,verified_deals=verified,sufficient_history=sufficient,providers=", ".join(sorted(providers)) or "غير مستخدم",comment=summary_ai.get("telegram_message",""))
+        send_scan_summary(run_number=os.getenv("GITHUB_RUN_NUMBER"),products_seen=total,store_reports=store_results,pairs_sent=pairs_sent,eligible_by_store=scan_result["eligible_by_store"],new_products=newly_archived,failures=failures,empty_stores=empty_stores,archive_stats=archive_stats,coverage_status=coverage_status,stores_checked=len(stores),successful_stores=sum(bool(s.get("observed_products")) for s in store_results.values()),potential_deals=potential,verified_deals=verified,sufficient_history=sufficient,providers=", ".join(sorted(providers)) or "غير مستخدم",comment=summary_ai.get("telegram_message",""))
         print("Telegram archive summary sent successfully.")
     except Exception as exc:
         telegram_errors+=1

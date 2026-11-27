@@ -1,3 +1,4 @@
+from urllib.parse import urlencode
 import random
 import time
 import requests
@@ -94,8 +95,12 @@ def format_deal(item):
     message = f"{status}\n\n📦 المنتج: {item['title']}\n🏬 المتجر: {store}\n💰 السعر الحالي: {item['price']:.2f} ريال"
     if item.get("baseline") is not None:
         message += f"\n📊 خط الأساس التاريخي: {item['baseline']:.2f} ريال\n📉 الانخفاض الفعلي: {item['drop_percent']}٪"
+    if item.get("last_alert_price", 0) > item["price"]:
+        message += f"\nنزل {item['last_alert_price'] - item['price']:.2f} ريال عن آخر تنبيه"
     comment = item.get("ai_message") or "التقييم الآلي غير متاح. معلومات الجودة والمواصفات غير كافية للتوصية بالشراء."
     message += f"\n\n🤖 التقييم: {comment}\n\n🔗 رابط المنتج: {item['url']}"
+    detail = urlencode({"product": item.get("_product_key") or item["url"]})
+    message += "\nسجل السعر: https://khalid-deal-hunter-monitor.tealbasket5.chatgpt.site/?" + detail
     return message
 
 
@@ -136,6 +141,12 @@ def send_scan_summary(run_number=None, products_seen=0, new_products=0,
         message += f"\nرسائل العروض المشتركة: {metrics['pairs_sent']} (منتج من كل متجر في الرسالة)"
         for store, count in metrics["eligible_by_store"].items():
             message += f"\n{store}: {count} منتجات مؤهلة للتنبيه"
+    for store, report in metrics.get("store_reports", {}).items():
+        if report.get("error") or not report.get("observed_products"):
+            reason = ("المتجر قيّد الوصول" if report.get("blocked") else
+                      "ما رجعت نتائج قابلة للرصد" if report.get("error") in (None, "EmptyStoreResults") else
+                      "تعذرت قراءة المتجر (" + str(report["error"]) + ")")
+            message += f"\n{store}: {reason}"
     if metrics.get("comment"):
         message += "\n\n" + metrics["comment"]
     return _send_text(message)

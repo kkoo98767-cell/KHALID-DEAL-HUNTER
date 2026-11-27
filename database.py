@@ -166,7 +166,7 @@ def save_and_evaluate(item, minimum_sample_minutes=60):
     if should_record or (latest and latest[2] and round(float(latest[0]),2)==round(float(item["price"]),2)):
         original = item.get("original_price")
         original = float(original) if isinstance(original,(int,float)) and not isinstance(original,bool) and math.isfinite(original) and original>item["price"] else None
-        metadata["current_offer"] = {"price":round(float(item["price"]),2),"original_price":original,"seen_at":datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S"),"validated":True,"data_sources":item.get("data_sources",[])}
+        metadata["current_offer"] = {"price":round(float(item["price"]),2),"original_price":original,"seen_at":datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S"),"validated":True,"shipping_sar":item.get("shipping_sar"),"data_sources":item.get("data_sources",[])}
     item["metadata"] = json.dumps(metadata,ensure_ascii=False)
     for field in ("product_id", "brand", "category", "currency", "gtin", "normalized_name", "metadata"):
         if item.get(field):
@@ -252,13 +252,17 @@ def get_archive_stats():
 
 def was_recently_alerted(item, cooldown_hours=72):
     db = connect()
-    row = db.execute("SELECT price,status, sent_at >= datetime('now', ?) FROM alert_history WHERE product_key=? ORDER BY id DESC LIMIT 1", (f"-{int(cooldown_hours)} hours", _product_key(item))).fetchone()
-    legacy = db.execute("SELECT 1 FROM sent_alerts WHERE product_key=? AND sent_at >= datetime('now', ?)", (_product_key(item),f"-{int(cooldown_hours)} hours")).fetchone()
-    db.close()
-    if row:
-        price,status,recent = row
-        return status == item.get("status") and abs(price-item["price"])/price < .05
-    return legacy is not None
+    key = _product_key(item)
+    try:
+        row = db.execute("SELECT last_price FROM sent_alerts WHERE product_key=?", (key,)).fetchone()
+        if row is None:
+            row = db.execute("SELECT price FROM alert_history WHERE product_key=? ORDER BY id DESC LIMIT 1", (key,)).fetchone()
+    finally:
+        db.close()
+    if not row or row[0] is None:
+        return False
+    item["last_alert_price"] = row[0]
+    return round(item["price"], 2) >= round(row[0], 2)
 
 
 def record_alert(item):
