@@ -439,6 +439,22 @@ def parse_jsonld_products(html, base_url, store, limit=20):
         _products_from_product_links(soup, base_url, store, limit),
         _products_from_meta(soup, base_url, store),
     ]
+    if store == "Amazon.sa" and product_identifier(canonical_url(base_url)):
+        title = soup.select_one("#productTitle")
+        asin = soup.select_one('input#ASIN[value]')
+        price_box = soup.select_one("#corePriceDisplay_desktop_feature_div, #corePrice_feature_div")
+        if title and asin and asin["value"] == product_identifier(canonical_url(base_url)) and price_box:
+            prices = {_number(node.get_text(strip=True)) for node in price_box.select(
+                '.priceToPay .a-offscreen, .apexPriceToPay .a-offscreen'
+            )}
+            if len(prices) == 1:
+                item = _normalise_product(title.get_text(" ", strip=True), prices.pop(), base_url,
+                                          store, base_url, source="amazon_product_page")
+                if item:
+                    original = _original_price(price_box)
+                    if original and original > item["price"]:
+                        item["original_price"] = original
+                    groups.insert(0, [item])
     products = _merge_products(groups, limit)
     by_url = {}
     conflicts = set()
